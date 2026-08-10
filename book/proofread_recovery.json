@@ -78,5 +78,9 @@
  {
   "before": "_him._ 1 expressed",
   "after": "_him._ I expressed"
+ },
+ {
+  "before": "never \n\n**&** \n\nhave vested",
+  "after": "never have vested"
  }
 ]

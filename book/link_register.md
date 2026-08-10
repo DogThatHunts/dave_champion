@@ -198,14 +198,17 @@ _URLs are sourced from the shared mapping `transcription-agent/TREASURY_DECISION
 | T.D. 2988 | 2 | 156 | in mapping | [link](https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2988%22;a=srchls;lmt=ft) |
 | T.D. 2382 | 2 | 155 | **add to mapping** | [link](https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2382%22;a=srchls;lmt=ft) |
 
-## 5. Constitution
+## 5. Constitution & founding documents
 
-| Reference | Occ. | Constitution Annotated |
+_Constitution refs link to the Constitution Annotated; founding documents (e.g. the Declaration of Independence) link to the National Archives._
+
+| Reference | Occ. | Source |
 |---|---:|---|
 | 16th Amendment | 89 | [link](https://constitution.congress.gov/constitution/amendment-16/) |
 | Article I | 13 | [link](https://constitution.congress.gov/constitution/article-1/) |
 | Sixteenth Amendment | 11 | [link](https://constitution.congress.gov/constitution/amendment-16/) |
 | 14th Amendment | 7 | [link](https://constitution.congress.gov/constitution/amendment-14/) |
+| Declaration of Independence | 4 | [link](https://www.archives.gov/founding-docs/declaration-transcript) |
 | Article IV | 3 | [link](https://constitution.congress.gov/constitution/article-4/) |
 | 13th Amendment | 2 | [link](https://constitution.congress.gov/constitution/amendment-13/) |
 

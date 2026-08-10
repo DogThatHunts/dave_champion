@@ -353,11 +353,7 @@ Yet, if we believe the U.S. government’s position concerning the income tax, w
 
 Now, some readers might be saying, “Come on, the government would never tax our income at 100%!” And you may well be right about that. However, this section addresses the foundation of federal taxing power, which is Congress’s authority under the U.S. Constitution. We are discussing whether Congress has the Constitutional authority to take away (i.e. tax away) your unalienable Rights. Whether or not they would choose to exercise such power is another discussion altogether. 
 
-It should be manifestly obvious to all but the most hardened Federalists that Congress does not have, and cannot have, any authority that if used would eviscerate our unalienable Rights. Not only would the Founding Fathers never 
-
-**&** 
-
-have vested the national government with such a power, but the U.S. Supreme Court has ruled that no government in this nation has, or can have, such authority. 
+It should be manifestly obvious to all but the most hardened Federalists that Congress does not have, and cannot have, any authority that if used would eviscerate our unalienable Rights. Not only would the Founding Fathers never have vested the national government with such a power, but the U.S. Supreme Court has ruled that no government in this nation has, or can have, such authority. 
 
 Earlier in this section, I said that, “the government must go about its business without infringing the individual rights of the American people." Hopefully, you now have a better appreciation of why that principle is true. 
 

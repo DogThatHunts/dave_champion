@@ -130,6 +130,13 @@ CMAP = {"16th Amendment":"amendment-16","Sixteenth Amendment":"amendment-16",
 for label in CMAP:
     n = len(re.findall(re.escape(label), text))
     if n: const[label]["count"] = n
+# founding documents (not part of the Constitution) with their own authoritative URLs
+FOUNDING = {"Declaration of Independence": "https://www.archives.gov/founding-docs/declaration-transcript"}
+for label, url in FOUNDING.items():
+    n = len(re.findall(re.escape(label), text))
+    if n:
+        const[label]["count"] = n
+        const[label]["url"] = url
 
 # ---------- 6. IRS forms ----------
 forms = defaultdict(lambda: {"count":0,"pages":set()})
@@ -188,7 +195,7 @@ for k,v in sorted(td.items(), key=lambda kv:-kv[1]["count"]):
         entry["note"] = "NOT YET in TREASURY_DECISIONS.md — add it there; fallback is a HathiTrust search."
     out["treasury_decisions"].append(entry)
 out["constitution"] = [
-    {"ref":k, "url":const_url(k), "occurrences":v["count"]}
+    {"ref":k, "url":v.get("url") or const_url(k), "occurrences":v["count"]}
     for k,v in sorted(const.items(), key=lambda kv:-kv[1]["count"])]
 out["irs_forms"] = [
     {"form":k, "url":form_url(k), "occurrences":v["count"], "pages":pset(v["pages"])}
@@ -241,8 +248,9 @@ for c in out["treasury_decisions"]:
     status = "in mapping" if c["in_mapping_file"] else "**add to mapping**"
     L.append(f"| {c['cite']} | {c['occurrences']} | {pgs} | {status} | [link]({c['url']}) |")
 
-L.append("\n## 5. Constitution\n")
-L.append("| Reference | Occ. | Constitution Annotated |")
+L.append("\n## 5. Constitution & founding documents\n")
+L.append("_Constitution refs link to the Constitution Annotated; founding documents (e.g. the Declaration of Independence) link to the National Archives._\n")
+L.append("| Reference | Occ. | Source |")
 L.append("|---|---:|---|")
 for c in out["constitution"]:
     L.append(f"| {c['ref']} | {c['occurrences']} | [link]({c['url']}) |")
