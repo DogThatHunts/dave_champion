@@ -1328,6 +1328,18 @@
   ],
   "cfr": [
     {
+      "cite": "Code of Federal Regulations",
+      "url": "https://www.law.cornell.edu/cfr/text",
+      "occurrences": 5,
+      "pages": []
+    },
+    {
+      "cite": "CFR",
+      "url": "https://www.law.cornell.edu/cfr/text",
+      "occurrences": 20,
+      "pages": []
+    },
+    {
       "cite": "26 CFR",
       "url": "https://www.law.cornell.edu/cfr/text/26",
       "occurrences": 6,

@@ -169,7 +169,15 @@ out["usc_title26_irc"] = [
     {"section":f"26 U.S.C. § {k}", "url":usc_url(k), "occurrences":v["count"],
      "pages":pset(v["pages"])}
     for k,v in sorted(usc.items(), key=lambda kv:-kv[1]["count"])]
-out["cfr"] = [
+# general references for the CFR as a whole (Cornell LII CFR landing page)
+CFR_GENERAL_URL = "https://www.law.cornell.edu/cfr/text"
+cfr_general = [
+    {"cite":"Code of Federal Regulations", "url":CFR_GENERAL_URL,
+     "occurrences":len(re.findall(r"Code of Federal Regulations", text)), "pages":[]},
+    {"cite":"CFR", "url":CFR_GENERAL_URL,
+     "occurrences":len(re.findall(r"\bCFR\b", text)), "pages":[]},
+]
+out["cfr"] = [e for e in cfr_general if e["occurrences"]] + [
     {"cite":k, "url":cfr_url(v), "occurrences":v["count"], "pages":pset(v["pages"])}
     for k,v in sorted(cfr.items(), key=lambda kv:-kv[1]["count"])]
 # Treasury Decision URLs come from the shared source of truth (single mapping,

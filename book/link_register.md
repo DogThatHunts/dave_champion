@@ -152,6 +152,8 @@ _Note: bare “section NNNN” references in the text are IRC (Title 26) section
 
 | Cite | Occ. | Pages | Cornell LII |
 |---|---:|---|---|
+| Code of Federal Regulations | 5 |  | [link](https://www.law.cornell.edu/cfr/text) |
+| CFR | 20 |  | [link](https://www.law.cornell.edu/cfr/text) |
 | 26 CFR | 6 | 111, 409, 410, 412 | [link](https://www.law.cornell.edu/cfr/text/26) |
 | 26 CFR §301.6109-1 | 4 | 361, 412, 414 | [link](https://www.law.cornell.edu/cfr/text/26/301.6109-1) |
 | 26 CFR §31.0-2 | 4 | 411 | [link](https://www.law.cornell.edu/cfr/text/26/31.0-2) |
