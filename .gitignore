@@ -3,3 +3,6 @@
 
 # ...except the stylesheet the live site needs
 !dry_fasting_summary.css
+
+# macOS
+.DS_Store
