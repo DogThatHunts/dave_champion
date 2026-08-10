@@ -126,7 +126,8 @@ for m in re.finditer(r"T\.?\s?D\.?\s*(\d{3,5})", text):
 const = defaultdict(lambda: {"count":0,"pages":set()})
 CMAP = {"16th Amendment":"amendment-16","Sixteenth Amendment":"amendment-16",
         "14th Amendment":"amendment-14","Fourteenth Amendment":"amendment-14",
-        "13th Amendment":"amendment-13","Article I":"article-1","Article IV":"article-4"}
+        "13th Amendment":"amendment-13","Article I":"article-1","Article IV":"article-4",
+        "Preamble":"preamble"}
 for label in CMAP:
     n = len(re.findall(re.escape(label), text))
     if n: const[label]["count"] = n
