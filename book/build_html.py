@@ -302,7 +302,8 @@ h2{font-size:1.55rem;margin-top:2.4rem}
 h3{font-size:1.3rem;margin-top:2rem}
 h4{font-size:1.08rem;margin-top:1.7rem;letter-spacing:.02em}
 h5{font-size:.98rem;text-transform:uppercase;letter-spacing:.06em;color:#5b5348;margin-top:1.5rem}
-h6{font-size:.9rem;text-transform:uppercase;letter-spacing:.05em;color:#6b6255;margin-top:1.3rem}
+h6{font-size:1.2rem;text-transform:uppercase;letter-spacing:.08em;color:#3a332b;font-weight:700;
+text-align:center;margin:2rem auto 1rem;max-width:var(--maxw)}
 p{margin:0 0 1.05rem}
 main>p,main>ol,main>ul{max-width:var(--maxw)}
 ol,ul{max-width:var(--maxw);padding-left:1.4rem}

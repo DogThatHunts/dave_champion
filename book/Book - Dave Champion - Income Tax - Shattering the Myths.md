@@ -1456,11 +1456,7 @@ Another interesting part of 6001 is this:
 
 “Whenever in the judgment of the Secretary it is necessary, he may require any person, by notice served upon such person or by regulations, to make such returns, render such statements, or keep such records, as the Secretary deems sufficient to show _whether or not such person is liable_ for tax under this title.” [Italics in bold by author.] 
 
-This is yet another clear indicator that the tax applies to an excise. For you to be engaged in a privileged activity, the government would have to know about it. Why? Because in order so that people do not engage in a privileged activity without paying the tax, privileged activities are almost universally “criminalized” 
-
-###### **_tt_** 
-
-unless the person exercising the privilege has permission (such as a license] from the government to do so. 
+This is yet another clear indicator that the tax applies to an excise. For you to be engaged in a privileged activity, the government would have to know about it. Why? Because in order so that people do not engage in a privileged activity without paying the tax, privileged activities are almost universally “criminalized”  unless the person exercising the privilege has permission (such as a license] from the government to do so. 
 
 If the Secretary had the power - without prior knowledge that you were involved in an excise taxable activity - to demand you surrender your financial records simply to determine that you’re _not_ a 'person liable’, there would have to be some “income tax exception” to the restrictions placed on the government by the 5th Amendment. But no such “income tax exception” exists in the law. 
 
@@ -1873,8 +1869,6 @@ There are only two possible sources for the government’s authority in this cou
 Understanding that we are the sole source of power and authority of any legitimate government, we should now explore whether our “representatives" in government - those we elect - have the power to do anything or everything their constituents say. The answer to this is ‘no’. 
 
 Remember that your elected official can only exercise the power _you_ have, and nothing more. What that means is that if you cannot do it, neither can he/she acting in your name. 
-
-###### **90** Dave Champion 
 
 Do you have the intrinsic authority to stop your neighbor from painting his house purple? Does another neighbor have that power? Do _any_ of your neighbors have that power? If the answer is ‘no’, then the person all of you elected to the town council does _not_ have that power either because he/she has no more power than each of you! 
 

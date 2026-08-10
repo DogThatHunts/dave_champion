@@ -82,5 +82,13 @@
  {
   "before": "never \n\n**&** \n\nhave vested",
   "after": "never have vested"
+ },
+ {
+  "before": "\n\n###### **_tt_** \n\n",
+  "after": " "
+ },
+ {
+  "before": "\n\n###### **90** Dave Champion \n\n",
+  "after": "\n\n"
  }
 ]
