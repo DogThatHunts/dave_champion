@@ -65,6 +65,7 @@ _Note: bare “section NNNN” references in the text are IRC (Title 26) section
 
 | Section | Occ. | Pages | Cornell LII |
 |---|---:|---|---|
+| Internal Revenue Code (Title 26) | 24 |  | [link](https://uscode.house.gov/browse/prelim@title26&edition=prelim) |
 | 26 U.S.C. § 7701 | 26 | 72, 121, 122, 127, 150, 269 | [link](https://www.law.cornell.edu/uscode/text/26/7701) |
 | 26 U.S.C. § 61 | 19 | 67, 71, 72, 95, 137, 213 | [link](https://www.law.cornell.edu/uscode/text/26/61) |
 | 26 U.S.C. § 861 | 16 | 291, 293, 413 | [link](https://www.law.cornell.edu/uscode/text/26/861) |
@@ -191,6 +192,7 @@ _URLs are sourced from the shared mapping `transcription-agent/TREASURY_DECISION
 
 | T.D. | Occ. | Pages | Status | Link |
 |---|---:|---|---|---|
+| Treasury Decisions (general) | 15 |  | in mapping | [link](https://www.irs.gov/internal-revenue-bulletins) |
 | T.D. 8734 | 23 | 127, 128, 129, 130, 131, 132 | in mapping | [link](https://www.irs.gov/pub/irs-regs/td8734.txt) |
 | T.D. 2313 | 5 | 151, 152, 153, 154 | in mapping | [link](https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2313%22;a=srchls;lmt=ft) |
 | T.D. 1928 | 4 | 149, 150 | in mapping | [link](https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+1928%22;a=srchls;lmt=ft) |
@@ -207,6 +209,7 @@ _Constitution refs link to the Constitution Annotated; founding documents (e.g. 
 | Reference | Occ. | Source |
 |---|---:|---|
 | 16th Amendment | 89 | [link](https://constitution.congress.gov/constitution/amendment-16/) |
+| Articles of Confederation | 14 | [link](https://www.archives.gov/milestone-documents/articles-of-confederation) |
 | Article I | 13 | [link](https://constitution.congress.gov/constitution/article-1/) |
 | Sixteenth Amendment | 11 | [link](https://constitution.congress.gov/constitution/amendment-16/) |
 | 14th Amendment | 7 | [link](https://constitution.congress.gov/constitution/amendment-14/) |

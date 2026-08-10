@@ -131,7 +131,8 @@ for label in CMAP:
     n = len(re.findall(re.escape(label), text))
     if n: const[label]["count"] = n
 # founding documents (not part of the Constitution) with their own authoritative URLs
-FOUNDING = {"Declaration of Independence": "https://www.archives.gov/founding-docs/declaration-transcript"}
+FOUNDING = {"Declaration of Independence": "https://www.archives.gov/founding-docs/declaration-transcript",
+            "Articles of Confederation": "https://www.archives.gov/milestone-documents/articles-of-confederation"}
 for label, url in FOUNDING.items():
     n = len(re.findall(re.escape(label), text))
     if n:
@@ -165,7 +166,11 @@ out["scotus_and_courts"] = [
     {"cite":k, "case_name":v["name"], "court":v["court"], "url":v["url"],
      "occurrences":v["count"], "pages":pset(v["pages"])}
     for k,v in sorted(cases.items(), key=lambda kv:-kv[1]["count"])]
-out["usc_title26_irc"] = [
+# general reference for the IRC as a whole -> official U.S. Code (OLRC, House.gov)
+IRC_GENERAL_URL = "https://uscode.house.gov/browse/prelim@title26&edition=prelim"
+irc_general = [{"section":"Internal Revenue Code (Title 26)", "url":IRC_GENERAL_URL,
+                "occurrences":len(re.findall(r"Internal Revenue Code", text)), "pages":[]}]
+out["usc_title26_irc"] = [e for e in irc_general if e["occurrences"]] + [
     {"section":f"26 U.S.C. § {k}", "url":usc_url(k), "occurrences":v["count"],
      "pages":pset(v["pages"])}
     for k,v in sorted(usc.items(), key=lambda kv:-kv[1]["count"])]
@@ -193,6 +198,13 @@ try:
 except FileNotFoundError:
     pass
 out["treasury_decisions"] = []
+# general reference: Treasury Decisions are published by the IRS in the Internal Revenue Bulletin
+_td_general = len(re.findall(r"Treasury Decisions", text))
+if _td_general:
+    out["treasury_decisions"].append({
+        "cite":"Treasury Decisions (general)", "occurrences":_td_general, "pages":[],
+        "in_mapping_file": True,
+        "url":"https://www.irs.gov/internal-revenue-bulletins"})
 for k,v in sorted(td.items(), key=lambda kv:-kv[1]["count"]):
     num = k.replace("T.D.", "").strip()
     url = td_map.get(num)
