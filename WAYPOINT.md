@@ -58,6 +58,23 @@ Pipeline (deterministic, re-runnable generators, all in `book/`). **Build order 
 - **Copyright:** the book is © 2010 Dave Champion; the full text + PDF are published publicly per
   the owner's direction.
 
+### 🔧 Reported for NEXT SESSION (owner feedback 2026-08-10)
+1. **Table of Contents looks wrong.** The in-page generated Contents (`.toc-list` in
+   `build_html.py`) is centered with a jumble of font sizes and reads as inconsistent —
+   especially against the **left-justified body**. The body chapter headings + their epigraphs
+   (e.g. "Introduction" followed by the George Orwell epigraph) stay left-justified, so the
+   centered gold/tiered TOC clashes with them. Revisit the TOC styling from the CSS added in the
+   "Style title block + Table of Contents" commit — likely reconsider centering vs left-align and
+   the size gradations; confirm the intended look with the owner.
+2. **Some PDF back-links are incoherent with the HTML text.** A number of `PDF p.N` pills open a
+   PDF page that doesn't match the surrounding HTML prose. Root cause is almost certainly the
+   printed→physical page-offset mapping in `build_html.py` (`phys_page()`, arabic +23 / roman +11)
+   being wrong for some ranges (front matter, roman/arabic boundary, or OCR'd page labels that are
+   off). Audit the offsets against the now-published PDF and fix per-range.
+3. TOC items "embedded in the text" (body section headings) were intentionally left unchanged
+   (gold applied to TOC only) — but that's part of why #1 looks mismatched. Decide the consistent
+   treatment across TOC + body.
+
 ### Book edition — next steps (optional)
 - [ ] Replace the placeholder root `index.html` with real home-page content.
 - [ ] Add T.D. 2382 to `../transcription-agent/TREASURY_DECISIONS.md`; recover more OCR tail if desired.
