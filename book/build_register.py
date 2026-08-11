@@ -4,6 +4,7 @@ constitutional refs, IRS forms) from the cleaned MD, mapped to authoritative URL
 Emits link_register.md (human) and link_register.json (for HTML enrichment)."""
 import re, json, sys
 from collections import defaultdict, OrderedDict
+from urllib.parse import quote
 
 MD = "Book - Dave Champion - Income Tax - Shattering the Myths.md"
 text = open(MD, encoding="utf-8").read()
@@ -35,59 +36,72 @@ def clean_name(n):
         n = re.sub(rf"\b{a}\b", b, n)
     return n
 
-# Curated case-name corrections (OCR repair / recovered from Table of Authorities),
-# keyed by normalized reporter cite. Reporter cite drives the (deterministic) URL.
+# Curated case-name corrections (OCR repair / recovered from the Table of Authorities),
+# keyed by NORMALISED cite ("<vol> <REPORTER-nospace-upper> <page>").
 CASE_FIXES = {
-    "231 U.S. 399": "Stratton's Independence, Ltd. v. Howbert",
-    "417 F.2d 1002": "United States v. Moylan",
-    "338 U.S. 680": "United States v. Alpers",
-    "466 U.S. 475": "United States v. Rodgers",
-    "361 U.S. 431": "United States v. Mersky",
-    "440 U.S. 472": "National Muffler Dealers Assn. v. United States",
-    "755 F.2d 790": "CWT Farms, Inc. v. Commissioner of Internal Revenue",
-    "809 F.2d 1427": "United States v. Murphy",
-    "470 F.2d 585": "Heating Co. v. United States",
-    "57 F.2d 877": "American Airways, Inc. v. Wallace",
-    "34 S. Ct. 421": "Billings v. United States",
-    "232 U.S. 261": "Billings v. United States",
+    "231 US 399": "Stratton's Independence, Ltd. v. Howbert",
+    "417 F2D 1002": "United States v. Moylan",
+    "338 US 680": "United States v. Alpers",
+    "466 US 475": "United States v. Rodgers",
+    "361 US 431": "United States v. Mersky",
+    "440 US 472": "National Muffler Dealers Assn. v. United States",
+    "755 F2D 790": "CWT Farms, Inc. v. Commissioner of Internal Revenue",
+    "809 F2D 1427": "United States v. Murphy",
+    "470 F2D 585": "Economy Plumbing & Heating Co. v. United States",
+    "57 F2D 877": "American Airways, Inc. v. Wallace",
+    "34 SCT 421": "Billings v. United States",
+    "232 US 261": "Billings v. United States",
+    "247 US 165": "William E. Peck & Co. v. Lowe",
+    "141 US 468": "American Net & Twine Co. v. Worthington",
+    "255 US 509": "Merchants' Loan & Trust Co. v. Smietanka",
+    "111 US 746": "Butchers' Union Co. v. Crescent City Co.",
 }
 def norm_reporter(rep_raw):
     r = re.sub(r"[.\s]", "", rep_raw).upper()
-    return {"F2D": "F.2d", "F3D": "F.3d", "F": "F.", "FED": "F.",
-            "SCT": "S. Ct.", "LED": "L. Ed."}.get(r, rep_raw.strip())
+    return {"F2D":"F.2d","F3D":"F.3d","FSUPP":"F. Supp.","F":"F.","FED":"F.",
+            "SCT":"S. Ct.","LED":"L. Ed.","US":"U.S.","CAL":"Cal.","TENN":"Tenn.",
+            "SW2D":"S.W.2d","SW":"S.W.","APPDC":"App. D.C."}.get(r, rep_raw.strip())
 
-cases = {}   # normalized reporter cite -> {name, reporter, url, pages:set, count}
-for m in re.finditer(cite_rx, text):
-    vol, rep_raw, pg = m.group(1), m.group(2), m.group(3)
-    rep = re.sub(r"[.\s]", "", rep_raw).upper()  # US, SCT, LED, F2D, F3D, F, FED
-    # look back up to 80 chars for a case name
-    back = text[max(0, m.start()-90):m.start()]
-    nm = re.findall(name_rx, back)
-    name = clean_name(nm[-1]) if nm else ""
-    if rep == "US":
-        key = norm_us(vol, pg)
-        url = f"https://supreme.justia.com/cases/federal/us/{vol}/{pg}/"
-        court = "U.S. Supreme Court"
-    elif rep in ("F2D","F3D","F","FED"):
-        key = f"{vol} {norm_reporter(rep_raw)} {pg}"
-        q = (name or key).replace(" ", "+")
-        url = f"https://www.courtlistener.com/?q={q}"
-        court = "Federal court (F.)"
-    else:  # parallel SCOTUS reporters
-        key = f"{vol} {norm_reporter(rep_raw)} {pg}"
-        url = f"https://www.courtlistener.com/?q={key.replace(' ','+')}"
-        court = "U.S. Supreme Court (parallel cite)"
-    e = cases.setdefault(key, {"name": name, "court": court, "url": url,
-                                "reporter": rep, "count": 0, "pages": set()})
+STATE_RPT = (r"U\.?\s?S\.?|S\.?\s?Ct\.?|L\.?\s?Ed\.?|F\.?\s?2d|F\.?\s?3d|F\.?\s?Supp\.?|F\.?|"
+             r"Cal|Tenn|S\.?\s?W\.?\s?2d|S\.?\s?W\.?|App\.?\s?D\.?C\.?")
+CASE_FULL = re.compile(
+    r"([A-Z][A-Za-z.'’&\-]*(?:\s+(?:of|the|ex|rel\.?|and|&|[A-Z][A-Za-z.'’&\-]*)){0,6}\s+v\.?\s+"
+    r"[A-Z][A-Za-z.'’&\-]*(?:\s+(?:of|the|and|&|[A-Z][A-Za-z.'’&\-]*)){0,6})\.?\s+"
+    r"(\d{1,3})\s+(" + STATE_RPT + r")\s+(\d{1,4})(?:,?\s*(?:at\s*)?[\d–\-]+)?(?:\s*\((\d{4})\))?")
+
+def clean_case_name(n):
+    n = re.sub(r"\s+", " ", n).strip().rstrip(".")
+    n = re.sub(r"^(In re |In |Court\. In |Amendment was |see |See )", "", n)
+    for a,b in [("Dovle","Doyle"),("Hvlton","Hylton"),("Framers","Farmers"),
+                ("Benzieer","Benziger"),("Speckels","Spreckels"),("Stales","States"),
+                ("Movlan","Moylan"),("Merskv","Mersky"),("Citv","City")]:
+        n = re.sub(rf"\b{a}\b", b, n)
+    return n
+
+cases = {}   # normalised cite -> {name, cite, year, court, url, count, pages}
+for m in CASE_FULL.finditer(text):
+    name = clean_case_name(m.group(1))
+    vol, rraw, pg, year = m.group(2), m.group(3), m.group(4), m.group(5)
+    rn = re.sub(r"[.\s]", "", rraw).upper()
+    key = f"{vol} {rn} {pg}"
+    disp = f"{vol} {norm_reporter(rraw)} {pg}"
+    if rn == "US":
+        url = f"https://supreme.justia.com/cases/federal/us/{vol}/{pg}/"; court = "U.S. Supreme Court"
+    elif rn in ("F2D","F3D","F","FSUPP"):
+        url = None; court = "Federal court"
+    else:
+        url = None; court = "State / other court"
+    e = cases.setdefault(key, {"name":name,"cite":disp,"year":year,"court":court,
+                               "url":url,"count":0,"pages":set()})
     e["count"] += 1
-    if name and not e["name"]:
-        e["name"] = name
+    if len(name) > len(e["name"]): e["name"] = name
+    if year and not e["year"]: e["year"] = year
     e["pages"].add(page_at(m.start()))
-
-# apply curated name corrections (authoritative over OCR)
-for k, nm in CASE_FIXES.items():
-    if k in cases:
-        cases[k]["name"] = nm
+for key, e in cases.items():
+    if key in CASE_FIXES: e["name"] = CASE_FIXES[key]
+    if e["url"] is None:
+        e["url"] = "https://www.courtlistener.com/?q=" + quote(f'{e["name"]} {e["cite"]}')
+    e["full"] = f'{e["name"]}. {e["cite"]}' + (f' ({e["year"]})' if e["year"] else "")
 
 # ---------- 2. USC / Title 26 (IRC) sections ----------
 # IMPORTANT: exclude dotted/decimal cites (e.g. §31.0-2, §1.1441-1, §301.7701-11) —
@@ -147,6 +161,73 @@ for m in re.finditer(r"Form\s+(\d{3,4}[- ]?[A-Z]{0,3})", text):
     forms[k]["count"] += 1
     forms[k]["pages"].add(page_at(m.start()))
 
+# ---------- 7. Constitutional Article/Section/Clause citations (section-level links) ----------
+ROMAN2INT = {"I":1,"II":2,"III":3,"IV":4,"V":5,"VI":6,"VII":7}
+INT2ROMAN = {v:k for k,v in ROMAN2INT.items()}
+def _artnum(a):
+    a = a.strip().upper()
+    return ROMAN2INT.get(a) or (int(a) if a.isdigit() else None)
+clauses = {}   # canonical display -> {count, pages, url}
+CLAUSE_RX = re.compile(
+    r"Art(?:icle|\.)\s*([IVX]+|\d+)\s*[.,]\s*Sec(?:tion|\.)\s*(\d+)"
+    r"(?:\s*[.,]\s*Cl(?:ause|\.)\s*(\d+))?", re.I)
+for m in CLAUSE_RX.finditer(text):
+    an = _artnum(m.group(1))
+    if not an: continue
+    sec, cl = m.group(2), m.group(3)
+    disp = f"Article {INT2ROMAN.get(an, an)}, Section {sec}" + (f", Clause {cl}" if cl else "")
+    e = clauses.setdefault(disp, {"count":0, "pages":set(),
+        "url":f"https://constitution.congress.gov/browse/article-{an}/section-{sec}/"})
+    e["count"] += 1; e["pages"].add(page_at(m.start()))
+
+# ---------- 8. Named Acts of Congress ----------
+# Curated official/government URLs where a clean one exists; historical Statutes-at-Large
+# era acts fall back to the Library of Congress Statutes at Large collection.
+LOC_STATUTES = "https://www.loc.gov/collections/united-states-statutes-at-large/"
+ACT_URLS = {
+    "Social Security Act": "https://www.ssa.gov/OP_Home/ssact/ssact.htm",
+    "Federal Reserve Act": "https://www.federalreserve.gov/aboutthefed/fract.htm",
+    "Patriot Act": "https://www.congress.gov/bill/107th-congress/house-bill/3162",
+    "Paperwork Reduction Act": "https://www.congress.gov/bill/96th-congress/senate-bill/1411",
+}
+ACT_RX = re.compile(
+    r"\b((?:[A-Z][A-Za-z'\-]+\s+){0,4}"
+    r"(?:Tariff|Revenue|Tax|Security|Reserve|Firearms|Retirement|Reduction|Restructuring|"
+    r"Contribution|Contributions|Unemployment|Patriot|Income\s+Tax|Corporation\s+Tax)\s+Act)"
+    r"(?:\s+of\s+(\d{4})|\s+\[(\d{4})\])?")
+acts = {}
+for m in ACT_RX.finditer(text):
+    name = re.sub(r"\s+", " ", m.group(1)).strip()
+    name = re.sub(r"^(The|An?)\s+", "", name)
+    name = re.sub(r"^[A-Z]{2,5}\s+(?=[A-Z][a-z])", "", name)          # drop leading acronym (e.g. "FDIC ")
+    name = name.replace("Insurance Contribution Act", "Insurance Contributions Act")  # normalise
+    if name.lower() in ("the act", "act", "lord act"): continue
+    year = m.group(2) or m.group(3)
+    full = name + (f" of {year}" if year and f"of {year}" not in name else "")
+    url = next((u for k,u in ACT_URLS.items() if k in name), LOC_STATUTES)
+    e = acts.setdefault(full, {"count":0, "pages":set(), "url":url,
+                               "official": any(k in name for k in ACT_URLS)})
+    e["count"] += 1; e["pages"].add(page_at(m.start()))
+
+# ---------- 9. Executive Orders ----------
+eos = {}
+for m in re.finditer(r"(?:Executive\s+Order|E\.?\s?O\.?)\s*(?:No\.?\s*)?(\d{4,5})", text):
+    num = m.group(1)
+    e = eos.setdefault(num, {"count":0, "pages":set(),
+        "url":f"https://www.federalregister.gov/documents/search?conditions%5Bterm%5D=Executive+Order+{num}"})
+    e["count"] += 1; e["pages"].add(page_at(m.start()))
+
+# ---------- 10. Secondary authorities (reference works; non-government) ----------
+SECONDARY = {
+    "Black's Law Dictionary": "https://thelawdictionary.org/",
+    "Bouvier's Law Dictionary": "https://www.constitution.org/1-Law/bouvier/bouvier.html",
+}
+secondary = {}
+for name, url in SECONDARY.items():
+    pat = name.replace("'", "[’']")
+    n = len(re.findall(pat, text))
+    if n: secondary[name] = {"count":n, "url":url}
+
 # ---------- URL builders ----------
 def usc_url(sec):  return f"https://www.law.cornell.edu/uscode/text/26/{sec}"
 def cfr_url(e):
@@ -164,7 +245,8 @@ def _pkey(x):
 def pset(s): return sorted((x for x in s if x!="?"), key=_pkey)
 out = OrderedDict()
 out["scotus_and_courts"] = [
-    {"cite":k, "case_name":v["name"], "court":v["court"], "url":v["url"],
+    {"cite":v["cite"], "case_name":v["name"], "full_citation":v["full"],
+     "year":v["year"], "court":v["court"], "url":v["url"],
      "occurrences":v["count"], "pages":pset(v["pages"])}
     for k,v in sorted(cases.items(), key=lambda kv:-kv[1]["count"])]
 # general reference for the IRC as a whole -> official U.S. Code (OLRC, House.gov)
@@ -221,6 +303,19 @@ out["constitution"] = [
 out["irs_forms"] = [
     {"form":k, "url":form_url(k), "occurrences":v["count"], "pages":pset(v["pages"])}
     for k,v in sorted(forms.items(), key=lambda kv:-kv[1]["count"])]
+out["constitutional_clauses"] = [
+    {"citation":k, "url":v["url"], "occurrences":v["count"], "pages":pset(v["pages"])}
+    for k,v in sorted(clauses.items())]
+out["acts_of_congress"] = [
+    {"act":k, "url":v["url"], "official_source":v["official"],
+     "occurrences":v["count"], "pages":pset(v["pages"])}
+    for k,v in sorted(acts.items(), key=lambda kv:-kv[1]["count"])]
+out["executive_orders"] = [
+    {"executive_order":f"E.O. {k}", "url":v["url"], "occurrences":v["count"], "pages":pset(v["pages"])}
+    for k,v in sorted(eos.items())]
+out["secondary_authorities"] = [
+    {"work":k, "url":v["url"], "occurrences":v["count"]}
+    for k,v in sorted(secondary.items(), key=lambda kv:-kv[1]["count"])]
 
 json.dump(out, open("link_register.json","w",encoding="utf-8"), indent=2, ensure_ascii=False)
 
@@ -236,12 +331,12 @@ L.append(f"- Source text: `{MD}`")
 L.append(f"- Generated by `build_register.py` (re-run to refresh)\n")
 
 L.append("\n## 1. SCOTUS & court cases\n")
-L.append("| Cite | Case name (OCR) | Court | Occ. | Pages | Link |")
-L.append("|---|---|---|---:|---|---|")
+L.append("_Full citation (name · reporter cite · year). U.S. Reports link to Justia; other courts to a CourtListener search._\n")
+L.append("| Full citation | Court | Occ. | Pages | Link |")
+L.append("|---|---|---:|---|---|")
 for c in out["scotus_and_courts"]:
-    flag = " **verify**" if (not c["case_name"] or c["court"].startswith("Federal") or "parallel" in c["court"]) else ""
     pgs=", ".join(c["pages"][:6])
-    L.append(f"| {c['cite']} | {c['case_name'] or '—'}{flag} | {c['court']} | {c['occurrences']} | {pgs} | [link]({c['url']}) |")
+    L.append(f"| {c['full_citation']} | {c['court']} | {c['occurrences']} | {pgs} | [link]({c['url']}) |")
 
 L.append("\n## 2. Title 26 U.S.C. (Internal Revenue Code) sections\n")
 L.append("_Note: bare “section NNNN” references in the text are IRC (Title 26) sections; verify a few against context (a handful may be quoting other titles)._\n")
@@ -283,6 +378,40 @@ L.append("|---|---:|---|---|")
 for c in out["irs_forms"]:
     pgs=", ".join(c["pages"][:6])
     L.append(f"| {c['form']} | {c['occurrences']} | {pgs} | [link]({c['url']}) |")
+
+L.append("\n## 7. Constitutional provisions (Article / Section / Clause)\n")
+L.append("_Deep-linked to the Constitution Annotated (congress.gov) at the section level._\n")
+L.append("| Provision | Occ. | Pages | Constitution Annotated |")
+L.append("|---|---:|---|---|")
+for c in out["constitutional_clauses"]:
+    pgs=", ".join(c["pages"][:6])
+    L.append(f"| {c['citation']} | {c['occurrences']} | {pgs} | [link]({c['url']}) |")
+
+L.append("\n## 8. Named Acts of Congress\n")
+L.append("_Official government sources where a clean one exists (SSA, Federal Reserve, congress.gov); "
+         "historical Statutes-at-Large-era acts link to the Library of Congress Statutes at Large collection._\n")
+L.append("| Act | Occ. | Pages | Source |")
+L.append("|---|---:|---|---|")
+for c in out["acts_of_congress"]:
+    pgs=", ".join(c["pages"][:6])
+    tag = "" if c["official_source"] else " _(Statutes at Large)_"
+    L.append(f"| {c['act']} | {c['occurrences']} | {pgs} | [link]({c['url']}){tag} |")
+
+L.append("\n## 9. Executive Orders\n")
+L.append("_Linked to a Federal Register search for the numbered order._\n")
+L.append("| Executive Order | Occ. | Pages | Federal Register |")
+L.append("|---|---:|---|---|")
+for c in out["executive_orders"]:
+    pgs=", ".join(c["pages"][:6])
+    L.append(f"| {c['executive_order']} | {c['occurrences']} | {pgs} | [link]({c['url']}) |")
+
+if out["secondary_authorities"]:
+    L.append("\n## 10. Secondary authorities (reference works)\n")
+    L.append("_Reference works cited in the text (non-government sources)._\n")
+    L.append("| Work | Occ. | Source |")
+    L.append("|---|---:|---|")
+    for c in out["secondary_authorities"]:
+        L.append(f"| {c['work']} | {c['occurrences']} | [link]({c['url']}) |")
 
 open("link_register.md","w",encoding="utf-8").write("\n".join(L)+"\n")
 

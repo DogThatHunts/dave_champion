@@ -8,56 +8,55 @@ Authoritative-source links for enriching the interactive HTML edition. URLs are 
 
 ## 1. SCOTUS & court cases
 
-| Cite | Case name (OCR) | Court | Occ. | Pages | Link |
-|---|---|---|---:|---|---|
-| 481 U.S. 465 | Meese v. Keene | U.S. Supreme Court | 6 | 172, 197, 407, 410 | [link](https://supreme.justia.com/cases/federal/us/481/465/) |
-| 439 U.S. 379 | Colautti v. Franklin | U.S. Supreme Court | 6 | 172, 197, 279, 407, 410, 413 | [link](https://supreme.justia.com/cases/federal/us/439/379/) |
-| 57 F.2d 877 | American Airways, Inc. v. Wallace **verify** | Federal court (F.) | 4 | 17, 29, 407, 408 | [link](https://www.courtlistener.com/?q=American+Airways+v.+Wallace) |
-| 157 U.S. 429 | Pollock v. Farmers’ Loan | U.S. Supreme Court | 4 | 20, 407, 408, 412 | [link](https://supreme.justia.com/cases/federal/us/157/429/) |
-| 252 U.S. 189 | In Eisner v. Macomber | U.S. Supreme Court | 4 | 48, 408, 409 | [link](https://supreme.justia.com/cases/federal/us/252/189/) |
-| 3 U.S. 171 | In Hylton v US | U.S. Supreme Court | 3 | 18, 407, 408 | [link](https://supreme.justia.com/cases/federal/us/3/171/) |
-| 240 U.S. 103 | Stanton v. Baltic Mining Co | U.S. Supreme Court | 3 | 33, 39, 408 | [link](https://supreme.justia.com/cases/federal/us/240/103/) |
-| 485 U.S. 505 | South Carolina v. Baker | U.S. Supreme Court | 3 | 40, 408 | [link](https://supreme.justia.com/cases/federal/us/485/505/) |
-| 236 U.S. 1 | Coppage v. Kansas | U.S. Supreme Court | 3 | 43, 52, 408 | [link](https://supreme.justia.com/cases/federal/us/236/1/) |
-| 111 U.S. 746 | Butcher’s Union Co. v. Crescent City Co | U.S. Supreme Court | 3 | 52, 407, 408 | [link](https://supreme.justia.com/cases/federal/us/111/746/) |
-| 245 U.S. 151 | Gould v. Gould | U.S. Supreme Court | 3 | 53, 256, 408 | [link](https://supreme.justia.com/cases/federal/us/245/151/) |
-| 192 U.S. 397 | Speckels Sugar Refining Co. v. McCain | U.S. Supreme Court | 3 | 85, 409, 413 | [link](https://supreme.justia.com/cases/federal/us/192/397/) |
-| 470 F.2d 585 | Heating Co. v. United States **verify** | Federal court (F.) | 3 | 240, 300, 413 | [link](https://www.courtlistener.com/?q=Heating+Co.+v.+United+States) |
-| 17 U.S. 327 | McCulloch v. Maryland | U.S. Supreme Court | 2 | 3, 407 | [link](https://supreme.justia.com/cases/federal/us/17/327/) |
-| 178 U.S. 41 | Knowlton v. Moore | U.S. Supreme Court | 2 | 18, 407 | [link](https://supreme.justia.com/cases/federal/us/178/41/) |
-| 240 U.S. 1 | Brushaber v. Union Pacific Railroad | U.S. Supreme Court | 2 | 25, 408 | [link](https://supreme.justia.com/cases/federal/us/240/1/) |
-| 247 U.S. 165 | Co. v. Lowe | U.S. Supreme Court | 2 | 39, 408 | [link](https://supreme.justia.com/cases/federal/us/247/165/) |
-| 231 U.S. 399 | Stratton's Independence, Ltd. v. Howbert | U.S. Supreme Court | 2 | 47, 408 | [link](https://supreme.justia.com/cases/federal/us/231/399/) |
-| 247 U.S. 179 | Doyle v. Mitchell Brother. Co | U.S. Supreme Court | 2 | 47, 408 | [link](https://supreme.justia.com/cases/federal/us/247/179/) |
-| 245 U.S. 418 | In Towne v. Eisner | U.S. Supreme Court | 2 | 47, 408 | [link](https://supreme.justia.com/cases/federal/us/245/418/) |
-| 255 U.S. 509 | Trust v. Smietanka | U.S. Supreme Court | 2 | 49, 408 | [link](https://supreme.justia.com/cases/federal/us/255/509/) |
-| 208 U.S. 161 | Adair v. United States | U.S. Supreme Court | 2 | 52, 408 | [link](https://supreme.justia.com/cases/federal/us/208/161/) |
-| 141 U.S. 468 | Twine Co. v. Worthington | U.S. Supreme Court | 2 | 53, 408 | [link](https://supreme.justia.com/cases/federal/us/141/468/) |
-| 192 U.S. 38 | Benziger v. United States | U.S. Supreme Court | 2 | 53, 408 | [link](https://supreme.justia.com/cases/federal/us/192/38/) |
-| 201 U.S. 43 | Hale v. Henkel | U.S. Supreme Court | 2 | 92, 409 | [link](https://supreme.justia.com/cases/federal/us/201/43/) |
-| 301 U.S. 548 | Charles C. Steward Machine Co. v. Davis | U.S. Supreme Court | 2 | 188, 411 | [link](https://supreme.justia.com/cases/federal/us/301/548/) |
-| 324 U.S. 652 | Allison Co. v. Evatt | U.S. Supreme Court | 2 | 195, 411 | [link](https://supreme.justia.com/cases/federal/us/324/652/) |
-| 182 U.S. 244 | Downes v. Bidwell | U.S. Supreme Court | 2 | 201, 411 | [link](https://supreme.justia.com/cases/federal/us/182/244/) |
-| 282 U.S. 55 | Crooks v. Harrelson | U.S. Supreme Court | 2 | 232, 412 | [link](https://supreme.justia.com/cases/federal/us/282/55/) |
-| 255 U.S. 257 | United States v. Field | U.S. Supreme Court | 2 | 232, 412 | [link](https://supreme.justia.com/cases/federal/us/255/257/) |
-| 446 U.S. 156 | Rome v. United States | U.S. Supreme Court | 2 | 232, 412 | [link](https://supreme.justia.com/cases/federal/us/446/156/) |
-| 417 F.2d 1002 | United States v. Moylan **verify** | Federal court (F.) | 2 | 358, 414 | [link](https://www.courtlistener.com/?q=417+F.2d+1002) |
-| 809 F.2d 1427 | United States v. Murphy **verify** | Federal court (F.) | 2 | 407 | [link](https://www.courtlistener.com/?q=U.S.+v.+Murphy) |
-| 232 U.S. 261 | Billings v. United States | U.S. Supreme Court | 1 | 256 | [link](https://supreme.justia.com/cases/federal/us/232/261/) |
-| 34 S. Ct. 421 | Billings v. United States **verify** | U.S. Supreme Court (parallel cite) | 1 | 256 | [link](https://www.courtlistener.com/?q=34+S.+Ct.+421) |
-| 168 U.S. 95 | United States v. Goldenberg | U.S. Supreme Court | 1 | 256 | [link](https://supreme.justia.com/cases/federal/us/168/95/) |
-| 338 U.S. 680 | United States v. Alpers | U.S. Supreme Court | 1 | 407 | [link](https://supreme.justia.com/cases/federal/us/338/680/) |
-| 466 U.S. 475 | United States v. Rodgers | U.S. Supreme Court | 1 | 407 | [link](https://supreme.justia.com/cases/federal/us/466/475/) |
-| 361 U.S. 431 | United States v. Mersky | U.S. Supreme Court | 1 | 407 | [link](https://supreme.justia.com/cases/federal/us/361/431/) |
-| 440 U.S. 472 | National Muffler Dealers Assn. v. United States | U.S. Supreme Court | 1 | 407 | [link](https://supreme.justia.com/cases/federal/us/440/472/) |
-| 282 U.S. 375 | Fawcus Mach. Co. v United States | U.S. Supreme Court | 1 | 407 | [link](https://supreme.justia.com/cases/federal/us/282/375/) |
-| 333 U.S. 496 | Internal Revenue v. South Texas Lumber Co | U.S. Supreme Court | 1 | 407 | [link](https://supreme.justia.com/cases/federal/us/333/496/) |
-| 416 U.S. 21 | California Bankers Assn v. Shultz | U.S. Supreme Court | 1 | 407 | [link](https://supreme.justia.com/cases/federal/us/416/21/) |
-| 441 U.S. 281 | Chrysler Corporation v. Brown | U.S. Supreme Court | 1 | 407 | [link](https://supreme.justia.com/cases/federal/us/441/281/) |
-| 530 U.S. 914 | Stenberg v. Carhart | U.S. Supreme Court | 1 | 407 | [link](https://supreme.justia.com/cases/federal/us/530/914/) |
-| 755 F.2d 790 | CWT Farms, Inc. v. Commissioner of Internal Revenue **verify** | Federal court (F.) | 1 | 412 | [link](https://www.courtlistener.com/?q=755+F.2d+790) |
-| 60 U.S. 393 | Dred Scott v. Sandford | U.S. Supreme Court | 1 | 413 | [link](https://supreme.justia.com/cases/federal/us/60/393/) |
-| 3 U.S. 1 | Georgia v. Brailsford | U.S. Supreme Court | 1 | 414 | [link](https://supreme.justia.com/cases/federal/us/3/1/) |
+_Full citation (name · reporter cite · year). U.S. Reports link to Justia; other courts to a CourtListener search._
+
+| Full citation | Court | Occ. | Pages | Link |
+|---|---|---:|---|---|
+| Meese v. Keene. 481 U.S. 465 (1987) | U.S. Supreme Court | 6 | 172, 197, 407, 410 | [link](https://supreme.justia.com/cases/federal/us/481/465/) |
+| Colautti v. Franklin. 439 U.S. 379 (1979) | U.S. Supreme Court | 5 | 172, 197, 407, 410, 413 | [link](https://supreme.justia.com/cases/federal/us/439/379/) |
+| American Airways, Inc. v. Wallace. 57 F.2d 877 (1932) | Federal court | 4 | 17, 29, 407, 408 | [link](https://www.courtlistener.com/?q=American%20Airways%2C%20Inc.%20v.%20Wallace%2057%20F.2d%20877) |
+| Pollock v. Farmers’ Loan & Trust Company. 157 U.S. 429 (1895) | U.S. Supreme Court | 4 | 20, 407, 408, 412 | [link](https://supreme.justia.com/cases/federal/us/157/429/) |
+| Eisner v. Macomber. 252 U.S. 189 (1920) | U.S. Supreme Court | 4 | 48, 408, 409 | [link](https://supreme.justia.com/cases/federal/us/252/189/) |
+| Hylton v. U.S. 3 U.S. 171 (1796) | U.S. Supreme Court | 3 | 18, 407, 408 | [link](https://supreme.justia.com/cases/federal/us/3/171/) |
+| Stanton v. Baltic Mining Co. 240 U.S. 103 (1916) | U.S. Supreme Court | 3 | 33, 39, 408 | [link](https://supreme.justia.com/cases/federal/us/240/103/) |
+| South Carolina v. Baker. 485 U.S. 505 (1988) | U.S. Supreme Court | 3 | 40, 408 | [link](https://supreme.justia.com/cases/federal/us/485/505/) |
+| Corn v. Fort. 95 S.W.2d 620 (1936) | State / other court | 3 | 43, 408, 409 | [link](https://www.courtlistener.com/?q=Corn%20v.%20Fort%2095%20S.W.2d%20620) |
+| Coppage v. Kansas. 236 U.S. 1 (1915) | U.S. Supreme Court | 3 | 43, 52, 408 | [link](https://supreme.justia.com/cases/federal/us/236/1/) |
+| People ex rel. Atty Gen v. Naglee. 1 Cal. 232 | State / other court | 2 | 17, 30 | [link](https://www.courtlistener.com/?q=People%20ex%20rel.%20Atty%20Gen%20v.%20Naglee%201%20Cal.%20232) |
+| Bank of Commerce & T. Co. v. Senter. 149 Tenn. 441 | State / other court | 2 | 17, 30 | [link](https://www.courtlistener.com/?q=Bank%20of%20Commerce%20%26%20T.%20Co.%20v.%20Senter%20149%20Tenn.%20441) |
+| Knowlton v. Moore. 178 U.S. 41 (1900) | U.S. Supreme Court | 2 | 18, 407 | [link](https://supreme.justia.com/cases/federal/us/178/41/) |
+| Brushaber v. Union Pacific Railroad. 240 U.S. 1 (1916) | U.S. Supreme Court | 2 | 25, 408 | [link](https://supreme.justia.com/cases/federal/us/240/1/) |
+| William E. Peck & Co. v. Lowe. 247 U.S. 165 (1918) | U.S. Supreme Court | 2 | 39, 408 | [link](https://supreme.justia.com/cases/federal/us/247/165/) |
+| Doyle v. Mitchell Brother. Co. 247 U.S. 179 (1918) | U.S. Supreme Court | 2 | 47, 408 | [link](https://supreme.justia.com/cases/federal/us/247/179/) |
+| Towne v. Eisner. 245 U.S. 418 (1918) | U.S. Supreme Court | 2 | 47, 408 | [link](https://supreme.justia.com/cases/federal/us/245/418/) |
+| Merchants' Loan & Trust Co. v. Smietanka. 255 U.S. 509 (1921) | U.S. Supreme Court | 2 | 49, 408 | [link](https://supreme.justia.com/cases/federal/us/255/509/) |
+| Adair v. United States. 208 U.S. 161 (1908) | U.S. Supreme Court | 2 | 52, 408 | [link](https://supreme.justia.com/cases/federal/us/208/161/) |
+| Gould v. Gould. 245 U.S. 151 (1917) | U.S. Supreme Court | 2 | 53, 408 | [link](https://supreme.justia.com/cases/federal/us/245/151/) |
+| Benziger v. United States. 192 U.S. 38 (1904) | U.S. Supreme Court | 2 | 53, 408 | [link](https://supreme.justia.com/cases/federal/us/192/38/) |
+| Charles C. Steward Machine Co. v. Davis. 301 U.S. 548 (1937) | U.S. Supreme Court | 2 | 188, 411 | [link](https://supreme.justia.com/cases/federal/us/301/548/) |
+| Supreme Court. In Hooven & Allison Co. v. Evatt. 324 U.S. 652 (1945) | U.S. Supreme Court | 2 | 195, 411 | [link](https://supreme.justia.com/cases/federal/us/324/652/) |
+| Butchers' Union Co. v. Crescent City Co.. 111 U.S. 746 (1884) | U.S. Supreme Court | 2 | 407, 408 | [link](https://supreme.justia.com/cases/federal/us/111/746/) |
+| United States v. Murphy. 809 F.2d 1427 | Federal court | 2 | 407 | [link](https://www.courtlistener.com/?q=United%20States%20v.%20Murphy%20809%20F.2d%201427) |
+| Spreckels Sugar Refining Co. v. McCain. 192 U.S. 397 (1904) | U.S. Supreme Court | 2 | 409, 413 | [link](https://supreme.justia.com/cases/federal/us/192/397/) |
+| McCulloch v. Maryland. 17 U.S. 327 | U.S. Supreme Court | 1 | 3 | [link](https://supreme.justia.com/cases/federal/us/17/327/) |
+| American Net & Twine Co. v. Worthington. 141 U.S. 468 | U.S. Supreme Court | 1 | 53 | [link](https://supreme.justia.com/cases/federal/us/141/468/) |
+| United States v. Alpers. 338 U.S. 680 (1950) | U.S. Supreme Court | 1 | 407 | [link](https://supreme.justia.com/cases/federal/us/338/680/) |
+| United States v. Rodgers. 466 U.S. 475 (1984) | U.S. Supreme Court | 1 | 407 | [link](https://supreme.justia.com/cases/federal/us/466/475/) |
+| United States v. Mersky. 361 U.S. 431 (1960) | U.S. Supreme Court | 1 | 407 | [link](https://supreme.justia.com/cases/federal/us/361/431/) |
+| National Muffler Dealers Assn. v. United States. 440 U.S. 472 (1979) | U.S. Supreme Court | 1 | 407 | [link](https://supreme.justia.com/cases/federal/us/440/472/) |
+| Fawcus Mach. Co. v United States. 282 U.S. 375 (1931) | U.S. Supreme Court | 1 | 407 | [link](https://supreme.justia.com/cases/federal/us/282/375/) |
+| Commissioner of Internal Revenue v. South Texas Lumber Co. 333 U.S. 496 (1948) | U.S. Supreme Court | 1 | 407 | [link](https://supreme.justia.com/cases/federal/us/333/496/) |
+| California Bankers Assn v. Shultz. 416 U.S. 21 (1974) | U.S. Supreme Court | 1 | 407 | [link](https://supreme.justia.com/cases/federal/us/416/21/) |
+| Chrysler Corporation v. Brown. 441 U.S. 281 (1979) | U.S. Supreme Court | 1 | 407 | [link](https://supreme.justia.com/cases/federal/us/441/281/) |
+| Stenberg v. Carhart. 530 U.S. 914 (2000) | U.S. Supreme Court | 1 | 407 | [link](https://supreme.justia.com/cases/federal/us/530/914/) |
+| Hale v. Henkel. 201 U.S. 43 (1906) | U.S. Supreme Court | 1 | 409 | [link](https://supreme.justia.com/cases/federal/us/201/43/) |
+| Downes v. Bidwell. 182 U.S. 244 (1901) | U.S. Supreme Court | 1 | 411 | [link](https://supreme.justia.com/cases/federal/us/182/244/) |
+| Crooks v. Harrelson. 282 U.S. 55 (1930) | U.S. Supreme Court | 1 | 412 | [link](https://supreme.justia.com/cases/federal/us/282/55/) |
+| United States v. Field. 255 U.S. 257 (1921) | U.S. Supreme Court | 1 | 412 | [link](https://supreme.justia.com/cases/federal/us/255/257/) |
+| City of Rome v. United States. 446 U.S. 156 (1980) | U.S. Supreme Court | 1 | 412 | [link](https://supreme.justia.com/cases/federal/us/446/156/) |
+| Dred Scott v. Sandford. 60 U.S. 393 (1856) | U.S. Supreme Court | 1 | 413 | [link](https://supreme.justia.com/cases/federal/us/60/393/) |
+| Economy Plumbing & Heating Co. v. United States. 470 F.2d 585 | Federal court | 1 | 413 | [link](https://www.courtlistener.com/?q=Economy%20Plumbing%20%26%20Heating%20Co.%20v.%20United%20States%20470%20F.2d%20585) |
+| State of Georgia v. Brailsford. 3 U.S. 1 (1794) | U.S. Supreme Court | 1 | 414 | [link](https://supreme.justia.com/cases/federal/us/3/1/) |
 
 ## 2. Title 26 U.S.C. (Internal Revenue Code) sections
 
@@ -242,3 +241,56 @@ _Links point to current IRS “About Form” pages; the book often discusses his
 | Form 1031 | 1 | 155 | [link](https://www.irs.gov/forms-pubs/about-form-1031) |
 | Form 1040NR | 1 | 157 | [link](https://www.irs.gov/forms-pubs/about-form-1040nr) |
 | Form 1099 MIS | 1 | 243 | [link](https://www.irs.gov/forms-pubs/about-form-1099 mis) |
+
+## 7. Constitutional provisions (Article / Section / Clause)
+
+_Deep-linked to the Constitution Annotated (congress.gov) at the section level._
+
+| Provision | Occ. | Pages | Constitution Annotated |
+|---|---:|---|---|
+| Article I, Section 2, Clause 3 | 3 | 14, 15, 407 | [link](https://constitution.congress.gov/browse/article-1/section-2/) |
+| Article I, Section 8, Clause 1 | 6 | 14, 15, 407 | [link](https://constitution.congress.gov/browse/article-1/section-8/) |
+| Article I, Section 8, Clause 17 | 3 | 197, 203, 411 | [link](https://constitution.congress.gov/browse/article-1/section-8/) |
+| Article I, Section 9, Clause 4 | 3 | 15, 407 | [link](https://constitution.congress.gov/browse/article-1/section-9/) |
+| Article IV, Section 3, Clause 2 | 2 | 203, 411 | [link](https://constitution.congress.gov/browse/article-4/section-3/) |
+| Article IV, Section 4 | 2 | 46, 408 | [link](https://constitution.congress.gov/browse/article-4/section-4/) |
+
+## 8. Named Acts of Congress
+
+_Official government sources where a clean one exists (SSA, Federal Reserve, congress.gov); historical Statutes-at-Large-era acts link to the Library of Congress Statutes at Large collection._
+
+| Act | Occ. | Pages | Source |
+|---|---:|---|---|
+| Social Security Act | 13 | 190, 192, 193, 200, 201, 206 | [link](https://www.ssa.gov/OP_Home/ssact/ssact.htm) |
+| Patriot Act | 9 | 189, 261, 262, 263, 373 | [link](https://www.congress.gov/bill/107th-congress/house-bill/3162) |
+| Federal Reserve Act | 7 | 184, 379, 382, 383 | [link](https://www.federalreserve.gov/aboutthefed/fract.htm) |
+| Federal Insurance Contributions Act | 6 | 190, 220, 418 | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
+| Corporation Tax Act of 1909 | 5 | 47, 48, 49 | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
+| Federal Firearms Act | 5 | 203, 418 | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
+| Railroad Retirement Tax Act | 4 | 189, 190, 220 | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
+| Federal Unemployment Tax Act | 4 | 184, 190, 220 | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
+| Income Tax Act of 1913 | 3 | 47, 49, 419 | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
+| Paperwork Reduction Act | 3 | 140, 189 | [link](https://www.congress.gov/bill/96th-congress/senate-bill/1411) |
+| Income Tax Act | 2 | 48, 49 | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
+| Corporation Tax Act | 2 | 49 | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
+| Restructuring Act | 2 | 148 | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
+| Wilson-Gorman Tariff Act of 1894 | 1 | 20 | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
+| Revenue Act | 1 | 48 | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
+| Corporate Excise Tax Act | 1 | 49 | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
+
+## 9. Executive Orders
+
+_Linked to a Federal Register search for the numbered order._
+
+| Executive Order | Occ. | Pages | Federal Register |
+|---|---:|---|---|
+| E.O. 10289 | 7 | 107, 108, 111, 409 | [link](https://www.federalregister.gov/documents/search?conditions%5Bterm%5D=Executive+Order+10289) |
+
+## 10. Secondary authorities (reference works)
+
+_Reference works cited in the text (non-government sources)._
+
+| Work | Occ. | Source |
+|---|---:|---|
+| Bouvier's Law Dictionary | 5 | [link](https://www.constitution.org/1-Law/bouvier/bouvier.html) |
+| Black's Law Dictionary | 3 | [link](https://thelawdictionary.org/) |

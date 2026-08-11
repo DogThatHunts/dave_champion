@@ -3,6 +3,8 @@
     {
       "cite": "481 U.S. 465",
       "case_name": "Meese v. Keene",
+      "full_citation": "Meese v. Keene. 481 U.S. 465 (1987)",
+      "year": "1987",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/481/465/",
       "occurrences": 6,
@@ -16,13 +18,14 @@
     {
       "cite": "439 U.S. 379",
       "case_name": "Colautti v. Franklin",
+      "full_citation": "Colautti v. Franklin. 439 U.S. 379 (1979)",
+      "year": "1979",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/439/379/",
-      "occurrences": 6,
+      "occurrences": 5,
       "pages": [
         "172",
         "197",
-        "279",
         "407",
         "410",
         "413"
@@ -31,8 +34,10 @@
     {
       "cite": "57 F.2d 877",
       "case_name": "American Airways, Inc. v. Wallace",
-      "court": "Federal court (F.)",
-      "url": "https://www.courtlistener.com/?q=American+Airways+v.+Wallace",
+      "full_citation": "American Airways, Inc. v. Wallace. 57 F.2d 877 (1932)",
+      "year": "1932",
+      "court": "Federal court",
+      "url": "https://www.courtlistener.com/?q=American%20Airways%2C%20Inc.%20v.%20Wallace%2057%20F.2d%20877",
       "occurrences": 4,
       "pages": [
         "17",
@@ -43,7 +48,9 @@
     },
     {
       "cite": "157 U.S. 429",
-      "case_name": "Pollock v. Farmers’ Loan",
+      "case_name": "Pollock v. Farmers’ Loan & Trust Company",
+      "full_citation": "Pollock v. Farmers’ Loan & Trust Company. 157 U.S. 429 (1895)",
+      "year": "1895",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/157/429/",
       "occurrences": 4,
@@ -56,7 +63,9 @@
     },
     {
       "cite": "252 U.S. 189",
-      "case_name": "In Eisner v. Macomber",
+      "case_name": "Eisner v. Macomber",
+      "full_citation": "Eisner v. Macomber. 252 U.S. 189 (1920)",
+      "year": "1920",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/252/189/",
       "occurrences": 4,
@@ -68,7 +77,9 @@
     },
     {
       "cite": "3 U.S. 171",
-      "case_name": "In Hylton v US",
+      "case_name": "Hylton v. U.S",
+      "full_citation": "Hylton v. U.S. 3 U.S. 171 (1796)",
+      "year": "1796",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/3/171/",
       "occurrences": 3,
@@ -81,6 +92,8 @@
     {
       "cite": "240 U.S. 103",
       "case_name": "Stanton v. Baltic Mining Co",
+      "full_citation": "Stanton v. Baltic Mining Co. 240 U.S. 103 (1916)",
+      "year": "1916",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/240/103/",
       "occurrences": 3,
@@ -93,6 +106,8 @@
     {
       "cite": "485 U.S. 505",
       "case_name": "South Carolina v. Baker",
+      "full_citation": "South Carolina v. Baker. 485 U.S. 505 (1988)",
+      "year": "1988",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/485/505/",
       "occurrences": 3,
@@ -102,8 +117,24 @@
       ]
     },
     {
+      "cite": "95 S.W.2d 620",
+      "case_name": "Corn v. Fort",
+      "full_citation": "Corn v. Fort. 95 S.W.2d 620 (1936)",
+      "year": "1936",
+      "court": "State / other court",
+      "url": "https://www.courtlistener.com/?q=Corn%20v.%20Fort%2095%20S.W.2d%20620",
+      "occurrences": 3,
+      "pages": [
+        "43",
+        "408",
+        "409"
+      ]
+    },
+    {
       "cite": "236 U.S. 1",
       "case_name": "Coppage v. Kansas",
+      "full_citation": "Coppage v. Kansas. 236 U.S. 1 (1915)",
+      "year": "1915",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/236/1/",
       "occurrences": 3,
@@ -114,67 +145,36 @@
       ]
     },
     {
-      "cite": "111 U.S. 746",
-      "case_name": "Butcher’s Union Co. v. Crescent City Co",
-      "court": "U.S. Supreme Court",
-      "url": "https://supreme.justia.com/cases/federal/us/111/746/",
-      "occurrences": 3,
-      "pages": [
-        "52",
-        "407",
-        "408"
-      ]
-    },
-    {
-      "cite": "245 U.S. 151",
-      "case_name": "Gould v. Gould",
-      "court": "U.S. Supreme Court",
-      "url": "https://supreme.justia.com/cases/federal/us/245/151/",
-      "occurrences": 3,
-      "pages": [
-        "53",
-        "256",
-        "408"
-      ]
-    },
-    {
-      "cite": "192 U.S. 397",
-      "case_name": "Speckels Sugar Refining Co. v. McCain",
-      "court": "U.S. Supreme Court",
-      "url": "https://supreme.justia.com/cases/federal/us/192/397/",
-      "occurrences": 3,
-      "pages": [
-        "85",
-        "409",
-        "413"
-      ]
-    },
-    {
-      "cite": "470 F.2d 585",
-      "case_name": "Heating Co. v. United States",
-      "court": "Federal court (F.)",
-      "url": "https://www.courtlistener.com/?q=Heating+Co.+v.+United+States",
-      "occurrences": 3,
-      "pages": [
-        "240",
-        "300",
-        "413"
-      ]
-    },
-    {
-      "cite": "17 U.S. 327",
-      "case_name": "McCulloch v. Maryland",
-      "court": "U.S. Supreme Court",
-      "url": "https://supreme.justia.com/cases/federal/us/17/327/",
+      "cite": "1 Cal. 232",
+      "case_name": "People ex rel. Atty Gen v. Naglee",
+      "full_citation": "People ex rel. Atty Gen v. Naglee. 1 Cal. 232",
+      "year": null,
+      "court": "State / other court",
+      "url": "https://www.courtlistener.com/?q=People%20ex%20rel.%20Atty%20Gen%20v.%20Naglee%201%20Cal.%20232",
       "occurrences": 2,
       "pages": [
-        "3",
-        "407"
+        "17",
+        "30"
+      ]
+    },
+    {
+      "cite": "149 Tenn. 441",
+      "case_name": "Bank of Commerce & T. Co. v. Senter",
+      "full_citation": "Bank of Commerce & T. Co. v. Senter. 149 Tenn. 441",
+      "year": null,
+      "court": "State / other court",
+      "url": "https://www.courtlistener.com/?q=Bank%20of%20Commerce%20%26%20T.%20Co.%20v.%20Senter%20149%20Tenn.%20441",
+      "occurrences": 2,
+      "pages": [
+        "17",
+        "30"
       ]
     },
     {
       "cite": "178 U.S. 41",
       "case_name": "Knowlton v. Moore",
+      "full_citation": "Knowlton v. Moore. 178 U.S. 41 (1900)",
+      "year": "1900",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/178/41/",
       "occurrences": 2,
@@ -186,6 +186,8 @@
     {
       "cite": "240 U.S. 1",
       "case_name": "Brushaber v. Union Pacific Railroad",
+      "full_citation": "Brushaber v. Union Pacific Railroad. 240 U.S. 1 (1916)",
+      "year": "1916",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/240/1/",
       "occurrences": 2,
@@ -196,7 +198,9 @@
     },
     {
       "cite": "247 U.S. 165",
-      "case_name": "Co. v. Lowe",
+      "case_name": "William E. Peck & Co. v. Lowe",
+      "full_citation": "William E. Peck & Co. v. Lowe. 247 U.S. 165 (1918)",
+      "year": "1918",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/247/165/",
       "occurrences": 2,
@@ -206,19 +210,10 @@
       ]
     },
     {
-      "cite": "231 U.S. 399",
-      "case_name": "Stratton's Independence, Ltd. v. Howbert",
-      "court": "U.S. Supreme Court",
-      "url": "https://supreme.justia.com/cases/federal/us/231/399/",
-      "occurrences": 2,
-      "pages": [
-        "47",
-        "408"
-      ]
-    },
-    {
       "cite": "247 U.S. 179",
       "case_name": "Doyle v. Mitchell Brother. Co",
+      "full_citation": "Doyle v. Mitchell Brother. Co. 247 U.S. 179 (1918)",
+      "year": "1918",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/247/179/",
       "occurrences": 2,
@@ -229,7 +224,9 @@
     },
     {
       "cite": "245 U.S. 418",
-      "case_name": "In Towne v. Eisner",
+      "case_name": "Towne v. Eisner",
+      "full_citation": "Towne v. Eisner. 245 U.S. 418 (1918)",
+      "year": "1918",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/245/418/",
       "occurrences": 2,
@@ -240,7 +237,9 @@
     },
     {
       "cite": "255 U.S. 509",
-      "case_name": "Trust v. Smietanka",
+      "case_name": "Merchants' Loan & Trust Co. v. Smietanka",
+      "full_citation": "Merchants' Loan & Trust Co. v. Smietanka. 255 U.S. 509 (1921)",
+      "year": "1921",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/255/509/",
       "occurrences": 2,
@@ -252,6 +251,8 @@
     {
       "cite": "208 U.S. 161",
       "case_name": "Adair v. United States",
+      "full_citation": "Adair v. United States. 208 U.S. 161 (1908)",
+      "year": "1908",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/208/161/",
       "occurrences": 2,
@@ -261,10 +262,12 @@
       ]
     },
     {
-      "cite": "141 U.S. 468",
-      "case_name": "Twine Co. v. Worthington",
+      "cite": "245 U.S. 151",
+      "case_name": "Gould v. Gould",
+      "full_citation": "Gould v. Gould. 245 U.S. 151 (1917)",
+      "year": "1917",
       "court": "U.S. Supreme Court",
-      "url": "https://supreme.justia.com/cases/federal/us/141/468/",
+      "url": "https://supreme.justia.com/cases/federal/us/245/151/",
       "occurrences": 2,
       "pages": [
         "53",
@@ -274,6 +277,8 @@
     {
       "cite": "192 U.S. 38",
       "case_name": "Benziger v. United States",
+      "full_citation": "Benziger v. United States. 192 U.S. 38 (1904)",
+      "year": "1904",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/192/38/",
       "occurrences": 2,
@@ -283,19 +288,10 @@
       ]
     },
     {
-      "cite": "201 U.S. 43",
-      "case_name": "Hale v. Henkel",
-      "court": "U.S. Supreme Court",
-      "url": "https://supreme.justia.com/cases/federal/us/201/43/",
-      "occurrences": 2,
-      "pages": [
-        "92",
-        "409"
-      ]
-    },
-    {
       "cite": "301 U.S. 548",
       "case_name": "Charles C. Steward Machine Co. v. Davis",
+      "full_citation": "Charles C. Steward Machine Co. v. Davis. 301 U.S. 548 (1937)",
+      "year": "1937",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/301/548/",
       "occurrences": 2,
@@ -306,7 +302,9 @@
     },
     {
       "cite": "324 U.S. 652",
-      "case_name": "Allison Co. v. Evatt",
+      "case_name": "Supreme Court. In Hooven & Allison Co. v. Evatt",
+      "full_citation": "Supreme Court. In Hooven & Allison Co. v. Evatt. 324 U.S. 652 (1945)",
+      "year": "1945",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/324/652/",
       "occurrences": 2,
@@ -316,103 +314,72 @@
       ]
     },
     {
-      "cite": "182 U.S. 244",
-      "case_name": "Downes v. Bidwell",
+      "cite": "111 U.S. 746",
+      "case_name": "Butchers' Union Co. v. Crescent City Co.",
+      "full_citation": "Butchers' Union Co. v. Crescent City Co.. 111 U.S. 746 (1884)",
+      "year": "1884",
       "court": "U.S. Supreme Court",
-      "url": "https://supreme.justia.com/cases/federal/us/182/244/",
+      "url": "https://supreme.justia.com/cases/federal/us/111/746/",
       "occurrences": 2,
       "pages": [
-        "201",
-        "411"
-      ]
-    },
-    {
-      "cite": "282 U.S. 55",
-      "case_name": "Crooks v. Harrelson",
-      "court": "U.S. Supreme Court",
-      "url": "https://supreme.justia.com/cases/federal/us/282/55/",
-      "occurrences": 2,
-      "pages": [
-        "232",
-        "412"
-      ]
-    },
-    {
-      "cite": "255 U.S. 257",
-      "case_name": "United States v. Field",
-      "court": "U.S. Supreme Court",
-      "url": "https://supreme.justia.com/cases/federal/us/255/257/",
-      "occurrences": 2,
-      "pages": [
-        "232",
-        "412"
-      ]
-    },
-    {
-      "cite": "446 U.S. 156",
-      "case_name": "Rome v. United States",
-      "court": "U.S. Supreme Court",
-      "url": "https://supreme.justia.com/cases/federal/us/446/156/",
-      "occurrences": 2,
-      "pages": [
-        "232",
-        "412"
-      ]
-    },
-    {
-      "cite": "417 F.2d 1002",
-      "case_name": "United States v. Moylan",
-      "court": "Federal court (F.)",
-      "url": "https://www.courtlistener.com/?q=417+F.2d+1002",
-      "occurrences": 2,
-      "pages": [
-        "358",
-        "414"
+        "407",
+        "408"
       ]
     },
     {
       "cite": "809 F.2d 1427",
       "case_name": "United States v. Murphy",
-      "court": "Federal court (F.)",
-      "url": "https://www.courtlistener.com/?q=U.S.+v.+Murphy",
+      "full_citation": "United States v. Murphy. 809 F.2d 1427",
+      "year": null,
+      "court": "Federal court",
+      "url": "https://www.courtlistener.com/?q=United%20States%20v.%20Murphy%20809%20F.2d%201427",
       "occurrences": 2,
       "pages": [
         "407"
       ]
     },
     {
-      "cite": "232 U.S. 261",
-      "case_name": "Billings v. United States",
+      "cite": "192 U.S. 397",
+      "case_name": "Spreckels Sugar Refining Co. v. McCain",
+      "full_citation": "Spreckels Sugar Refining Co. v. McCain. 192 U.S. 397 (1904)",
+      "year": "1904",
       "court": "U.S. Supreme Court",
-      "url": "https://supreme.justia.com/cases/federal/us/232/261/",
-      "occurrences": 1,
+      "url": "https://supreme.justia.com/cases/federal/us/192/397/",
+      "occurrences": 2,
       "pages": [
-        "256"
+        "409",
+        "413"
       ]
     },
     {
-      "cite": "34 S. Ct. 421",
-      "case_name": "Billings v. United States",
-      "court": "U.S. Supreme Court (parallel cite)",
-      "url": "https://www.courtlistener.com/?q=34+S.+Ct.+421",
+      "cite": "17 U.S. 327",
+      "case_name": "McCulloch v. Maryland",
+      "full_citation": "McCulloch v. Maryland. 17 U.S. 327",
+      "year": null,
+      "court": "U.S. Supreme Court",
+      "url": "https://supreme.justia.com/cases/federal/us/17/327/",
       "occurrences": 1,
       "pages": [
-        "256"
+        "3"
       ]
     },
     {
-      "cite": "168 U.S. 95",
-      "case_name": "United States v. Goldenberg",
+      "cite": "141 U.S. 468",
+      "case_name": "American Net & Twine Co. v. Worthington",
+      "full_citation": "American Net & Twine Co. v. Worthington. 141 U.S. 468",
+      "year": null,
       "court": "U.S. Supreme Court",
-      "url": "https://supreme.justia.com/cases/federal/us/168/95/",
+      "url": "https://supreme.justia.com/cases/federal/us/141/468/",
       "occurrences": 1,
       "pages": [
-        "256"
+        "53"
       ]
     },
     {
       "cite": "338 U.S. 680",
       "case_name": "United States v. Alpers",
+      "full_citation": "United States v. Alpers. 338 U.S. 680 (1950)",
+      "year": "1950",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/338/680/",
       "occurrences": 1,
@@ -423,6 +390,8 @@
     {
       "cite": "466 U.S. 475",
       "case_name": "United States v. Rodgers",
+      "full_citation": "United States v. Rodgers. 466 U.S. 475 (1984)",
+      "year": "1984",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/466/475/",
       "occurrences": 1,
@@ -433,6 +402,8 @@
     {
       "cite": "361 U.S. 431",
       "case_name": "United States v. Mersky",
+      "full_citation": "United States v. Mersky. 361 U.S. 431 (1960)",
+      "year": "1960",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/361/431/",
       "occurrences": 1,
@@ -443,6 +414,8 @@
     {
       "cite": "440 U.S. 472",
       "case_name": "National Muffler Dealers Assn. v. United States",
+      "full_citation": "National Muffler Dealers Assn. v. United States. 440 U.S. 472 (1979)",
+      "year": "1979",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/440/472/",
       "occurrences": 1,
@@ -453,6 +426,8 @@
     {
       "cite": "282 U.S. 375",
       "case_name": "Fawcus Mach. Co. v United States",
+      "full_citation": "Fawcus Mach. Co. v United States. 282 U.S. 375 (1931)",
+      "year": "1931",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/282/375/",
       "occurrences": 1,
@@ -462,7 +437,9 @@
     },
     {
       "cite": "333 U.S. 496",
-      "case_name": "Internal Revenue v. South Texas Lumber Co",
+      "case_name": "Commissioner of Internal Revenue v. South Texas Lumber Co",
+      "full_citation": "Commissioner of Internal Revenue v. South Texas Lumber Co. 333 U.S. 496 (1948)",
+      "year": "1948",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/333/496/",
       "occurrences": 1,
@@ -473,6 +450,8 @@
     {
       "cite": "416 U.S. 21",
       "case_name": "California Bankers Assn v. Shultz",
+      "full_citation": "California Bankers Assn v. Shultz. 416 U.S. 21 (1974)",
+      "year": "1974",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/416/21/",
       "occurrences": 1,
@@ -483,6 +462,8 @@
     {
       "cite": "441 U.S. 281",
       "case_name": "Chrysler Corporation v. Brown",
+      "full_citation": "Chrysler Corporation v. Brown. 441 U.S. 281 (1979)",
+      "year": "1979",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/441/281/",
       "occurrences": 1,
@@ -493,6 +474,8 @@
     {
       "cite": "530 U.S. 914",
       "case_name": "Stenberg v. Carhart",
+      "full_citation": "Stenberg v. Carhart. 530 U.S. 914 (2000)",
+      "year": "2000",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/530/914/",
       "occurrences": 1,
@@ -501,10 +484,60 @@
       ]
     },
     {
-      "cite": "755 F.2d 790",
-      "case_name": "CWT Farms, Inc. v. Commissioner of Internal Revenue",
-      "court": "Federal court (F.)",
-      "url": "https://www.courtlistener.com/?q=755+F.2d+790",
+      "cite": "201 U.S. 43",
+      "case_name": "Hale v. Henkel",
+      "full_citation": "Hale v. Henkel. 201 U.S. 43 (1906)",
+      "year": "1906",
+      "court": "U.S. Supreme Court",
+      "url": "https://supreme.justia.com/cases/federal/us/201/43/",
+      "occurrences": 1,
+      "pages": [
+        "409"
+      ]
+    },
+    {
+      "cite": "182 U.S. 244",
+      "case_name": "Downes v. Bidwell",
+      "full_citation": "Downes v. Bidwell. 182 U.S. 244 (1901)",
+      "year": "1901",
+      "court": "U.S. Supreme Court",
+      "url": "https://supreme.justia.com/cases/federal/us/182/244/",
+      "occurrences": 1,
+      "pages": [
+        "411"
+      ]
+    },
+    {
+      "cite": "282 U.S. 55",
+      "case_name": "Crooks v. Harrelson",
+      "full_citation": "Crooks v. Harrelson. 282 U.S. 55 (1930)",
+      "year": "1930",
+      "court": "U.S. Supreme Court",
+      "url": "https://supreme.justia.com/cases/federal/us/282/55/",
+      "occurrences": 1,
+      "pages": [
+        "412"
+      ]
+    },
+    {
+      "cite": "255 U.S. 257",
+      "case_name": "United States v. Field",
+      "full_citation": "United States v. Field. 255 U.S. 257 (1921)",
+      "year": "1921",
+      "court": "U.S. Supreme Court",
+      "url": "https://supreme.justia.com/cases/federal/us/255/257/",
+      "occurrences": 1,
+      "pages": [
+        "412"
+      ]
+    },
+    {
+      "cite": "446 U.S. 156",
+      "case_name": "City of Rome v. United States",
+      "full_citation": "City of Rome v. United States. 446 U.S. 156 (1980)",
+      "year": "1980",
+      "court": "U.S. Supreme Court",
+      "url": "https://supreme.justia.com/cases/federal/us/446/156/",
       "occurrences": 1,
       "pages": [
         "412"
@@ -513,6 +546,8 @@
     {
       "cite": "60 U.S. 393",
       "case_name": "Dred Scott v. Sandford",
+      "full_citation": "Dred Scott v. Sandford. 60 U.S. 393 (1856)",
+      "year": "1856",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/60/393/",
       "occurrences": 1,
@@ -521,8 +556,22 @@
       ]
     },
     {
+      "cite": "470 F.2d 585",
+      "case_name": "Economy Plumbing & Heating Co. v. United States",
+      "full_citation": "Economy Plumbing & Heating Co. v. United States. 470 F.2d 585",
+      "year": null,
+      "court": "Federal court",
+      "url": "https://www.courtlistener.com/?q=Economy%20Plumbing%20%26%20Heating%20Co.%20v.%20United%20States%20470%20F.2d%20585",
+      "occurrences": 1,
+      "pages": [
+        "413"
+      ]
+    },
+    {
       "cite": "3 U.S. 1",
-      "case_name": "Georgia v. Brailsford",
+      "case_name": "State of Georgia v. Brailsford",
+      "full_citation": "State of Georgia v. Brailsford. 3 U.S. 1 (1794)",
+      "year": "1794",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/3/1/",
       "occurrences": 1,
@@ -1914,6 +1963,264 @@
       "pages": [
         "243"
       ]
+    }
+  ],
+  "constitutional_clauses": [
+    {
+      "citation": "Article I, Section 2, Clause 3",
+      "url": "https://constitution.congress.gov/browse/article-1/section-2/",
+      "occurrences": 3,
+      "pages": [
+        "14",
+        "15",
+        "407"
+      ]
+    },
+    {
+      "citation": "Article I, Section 8, Clause 1",
+      "url": "https://constitution.congress.gov/browse/article-1/section-8/",
+      "occurrences": 6,
+      "pages": [
+        "14",
+        "15",
+        "407"
+      ]
+    },
+    {
+      "citation": "Article I, Section 8, Clause 17",
+      "url": "https://constitution.congress.gov/browse/article-1/section-8/",
+      "occurrences": 3,
+      "pages": [
+        "197",
+        "203",
+        "411"
+      ]
+    },
+    {
+      "citation": "Article I, Section 9, Clause 4",
+      "url": "https://constitution.congress.gov/browse/article-1/section-9/",
+      "occurrences": 3,
+      "pages": [
+        "15",
+        "407"
+      ]
+    },
+    {
+      "citation": "Article IV, Section 3, Clause 2",
+      "url": "https://constitution.congress.gov/browse/article-4/section-3/",
+      "occurrences": 2,
+      "pages": [
+        "203",
+        "411"
+      ]
+    },
+    {
+      "citation": "Article IV, Section 4",
+      "url": "https://constitution.congress.gov/browse/article-4/section-4/",
+      "occurrences": 2,
+      "pages": [
+        "46",
+        "408"
+      ]
+    }
+  ],
+  "acts_of_congress": [
+    {
+      "act": "Social Security Act",
+      "url": "https://www.ssa.gov/OP_Home/ssact/ssact.htm",
+      "official_source": true,
+      "occurrences": 13,
+      "pages": [
+        "190",
+        "192",
+        "193",
+        "200",
+        "201",
+        "206",
+        "207",
+        "411",
+        "422"
+      ]
+    },
+    {
+      "act": "Patriot Act",
+      "url": "https://www.congress.gov/bill/107th-congress/house-bill/3162",
+      "official_source": true,
+      "occurrences": 9,
+      "pages": [
+        "189",
+        "261",
+        "262",
+        "263",
+        "373"
+      ]
+    },
+    {
+      "act": "Federal Reserve Act",
+      "url": "https://www.federalreserve.gov/aboutthefed/fract.htm",
+      "official_source": true,
+      "occurrences": 7,
+      "pages": [
+        "184",
+        "379",
+        "382",
+        "383"
+      ]
+    },
+    {
+      "act": "Federal Insurance Contributions Act",
+      "url": "https://www.loc.gov/collections/united-states-statutes-at-large/",
+      "official_source": false,
+      "occurrences": 6,
+      "pages": [
+        "190",
+        "220",
+        "418"
+      ]
+    },
+    {
+      "act": "Corporation Tax Act of 1909",
+      "url": "https://www.loc.gov/collections/united-states-statutes-at-large/",
+      "official_source": false,
+      "occurrences": 5,
+      "pages": [
+        "47",
+        "48",
+        "49"
+      ]
+    },
+    {
+      "act": "Federal Firearms Act",
+      "url": "https://www.loc.gov/collections/united-states-statutes-at-large/",
+      "official_source": false,
+      "occurrences": 5,
+      "pages": [
+        "203",
+        "418"
+      ]
+    },
+    {
+      "act": "Railroad Retirement Tax Act",
+      "url": "https://www.loc.gov/collections/united-states-statutes-at-large/",
+      "official_source": false,
+      "occurrences": 4,
+      "pages": [
+        "189",
+        "190",
+        "220"
+      ]
+    },
+    {
+      "act": "Federal Unemployment Tax Act",
+      "url": "https://www.loc.gov/collections/united-states-statutes-at-large/",
+      "official_source": false,
+      "occurrences": 4,
+      "pages": [
+        "184",
+        "190",
+        "220"
+      ]
+    },
+    {
+      "act": "Income Tax Act of 1913",
+      "url": "https://www.loc.gov/collections/united-states-statutes-at-large/",
+      "official_source": false,
+      "occurrences": 3,
+      "pages": [
+        "47",
+        "49",
+        "419"
+      ]
+    },
+    {
+      "act": "Paperwork Reduction Act",
+      "url": "https://www.congress.gov/bill/96th-congress/senate-bill/1411",
+      "official_source": true,
+      "occurrences": 3,
+      "pages": [
+        "140",
+        "189"
+      ]
+    },
+    {
+      "act": "Income Tax Act",
+      "url": "https://www.loc.gov/collections/united-states-statutes-at-large/",
+      "official_source": false,
+      "occurrences": 2,
+      "pages": [
+        "48",
+        "49"
+      ]
+    },
+    {
+      "act": "Corporation Tax Act",
+      "url": "https://www.loc.gov/collections/united-states-statutes-at-large/",
+      "official_source": false,
+      "occurrences": 2,
+      "pages": [
+        "49"
+      ]
+    },
+    {
+      "act": "Restructuring Act",
+      "url": "https://www.loc.gov/collections/united-states-statutes-at-large/",
+      "official_source": false,
+      "occurrences": 2,
+      "pages": [
+        "148"
+      ]
+    },
+    {
+      "act": "Wilson-Gorman Tariff Act of 1894",
+      "url": "https://www.loc.gov/collections/united-states-statutes-at-large/",
+      "official_source": false,
+      "occurrences": 1,
+      "pages": [
+        "20"
+      ]
+    },
+    {
+      "act": "Revenue Act",
+      "url": "https://www.loc.gov/collections/united-states-statutes-at-large/",
+      "official_source": false,
+      "occurrences": 1,
+      "pages": [
+        "48"
+      ]
+    },
+    {
+      "act": "Corporate Excise Tax Act",
+      "url": "https://www.loc.gov/collections/united-states-statutes-at-large/",
+      "official_source": false,
+      "occurrences": 1,
+      "pages": [
+        "49"
+      ]
+    }
+  ],
+  "executive_orders": [
+    {
+      "executive_order": "E.O. 10289",
+      "url": "https://www.federalregister.gov/documents/search?conditions%5Bterm%5D=Executive+Order+10289",
+      "occurrences": 7,
+      "pages": [
+        "107",
+        "108",
+        "111",
+        "409"
+      ]
+    }
+  ],
+  "secondary_authorities": [
+    {
+      "work": "Bouvier's Law Dictionary",
+      "url": "https://www.constitution.org/1-Law/bouvier/bouvier.html",
+      "occurrences": 5
+    },
+    {
+      "work": "Black's Law Dictionary",
+      "url": "https://thelawdictionary.org/",
+      "occurrences": 3
     }
   ]
 }

@@ -545,7 +545,7 @@ Let’s take a moment and do a quick recap.
 
 - Only one provision [Article I, Section 8, Clause 1] grants Congress its taxing authority. 
 
-- Article I. Section 8. Clause 1 grants Congress the power to “lay and collect taxes, duties, imposts, and excises.” 
+- Article I, Section 8, Clause 1 grants Congress the power to “lay and collect taxes, duties, imposts, and excises.” 
 
 - “Taxes” (as used in Article I, Section 8, Clause 1) refers to direct taxes, which are twice restricted to the rule of apportionment. 
 

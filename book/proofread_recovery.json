@@ -90,5 +90,9 @@
  {
   "before": "\n\n###### **90** Dave Champion \n\n",
   "after": "\n\n"
+ },
+ {
+  "before": "Article I. Section 8. Clause 1",
+  "after": "Article I, Section 8, Clause 1"
  }
 ]
