@@ -1,6 +1,6 @@
 # Waypoint — dave_champion
 
-_Last updated: 2026-08-07_
+_Last updated: 2026-08-10_
 
 ## Goal
 Publish the project's HTML pages as a live site via GitHub Pages. **New major workstream:**
@@ -10,51 +10,57 @@ an interactive HTML edition of the book *Income Tax: Shattering The Myths* (in `
 
 ## Book edition (`book/`) — interactive HTML
 
-**Status: ✅ built + proofread (local); ⚠️ not yet published**
+**Status: ✅ LIVE & published**
+- Edition: https://dogthathunts.github.io/dave_champion/book/
+- Link register (HTML): https://dogthathunts.github.io/dave_champion/book/link_register.html
+- Source PDF **is now published** (`book/Book - …Shattering the Myths.pdf`, ~16 MB) so the
+  edition's per-page back-links resolve.
 
 Pipeline (deterministic, re-runnable generators, all in `book/`). **Build order matters:**
-`clean.py` → `proofread.py chunk` → `proofread.py apply` → `build_register.py` → `build_html.py`.
+`clean.py` → `proofread.py chunk` → `proofread.py apply` → `build_register.py` →
+`build_register_html.py` → `build_html.py`.
 1. `clean.py` — raw OCR → cleaned MD (`Book - …Shattering the Myths.md`). Strips
    running heads/footers/page-numbers (kept as `<!-- page: N -->` anchors), rebuilds
-   3 duplicate zones, applies safe OCR fixes. Backup: `…raw-ocr.md`. Report: `cleanup_report.txt`.
-2. `proofread.py` — Stage-2 proofreading. `chunk` partitions the cleaned MD into
-   `proofread_chunks/` (57 pieces); a multi-agent **workflow** wrote exact before→after
-   edits per chunk; `apply` applies `proofread_edits.json` in place with a hallucination
-   guardrail. **1,212 edits applied** (OCR/split/punct/quote) + **52 handwriting removals**
-   (garbled signatures/margin notes deleted). Pre-proofread backup: `…pre-proofread.md`.
-   Log: `proofread_apply_log.json`. Reproducible: same clean MD + `proofread_edits.json` → same result.
-3. `build_register.py` — proofread MD → `link_register.md` + `link_register.json`
-   (SCOTUS→Justia, USC/CFR→Cornell LII, Constitution→Constitution Annotated, IRS forms,
-   Treasury Decisions sourced from `../transcription-agent/TREASURY_DECISIONS.md`).
-4. `build_html.py` — proofread MD + `link_register.json` → the HTML edition + `treasury_decisions.json`.
+   3 duplicate zones, applies safe OCR fixes. Backup: `…raw-ocr.md`.
+2. `proofread.py` — Stage-2 proofreading. `chunk` → `proofread_chunks/` (57 pieces); a multi-agent
+   **workflow** wrote exact before→after edits; `apply` applies `proofread_edits.json` +
+   `proofread_recovery.json` (global unique-match fixes) with a hallucination guardrail
+   (`_suspicious`; bypass a vetted edit with `"force":true`; `"all":true` = replace-all).
+   ~1,230 fixes applied incl. 52+ handwriting removals. Pre-proofread backup: `…pre-proofread.md`.
+   Do NOT run `proofread.py chunk` on an already-proofread MD (edits are keyed to clean-MD chunks).
+3. `build_register.py` — proofread MD → `link_register.md` + `link_register.json`. 11 sections:
+   cases (full "Name. Cite at pin (Year)" → Justia), USC/CFR → Cornell LII, Treasury Decisions
+   (from `../transcription-agent/TREASURY_DECISIONS.md`), Constitution + founding docs, IRS forms,
+   constitutional Article/Section/Clause, named Acts, Executive Orders, secondary authorities,
+   IRS/Treasury guidance docs. Curated `CASE_FIXES`, `ACT_URLS`, `FOUNDING`, `CFR §1.1-1`.
+4. `build_register_html.py` — `link_register.json` → `link_register.html` (styled like the edition).
+5. `build_html.py` — proofread MD + `link_register.json` → the HTML edition (+ `index.html` copy
+   for the clean `/book/` URL) + `treasury_decisions.json` sidecar.
 
-**Output:** `Book - Dave Champion - Income Tax - Shattering the Myths.html` (single self-contained file):
-- Sticky sidebar nav + a generated **Contents** (replaces the OCR dot-leader TOC; all links resolve).
-- Inline citation enrichment **driven by `link_register.json`** (433 links; verified the register
-  is the source, not re-derived — e.g. F-cites use the register's case-name query URLs).
-- **404 per-page PDF back-links** rendered as right-aligned `PDF p.N` pills (printed page →
-  physical PDF page via measured offsets: arabic +23, roman +11). 4 OCR-junk labels left unlinked.
-- Treasury Decision links resolved **at load time** from `treasury_decisions.json` (fetch), so the
-  mapping can update without rebuilding the HTML.
-- Validated: 0 broken in-page links, 0 unbalanced tags, 0 leaked dot-leaders.
+**Edition features:**
+- Centered title block + Table of Contents (DEDICATION style); TOC entries sized by seniority
+  (h1–h3 larger dark ink, h4–h5 smaller dark gold). ALL-CAPS section headers centered/enlarged.
+- ~559 inline citation links across 11 categories, colour-coded (legend in sidebar), **driven by
+  `link_register.json`**. A precedence engine resolves overlapping link rules and would highlight
+  conflicts (currently 0); report in `citation_conflicts.txt`.
+- ~404 per-page `PDF p.N` back-links (printed→physical page via offsets: arabic +23, roman +11).
+- Treasury-Decision links resolved **at load time** from `treasury_decisions.json` (fetch) — update
+  the mapping without rebuilding the HTML.
+- Validated each build: 0 broken in-page links, 0 unbalanced tags, 0 nested anchors, 0 dot-leaders.
 
 ### ⚠️ Known issues / debt (book edition)
-- **OCR proofreading pass is DONE** (hybrid: multi-agent workflow, 1,212 edits + 52 handwriting
-  removals, quotes preserved verbatim, structure intact). Residual: **26 edits missed** (agent's
-  `before` string didn't match exactly — those specific OCR errors remain; see `proofread_apply_log.json`).
-  The book still contains a small tail of OCR errors the agents didn't catch; a second sweep could
-  reduce it further but returns diminish.
-- **PDF back-links need the PDF served alongside the HTML.** The 16 MB PDF is currently untracked
-  in git, so on GitHub Pages those `#page=` links will 404 until the PDF is published (or the links
-  are pointed elsewhere).
-- **Dynamic TD + PDF links need HTTP** (GitHub Pages fine; opening via `file://` blocks the TD fetch).
-- Register still flags T.D. 2382 (cited in book, not yet in `TREASURY_DECISIONS.md` — owner to add)
-  and ~7 `verify` cases (F./parallel cites without deterministic URLs).
+- Small **tail of residual OCR errors** the proofread agents didn't catch (26 per-chunk misses were
+  recovered via `proofread_recovery.json`; more may remain). Fixed on request as spotted.
+- **Dynamic TD fetch + PDF back-links need HTTP** (GitHub Pages ✓; `file://` blocks the TD fetch).
+- Register flags T.D. 2382 (cited in book, not yet in `TREASURY_DECISIONS.md` — owner to add) and a
+  few `verify` cases (F./parallel cites without deterministic URLs). Acts without clean govt URLs
+  fall back to LoC Statutes at Large. Constitutional links are section-level (clause named in text).
+- **Copyright:** the book is © 2010 Dave Champion; the full text + PDF are published publicly per
+  the owner's direction.
 
-### Book edition — next steps
-- [ ] Dedicated typo / OCR-correction proofreading pass over the cleaned MD (fold fixes into `clean.py`).
-- [ ] Decide PDF-hosting for the live site (publish the PDF, or repoint page links).
-- [ ] Wire the book HTML into the site / `index.html`; confirm TD dynamic fetch + PDF links over HTTPS.
+### Book edition — next steps (optional)
+- [ ] Replace the placeholder root `index.html` with real home-page content.
+- [ ] Add T.D. 2382 to `../transcription-agent/TREASURY_DECISIONS.md`; recover more OCR tail if desired.
 
 ---
 

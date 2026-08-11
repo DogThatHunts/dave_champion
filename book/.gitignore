@@ -1,5 +1,7 @@
 # large / regenerable / scratch — not published
 *.pdf
+# ...except the source book PDF (published so the edition's page back-links resolve)
+!Book - Dave Champion - Income Tax - Shattering the Myths.pdf
 *.raw-ocr.md
 *.pre-proofread.md
 pdf_reference.txt
