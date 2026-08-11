@@ -169,6 +169,7 @@ TEMPLATE = """<!DOCTYPE html>
   }}
   header.hero h1 {{ margin:0 0 6px; font-size:2.05rem; line-height:1.2; color:#fff; border:0; }}
   header.hero p.sub {{ margin:8px 0 0; max-width:760px; color:#dcebff; font-size:1.02rem; }}
+  header.hero em {{ color:#fff; font-style:italic; }}
   header.hero .tag {{
     display:inline-block; margin-bottom:16px; padding:5px 13px; border-radius:999px;
     background:rgba(255,255,255,.16); color:#eaf3ff; font-size:.72rem;
@@ -207,6 +208,7 @@ TEMPLATE = """<!DOCTYPE html>
     color:#fff; text-align:left; font-weight:600; padding:12px 13px;
     position:sticky; top:0; vertical-align:bottom;
   }}
+  thead th strong, thead th em {{ color:#fff; }}
   tbody td {{ padding:11px 13px; border-top:1px solid var(--line); vertical-align:top; }}
   tbody tr:nth-child(odd) td {{ background:var(--accent); }}
   tbody tr:hover td {{ background:#d8e8fb; }}
@@ -239,7 +241,7 @@ TEMPLATE = """<!DOCTYPE html>
     <main>
 {body}
     </main>
-    <footer>Generated from Books_compared_legal_theory.md &middot; dave_champion</footer>
+    <footer>Generated from Books_compared_legal_theory.md</footer>
   </div>
 </body>
 </html>
