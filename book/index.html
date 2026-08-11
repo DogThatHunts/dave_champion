@@ -73,15 +73,21 @@ opacity:.65;cursor:default}
 .authtable{border-collapse:collapse;width:100%;max-width:var(--maxw);margin:1rem 0 1.6rem;font-size:.9rem}
 .authtable td{border-bottom:1px solid var(--rule);padding:.35rem .6rem;vertical-align:top}
 .authtable td:first-child{color:var(--muted);white-space:nowrap;width:1%;font-family:'Inter',sans-serif;font-size:.82rem}
-.toc-block{background:var(--paper);border:1px solid var(--rule);border-radius:8px;padding:1rem 1.4rem;margin:1.2rem 0 2rem}
-.toc-block h2{margin:.2rem 0 .6rem;font-size:1.2rem}
-.toc-list{list-style:none;padding:0;margin:0;font-family:'Inter',system-ui,sans-serif;font-size:.92rem}
-.toc-list li{margin:.15rem 0}
-.toc-list a{text-decoration:none;color:#3f382f}
+.titleblock{max-width:var(--maxw);text-align:center;font-family:'Playfair Display',Georgia,serif;margin:0 auto}
+.titleblock.booktitle{font-size:2rem;line-height:1.15;margin:1.5rem auto .3rem}
+.titleblock.byline{font-size:1.1rem;color:#5b5348;margin:.2rem auto}
+.titleblock.copyright{font-size:1rem;color:#5b5348;margin:.2rem auto 1.6rem}
+.toc-block{background:var(--paper);border:1px solid var(--rule);border-radius:8px;padding:1.2rem 1.4rem;margin:1.2rem auto 2rem;max-width:var(--maxw)}
+.toc-list{list-style:none;padding:0;margin:0;text-align:center;font-family:'Playfair Display',Georgia,serif}
+.toc-list li{margin:.28rem 0}
+.toc-list a{text-decoration:none;color:inherit}
 .toc-list a:hover{color:var(--link);text-decoration:underline}
-.toc-list .lvl1,.toc-list .lvl2,.toc-list .lvl3{font-weight:600;margin-top:.35rem}
-.toc-list .lvl4{padding-left:1.1rem}
-.toc-list .lvl5{padding-left:2.1rem;font-style:italic}
+/* two-tier by heading level, consistent throughout: senior (h1-h3) larger; junior (h4-h5) smaller, dark gold */
+.toc-list .lvl1{font-size:1.28rem;font-weight:700;color:#241f1a;margin-top:.5rem}
+.toc-list .lvl2{font-size:1.18rem;font-weight:700;color:#241f1a;margin-top:.45rem}
+.toc-list .lvl3{font-size:1.14rem;font-weight:600;color:#241f1a;margin-top:.4rem}
+.toc-list .lvl4{font-size:.98rem;font-weight:600;color:#8a6d1a}
+.toc-list .lvl5{font-size:.9rem;font-style:italic;color:#8a6d1a}
 #menu-btn{display:none;position:fixed;top:.6rem;left:.6rem;z-index:20;background:var(--paper);
 border:1px solid var(--rule);border-radius:6px;font-size:1.2rem;padding:.25rem .55rem;cursor:pointer}
 #totop{position:fixed;right:1rem;bottom:1rem;background:var(--link);color:#fff;text-decoration:none;
@@ -142,9 +148,9 @@ The blue <span style="background:#0b5c8a;color:#fff;border-radius:3px;padding:0 
 tags in the right margin open that page of the source PDF.</div>
 </aside>
 <main>
-<p><strong>Income Tax: Shattering The Myths</strong></p>
-<p><em>by Dave Champion</em></p>
-<p><strong>Copyright © 2010 by Dave Champion</strong></p>
+<p class="titleblock booktitle"><strong>Income Tax: Shattering The Myths</strong></p>
+<p class="titleblock byline"><em>by Dave Champion</em></p>
+<p class="titleblock copyright"><strong>Copyright © 2010 by Dave Champion</strong></p>
 <p>All rights reserved. No part of this book may be used or reproduced by any means, graphic, electronic, or mechanical, including photocopying, recording, taping or by any information storage retrieval system without the written permission of the publisher except in the case of brief quotations embodied in critical articles or reviews.</p>
 <p>Because of the dynamic nature of the Internet, any web addresses or links contained in this book may have changed since its publication and may no longer be valid.</p>
 <p><strong>Second Printing: March, 2012</strong></p>
@@ -166,8 +172,8 @@ tags in the right margin open that page of the source PDF.</div>
 <p>government. Others want a different America. Their America is not an America of freedom and liberty.</p>
 <p>Do I intend harm to the United States? Well, that depends on how you define &quot;United States”. If the United States means the collective citizenry of the states of the Union, then I mean to restore a greater degree of freedom and liberty to you, your children, and your grandchildren. If “United States” means the felonious and unconstitutional rape of the American people by power-hungry government officials, then yes, I mean this book to do them harm.</p>
 <p><strong>A long habit</strong> <em>of not thinking a thing wrong gives</em> <strong>it a</strong> <em>superficial appearance of being right. Thomas Paine</em></p>
-<h3 id="table-of-contents">Table of Contents</h3>
-<nav class="toc-block" aria-label="Contents"><h2>Contents</h2><ol class="toc-list">
+<h6 id="table-of-contents">Table of Contents</h6>
+<nav class="toc-block" aria-label="Contents"><ol class="toc-list">
 <li class="lvl4"><a href="#introduction">Introduction</a></li>
 <li class="lvl4"><a href="#how-to-read-this-book">How To Read This Book</a></li>
 <li class="lvl4"><a href="#revision-notes-2025">Revision notes (2025)</a></li>

@@ -213,7 +213,7 @@ for i,l in enumerate(lines):
         if lvl<=5: heads.append((lvl,txt,sg))
 
 def contents_html():
-    out=['<nav class="toc-block" aria-label="Contents"><h2>Contents</h2><ol class="toc-list">']
+    out=['<nav class="toc-block" aria-label="Contents"><ol class="toc-list">']
     for lvl,txt,sg in heads:
         if txt.lower()=="table of contents": continue
         out.append(f'<li class="lvl{lvl}"><a href="#{sg}">{html.escape(txt)}</a></li>')
@@ -261,14 +261,26 @@ def flush_table():
             body.append('<table class="authtable">'+"".join(rows)+"</table>")
         table_buf=[]
 
+title_done=False
 for i,l in enumerate(lines):
     s=l.strip()
+
+    # title block (title / byline / copyright) -> centered, DEDICATION-style treatment
+    if not title_done and s:
+        n=strip_md(s)
+        if n=="Income Tax: Shattering The Myths":
+            flush_para(); body.append(f'<p class="titleblock booktitle">{inline(s)}</p>'); continue
+        if n.lower().startswith("by ") and "Dave Champion" in n:
+            flush_para(); body.append(f'<p class="titleblock byline">{inline(s)}</p>'); continue
+        if n.lower().startswith("copyright"):
+            flush_para(); body.append(f'<p class="titleblock copyright">{inline(s)}</p>')
+            title_done=True; continue
 
     # emit generated Contents at the TOC heading, then drop the whole OCR TOC region
     if i==toc_line:
         flush_para(); flush_list(); flush_table()
         lvl,txt,sg=head_slug[i]
-        body.append(f'<h{min(lvl,3)} id="{sg}">{html.escape(txt)}</h{min(lvl,3)}>')
+        body.append(f'<h6 id="{sg}">{html.escape(txt)}</h6>')   # same style as DEDICATION/DISCLAIMER
         body.append(contents_html())
         continue
     if toc_line is not None and intro_line is not None and toc_line < i < intro_line:
@@ -413,15 +425,21 @@ opacity:.65;cursor:default}
 .authtable{border-collapse:collapse;width:100%;max-width:var(--maxw);margin:1rem 0 1.6rem;font-size:.9rem}
 .authtable td{border-bottom:1px solid var(--rule);padding:.35rem .6rem;vertical-align:top}
 .authtable td:first-child{color:var(--muted);white-space:nowrap;width:1%;font-family:'Inter',sans-serif;font-size:.82rem}
-.toc-block{background:var(--paper);border:1px solid var(--rule);border-radius:8px;padding:1rem 1.4rem;margin:1.2rem 0 2rem}
-.toc-block h2{margin:.2rem 0 .6rem;font-size:1.2rem}
-.toc-list{list-style:none;padding:0;margin:0;font-family:'Inter',system-ui,sans-serif;font-size:.92rem}
-.toc-list li{margin:.15rem 0}
-.toc-list a{text-decoration:none;color:#3f382f}
+.titleblock{max-width:var(--maxw);text-align:center;font-family:'Playfair Display',Georgia,serif;margin:0 auto}
+.titleblock.booktitle{font-size:2rem;line-height:1.15;margin:1.5rem auto .3rem}
+.titleblock.byline{font-size:1.1rem;color:#5b5348;margin:.2rem auto}
+.titleblock.copyright{font-size:1rem;color:#5b5348;margin:.2rem auto 1.6rem}
+.toc-block{background:var(--paper);border:1px solid var(--rule);border-radius:8px;padding:1.2rem 1.4rem;margin:1.2rem auto 2rem;max-width:var(--maxw)}
+.toc-list{list-style:none;padding:0;margin:0;text-align:center;font-family:'Playfair Display',Georgia,serif}
+.toc-list li{margin:.28rem 0}
+.toc-list a{text-decoration:none;color:inherit}
 .toc-list a:hover{color:var(--link);text-decoration:underline}
-.toc-list .lvl1,.toc-list .lvl2,.toc-list .lvl3{font-weight:600;margin-top:.35rem}
-.toc-list .lvl4{padding-left:1.1rem}
-.toc-list .lvl5{padding-left:2.1rem;font-style:italic}
+/* two-tier by heading level, consistent throughout: senior (h1-h3) larger; junior (h4-h5) smaller, dark gold */
+.toc-list .lvl1{font-size:1.28rem;font-weight:700;color:#241f1a;margin-top:.5rem}
+.toc-list .lvl2{font-size:1.18rem;font-weight:700;color:#241f1a;margin-top:.45rem}
+.toc-list .lvl3{font-size:1.14rem;font-weight:600;color:#241f1a;margin-top:.4rem}
+.toc-list .lvl4{font-size:.98rem;font-weight:600;color:#8a6d1a}
+.toc-list .lvl5{font-size:.9rem;font-style:italic;color:#8a6d1a}
 #menu-btn{display:none;position:fixed;top:.6rem;left:.6rem;z-index:20;background:var(--paper);
 border:1px solid var(--rule);border-radius:6px;font-size:1.2rem;padding:.25rem .55rem;cursor:pointer}
 #totop{position:fixed;right:1rem;bottom:1rem;background:var(--link);color:#fff;text-decoration:none;
