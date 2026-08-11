@@ -2,6 +2,7 @@
 """Render link_register.json -> link_register.html, styled to match the book edition.
 Regenerate whenever the register changes (kept in sync with the JSON source of truth)."""
 import json, html
+from urllib.parse import quote
 
 REG = json.load(open("link_register.json", encoding="utf-8"))
 
@@ -52,8 +53,21 @@ for key, title, cls, prim, cols in SECTIONS:
     body.append(f'<table><thead><tr><th>{esc(PRIM_HEADER.get(prim,"Citation"))}</th>{heads}</tr></thead><tbody>')
     for it in items:
         url = it.get("url","")
+        local = it.get("local_path","")
         label = esc(it.get(prim,""))
-        link = f'<a class="cite {cls}" href="{esc(url)}" target="_blank" rel="noopener">{label}</a>' if url else label
+        # Prefer the local source document when we have one; keep the external
+        # URL as a secondary link. Notes (e.g. possible mislabels) render inline.
+        if local:
+            href = quote(local)
+            link = (f'<a class="cite {cls}" href="{href}">{label}</a>'
+                    f'<span class="src"> · local copy · '
+                    f'<a href="{esc(url)}" target="_blank" rel="noopener">external</a></span>')
+        elif url:
+            link = f'<a class="cite {cls}" href="{esc(url)}" target="_blank" rel="noopener">{label}</a>'
+        else:
+            link = label
+        if it.get("note"):
+            link += f'<span class="note">⚠ {esc(it["note"])}</span>'
         tds = "".join(f"<td>{cell(it.get(f), kind)}</td>" for f,_,kind in cols)
         body.append(f"<tr><td>{link}</td>{tds}</tr>")
     body.append("</tbody></table></section>")
@@ -84,6 +98,9 @@ td:nth-child(n+2){font-family:'Inter',sans-serif;font-size:.82rem;color:#5b5348;
 .cite.case{color:#0b5c8a}.cite.stat,.cite.reg{color:#5a3d8a}.cite.const{color:#1d6b45}
 .cite.td{color:#a05a00}.cite.form{color:#7a1f1f}.cite.act{color:#0b6b5e}.cite.eo{color:#8a5a00}.cite.secondary{color:#555}
 .cite:hover{background:#eee}
+.src{font-family:'Inter',sans-serif;font-size:.7rem;color:var(--muted)}
+.src a{color:var(--muted)}
+.note{display:block;font-family:'Inter',sans-serif;font-size:.72rem;color:#a05a00;margin-top:.15rem;white-space:normal}
 @media(max-width:860px){.wrap{grid-template-columns:1fr}#sidebar{position:static;height:auto}td:nth-child(n+2){white-space:normal}}
 """
 
@@ -100,7 +117,7 @@ out = f"""<!doctype html>
 <aside id="sidebar">
 <h1>Link Register</h1>
 <div class="sub">Income Tax: Shattering The Myths</div>
-<a class="home" href="./">← Back to the interactive edition</a>
+<a class="home" href="../book/">← Back to the interactive edition</a>
 <ul class="nav-list">
 {nav_html}
 </ul>

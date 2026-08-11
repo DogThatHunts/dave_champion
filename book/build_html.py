@@ -30,7 +30,7 @@ try:
             td_map[mnum.group(1)] = urls[-1]
 except FileNotFoundError:
     pass
-json.dump(td_map, open("treasury_decisions.json", "w", encoding="utf-8"), indent=2)
+json.dump(td_map, open("../citations/treasury_decisions.json", "w", encoding="utf-8"), indent=2)
 
 # ---------- helpers ----------
 def roman_to_int(s):
@@ -83,7 +83,7 @@ def rk(s):  # register key normaliser
     return re.sub(r"[^a-z0-9]+","",s.lower())
 reg_url={}      # (kind, key) -> url
 try:
-    REG=json.load(open("link_register.json",encoding="utf-8"))
+    REG=json.load(open("../citations/link_register.json",encoding="utf-8"))
     for e in REG.get("scotus_and_courts",[]):
         reg_url[("case",rk(e["cite"]))]=e["url"]
     for e in REG.get("usc_title26_irc",[]):
@@ -479,7 +479,7 @@ const tt=document.getElementById('totop');
 addEventListener('scroll',()=>{tt.style.display=scrollY>600?'flex':'none';});
 // DYNAMIC Treasury Decision links: resolve href from the sidecar mapping at load time,
 // so updates to treasury_decisions.json take effect without rebuilding this HTML.
-fetch('treasury_decisions.json').then(r=>r.ok?r.json():{}).then(m=>{
+fetch('../citations/treasury_decisions.json').then(r=>r.ok?r.json():{}).then(m=>{
  document.querySelectorAll('a.cite.td[data-td]').forEach(a=>{
   const u=m[a.dataset.td]; if(u) a.href=u;});
 }).catch(()=>{});
@@ -502,7 +502,7 @@ htmlout = f"""<!doctype html>
 <aside id="sidebar">
 <h1>Income Tax:<br>Shattering The Myths</h1>
 <div class="byline">Dave Champion — interactive edition</div>
-<div class="byline"><a href="link_register.html" style="color:var(--link);text-decoration:none">Link register →</a></div>
+<div class="byline"><a href="../citations/link_register.html" style="color:var(--link);text-decoration:none">Link register →</a></div>
 {sidebar}
 <div class="legend"><b>Link colours:</b> <span style="color:#0b5c8a">cases</span>,
 <span style="color:#5a3d8a">statutes / regs</span>, <span style="color:#1d6b45">Constitution</span>,

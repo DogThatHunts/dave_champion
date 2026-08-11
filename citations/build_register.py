@@ -6,7 +6,7 @@ import re, json, sys
 from collections import defaultdict, OrderedDict
 from urllib.parse import quote
 
-MD = "Book - Dave Champion - Income Tax - Shattering the Myths.md"
+MD = "../book/Book - Dave Champion - Income Tax - Shattering the Myths.md"
 text = open(MD, encoding="utf-8").read()
 
 # ---- page-anchor tracking: map char offset -> nearest preceding page label ----
@@ -308,6 +308,23 @@ try:
             td_map[mnum.group(1)] = urls[-1]
 except FileNotFoundError:
     pass
+
+# Local source documents: prefer a locally-stored copy when we have one.
+# Scanned from citations/treasury_decisions/td_<num>/*.pdf (relative to this script).
+# We record BOTH the local path and the external URL (dual-link) for now.
+import os
+TD_LOCAL_DIR = "treasury_decisions"
+# Known caveats about the local scans (surfaced in the register, not silently trusted).
+TD_LOCAL_NOTES = {
+    "2815": "Local copy may actually be T.D. 2816 (possible filing/scan mislabel) — verify before relying on it.",
+}
+def td_local_path(num):
+    """Return the relative path to a locally-stored TD PDF, or None."""
+    d = os.path.join(TD_LOCAL_DIR, f"td_{num}")
+    if not os.path.isdir(d):
+        return None
+    pdfs = sorted(f for f in os.listdir(d) if f.lower().endswith(".pdf"))
+    return os.path.join(d, pdfs[0]) if pdfs else None
 out["treasury_decisions"] = []
 # general reference: Treasury Decisions are published by the IRS in the Internal Revenue Bulletin
 _td_general = len(re.findall(r"Treasury Decisions", text))
@@ -319,11 +336,20 @@ if _td_general:
 for k,v in sorted(td.items(), key=lambda kv:-kv[1]["count"]):
     num = k.replace("T.D.", "").strip()
     url = td_map.get(num)
+    local = td_local_path(num)
     entry = {"cite":k, "occurrences":v["count"], "pages":pset(v["pages"]),
              "in_mapping_file": url is not None,
              "url": url or f"https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+{num}%22;a=srchls;lmt=ft"}
+    if local:
+        # prefer the local source document; keep the external URL as a secondary link
+        entry["local_path"] = local
+    notes = []
     if url is None:
-        entry["note"] = "NOT YET in TREASURY_DECISIONS.md — add it there; fallback is a HathiTrust search."
+        notes.append("NOT YET in TREASURY_DECISIONS.md — add it there; fallback is a HathiTrust search.")
+    if num in TD_LOCAL_NOTES:
+        notes.append(TD_LOCAL_NOTES[num])
+    if notes:
+        entry["note"] = " ".join(notes)
     out["treasury_decisions"].append(entry)
 out["constitution"] = [
     {"ref":k, "url":v.get("url") or const_url(k), "occurrences":v["count"]}
@@ -383,15 +409,22 @@ for c in out["cfr"]:
     L.append(f"| {c['cite']} | {c['occurrences']} | {pgs} | [link]({c['url']}) |")
 
 L.append("\n## 4. Treasury Decisions (T.D.)\n")
-L.append("_URLs are sourced from the shared mapping `transcription-agent/TREASURY_DECISIONS.md` "
-         "(single source of truth, updated over time). Rows marked **add to mapping** are cited "
-         "in this book but not yet in that file._\n")
-L.append("| T.D. | Occ. | Pages | Status | Link |")
+L.append("_External URLs are sourced from the shared mapping `transcription-agent/TREASURY_DECISIONS.md` "
+         "(single source of truth, updated over time). Where a **local copy** is stored under "
+         "`citations/treasury_decisions/td_<num>/`, it is the primary source and the external link is kept "
+         "as a secondary. Rows marked **add to mapping** are cited in this book but not yet in that file._\n")
+L.append("| T.D. | Occ. | Pages | Status | Source |")
 L.append("|---|---:|---|---|---|")
 for c in out["treasury_decisions"]:
     pgs=", ".join(c["pages"][:6])
     status = "in mapping" if c["in_mapping_file"] else "**add to mapping**"
-    L.append(f"| {c['cite']} | {c['occurrences']} | {pgs} | {status} | [link]({c['url']}) |")
+    if c.get("local_path"):
+        src = f"[local copy]({quote(c['local_path'])}) · [external]({c['url']})"
+    else:
+        src = f"[link]({c['url']})"
+    if c.get("note"):
+        src += f"<br>⚠ {c['note']}"
+    L.append(f"| {c['cite']} | {c['occurrences']} | {pgs} | {status} | {src} |")
 
 L.append("\n## 5. Constitution & founding documents\n")
 L.append("_Constitution refs link to the Constitution Annotated; founding documents (e.g. the Declaration of Independence) link to the National Archives._\n")

@@ -1679,7 +1679,8 @@
         "136"
       ],
       "in_mapping_file": true,
-      "url": "https://www.irs.gov/pub/irs-regs/td8734.txt"
+      "url": "https://www.irs.gov/pub/irs-regs/td8734.txt",
+      "local_path": "treasury_decisions/td_8734/T.D. 8734-Cumulative Bulletin 1997-44.pdf"
     },
     {
       "cite": "T.D. 2313",
@@ -1691,7 +1692,8 @@
         "154"
       ],
       "in_mapping_file": true,
-      "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2313%22;a=srchls;lmt=ft"
+      "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2313%22;a=srchls;lmt=ft",
+      "local_path": "treasury_decisions/td_2313/TD 2313.pdf"
     },
     {
       "cite": "T.D. 1928",
@@ -1711,7 +1713,8 @@
         "158"
       ],
       "in_mapping_file": true,
-      "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+6500%22;a=srchls;lmt=ft"
+      "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+6500%22;a=srchls;lmt=ft",
+      "local_path": "treasury_decisions/td_6500/TD 6500.pdf"
     },
     {
       "cite": "T.D. 2401",
@@ -1729,7 +1732,9 @@
         "155"
       ],
       "in_mapping_file": true,
-      "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2815%22;a=srchls;lmt=ft"
+      "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2815%22;a=srchls;lmt=ft",
+      "local_path": "treasury_decisions/td_2815/TD 2815 - Form 1040 for nonresident aliens and their agents.pdf",
+      "note": "Local copy may actually be T.D. 2816 (possible filing/scan mislabel) — verify before relying on it."
     },
     {
       "cite": "T.D. 2988",
