@@ -10,3 +10,4 @@ cleanup_report.txt
 __pycache__/
 *.pyc
 *_Kimi.html
+citation_conflicts.txt
