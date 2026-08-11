@@ -94,5 +94,39 @@
  {
   "before": "Article I. Section 8. Clause 1",
   "after": "Article I, Section 8, Clause 1"
+ },
+ {
+  "before": "• Is contracting your labor to another a right",
+  "after": "Is contracting your labor to another a right"
+ },
+ {
+  "before": "- / Remember this regulation?",
+  "after": "Remember this regulation?"
+ },
+ {
+  "before": "- \\ l.l-l(a) - Section I of the Code imposes an income tax on the income ) of every individual who is a citizen or resident of the United States and, | to the extent provided by section 871(b) or 877(b), on the income of a ^nonresident alien individual.",
+  "after": "1.1-1(a) - Section 1 of the Code imposes an income tax on the income of every individual who is a citizen or resident of the United States and, to the extent provided by section 871(b) or 877(b), on the income of a nonresident alien individual."
+ },
+ {
+  "before": "l.l-l",
+  "after": "1.1-1",
+  "all": true
+ },
+ {
+  "before": "1 .l-l",
+  "after": "1.1-1",
+  "all": true
+ },
+ {
+  "before": "A/o e i _14 S etc_ \n\n",
+  "after": ""
+ },
+ {
+  "before": "Section I of the Code imposes an income tax on the income ofevery",
+  "after": "Section 1 of the Code imposes an income tax on the income of every"
+ },
+ {
+  "before": "\n\n**»6** \n\n",
+  "after": "\n\n"
  }
 ]

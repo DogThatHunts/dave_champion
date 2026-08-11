@@ -114,6 +114,7 @@ ACT=re.compile(r"\b((?:[A-Z][A-Za-z'\-]+\s+){0,4}"
     r"Contribution|Contributions|Unemployment|Patriot|Income\s+Tax|Corporation\s+Tax)\s+Act)"
     r"(?:\s+of\s+\d{4}|\s+\[\d{4}\])?")
 EO=re.compile(r"(?:Executive\s+Order|E\.?\s?O\.?)\s*(?:No\.?\s*)?(\d{4,5})")
+REG11=re.compile(r"\b1\.1-1(?:\([a-z]\))?")   # bare CFR reg cite written without a "CFR" prefix
 SECONDARY=re.compile(r"(Black|Bouvier)['’]s Law Dictionary")
 LOC_STATUTES="https://www.loc.gov/collections/united-states-statutes-at-large/"
 SECONDARY_URL={"black":"https://thelawdictionary.org/",
@@ -140,6 +141,8 @@ def _cfr_b(m):
     title,part=m.group(1),m.group(2)
     fb=f"https://www.law.cornell.edu/cfr/text/{title}"+(f"/{part}" if part else "")
     return A(look("cfr",f"{title} CFR"+(f" §{part}" if part else ""),fb),"reg",m.group(0))
+def _reg11_b(m):
+    return A("https://www.law.cornell.edu/cfr/text/26/1.1-1","reg",m.group(0))
 def _amend_b(m):
     return A(look("const",m.group(1)+" Amendment",
         "https://constitution.congress.gov/constitution/"+AMAP[m.group(1).lower()]+"/"),"const",m.group(0))
@@ -161,7 +164,7 @@ def _sec_b(m):
 
 # priority order (first = most specific / wins overlaps)
 RULES=[("const_clause",CLAUSE,_clause_b),("case",CASE_US,_caseus_b),("case",CASE_F,_casef_b),
-       ("cfr",CFR,_cfr_b),("usc",USC,_usc_b),("amendment",AMEND,_amend_b),("td",TD,_td_b),
+       ("reg",REG11,_reg11_b),("cfr",CFR,_cfr_b),("usc",USC,_usc_b),("amendment",AMEND,_amend_b),("td",TD,_td_b),
        ("act",ACT,_act_b),("eo",EO,_eo_b),("form",FORM,_form_b),("secondary",SECONDARY,_sec_b)]
 CONFLICTS=[]   # (text, winner_rule, [competing_rules])
 

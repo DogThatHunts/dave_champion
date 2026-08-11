@@ -96,10 +96,13 @@ def do_apply():
     if os.path.exists(RECOVERY):
         for e in json.load(open(RECOVERY)):
             b, a = e["before"], e["after"]
-            if corrected.count(b) == 1:
+            cnt = corrected.count(b)
+            if e.get("all") and cnt >= 1:
+                corrected = corrected.replace(b, a); rec_applied += cnt
+            elif cnt == 1:
                 corrected = corrected.replace(b, a); rec_applied += 1
             else:
-                rec_skipped += 1; log.append(("recovery", f"count={corrected.count(b)}", "", b[:60]))
+                rec_skipped += 1; log.append(("recovery", f"count={cnt}", "", b[:60]))
     open(MD, "w", encoding="utf-8").write(corrected)
     json.dump(log, open("proofread_apply_log.json","w"), indent=2)
     print(f"applied {applied}, skipped {skipped}, FLAGGED {flagged}; "

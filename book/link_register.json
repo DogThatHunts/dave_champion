@@ -3,7 +3,7 @@
     {
       "cite": "481 U.S. 465",
       "case_name": "Meese v. Keene",
-      "full_citation": "Meese v. Keene. 481 U.S. 465 (1987)",
+      "full_citation": "Meese v. Keene. 481 U.S. 465 at 484 (1987)",
       "year": "1987",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/481/465/",
@@ -18,7 +18,7 @@
     {
       "cite": "439 U.S. 379",
       "case_name": "Colautti v. Franklin",
-      "full_citation": "Colautti v. Franklin. 439 U.S. 379 (1979)",
+      "full_citation": "Colautti v. Franklin. 439 U.S. 379 at 392 (1979)",
       "year": "1979",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/439/379/",
@@ -34,7 +34,7 @@
     {
       "cite": "57 F.2d 877",
       "case_name": "American Airways, Inc. v. Wallace",
-      "full_citation": "American Airways, Inc. v. Wallace. 57 F.2d 877 (1932)",
+      "full_citation": "American Airways, Inc. v. Wallace. 57 F.2d 877 at 880 (1932)",
       "year": "1932",
       "court": "Federal court",
       "url": "https://www.courtlistener.com/?q=American%20Airways%2C%20Inc.%20v.%20Wallace%2057%20F.2d%20877",
@@ -64,7 +64,7 @@
     {
       "cite": "252 U.S. 189",
       "case_name": "Eisner v. Macomber",
-      "full_citation": "Eisner v. Macomber. 252 U.S. 189 (1920)",
+      "full_citation": "Eisner v. Macomber. 252 U.S. 189 at 206 (1920)",
       "year": "1920",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/252/189/",
@@ -78,7 +78,7 @@
     {
       "cite": "3 U.S. 171",
       "case_name": "Hylton v. U.S",
-      "full_citation": "Hylton v. U.S. 3 U.S. 171 (1796)",
+      "full_citation": "Hylton v. U.S. 3 U.S. 171 at 176-177 (1796)",
       "year": "1796",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/3/171/",
@@ -251,7 +251,7 @@
     {
       "cite": "208 U.S. 161",
       "case_name": "Adair v. United States",
-      "full_citation": "Adair v. United States. 208 U.S. 161 (1908)",
+      "full_citation": "Adair v. United States. 208 U.S. 161 at 172 (1908)",
       "year": "1908",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/208/161/",
@@ -277,7 +277,7 @@
     {
       "cite": "192 U.S. 38",
       "case_name": "Benziger v. United States",
-      "full_citation": "Benziger v. United States. 192 U.S. 38 (1904)",
+      "full_citation": "Benziger v. United States. 192 U.S. 38 at 55 (1904)",
       "year": "1904",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/192/38/",
@@ -302,8 +302,8 @@
     },
     {
       "cite": "324 U.S. 652",
-      "case_name": "Supreme Court. In Hooven & Allison Co. v. Evatt",
-      "full_citation": "Supreme Court. In Hooven & Allison Co. v. Evatt. 324 U.S. 652 (1945)",
+      "case_name": "Hooven & Allison Co. v. Evatt",
+      "full_citation": "Hooven & Allison Co. v. Evatt. 324 U.S. 652 at 671 (1945)",
       "year": "1945",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/324/652/",
@@ -316,7 +316,7 @@
     {
       "cite": "111 U.S. 746",
       "case_name": "Butchers' Union Co. v. Crescent City Co.",
-      "full_citation": "Butchers' Union Co. v. Crescent City Co.. 111 U.S. 746 (1884)",
+      "full_citation": "Butchers' Union Co. v. Crescent City Co.. 111 U.S. 746 at 756-758 (1884)",
       "year": "1884",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/111/746/",
@@ -329,7 +329,7 @@
     {
       "cite": "809 F.2d 1427",
       "case_name": "United States v. Murphy",
-      "full_citation": "United States v. Murphy. 809 F.2d 1427",
+      "full_citation": "United States v. Murphy. 809 F.2d 1427 at 1430",
       "year": null,
       "court": "Federal court",
       "url": "https://www.courtlistener.com/?q=United%20States%20v.%20Murphy%20809%20F.2d%201427",
@@ -366,7 +366,7 @@
     {
       "cite": "141 U.S. 468",
       "case_name": "American Net & Twine Co. v. Worthington",
-      "full_citation": "American Net & Twine Co. v. Worthington. 141 U.S. 468",
+      "full_citation": "American Net & Twine Co. v. Worthington. 141 U.S. 468 at 474",
       "year": null,
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/141/468/",
@@ -390,7 +390,7 @@
     {
       "cite": "466 U.S. 475",
       "case_name": "United States v. Rodgers",
-      "full_citation": "United States v. Rodgers. 466 U.S. 475 (1984)",
+      "full_citation": "United States v. Rodgers. 466 U.S. 475 at 481-482 (1984)",
       "year": "1984",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/466/475/",
@@ -402,7 +402,7 @@
     {
       "cite": "361 U.S. 431",
       "case_name": "United States v. Mersky",
-      "full_citation": "United States v. Mersky. 361 U.S. 431 (1960)",
+      "full_citation": "United States v. Mersky. 361 U.S. 431 at 437-438 (1960)",
       "year": "1960",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/361/431/",
@@ -426,7 +426,7 @@
     {
       "cite": "282 U.S. 375",
       "case_name": "Fawcus Mach. Co. v United States",
-      "full_citation": "Fawcus Mach. Co. v United States. 282 U.S. 375 (1931)",
+      "full_citation": "Fawcus Mach. Co. v United States. 282 U.S. 375 at 378 (1931)",
       "year": "1931",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/282/375/",
@@ -438,7 +438,7 @@
     {
       "cite": "333 U.S. 496",
       "case_name": "Commissioner of Internal Revenue v. South Texas Lumber Co",
-      "full_citation": "Commissioner of Internal Revenue v. South Texas Lumber Co. 333 U.S. 496 (1948)",
+      "full_citation": "Commissioner of Internal Revenue v. South Texas Lumber Co. 333 U.S. 496 at 501 (1948)",
       "year": "1948",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/333/496/",
@@ -450,7 +450,7 @@
     {
       "cite": "416 U.S. 21",
       "case_name": "California Bankers Assn v. Shultz",
-      "full_citation": "California Bankers Assn v. Shultz. 416 U.S. 21 (1974)",
+      "full_citation": "California Bankers Assn v. Shultz. 416 U.S. 21 at 25 (1974)",
       "year": "1974",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/416/21/",
@@ -462,7 +462,7 @@
     {
       "cite": "441 U.S. 281",
       "case_name": "Chrysler Corporation v. Brown",
-      "full_citation": "Chrysler Corporation v. Brown. 441 U.S. 281 (1979)",
+      "full_citation": "Chrysler Corporation v. Brown. 441 U.S. 281 at 307-309 (1979)",
       "year": "1979",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/441/281/",
@@ -474,7 +474,7 @@
     {
       "cite": "530 U.S. 914",
       "case_name": "Stenberg v. Carhart",
-      "full_citation": "Stenberg v. Carhart. 530 U.S. 914 (2000)",
+      "full_citation": "Stenberg v. Carhart. 530 U.S. 914 at 942-943 (2000)",
       "year": "2000",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/530/914/",
@@ -486,7 +486,7 @@
     {
       "cite": "201 U.S. 43",
       "case_name": "Hale v. Henkel",
-      "full_citation": "Hale v. Henkel. 201 U.S. 43 (1906)",
+      "full_citation": "Hale v. Henkel. 201 U.S. 43 at 74 (1906)",
       "year": "1906",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/201/43/",
@@ -510,7 +510,7 @@
     {
       "cite": "282 U.S. 55",
       "case_name": "Crooks v. Harrelson",
-      "full_citation": "Crooks v. Harrelson. 282 U.S. 55 (1930)",
+      "full_citation": "Crooks v. Harrelson. 282 U.S. 55 at 58 (1930)",
       "year": "1930",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/282/55/",
@@ -522,7 +522,7 @@
     {
       "cite": "255 U.S. 257",
       "case_name": "United States v. Field",
-      "full_citation": "United States v. Field. 255 U.S. 257 (1921)",
+      "full_citation": "United States v. Field. 255 U.S. 257 at 262 (1921)",
       "year": "1921",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/255/257/",
@@ -534,7 +534,7 @@
     {
       "cite": "446 U.S. 156",
       "case_name": "City of Rome v. United States",
-      "full_citation": "City of Rome v. United States. 446 U.S. 156 (1980)",
+      "full_citation": "City of Rome v. United States. 446 U.S. 156 at 172 (1980)",
       "year": "1980",
       "court": "U.S. Supreme Court",
       "url": "https://supreme.justia.com/cases/federal/us/446/156/",
@@ -1395,9 +1395,21 @@
       "pages": []
     },
     {
+      "cite": "26 CFR §1.1-1(a)",
+      "url": "https://www.law.cornell.edu/cfr/text/26/1.1-1",
+      "occurrences": 8,
+      "pages": []
+    },
+    {
+      "cite": "26 CFR §1.1-1(b)",
+      "url": "https://www.law.cornell.edu/cfr/text/26/1.1-1",
+      "occurrences": 6,
+      "pages": []
+    },
+    {
       "cite": "26 CFR",
       "url": "https://www.law.cornell.edu/cfr/text/26",
-      "occurrences": 6,
+      "occurrences": 5,
       "pages": [
         "111",
         "409",
@@ -1434,6 +1446,15 @@
       ]
     },
     {
+      "cite": "26 CFR §1.1-1",
+      "url": "https://www.law.cornell.edu/cfr/text/26/1.1-1",
+      "occurrences": 3,
+      "pages": [
+        "408",
+        "409"
+      ]
+    },
+    {
       "cite": "27 CFR §72.11",
       "url": "https://www.law.cornell.edu/cfr/text/27/72.11",
       "occurrences": 2,
@@ -1449,14 +1470,6 @@
       "pages": [
         "360",
         "409"
-      ]
-    },
-    {
-      "cite": "26 CFR §1.1-1",
-      "url": "https://www.law.cornell.edu/cfr/text/26/1.1-1",
-      "occurrences": 2,
-      "pages": [
-        "408"
       ]
     },
     {
@@ -2221,6 +2234,28 @@
       "work": "Black's Law Dictionary",
       "url": "https://thelawdictionary.org/",
       "occurrences": 3
+    }
+  ],
+  "irs_treasury_documents": [
+    {
+      "document": "Internal Revenue Manual",
+      "url": "https://www.irs.gov/irm",
+      "occurrences": 8
+    },
+    {
+      "document": "Cumulative Bulletin",
+      "url": "https://www.irs.gov/internal-revenue-bulletins",
+      "occurrences": 1
+    },
+    {
+      "document": "Treasury Orders",
+      "url": "https://home.treasury.gov/about/general-information/orders-and-directives",
+      "occurrences": 9
+    },
+    {
+      "document": "IRS Determination Letters",
+      "url": "https://www.irs.gov/individuals/understanding-your-irs-notice-or-letter",
+      "occurrences": 1
     }
   ]
 }

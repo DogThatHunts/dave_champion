@@ -1300,13 +1300,13 @@ I’ve often referred to the Regulations as that which “puts the meat on the b
 
 <!-- page: 57 -->
 
-1 .l-l(a) - Section 1 of the Code imposes an income tax on the income of every individual who is a citizen or resident of the United States and, to the extent provided by section 871(b) or 877(b), on the income of a nonresident alien individual. The tax imposed is upon taxable income. 
+1.1-1(a) - Section 1 of the Code imposes an income tax on the income of every individual who is a citizen or resident of the United States and, to the extent provided by section 871(b) or 877(b), on the income of a nonresident alien individual. The tax imposed is upon taxable income. 
 
 **l** (b).l- In general, all citizens of the United States, wherever resident, and all resident alien individuals are liable to the income taxes imposed by the Code whether the income is received from sources within or without the United States. 
 
 Does this regulation provide any additional clarity or certainty? Not much. It is nearly as vague as the statute. 
 
-Section l.l-l(a) tells us that an income tax is imposed “on the income of every individual who is a citizen or resident of the United States.” This statement begs far more questions than it offers clarity. 
+Section 1.1-1(a) tells us that an income tax is imposed “on the income of every individual who is a citizen or resident of the United States.” This statement begs far more questions than it offers clarity. 
 
 Let’s see how this breaks down. 
 
@@ -1346,7 +1346,7 @@ Again, I remind you that these are not things you can simply presume. The law mu
 
 I should also draw your attention to the use of the phrase “specific individuals” in the restructured example of 1.1-1 (above). That phrase is significant because “individual" has been modified with “specific”. Synonyms for specific are: distinct, special, peculiar, specified, different, appropriate, exclusive, particular, etc. In other words, if the Secretary wanted to let you know the actual meaning of **1** .1- he would have said the tax is imposed on _certain_ “specific individuals” who are distinct from the general population by virtue of some identifiable _particular._ But of course the Secretary is doing everything he can here to be intentionally vague. We’ll find out soon enough where he gets specific! 
 
-The next issue I’d like to draw your attention to is that l.l-l(a) speaks (in vague terms) about those upon whom the tax has been _imposed,_ and l.l-l(b) speaks (also in vague terms) about those who have been made _liable_ for the tax. 
+The next issue I’d like to draw your attention to is that 1.1-1(a) speaks (in vague terms) about those upon whom the tax has been _imposed,_ and 1.1-1(b) speaks (also in vague terms) about those who have been made _liable_ for the tax. 
 
 These two sections - nearly identical, yet wholly different - are necessary, because the federal income tax is one of the few taxes in this country in which the tax can be imposed on one person, but another person is made liable for paying the tax and filing the return for the person upon whom the tax was imposed! 
 
@@ -1918,7 +1918,7 @@ Despite what the government might like us to believe, an American citizen exerci
 
 - Is earning a living a right? Yes; so says the U.S. Supreme Court. 
 
-- • Is contracting your labor to another a right? Yes; so says the U.S. Supreme Court. 
+- Is contracting your labor to another a right? Yes; so says the U.S. Supreme Court. 
 
 - Is contracting with another for his/her labor a right? Yes; so says the U.S. Supreme Court. 
 
@@ -1928,19 +1928,19 @@ Since every money-earning activity in the private sector involves at least one o
 
 As we discussed previously, the statutes and regulations are not terribly specific concerning whom the tax is imposed upon and under what circumstances. 
 
-- / Remember this regulation? 
+Remember this regulation? 
 
-- \ l.l-l(a) - Section I of the Code imposes an income tax on the income ) of every individual who is a citizen or resident of the United States and, | to the extent provided by section 871(b) or 877(b), on the income of a ^nonresident alien individual. 
+1.1-1(a) - Section 1 of the Code imposes an income tax on the income of every individual who is a citizen or resident of the United States and, to the extent provided by section 871(b) or 877(b), on the income of a nonresident alien individual. 
 
 The tax imposed is upon taxable income. As we established earlier, this section provides nowhere near the specificity required to know whom the tax has been imposed upon and under what circumstances. 
 
-Let’s also look again at: l.l-l(b) - In general, all citizens of the United States, wherever resident, and all resident alien individuals are liable to the income taxes imposed by the Code whether the income is received from sources within or without the United States. 
+Let’s also look again at: 1.1-1(b) - In general, all citizens of the United States, wherever resident, and all resident alien individuals are liable to the income taxes imposed by the Code whether the income is received from sources within or without the United States. 
 
 <!-- page: 94 -->
 
 Here we start to get a bit of specificity. I was unable to show you this tidbit of specificity in the earlier chapter because you didn’t yet have the foundation to understand it. Now we can cover it! 
 
-In l.l-l(b) we see the following two classes: 
+In 1.1-1(b) we see the following two classes: 
 
 _J_ “...citizens of the United States, wherever resident...” and; 
 
@@ -1949,8 +1949,6 @@ _J_ “...all resident alien individuals are liable to the income taxes imposed 
 So what are we to derive from the specificity of the language the Secretary has chosen? 
 
 First, as discussed earlier, an individual is a “resident” - for the purposes of U.S. tax law - if he is residing in a country other than the one with which he has citizenship. That means that in this regulation the Secretary has given us a critical piece of information. 
-
-A/o e i _14 S etc_ 
 
 The regulation tells us that a U.S, citizen has had the subtitle ‘A’ income tax imposed upon him if he is residing somewhere other than the United States. Yet we do not know what he must be doing there (as far as “income” is concerned) to fall within the boundaries of the tax imposed. In other words, the Secretary has given us one piece of the puzzle, but not all of it. However, since the regulation starts with the words "In general" we should not expect a detailed statement of specifics. Anything that purports to give us a “general” understanding will never contain specifics. That’s just one of the rules of how law is written. 
 
@@ -1986,8 +1984,6 @@ Here are a few quotes from Jefferson that may give you a hint as to what “priv
 
 “I believe the States can best govern our home concerns, and the General Government our foreign ones.” 
 
-**»6** 
-
 “My general plan would be, to make the States one as to everything connected with foreign nations, and several as to everything purely domestic." 
 
 “Our citizens have wisely formed themselves into one nation as to others [foreign nations] and several States as among themselves.” “The radical idea of the character of the constitution of our government, which I have adopted as a key in cases of doubtful construction, is, that the whole field of government is divided into two departments, domestic and foreign; that the former department is reserved exclusively to the respective States within their own limits, and the latter assigned to a separate set of functionaries, constituting what may be called the foreign branch [the general government].” 
@@ -2014,7 +2010,7 @@ Foreigners, except those here legally with a green card, have few rights in this
 
 Congress has also imposed subtitle ‘A’ income tax upon certain U.S. citizens living abroad with foreign income. I will not be delving into that issue in this book as it touches such a narrow slice of the pie; involving only an infinitesimal number of Americans, and it is not a significant part of the “largest financial crime in the history of the world” as is the misapplication of the income tax here at home. I will only say that the proper application of that aspect of the income tax is even narrower than its description would lead one to believe. 
 
-In chapter 5 we looked at regulation l.l-l(a) as it would be worded if the Secretary wanted to provide clarity (instead of vagueness). Let’s look at it again: 
+In chapter 5 we looked at regulation 1.1-1(a) as it would be worded if the Secretary wanted to provide clarity (instead of vagueness). Let’s look at it again: 
 
 _Section 1 of the Code imposes an excise tax on specific individuals, who are citizens of the United States or a resident alien in the U.S._ 
 
@@ -3161,7 +3157,7 @@ Since late 1980, every tax form has had its own unique OMB Control Number. The O
 
 <!-- page: 161 -->
 
-We have discussed the opening regulation of Title 26 (1.1-1) quite a few times already. Remember, that’s the one that begins with the words, _"Section I of the Code imposes an income tax on the income ofevery individual who is a citizen or resident of the United States..."_ 
+We have discussed the opening regulation of Title 26 (1.1-1) quite a few times already. Remember, that’s the one that begins with the words, _"Section 1 of the Code imposes an income tax on the income of every individual who is a citizen or resident of the United States..."_ 
 
 So what does it say when you look up 1.1-1 in the chart at 601.101? For decades there was only _one_ form shown in the chart as being applicable to 1.1-1. That was the form bearing OMB Control Number 1545-0067. Want to know what the publicly recognized number is for that form? It’s Form 2555, and it’s entitled, “Foreign Earned Income”. 
 
@@ -7647,7 +7643,7 @@ Agent)
 
 5. Hale v. Henkel. 201 U.S. 43, at 74 (1906) 6. Corn v. Fort. 95 S.W.2d 620 (1936) 
 
-7. 26 C.F.R. §l.l-l(a) 
+7. 26 C.F.R. §1.1-1(a) 
 
 - **Chapter Seven - In Their Own Words** 
 

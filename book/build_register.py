@@ -67,21 +67,21 @@ STATE_RPT = (r"U\.?\s?S\.?|S\.?\s?Ct\.?|L\.?\s?Ed\.?|F\.?\s?2d|F\.?\s?3d|F\.?\s?
 CASE_FULL = re.compile(
     r"([A-Z][A-Za-z.'’&\-]*(?:\s+(?:of|the|ex|rel\.?|and|&|[A-Z][A-Za-z.'’&\-]*)){0,6}\s+v\.?\s+"
     r"[A-Z][A-Za-z.'’&\-]*(?:\s+(?:of|the|and|&|[A-Z][A-Za-z.'’&\-]*)){0,6})\.?\s+"
-    r"(\d{1,3})\s+(" + STATE_RPT + r")\s+(\d{1,4})(?:,?\s*(?:at\s*)?[\d–\-]+)?(?:\s*\((\d{4})\))?")
+    r"(\d{1,3})\s+(" + STATE_RPT + r")\s+(\d{1,4})(?:,?\s*(?:at\s*)?([\d–\-]+))?(?:[\s,]*\((\d{4})\))?")
 
 def clean_case_name(n):
     n = re.sub(r"\s+", " ", n).strip().rstrip(".")
-    n = re.sub(r"^(In re |In |Court\. In |Amendment was |see |See )", "", n)
+    n = re.sub(r"^(Supreme Court\. In |Court\. In |In re |In |Amendment was |see |See )", "", n)
     for a,b in [("Dovle","Doyle"),("Hvlton","Hylton"),("Framers","Farmers"),
                 ("Benzieer","Benziger"),("Speckels","Spreckels"),("Stales","States"),
                 ("Movlan","Moylan"),("Merskv","Mersky"),("Citv","City")]:
         n = re.sub(rf"\b{a}\b", b, n)
     return n
 
-cases = {}   # normalised cite -> {name, cite, year, court, url, count, pages}
+cases = {}   # normalised cite -> {name, cite, pin, year, court, url, count, pages}
 for m in CASE_FULL.finditer(text):
     name = clean_case_name(m.group(1))
-    vol, rraw, pg, year = m.group(2), m.group(3), m.group(4), m.group(5)
+    vol, rraw, pg, pin, year = m.group(2), m.group(3), m.group(4), m.group(5), m.group(6)
     rn = re.sub(r"[.\s]", "", rraw).upper()
     key = f"{vol} {rn} {pg}"
     disp = f"{vol} {norm_reporter(rraw)} {pg}"
@@ -91,17 +91,19 @@ for m in CASE_FULL.finditer(text):
         url = None; court = "Federal court"
     else:
         url = None; court = "State / other court"
-    e = cases.setdefault(key, {"name":name,"cite":disp,"year":year,"court":court,
+    e = cases.setdefault(key, {"name":name,"cite":disp,"pin":pin,"year":year,"court":court,
                                "url":url,"count":0,"pages":set()})
     e["count"] += 1
     if len(name) > len(e["name"]): e["name"] = name
     if year and not e["year"]: e["year"] = year
+    if pin and not e["pin"]: e["pin"] = pin
     e["pages"].add(page_at(m.start()))
 for key, e in cases.items():
     if key in CASE_FIXES: e["name"] = CASE_FIXES[key]
     if e["url"] is None:
         e["url"] = "https://www.courtlistener.com/?q=" + quote(f'{e["name"]} {e["cite"]}')
-    e["full"] = f'{e["name"]}. {e["cite"]}' + (f' ({e["year"]})' if e["year"] else "")
+    e["full"] = (f'{e["name"]}. {e["cite"]}' + (f' at {e["pin"]}' if e["pin"] else "")
+                 + (f' ({e["year"]})' if e["year"] else ""))
 
 # ---------- 2. USC / Title 26 (IRC) sections ----------
 # IMPORTANT: exclude dotted/decimal cites (e.g. §31.0-2, §1.1441-1, §301.7701-11) —
@@ -228,6 +230,26 @@ for name, url in SECONDARY.items():
     n = len(re.findall(pat, text))
     if n: secondary[name] = {"count":n, "url":url}
 
+# ---------- 11. IRS / Treasury guidance documents ----------
+IRS_DOCS = [
+    ("Internal Revenue Manual", r"Internal Revenue Manual", "https://www.irs.gov/irm"),
+    ("Cumulative Bulletin", r"Cumulative Bulletin", "https://www.irs.gov/internal-revenue-bulletins"),
+    ("Treasury Orders", r"Treasury Orders?", "https://home.treasury.gov/about/general-information/orders-and-directives"),
+    ("IRS Determination Letters", r"Determination Letters?", "https://www.irs.gov/individuals/understanding-your-irs-notice-or-letter"),
+]
+irs_docs=[]
+for label,pat,url in IRS_DOCS:
+    n=len(re.findall(pat,text))
+    if n: irs_docs.append({"document":label,"url":url,"occurrences":n})
+# IRS notice codes (CPnn) — capability; the book cites none, but any that appear link to IRS
+cp_notices={}
+for m in re.finditer(r"\bCP[- ]?(\d{2,4})[A-Z]?\b", text):
+    num=m.group(1)
+    cp_notices.setdefault(num,{"count":0,"url":f"https://www.irs.gov/individuals/understanding-your-cp{num}-notice"})
+    cp_notices[num]["count"]+=1
+for num,v in sorted(cp_notices.items()):
+    irs_docs.append({"document":f"Notice CP{num}","url":v["url"],"occurrences":v["count"]})
+
 # ---------- URL builders ----------
 def usc_url(sec):  return f"https://www.law.cornell.edu/uscode/text/26/{sec}"
 def cfr_url(e):
@@ -265,6 +287,12 @@ cfr_general = [
     {"cite":"CFR", "url":CFR_GENERAL_URL,
      "occurrences":len(re.findall(r"\bCFR\b", text)), "pages":[]},
 ]
+# bare reg cites written without a "CFR" prefix (e.g. "1.1-1(a)") -> Cornell LII, section-level
+_11_url = "https://www.law.cornell.edu/cfr/text/26/1.1-1"
+for sub in ["(a)","(b)"]:
+    n=len(re.findall(re.escape(f"1.1-1{sub}"), text))
+    if n: cfr_general.append({"cite":f"26 CFR §1.1-1{sub}", "url":_11_url,
+                              "occurrences":n, "pages":[]})
 out["cfr"] = [e for e in cfr_general if e["occurrences"]] + [
     {"cite":k, "url":cfr_url(v), "occurrences":v["count"], "pages":pset(v["pages"])}
     for k,v in sorted(cfr.items(), key=lambda kv:-kv[1]["count"])]
@@ -316,6 +344,7 @@ out["executive_orders"] = [
 out["secondary_authorities"] = [
     {"work":k, "url":v["url"], "occurrences":v["count"]}
     for k,v in sorted(secondary.items(), key=lambda kv:-kv[1]["count"])]
+out["irs_treasury_documents"] = irs_docs
 
 json.dump(out, open("link_register.json","w",encoding="utf-8"), indent=2, ensure_ascii=False)
 
@@ -412,6 +441,15 @@ if out["secondary_authorities"]:
     L.append("|---|---:|---|")
     for c in out["secondary_authorities"]:
         L.append(f"| {c['work']} | {c['occurrences']} | [link]({c['url']}) |")
+
+if out["irs_treasury_documents"]:
+    L.append("\n## 11. IRS & Treasury guidance documents\n")
+    L.append("_IRS/Treasury document types cited in the text, linked to official sources. "
+             "(No numbered IRS notice codes such as CP54 are cited anywhere in the book.)_\n")
+    L.append("| Document | Occ. | Source |")
+    L.append("|---|---:|---|")
+    for c in out["irs_treasury_documents"]:
+        L.append(f"| {c['document']} | {c['occurrences']} | [link]({c['url']}) |")
 
 open("link_register.md","w",encoding="utf-8").write("\n".join(L)+"\n")
 
