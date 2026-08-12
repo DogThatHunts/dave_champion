@@ -1753,7 +1753,7 @@
       ],
       "in_mapping_file": false,
       "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2382%22;a=srchls;lmt=ft",
-      "note": "NOT YET in TREASURY_DECISIONS.md — add it there; fallback is a HathiTrust search."
+      "note": "NOT YET in TREASURY_DECISIONS file — add it there; fallback is a HathiTrust search."
     }
   ],
   "constitution": [

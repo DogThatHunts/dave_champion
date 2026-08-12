@@ -351,7 +351,7 @@ for k,v in sorted(td.items(), key=lambda kv:-kv[1]["count"]):
         entry["local_path"] = local
     notes = []
     if url is None:
-        notes.append("NOT YET in TREASURY_DECISIONS.md — add it there; fallback is a HathiTrust search.")
+        notes.append("NOT YET in TREASURY_DECISIONS file — add it there; fallback is a HathiTrust search.")
     if num in TD_LOCAL_NOTES:
         notes.append(TD_LOCAL_NOTES[num])
     if notes:
