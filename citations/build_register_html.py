@@ -117,7 +117,6 @@ out = f"""<!doctype html>
 <aside id="sidebar">
 <h1>Link Register</h1>
 <div class="sub">Income Tax: Shattering The Myths</div>
-<a class="home" href="../books/income-tax-shattering-the-myths/">← Back to the interactive edition</a>
 <ul class="nav-list">
 {nav_html}
 </ul>
