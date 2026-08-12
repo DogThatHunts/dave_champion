@@ -100,6 +100,10 @@ Pipeline (deterministic, re-runnable generators). The register builders live in 
    treatment across TOC + body.
 
 ### Book edition — next steps (optional)
+- [ ] **Make the case linker policy-compliant** (`citations/CITATION_LINKING.md`): anchor the
+      full `case_name + cite` span (from `link_register.json` `full_citation`), not just the bare
+      reporter cite — e.g. link *"Tandy Leather Company v. United States, 347 F.2d 693"*. Do it
+      once in the shared/edition builder so both books inherit it. Owner deferred (2026-08-12).
 - [ ] Replace the placeholder root `index.html` with real home-page content.
 - [ ] Add T.D. 2382 to `../transcription-agent/TREASURY_DECISIONS.md`; recover more OCR tail if desired.
 
