@@ -212,11 +212,17 @@ for m in ACT_RX.finditer(text):
     e["count"] += 1; e["pages"].add(page_at(m.start()))
 
 # ---------- 9. Executive Orders ----------
+# Pre-1994 EOs aren't in the Federal Register's online index, so the default is a
+# search URL. Where we have a better canonical source, override it here.
+EO_URL_OVERRIDES = {
+    "10289": "https://www.trumanlibrary.gov/library/executive-orders/10289/executive-order-10289",
+}
 eos = {}
 for m in re.finditer(r"(?:Executive\s+Order|E\.?\s?O\.?)\s*(?:No\.?\s*)?(\d{4,5})", text):
     num = m.group(1)
     e = eos.setdefault(num, {"count":0, "pages":set(),
-        "url":f"https://www.federalregister.gov/documents/search?conditions%5Bterm%5D=Executive+Order+{num}"})
+        "url":EO_URL_OVERRIDES.get(num,
+            f"https://www.federalregister.gov/documents/search?conditions%5Bterm%5D=Executive+Order+{num}")})
     e["count"] += 1; e["pages"].add(page_at(m.start()))
 
 # ---------- 10. Secondary authorities (reference works; non-government) ----------

@@ -154,8 +154,13 @@ def _act_b(m):
     name=re.sub(r"\s+"," ",m.group(1)).strip()
     name=re.sub(r"^(The|An?)\s+","",name); name=re.sub(r"^[A-Z]{2,5}\s+(?=[A-Z][a-z])","",name)
     return A(act_url.get(rk(m.group(0)),act_url.get(rk(name),LOC_STATUTES)),"act",m.group(0))
+# canonical EO sources where better than the Federal Register search (mirrors build_register.py)
+EO_URL_OVERRIDES = {
+    "10289": "https://www.trumanlibrary.gov/library/executive-orders/10289/executive-order-10289",
+}
 def _eo_b(m):
-    return A(f"https://www.federalregister.gov/documents/search?conditions%5Bterm%5D=Executive+Order+{m.group(1)}","eo",m.group(0))
+    return A(EO_URL_OVERRIDES.get(m.group(1),
+        f"https://www.federalregister.gov/documents/search?conditions%5Bterm%5D=Executive+Order+{m.group(1)}"),"eo",m.group(0))
 def _form_b(m):
     return A(look("form","Form "+m.group(1),
         "https://www.irs.gov/forms-pubs/about-form-"+m.group(1).strip().lower().replace(" ","-")),"form",m.group(0))

@@ -286,7 +286,7 @@ _Linked to a Federal Register search for the numbered order._
 
 | Executive Order | Occ. | Pages | Federal Register |
 |---|---:|---|---|
-| E.O. 10289 | 7 | 107, 108, 111, 409 | [link](https://www.federalregister.gov/documents/search?conditions%5Bterm%5D=Executive+Order+10289) |
+| E.O. 10289 | 7 | 107, 108, 111, 409 | [link](https://www.trumanlibrary.gov/library/executive-orders/10289/executive-order-10289) |
 
 ## 10. Secondary authorities (reference works)
 

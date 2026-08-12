@@ -1,6 +1,17 @@
 # Waypoint — dave_champion
 
-_Last updated: 2026-08-10_
+_Last updated: 2026-08-11_
+
+> **Planned reorg:** multi-book layout with a shared citation library — see
+> [`MIGRATION.md`](MIGRATION.md). Decisions locked: full rename of book #1 into
+> `books/<slug>/` (redirect the old `/book/` URL), one merged multi-book register.
+> **Not executed yet — plan only.**
+>
+> **Pipeline playbook:** [`PDF_TO_MD_PROMPT.md`](PDF_TO_MD_PROMPT.md) — the reusable,
+> book-agnostic PDF→MD conversion spec + agent prompt (recon → extract → OCR → citation
+> abstraction/parking → validate → HTML handoff). Specs a **parked `new_citations.json`**
+> allowlist for the HTML build — **spec only, not yet implemented** (build_new_citations.py
+> still emits the `.md` report; HTML allowlist-linking of bare IRC sections is pending).
 
 ## Goal
 Publish the project's HTML pages as a live site via GitHub Pages. **New major workstream:**
@@ -81,6 +92,120 @@ Pipeline (deterministic, re-runnable generators, all in `book/`). **Build order 
 
 ---
 
+## Book #2 — *The American Tax Bible* (`American_Tax_Bible_book/book/`)
+
+**Status: 🟢 MD edition built (2026-08-11); citation diff + HTML still to do**
+
+### ✅ Done this session (2026-08-11)
+- Installed **tesseract 5.5.3** via `brew install tesseract` (eng/osd/snum).
+- Wrote `American_Tax_Bible_book/book/extract_md.py` (PyMuPDF span walk) and built
+  **`American Tax Bible.md`** — 766 pages, 1.73 MB. Verified: 8 book sections
+  (`# GENESIS`/CRYER/JOHN/TOMMY/`EXODUS`/`REVELATION`/THE FREED/`SALVATION`),
+  766 `<!-- page: N -->` anchors (PDF sequence), 10 image-only pages OCR'd inline,
+  bold/italic recovered from span flags.
+- Extractor logic: strip running head (top-margin CIDFont bold) + printed folio
+  (bottom CIDFont digits / "AMERICAN TAX BIBLE" band); reproduced-doc pages keep
+  their own headers (non-CIDFont fonts). Reflow by vertical-gap (`PARA_GAP=24pt`).
+  OCR renders full page @300dpi grayscale, inverts if artwork is dark (p94 cover).
+- Known tail issue: p94 is a stylized dark book cover — OCR only recovers
+  "Second Edition" (decorative, low value). TOC dot-leader page numbers land on
+  their own lines (cosmetic; TOC regenerated for HTML later).
+
+- **Citation diff done** — `build_new_citations.py` reuses `citations/build_register.py`'s
+  regexes on the new MD, diffs against `citations/link_register.json`, writes
+  `American_Tax_Bible_book/new_citations.md`: **329 new cites** (63 cases, 190 IRC
+  sections, 15 CFR, 21 Acts, 6 clauses, +1 const). NOTE: book #2 formats case cites
+  with a **comma** ("Name, 17 U.S. 316"); book #1's regex only allowed a period, so the
+  book-#2 script uses `[.,]?` — port this back if the register is ever merged. Same
+  known noise as book #1 (a few "Tax Act" fragments) — vet before folding in.
+- **HTML style preview done** — `build_html_preview.py` renders any page range reusing
+  book #1's `<style>` verbatim; `preview_p1-10.html` (title + TOC + GENESIS) verified via
+  headless-Chrome screenshot, matches book #1's look. TOC dot-leader page numbers are
+  rejoined in the preview renderer. Full citation-enriched build (`build_html.py`) is the
+  next real step.
+
+- **Reflow repair done (owner feedback)** — `extract_md.py` now reflows **prose** to
+  one line per paragraph (no mid-sentence carriage returns) while **preserving** ragged
+  blocks (lists, enumerations, reproduced-statute subsections). Discriminator: a
+  paragraph is prose when ≥60% (`FILL_FRAC`) of its non-final lines reach the block's
+  right margin within `FILL_BAND=25pt` (measured from PyMuPDF line bboxes). **TOC** blocks
+  (≥3 lines, ≥2 with dotted leaders) are coalesced by `coalesce_toc()` to one entry per
+  line — wrapped titles joined, page number kept inline (dotted leaders retained, numbers
+  left-justified), bold section labels stand alone. Decisions: keep leaders, prose-only
+  reflow, NO de-hyphenation (owner). MD regenerated; preview re-verified via screenshot.
+- **Emphasis seams cleaned** — `wrap_line()` now neutralises punctuation/whitespace-only
+  spans (no more `_,_` / `_"_`), and `tidy_emphasis()` merges same-style runs a wrap/reflow
+  split with a single space (`_subject-_ _matter_` → `_subject- matter_`, `**a** **b**` →
+  `**a b**`; newlines not merged, so ragged/list breaks survive). Whole-MD scan: 0 `_ _`
+  / 0 `** **` seams, 0 pure-punct italics. Remaining `_16_`-style italics are faithful
+  source footnote numbers; `_____` runs are literal form/signature lines. MD regenerated
+  (now 1,720,779 chars); `preview_p1-10.html` recreated and screenshot-verified.
+
+- **Full `build_html.py` done** — book #2's interactive edition
+  (`American Tax Bible.html`, ~2.3 MB) styled identically to book #1. Adapts book #1's
+  citation-linking engine (same RULES/precedence, shared `citations/link_register.json`
+  as URL source of truth + deterministic fallbacks so book-#2-only cites still link).
+  **Key deltas from book #1's builder:** (1) **1:1 PDF pages** — MD anchors are the PDF
+  sequence, so `phys_page()` maps straight through (766 back-links, 0 unmapped);
+  (2) **line-preserving paragraphs** — intra-block newlines → `<br>` (book #1 space-joins,
+  which would flatten our ragged lists/statutes); prose is already one line so no `<br>`;
+  (3) **keeps the book's own detailed TOC** (real content now; no dot-leader drop, no
+  synthetic TOC); (4) **underscore-run protection** in `inline()` so form/signature `____`
+  aren't parsed as italics; (5) styled title block for THE AMERICAN / TAX BIBLE / Thomas
+  Freed; sidebar nav = the 8 book sections; TD links resolve live from the shared sidecar.
+  Validated: 1840 cite links, 0 conflicts, 0 nested anchors, balanced tags, screenshot OK.
+
+### ⏭ Next (optional): make TOC entries clickable (needs printed→PDF-seq map, per-book
+reset); richer sub-section nav; publish (fold into the MIGRATION.md books/<slug>/ layout).
+
+New, **separate** book by **Thomas Freed** — `American Tax Bible.pdf` (18 MB, 766 pages,
+letter). NOT the Dave Champion book. Goal: a clean **Markdown** edition preserving
+**emphasis + pagination + structure** (MD now; an HTML edition like book #1 is intended
+*later* — typeface/layout can't live in MD, only in HTML/CSS).
+
+### Key findings (recon)
+- **Clean, digitally-produced PDF** (Adobe Acrobat 6.0, 2018) — NOT scanned OCR like book #1.
+  So we **skip** `clean.py` / multi-agent proofread; the text layer is accurate.
+- Body text is set in **subsetted `CIDFont+Fn`** fonts (generic names — the *name* tells us
+  nothing about weight/style). BUT **PyMuPDF's span `flags` recover bold/italic correctly**
+  even on these (bit 4 = bold, bit 1 = italic). Verified on pp. 50/56/121. → **font-aware
+  emphasis extraction is feasible.**
+- Structured as Bible-style "books": bold size-12 running head per page (`THE BOOK OF CRYER`,
+  `EXODUS`, `THE BOOK OF JOHN`, …) + a small **printed page number that resets per section**
+  (≠ PDF sequence). Plan: strip running head/number, emit `<!-- page: N -->` anchors on **PDF
+  sequence** (like book #1), and turn each new "book" head into a section heading.
+- Many **reproduced source documents** (statutes, IRS letters, court filings) embedded: most are
+  **live selectable text** (real Times/Courier fonts). Only **~10 image-only pages** (of 766)
+  would need OCR — and **`tesseract` is NOT installed**. 751/766 pages extract as live text.
+
+### Decisions (from owner, 2026-08-11)
+1. Deliverable: **MD now, HTML later.**
+2. Emphasis: **font-aware** (recover bold/italic via PyMuPDF flags).
+3. Citations: **diff vs the repo-root `citations/` register** (book #1's), and write a **local
+   list of only the NEW cites** in this book, to fold into the register later.
+
+### Tooling set up
+- `American_Tax_Bible_book/book/.venv` — Python venv with **PyMuPDF 1.28.2** (`fitz`) installed
+  (system is Python 3.14 with no PDF libs). `pdftotext`/`pdffonts`/`pdfinfo` available; no
+  `tesseract`/`mutool`/`qpdf`/`gs`.
+- **⏭ PENDING (next session, dangerous mode):** owner will restart Claude in dangerous mode to
+  install **tesseract** via `brew install tesseract` (sandboxed `brew` was blocked this session).
+  Owner confirmed OCR the ~10 image-only pages **inline** (not placeholders). After install:
+  verify `tesseract --version`, then OCR image-only pages during the MD build.
+
+### Plan (not yet built)
+- [ ] **First:** `brew install tesseract` (needs dangerous mode — owner restarting Claude for this).
+- [ ] `extract_md.py` (PyMuPDF): page-by-page span walk → paragraphs; wrap bold→`**`, italic→`_`;
+      strip running head + printed page number; emit `<!-- page: N -->` (PDF seq); promote each new
+      "BOOK OF …" head to a heading; **OCR the ~10 image-only pages inline** via tesseract
+      (owner chose inline OCR, not placeholders).
+- [ ] Citation extractor → diff against `citations/link_register.json` → local
+      `American_Tax_Bible_book/new_citations.md` (cites present in this book, absent from register).
+- [ ] Verify emphasis/pagination on a sample; decide printed-vs-PDF page mapping (note per-section
+      reset) for the eventual HTML back-links.
+
+---
+
 ## Site (GitHub Pages)
 
 ## Status: ✅ Live and styled
@@ -132,3 +257,20 @@ Any *other* `.css` file added later stays out of the repo.
 ## Open / next steps
 - [ ] Replace the placeholder `index.html` with real home-page content.
 - [ ] (Optional) Vendor the Google Fonts locally to remove the CDN dependency.
+
+## ⚠ Repo file-size concern (flagged 2026-08-11)
+Binary assets are being committed straight into git history and will bloat every
+clone/pull permanently (git keeps every version forever):
+- `citations/treasury_decisions/` — local TD source PDFs, **~4.5 MB** total
+  (`td_2815` alone is ~2.4 MB). Committed in the citation-reorg commit.
+- `book/Book - …Shattering the Myths.pdf` — **~16 MB** source PDF, already tracked
+  (kept so the edition's page back-links resolve). `book/.gitignore` ignores all
+  other `*.pdf`.
+- Top-level `American Tax Bible.pdf` (~18 MB) and `Tax_acts_compared.xlsx` are
+  currently **untracked** — decide before adding them.
+
+Decision needed: keep committing binaries as-is (simple, but history grows), or
+move large/binary assets to **Git LFS** or an external asset store and reference
+them. Cheapest to switch **before** these get pushed. Inline book TD links are a
+planned follow-up that would require the `citations/` PDFs to ship alongside the
+distributable HTML — factor that into the LFS-vs-inline decision.

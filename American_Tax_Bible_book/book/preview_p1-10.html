@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The American Tax Bible — Thomas Freed (preview, pp. 1–10)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1c1a17;--muted:#8a8072;--rule:#e6e0d6;--bg:#faf7f2;--paper:#fffdf9;
+--link:#7a1f1f;--cite:#0b5c8a;--nav:#f3efe8;--maxw:760px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+font-family:Georgia,'Iowan Old Style','Times New Roman',serif;line-height:1.62;font-size:19px}
+a{color:var(--link)}
+.wrap{display:grid;grid-template-columns:300px minmax(0,1fr);gap:0;align-items:start}
+#sidebar{position:sticky;top:0;height:100vh;overflow:auto;background:var(--nav);
+border-right:1px solid var(--rule);padding:1.1rem 1rem 3rem}
+#sidebar h1{font-family:'Playfair Display',Georgia,serif;font-size:1.02rem;line-height:1.3;
+margin:.2rem 0 1rem;color:var(--ink)}
+#sidebar .byline{font-size:.8rem;color:var(--muted);margin:-0.6rem 0 1rem}
+.nav-list{list-style:none;margin:0;padding:0;font-family:'Inter',system-ui,sans-serif;font-size:.82rem}
+.nav-list li{margin:.12rem 0}
+.nav-list a{color:#4a4034;text-decoration:none;display:block;padding:.15rem .35rem;border-radius:5px}
+.nav-list a:hover{background:#e7e0d4;color:var(--link)}
+.nav-list a.active{background:#e2d8c6;color:var(--link);font-weight:600}
+.nav-list .lvl1,.nav-list .lvl2{font-weight:700}
+.nav-list .lvl3{font-weight:600}
+.nav-list .lvl4{padding-left:.9rem}
+.nav-list .lvl5{padding-left:1.7rem;font-style:italic}
+main{padding:2.4rem clamp(1rem,5vw,3rem) 6rem;max-width:calc(var(--maxw) + 6rem);margin:0 auto}
+.book-title{font-family:'Playfair Display',Georgia,serif;font-size:2.1rem;line-height:1.15;margin:.2rem 0 .2rem}
+h1,h2,h3,h4,h5,h6{font-family:'Playfair Display',Georgia,serif;line-height:1.2;color:#241f1a;
+scroll-margin-top:1rem}
+h1{font-size:1.9rem;border-bottom:2px solid var(--rule);padding-bottom:.3rem;margin-top:2.6rem}
+h2{font-size:1.55rem;margin-top:2.4rem}
+h3{font-size:1.3rem;margin-top:2rem}
+h4{font-size:1.08rem;margin-top:1.7rem;letter-spacing:.02em}
+h5{font-size:.98rem;text-transform:uppercase;letter-spacing:.06em;color:#5b5348;margin-top:1.5rem}
+h6{font-size:1.2rem;text-transform:uppercase;letter-spacing:.08em;color:#3a332b;font-weight:700;
+text-align:center;margin:2rem auto 1rem;max-width:var(--maxw)}
+p{margin:0 0 1.05rem}
+main>p,main>ol,main>ul{max-width:var(--maxw)}
+ol,ul{max-width:var(--maxw);padding-left:1.4rem}
+li{margin:.2rem 0}
+em{font-style:italic}
+strong{font-weight:700}
+.pagebreak{clear:both;text-align:right;max-width:var(--maxw);margin:.5rem 0 1rem;
+border-top:1px dotted var(--rule);padding-top:.35rem}
+.pageref{display:inline-block;font-family:'Inter',sans-serif;font-size:.7rem;color:var(--cite);
+text-decoration:none;border:1px solid #cfe0ea;border-radius:5px;padding:.1rem .45rem;
+background:#f2f8fb;white-space:nowrap;line-height:1.4}
+.pageref .pdf-ico{font-size:.58rem;font-weight:700;letter-spacing:.03em;color:#fff;background:var(--cite);
+border-radius:3px;padding:.03rem .24rem;margin-right:.15rem}
+.pageref:hover{background:#e2f0f7;border-color:var(--cite);box-shadow:0 1px 3px rgba(11,92,138,.2)}
+.pageref.nolink{color:var(--muted);border:1px dashed var(--rule);background:transparent;
+opacity:.65;cursor:default}
+.pageref.nolink .pdf-ico{display:none}
+.cite{text-decoration:none;color:var(--cite);border-bottom:1px dotted var(--cite)}
+.cite:hover{background:#eaf3f8}
+.cite.case{color:#0b5c8a;border-color:#0b5c8a}
+.cite.stat,.cite.reg{color:#5a3d8a;border-color:#5a3d8a}
+.cite.const{color:#1d6b45;border-color:#1d6b45}
+.cite.td{color:#a05a00;border-color:#a05a00}
+.cite.form{color:#7a1f1f;border-color:#c8a0a0}
+.cite.act{color:#0b6b5e;border-color:#0b6b5e}
+.cite.eo{color:#8a5a00;border-color:#8a5a00}
+.cite.secondary{color:#555;border-color:#999}
+.cite.conflict{background:#fff3cf;border-bottom:2px double #c9a227}
+.cite.conflict::after{content:"A0";font-size:.6em;vertical-align:super;color:#b8860b;margin-left:.05em}
+.authtable{border-collapse:collapse;width:100%;max-width:var(--maxw);margin:1rem 0 1.6rem;font-size:.9rem}
+.authtable td{border-bottom:1px solid var(--rule);padding:.35rem .6rem;vertical-align:top}
+.authtable td:first-child{color:var(--muted);white-space:nowrap;width:1%;font-family:'Inter',sans-serif;font-size:.82rem}
+.titleblock{max-width:var(--maxw);text-align:center;font-family:'Playfair Display',Georgia,serif;margin:0 auto}
+.titleblock.booktitle{font-size:2rem;line-height:1.15;margin:1.5rem auto .3rem}
+.titleblock.byline{font-size:1.1rem;color:#5b5348;margin:.2rem auto}
+.titleblock.copyright{font-size:1rem;color:#5b5348;margin:.2rem auto 1.6rem}
+.toc-block{background:var(--paper);border:1px solid var(--rule);border-radius:8px;padding:1.2rem 1.4rem;margin:1.2rem auto 2rem;max-width:var(--maxw)}
+.toc-list{list-style:none;padding:0;margin:0;text-align:center;font-family:'Playfair Display',Georgia,serif}
+.toc-list li{margin:.28rem 0}
+.toc-list a{text-decoration:none;color:inherit}
+.toc-list a:hover{color:var(--link);text-decoration:underline}
+/* two-tier by heading level, consistent throughout: senior (h1-h3) larger; junior (h4-h5) smaller, dark gold */
+.toc-list .lvl1{font-size:1.28rem;font-weight:700;color:#241f1a;margin-top:.5rem}
+.toc-list .lvl2{font-size:1.18rem;font-weight:700;color:#241f1a;margin-top:.45rem}
+.toc-list .lvl3{font-size:1.14rem;font-weight:600;color:#241f1a;margin-top:.4rem}
+.toc-list .lvl4{font-size:.98rem;font-weight:600;color:#8a6d1a}
+.toc-list .lvl5{font-size:.9rem;font-style:italic;color:#8a6d1a}
+#menu-btn{display:none;position:fixed;top:.6rem;left:.6rem;z-index:20;background:var(--paper);
+border:1px solid var(--rule);border-radius:6px;font-size:1.2rem;padding:.25rem .55rem;cursor:pointer}
+#totop{position:fixed;right:1rem;bottom:1rem;background:var(--link);color:#fff;text-decoration:none;
+border-radius:50%;width:2.5rem;height:2.5rem;display:none;align-items:center;justify-content:center;
+font-size:1.2rem;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+.legend{font-family:'Inter',sans-serif;font-size:.72rem;color:var(--muted);border-top:1px solid var(--rule);
+margin-top:1.4rem;padding-top:.7rem}
+.legend b{color:#4a4034}
+@media(max-width:860px){
+ .wrap{grid-template-columns:1fr}
+ #sidebar{position:fixed;left:0;top:0;width:82%;max-width:320px;z-index:15;transform:translateX(-100%);
+ transition:transform .2s;box-shadow:2px 0 14px rgba(0,0,0,.15)}
+ #sidebar.open{transform:none}
+ #menu-btn{display:block}
+ body{font-size:18px}
+ .pageref{float:none;display:inline-block;margin:0 .3rem}
+}
+</style>
+</head>
+<body>
+<button id="menu-btn" aria-label="Toggle contents">☰</button>
+<div class="wrap">
+<aside id="sidebar">
+<h1>The American<br>Tax Bible</h1>
+<div class="byline">Thomas Freed — interactive edition</div>
+<div class="byline"><em>Style preview · pages 1–10</em></div>
+<ol class="nav-list">
+<li class="lvl3"><a href="#top">Front matter &amp; Contents</a></li>
+<li class="lvl1"><a href="#genesis">Genesis</a></li>
+</ol>
+<div class="legend"><b>Preview note:</b> this is a visual style preview of the first
+10 pages, reusing book&nbsp;#1's stylesheet. Bold/italic are recovered from the
+source PDF; the blue <span style="background:#0b5c8a;color:#fff;border-radius:3px;padding:0 .2rem;font-size:.62rem">PDF</span>&nbsp;p.N
+tags open that page of the source PDF. Inline citation links and a generated Table of
+Contents come in the full build.</div>
+</aside>
+<main id="top">
+<p class="titleblock booktitle"><strong>The American Tax Bible</strong></p>
+<p class="titleblock byline"><em>by Thomas Freed</em></p>
+<div class="pagebreak"><a class="pageref" href="American Tax Bible.pdf#page=1" target="_blank" title="Open PDF page 1"><span class="pdf-ico">PDF</span> p.1</a></div>
+<p><strong>THE AMERICAN</strong></p>
+<p><strong>TAX BIBLE</strong></p>
+<p><strong>By</strong></p>
+<p><strong>Thomas Freed</strong></p>
+<div class="pagebreak"><a class="pageref" href="American Tax Bible.pdf#page=2" target="_blank" title="Open PDF page 2"><span class="pdf-ico">PDF</span> p.2</a></div>
+<div class="pagebreak"><a class="pageref" href="American Tax Bible.pdf#page=3" target="_blank" title="Open PDF page 3"><span class="pdf-ico">PDF</span> p.3</a></div>
+<p><strong>TABLE OF CONTENTS</strong></p>
+<p><strong>GENESIS</strong><br>
+Introduction ……………………………………………………………………….. 1<br>
+The U.S. Constitution Controls as the Supreme Law …………………………….. 9<br>
+Constitutional Taxation …………………………………………………………… 11<br>
+<em>Subject-matter jurisdiction</em> in the U.S. courts …………………………………….. 19<br>
+STATUTORY CONSTRUCTION ……………………………………………….. 23<br>
+Taxing Statutes Are To Be Strictly Construed ……………………………………. 23<br>
+Courts Are Limited to the Statutory Construction Used ………………………….. 26<br>
+Coexistence Of Statutory Provisions ……………………………………………… 30<br>
+Statutory Liability for the Payment of Tax ……………………………………….. 31</p>
+<p><strong>THE BOOK OF CRYER</strong><br>
+Introduction of Argument Positions ………………………………………………... 1<br>
+CITIZENS ARE NOT SUBJECT TO DIRECT FEDERAL TAXATION ………... 1<br>
+The Federal Taxing Power …………………………………………………………. 1<br>
+The Federal Power to Tax by Excise ………………………………………………. 11</p>
+<p><strong>THE BOOK OF JOHN</strong><br>
+The Federal Income Tax of 1913 is an <em>Indirect</em> Tax ……………………………… 1<br>
+<em>collection of the tax at the source ………………………………………………………..</em> 7<br>
+<em>Direct</em> v. <em>Indirect</em> Taxation ………………………………………………………... 10<br>
+The Federal Corporate Income Tax is a Domestic Excise ………………………... 25<br>
+Structural Organization of Title 26 U.S.C. …………………………….………….. 32<br>
+The Constitutional Federal Foreign Jurisdiction ………………………………….. 34<br>
+The Original History in America ………………………………………………….. 37<br>
+INCOME DUTY of 1861 …………………………………………………………. 37<br>
+The Judges Refuse ………………………………………………………………… 39<br>
+The Requirement to File an <em>income tax</em> Return Form …………………………….. 41<br>
+The Statutory Liability for Tax under Subtitle A Law ……………………………. 45<br>
+The Subtitle A Withholding Authority by Statute ………………………………… 46<br>
+Treasury Decision 2313 …………………………………………………………… 58<br>
+The Citizen's Exemption …………………………………………………………... 59<br>
+Assessments ……………………………………………………………………….. 63<br>
+Substitute for Return (SFR) Authority ……………………………………………. 64<br>
+Deficiencies ……………………………………………………………………….. 70<br>
+The Tax Return Form Required By Law …………………………………………. 74<br>
+<em>Gross Income ……………………………………………………………………………….</em> 78<br>
+The Canadian Tax Treaty of 1918 ………………………………………………… 81<br>
+The Federal Personal Income Tax is NOT a Domestic Excise ……………………. 87<br>
+The Personal Income Tax is an Indirect Tax ……………………………………… 88<br>
+Supporting, Noncontradictory Opinions …………………………………………... 91<br>
+The Tax is Paid Indirectly By Tax Collectors After Collection ……………………. 92<br>
+Statutory Liability For The Payment of Income Tax ………………………………. 98</p>
+<div class="pagebreak"><a class="pageref" href="American Tax Bible.pdf#page=4" target="_blank" title="Open PDF page 4"><span class="pdf-ico">PDF</span> p.4</a></div>
+<p><strong>THE BOOK OF TOMMY</strong><br>
+Citizen’s Revenues are Exempt from Federal Excise Taxation ……………………… 1<br>
+The Citizen's Revenues are Exempt ………………………………………………….. 2<br>
+Defendant's Revenues are Constitutionally Protected Right …………………………. 5<br>
+Labor is not Taxed ……………………………………………………………………. 5<br>
+What Is Constitutional <em>Taxable</em> Income ? ……………………………………………. 18<br>
+The IRC Statutes Do NOT Impose Any Statutory Liability …………………………. 44<br>
+26 U.S.C. § 7806  Construction of Title ……………………………………………… 45<br>
+Burden Of Proof …………………………………………………………………………47<br>
+Subtitle A  <em>“Collection at the Source”</em> By Withholding ……………………………… 48<br>
+Subtitle C Liability For the Payment Of Tax ………………………………………… 50<br>
+Liability for the Payment Of Interest, Penalties, etc. ……………………………………51<br>
+NO Tax "Plainly and Clearly Laid" …………………………………………………… 58<br>
+Section 61 Gross Income ……………………………………………………………… 60<br>
+<em>Taxable</em> Federal Subjects ……………………………………………………………… 62<br>
+Taxable Income of an American Citizen ……………………………………………… 66<br>
+Citizen's Revenues Do Not Constitute "Income" …………………………………….. 72<br>
+A Direct tax, OR an Indirect Tax, but NEVER Both ………………………………… 74<br>
+Summary ……………………………………………………………………………… 76<br>
+The Duty of the U.S. Courts to Consider Substance over Form ……………………… 78</p>
+<p><strong>EXODUS</strong><br>
+EMPLOYMENT TAX (1945) ………………………………………………………… 1<br>
+Citizens' Exemption From employer's Withholding …………………………………… 1<br>
+Tax Reform and Economic Stimulus is Already in the LAW ………………………… 7<br>
+Stop Employment Withholding Letter ………………………………………………… 10<br>
+Request for Determination Records …………………………………………………… 18<br>
+Withholding of F.I.C.A. tax under Subtitle “C” ……………………………………… 27<br>
+The LEVY Authority ……………………………………………………………………29<br>
+Checklist For Determining the Statutory Validity of an I.R.S. Notice of Levy ………. 69<br>
+Letter Demanding Agent's Authority beyond IRC § 7608(a) ………………………… 70<br>
+Letter Seeking Collection Due Process (CDP) hearing for Levy …………………….. 77<br>
+The "<em>wages</em>" of an American citizen are NOT "<em>gross income</em>" ………………………. 83</p>
+<p><strong>REVELATION</strong><br>
+THE SMOKING GUNS ……………………………………………………………… 1<br>
+Assessment Authority ………………………………………………………………… 1<br>
+What's Wrong With the Income Tax …………………………………………………. 10<br>
+Uncertainties of the Income Tax ……………………………………………………… 19<br>
+THE CONFLICT IN THE STATE AND FEDERAL COURTS …………………….. 20<br>
+A Former IRS Commissioner's Statement ………………………………………………29<br>
+Why Graduated Tax “Brackets” are Unconstitutional ………………………………… 30<br>
+<em>Subject matter jurisdiction</em> to Enforce <em>direct</em> Taxation Does Not Exist ……………… 40<br>
+<em>Subject matter jurisdiction</em>  Chart …………………………………………………….. 48<br>
+<em>personal jurisdiction</em>  Chart …………………………………………………………… 49<br>
+<em>geographical uniformity</em> does not allow for the creation of different <em>classes</em> of citizens50</p>
+<div class="pagebreak"><a class="pageref" href="American Tax Bible.pdf#page=5" target="_blank" title="Open PDF page 5"><span class="pdf-ico">PDF</span> p.5</a></div>
+<p><strong>THE BOOK OF THE FREED</strong><br>
+Putting Our Knowledge to Work in the Courts ……………………………………... 0<br>
+MOTION TO DETERMINE THE <em>subject matter jurisdiction</em> OF THE COURT …. 1<br>
+MOTION TO DISMISS for Lack of <em>subject matter jurisdiction</em> …………………… 17<br>
+The U.S. TAX COURT ……………………………………………………………… 32<br>
+Petitioner’s Motion to Determined the <em>subject matter jurisdiction</em> …………………. 32<br>
+Motion to VOID JUDGMENT for Lack of <em>subject matter jurisdiction</em> …………….. 42<br>
+COMPLAINT FOR VIOLATIONS OF LAW ……………………………………… 65<br>
+The Statutory Definitions of the Term "State" ……………………………………… 89<br>
+State Taxation Reply Letter …………………………………………………………. 90<br>
+2nd State Taxation Reply Letter …………………………………………………….. 94<br>
+Employment (&amp; self employment) Tax, Memorandum at Law …………………….. 100<br>
+Motion to Dismiss (IRS Summons) for lack of jurisdiction for want of “<em>appropriate process</em>” ………………………………………….. 129<br>
+Petition To Quash Administrative (personal) Summons (no court filing) …………… 155<br>
+Petition Court to QUASH 3rd Party I.R.S. SUMMONS ……………………………… 175<br>
+Limited Jurisdiction of the Court &gt; Case Authorities ………………………………… 201<br>
+Letter on Statute Of Limitations For Assessments …………………………………… 208<br>
+Letter on Statute Of Limitations For Collections …………………………………….. 210<br>
+Petition for Writ of Mandamus ……………………………………………………… 212</p>
+<p><strong>SALVATION</strong><br>
+Is It Even Federal Tax  IRC § 7809 ? …………………………………………………. 1<br>
+The IRS Is Not An Agency Of The U.S. Government By LAW ……………………… 2<br>
+A COMPLETE ECONOMIC RECOVERY PLAN …………………………………… 8<br>
+Budget Allocations &amp; the Need to “<em>means test</em>” …………………………………………18<br>
+God’s True Plan For Mankind is FREEDOM ………………………………………… 20<br>
+Tax Avoidance vs. Tax Evasion ………………………………………………………. 23<br>
+THE COMMUNIST MANIFESTO …………………………………………………… 24</p>
+<p><strong>USEFUL IRC LAW &amp; STATUTES</strong><br>
+Tax Imposed &amp; Gross Income ……………………………………………………………25<br>
+Liability for Subtitle A income tax ……………………………………………………. 27<br>
+Enforcement Authority of Revenue Agents …………………………………………… 28<br>
+Assessment and SFR Authorities ……………………………………………………… 29<br>
+Lien and Levy Authorities ……………………………………………………………… 30<br>
+Statutes of Limitations for Assessments &amp; Collections ……………………………….. 32<br>
+The Requirement to File a Return ……………………………………………………… 33<br>
+Constitutional Authorities &amp; Limitations ……………………………………………… 34<br>
+Other Amendments’ enforcement clauses …………………………………………….. 36<br>
+Deficiency Statutes ……………………………………………………………………. 37<br>
+Construction of Title …………………………………………………………………… 38</p>
+<div class="pagebreak"><a class="pageref" href="American Tax Bible.pdf#page=6" target="_blank" title="Open PDF page 6"><span class="pdf-ico">PDF</span> p.6</a></div>
+<p>Employment tax Law ………………………………………………………………….. 38<br>
+Liability for Subtitle C tax ………………………………………………………………41<br>
+Exemption from Withholding ……………………………………………………………41<br>
+More on Federal Taxation of  <em>wages</em> and <em>income</em> by employers ……………………………. 42<br>
+AUTHORITY TO FILE LEGAL ACTIONS  (lawsuits) …………………………………… 53<br>
+<em>McCulloch v. State of Maryland</em>, 17 U.S. 316 (1819) …………………………………. 58<br>
+The POLITICAL DIFFERENCE …………………………………………………….. 59<br>
+They Just Broke the U.S. Tax System with the New Income Tax Law (H.R.1) …….. 60<br>
+Tax Bible Websites …………………………………………………………………... 77</p>
+<div class="pagebreak"><a class="pageref" href="American Tax Bible.pdf#page=7" target="_blank" title="Open PDF page 7"><span class="pdf-ico">PDF</span> p.7</a></div>
+<p><strong>Dedicated to My Mentor, John Baptist Kotmair, Jr.,</strong></p>
+<p>America has lost a true hero and patriot, John Baptist Kotmair, Jr., 83, of Westminster, Maryland, who passed from this world on December 13, 2017.   He is survived by his wife, Nancy L. (Blunt) Kotmair, two daughters, two sons, 10 grandchildren, 17 great-grandchildren, and many American patriots who will always remember his unremitting efforts on their behalf.</p>
+<p>John served in the Navy for four years and with the Baltimore Police for eight years. He was a custom home builder during the 1970s, served as a patriot in federal prison camp in the early 1980s, and was the founder and fiduciary of Save- A-Patriot Fellowship from 1984 onward.</p>
+<p>Most patriots will remember John Kotmair as one of the strongest voices of the tax honesty movement, fearlessly striving to educate the public about the limited application of the federal income tax.  He and his wife Nancy took to the road for two and a half years, visiting patriots and recruiting for the Patriot Network and then for the National Patriot Association. In addition to founding Save-A-Patriot Fellowship, he was founder and fiduciary of Liberty Works Radio Network Fellowship.</p>
+<p>John Kotmair’s passion was, and the mission of Liberty Works Radio Network is, to educate the public about the Christian heritage and legacy of a Constitutionally limited government that was left to all Americans by the founders of our nation. He fervently desired that government at all levels be held to the confines of the Constitution.  He was no fair-weather patriot, but rather, as his hero, Samuel Adams, he desired to be a grand incendiary in the great cause of Liberty, understanding that it takes a “tireless minority, keen on setting brushfires of freedom in the minds of men” to prevail.</p>
+<p>To that end, he was identified as an enemy of the Department of Justice and the Internal Revenue Service, and they attacked him and the Fellowship without cause numerous times. In 1981, using a stacked jury, they convicted him of “failure to</p>
+<div class="pagebreak"><a class="pageref" href="American Tax Bible.pdf#page=8" target="_blank" title="Open PDF page 8"><span class="pdf-ico">PDF</span> p.8</a></div>
+<p>file” and sentenced him to two years in federal prison. In 1993, they raided the Fellowship and attempted to shut its doors and put him in prison once again.  God, the Author of Liberty caused those attempts to come to naught, and John and the members of the Fellowship prevailed.</p>
+<p>After the raid, Mr. Kotmair and numerous Fellowship members set up Liberty Works Radio Network to inform Americans of their God-given heritage. Among other accomplishments, he recorded a 12-hour lecture series entitled “Just the Facts” on the taxing powers of the Constitution and the application of the Income Tax, wrote a book entitled “Piercing the Illusion,” and published a booklet entitled “Do Courts have Law-making Powers?”</p>
+<p>Despising Liberty and all those who exercise their First-Amendment rights, the U.S. Department of Justice sued in federal court to shut down John's teachings of the Truth, and to terminate the Save-A-Patriot Fellowship's First Amendment's <em>Rights</em> to exist as an already court-recognized "group" of American citizens with common constitutional interests based in the First Amendment's guaranteed <em>Right</em> to speak; - an action which —without the benefit of any trial on the facts — culminated in a permanent injunction in 2008 against Mr. Kotmair and many of the First-Amendment activities of the Fellowship.  However, due to the faithfulness and dedication of fellow patriots, the Liberty Works Radio Network Fellowship and the Save-A-Patriot Fellowship are still active.</p>
+<p>Gifts an contributions to the Liberty Works Radio Network Fellowship will be appreciated to help defray the costs of operation. They can be made at LibertyWorksRadioNetwork.com .</p>
+<p>Personal correspondence can be sent to:</p>
+<p>SAP Fellowship ATTENTION NANCY P.O. Box 91 Westminster, MD 21158</p>
+<div class="pagebreak"><a class="pageref" href="American Tax Bible.pdf#page=9" target="_blank" title="Open PDF page 9"><span class="pdf-ico">PDF</span> p.9</a></div>
+<p>Or to:</p>
+<p>LWRN<br>
+P.O. Box 91<br>
+Westminster, MD 21158</p>
+<p>Please note that only completely blank postal money orders or federal reserve notes (a.k.a. “cash”) can be accepted as gifts or contributions.</p>
+<p>Tributes to John B. Kotmair and his accomplishments, and memories of how his passion for justice and liberty affected you,</p>
+<p>Above all, John Baptist Kotmair believed in the Lord Jesus Christ, and looked to him, the Author and Finisher of his Faith, for help in the battle for Liberty.  He often quoted Galatians 5:1:</p>
+<p>“<strong><em>Stand fast therefore in the liberty wherewith Christ hath made us free and be not entangled again with the yoke of bondage</em></strong>.”</p>
+<p>May you and your family hereby do the same.</p>
+<div class="pagebreak"><a class="pageref" href="American Tax Bible.pdf#page=10" target="_blank" title="Open PDF page 10"><span class="pdf-ico">PDF</span> p.10</a></div>
+<h1 id="genesis">GENESIS</h1>
+<p><strong>Introduction</strong></p>
+<p>Every American in the nation knows in their heart that there is something very, very, wrong with the way the IRS operates in America to supposedly enforce the federal income tax laws on Americans in order to exact from them the payment of the federal income tax.  For 80 years American have been persistently objecting that there is a problem, but to date have never been able to quite articulate the problem and the issue correctly, - instead being consumed with, and always speaking in terms of "<em>constitutionality</em>", rather than speaking  in terms of the true controlling legal issue, which is the "<em>subject-matter jurisdiction</em>" of the federal courts that is actually both constitutionally granted and made <em>enforceable</em>, and can therefore properly and lawfully be taken by a federal court under the U.S. Constitution to enforce “<em>any tax</em>”.</p>
+<p>Clearly, there is an obvious inherent and fundamental contradiction present in the operation of the tax "<em>system</em>", that <strong><em>contradicts</em></strong> everything we learn and are taught when we are young, about how great America is, and why,   <em>i.e.</em>: personal freedom, liberty, independence, privacy, private property, security, equal <em>Rights,</em> limited government, a <em>Right to Work,</em> private enterprise, legal <em>due process</em>, jury trial, face your accuser, law controls everyone (and not the tyranny of the masses), equal protection, equal opportunity, etc.  Fully understanding the matter of the "<em>subject- matter jurisdiction</em> of the court that can [or cannot] be taken" will complete your education on the <em>income tax</em> law, and the American legal system in general.</p>
+<p>Of course, more than just a few Americans already feel that the legal confusion surrounding the constitutional authority to tax <em>income</em> is being intentionally secretly used by the socialists and the politicians to overcome the constitutional limitations on the government's power to tax <em>We the People</em> in order to effect a Fabian collective-socialist society that, in order to exist, first requires the destruction of America’s constitutional Republic, the limits of exercisable power and controlling government authority, the written law, and our representative system of government; - and which tax has already been used to substantially diminish the fundamental freedoms of the American people by forcing the population to serve the government and its never-ending and ever-growing demands, rather than comply with the Constitutional mandate for the government to represent <em>We the People</em> as the true and proper, only sovereign power in America.</p>
+</main>
+</div>
+<a id="totop" href="#top">↑</a>
+<script>
+const sb=document.getElementById('sidebar'),mb=document.getElementById('menu-btn');
+mb&&mb.addEventListener('click',()=>sb.classList.toggle('open'));
+const tt=document.getElementById('totop');
+addEventListener('scroll',()=>{tt.style.display=scrollY>500?'flex':'none';});
+</script>
+</body>
+</html>
