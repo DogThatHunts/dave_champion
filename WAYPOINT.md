@@ -1,6 +1,6 @@
 # Waypoint — dave_champion
 
-_Last updated: 2026-08-11_
+_Last updated: 2026-08-12_
 
 > **Reorg DONE (2026-08-11):** multi-book layout with a shared citation library — see
 > [`MIGRATION.md`](MIGRATION.md). Executed the *relocate + retarget* pass: `book/` →
@@ -59,7 +59,8 @@ Pipeline (deterministic, re-runnable generators). The register builders live in 
    IRS/Treasury guidance docs. Curated `CASE_FIXES`, `ACT_URLS`, `FOUNDING`, `CFR §1.1-1`.
 4. `build_register_html.py` — `link_register.json` → `link_register.html` (styled like the edition).
 5. `build_html.py` — proofread MD + `link_register.json` → the HTML edition (+ `index.html` copy
-   for the clean `/book/` URL) + `treasury_decisions.json` sidecar.
+   for the clean `/books/income-tax-shattering-the-myths/` URL). Reads/writes the shared
+   `citations/` (register in, `treasury_decisions.json` sidecar out).
 
 **Edition features:**
 - Centered title block + Table of Contents (DEDICATION style); TOC entries sized by seniority
@@ -228,7 +229,7 @@ letter). NOT the Dave Champion book. Goal: a clean **Markdown** edition preservi
 
 ## Site (GitHub Pages)
 
-## Status: ✅ Live and styled
+## Status: ✅ Live (multi-section; Jekyll disabled) — verified 2026-08-12
 
 **Live site:** https://dogthathunts.github.io/dave_champion/
 
@@ -236,26 +237,37 @@ letter). NOT the Dave Champion book. Goal: a clean **Markdown** edition preservi
 |-----|---------|
 | `/dave_champion/` | Placeholder home (`index.html`), links to the whiteboard page |
 | `/dave_champion/whiteboard_income_tax.html` | Whiteboard: Income Tax page (styled) |
-| `/dave_champion/dry_fasting_summary.css` | Stylesheet used by the whiteboard page |
+| `/dave_champion/books/income-tax-shattering-the-myths/` | **Book #1 edition** (Dave Champion) |
+| `/dave_champion/books/american-tax-bible/American%20Tax%20Bible.html` | **Book #2 edition** (Thomas Freed) |
+| `/dave_champion/citations/link_register.html` | Shared citation **link register** |
+| `/dave_champion/citations/treasury_decisions.json` | TD num→URL sidecar (fetched by the editions) |
+| `/dave_champion/comparisons/Books_compared_legal_theory.html` | Legal-theory comparison of the two books |
+
+_Old `/dave_champion/book/` (Book #1's pre-reorg URL) now 404s — retired, no redirect._
 
 ## Repo
 - **GitHub:** https://github.com/DogThatHunts/dave_champion (public)
 - **Account:** DogThatHunts · **Branch:** `main`
-- **Pages source:** deploy from `main` / root (`/`)
+- **Pages source:** deploy from `main` / root (`/`), **Jekyll disabled** via repo-root `.nojekyll`
+  (see the Book-edition note — Book #2's OCR'd `{{` broke Jekyll; static-copy only now).
 
-### Tracked files
-- `index.html` — placeholder home page linking to the whiteboard page
-- `whiteboard_income_tax.html` — references `dry_fasting_summary.css` (relative path, line 8)
-- `dry_fasting_summary.css`
-- `.gitignore`
+### Layout (top level)
+- `books/<slug>/` — one self-contained dir per book (edition HTML + source PDF + generators)
+- `citations/` — shared library: register builders, `link_register.*`, TD sidecar + local TD PDFs, `CITATION_LINKING.md`
+- `comparisons/` — cross-book docs (legal-theory comparison, `Tax_acts_compared.xlsx`)
+- `docs/` — reusable `PDF_TO_MD_PROMPT.md`
+- root — `index.html` (placeholder home), `whiteboard_income_tax.html`, `dry_fasting_summary.css`, `.nojekyll`, `WAYPOINT.md`, `MIGRATION.md`
 
 ### .gitignore behavior
 ```
-*.css
-!dry_fasting_summary.css
+*.css                     # except !dry_fasting_summary.css (live site needs it)
+.DS_Store
+__pycache__/  *.pyc  .venv/
+**/settings.local.json
 ```
-Ignores all CSS **except** `dry_fasting_summary.css` (which the live site needs).
-Any *other* `.css` file added later stays out of the repo.
+Ignores stray CSS (keeps the one stylesheet), macOS cruft, Python build/venv artifacts, and
+local editor/agent settings. Book source PDFs and the local TD PDFs **are** committed (see the
+Git-LFS-rejected decision below).
 
 ## History / key decisions
 1. Created public repo, pushed `whiteboard_income_tax.html` + `dry_fasting_summary.css`.
