@@ -6,7 +6,7 @@
 - inline citation enrichment (SCOTUS->Justia, USC/CFR->Cornell LII, Amendments->
   Constitution Annotated, IRS forms->IRS)
 - Treasury Decision links resolved at RUNTIME from treasury_decisions.json (a small
-  sidecar built from ../transcription-agent/TREASURY_DECISIONS.md) so the mapping can
+  sidecar built from ../../../transcription-agent/TREASURY_DECISIONS.md) so the mapping can
   be updated without rebuilding this HTML file.
 """
 import re, html, json, unicodedata
@@ -15,7 +15,7 @@ from urllib.parse import quote
 MD  = "Book - Dave Champion - Income Tax - Shattering the Myths.md"
 OUT = "Book - Dave Champion - Income Tax - Shattering the Myths.html"
 PDF = "Book - Dave Champion - Income Tax - Shattering the Myths.pdf"
-TD_FILE = "../../transcription-agent/TREASURY_DECISIONS.md"
+TD_FILE = "../../../transcription-agent/TREASURY_DECISIONS.md"
 PDF_HREF = quote(PDF)
 PAGE_OFFSET_ARABIC = 23   # physical PDF page = printed arabic + 23  (measured)
 PAGE_OFFSET_ROMAN  = 11   # physical PDF page = printed roman  + 11  (measured, ii->13)
@@ -30,7 +30,7 @@ try:
             td_map[mnum.group(1)] = urls[-1]
 except FileNotFoundError:
     pass
-json.dump(td_map, open("../citations/treasury_decisions.json", "w", encoding="utf-8"), indent=2)
+json.dump(td_map, open("../../citations/treasury_decisions.json", "w", encoding="utf-8"), indent=2)
 
 # ---------- helpers ----------
 def roman_to_int(s):
@@ -83,7 +83,7 @@ def rk(s):  # register key normaliser
     return re.sub(r"[^a-z0-9]+","",s.lower())
 reg_url={}      # (kind, key) -> url
 try:
-    REG=json.load(open("../citations/link_register.json",encoding="utf-8"))
+    REG=json.load(open("../../citations/link_register.json",encoding="utf-8"))
     for e in REG.get("scotus_and_courts",[]):
         reg_url[("case",rk(e["cite"]))]=e["url"]
     for e in REG.get("usc_title26_irc",[]):
@@ -484,7 +484,7 @@ const tt=document.getElementById('totop');
 addEventListener('scroll',()=>{tt.style.display=scrollY>600?'flex':'none';});
 // DYNAMIC Treasury Decision links: resolve href from the sidecar mapping at load time,
 // so updates to treasury_decisions.json take effect without rebuilding this HTML.
-fetch('../citations/treasury_decisions.json').then(r=>r.ok?r.json():{}).then(m=>{
+fetch('../../citations/treasury_decisions.json').then(r=>r.ok?r.json():{}).then(m=>{
  document.querySelectorAll('a.cite.td[data-td]').forEach(a=>{
   const u=m[a.dataset.td]; if(u) a.href=u;});
 }).catch(()=>{});
@@ -507,7 +507,7 @@ htmlout = f"""<!doctype html>
 <aside id="sidebar">
 <h1>Income Tax:<br>Shattering The Myths</h1>
 <div class="byline">Dave Champion — interactive edition</div>
-<div class="byline"><a href="../citations/link_register.html" style="color:var(--link);text-decoration:none">Link register →</a></div>
+<div class="byline"><a href="../../citations/link_register.html" style="color:var(--link);text-decoration:none">Link register →</a></div>
 {sidebar}
 <div class="legend"><b>Link colours:</b> <span style="color:#0b5c8a">cases</span>,
 <span style="color:#5a3d8a">statutes / regs</span>, <span style="color:#1d6b45">Constitution</span>,
@@ -528,7 +528,7 @@ tags in the right margin open that page of the source PDF.</div>
 """
 
 open(OUT,"w",encoding="utf-8").write(htmlout)
-# also emit index.html so the edition has a clean URL (/dave_champion/book/)
+# also emit index.html so the edition has a clean URL (/dave_champion/books/income-tax-shattering-the-myths/)
 open("index.html","w",encoding="utf-8").write(htmlout)
 print(f"wrote {OUT} + index.html  ({len(htmlout):,} bytes)")
 print(f"nav entries: {len([h for h in heads if h[1].lower()!='table of contents'])}")

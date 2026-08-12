@@ -113,7 +113,7 @@ margin-top:1.4rem;padding-top:.7rem}
 <aside id="sidebar">
 <h1>Income Tax:<br>Shattering The Myths</h1>
 <div class="byline">Dave Champion — interactive edition</div>
-<div class="byline"><a href="../citations/link_register.html" style="color:var(--link);text-decoration:none">Link register →</a></div>
+<div class="byline"><a href="../../citations/link_register.html" style="color:var(--link);text-decoration:none">Link register →</a></div>
 <ol class="nav-list">
 <li class="lvl4"><a href="#introduction">Introduction</a></li>
 <li class="lvl4"><a href="#how-to-read-this-book">How To Read This Book</a></li>
@@ -4090,7 +4090,7 @@ const tt=document.getElementById('totop');
 addEventListener('scroll',()=>{tt.style.display=scrollY>600?'flex':'none';});
 // DYNAMIC Treasury Decision links: resolve href from the sidecar mapping at load time,
 // so updates to treasury_decisions.json take effect without rebuilding this HTML.
-fetch('../citations/treasury_decisions.json').then(r=>r.ok?r.json():{}).then(m=>{
+fetch('../../citations/treasury_decisions.json').then(r=>r.ok?r.json():{}).then(m=>{
  document.querySelectorAll('a.cite.td[data-td]').forEach(a=>{
   const u=m[a.dataset.td]; if(u) a.href=u;});
 }).catch(()=>{});

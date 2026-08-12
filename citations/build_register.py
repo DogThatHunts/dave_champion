@@ -6,7 +6,7 @@ import re, json, sys
 from collections import defaultdict, OrderedDict
 from urllib.parse import quote
 
-MD = "../book/Book - Dave Champion - Income Tax - Shattering the Myths.md"
+MD = "../books/income-tax-shattering-the-myths/Book - Dave Champion - Income Tax - Shattering the Myths.md"
 text = open(MD, encoding="utf-8").read()
 
 # ---- page-anchor tracking: map char offset -> nearest preceding page label ----

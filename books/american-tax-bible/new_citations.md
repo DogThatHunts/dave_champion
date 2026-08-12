@@ -7,11 +7,13 @@ Citations found in this book that are **not yet** in the shared register (`citat
 
 | Full citation | Court | Occ. | Pages | Link |
 |---|---|---:|---|---|
+| Christianson v. Colt Industries Operating Co. 486 U.S. 800 | U.S. Supreme Court | 4 | 461, 488, 653, 661 | [link](https://supreme.justia.com/cases/federal/us/486/800/) |
 | Firestone Tire & Rubber Co. v. Risjord. 449 U.S. 368 | U.S. Supreme Court | 4 | 461, 488, 653, 661 | [link](https://supreme.justia.com/cases/federal/us/449/368/) |
 | United States v. Collins. 920 F.2d 619 at 629 | Federal court | 4 | 483, 484, 758 | [link](https://www.courtlistener.com/?q=United%20States%20v.%20Collins%20920%20F.2d%20619) |
+| Shoshone Mining Co. v. Rutter. 177 U.S. 505 at 513 (1900) | U.S. Supreme Court | 2 | 438, 639 | [link](https://supreme.justia.com/cases/federal/us/177/505/) |
+| Finley v. United States. 490 U.S. 545 (1989) | U.S. Supreme Court | 2 | 438, 639 | [link](https://supreme.justia.com/cases/federal/us/490/545/) |
 | Lovell v. United States. 755 F.2d 517 at 518 | Federal court | 2 | 484, 759 | [link](https://www.courtlistener.com/?q=Lovell%20v.%20United%20States%20755%20F.2d%20517) |
 | Broughton v. United States. 632 F.2d 706 | Federal court | 2 | 484, 759 | [link](https://www.courtlistener.com/?q=Broughton%20v.%20United%20States%20632%20F.2d%20706) |
-| Christianson v. Colt Industries Operating Co. 486 U.S. 800 | U.S. Supreme Court | 2 | 653, 661 | [link](https://supreme.justia.com/cases/federal/us/486/800/) |
 | Connecticut National Bank v. Germain. 503 U.S. 249 | U.S. Supreme Court | 1 | 34 | [link](https://supreme.justia.com/cases/federal/us/503/249/) |
 | Murphy v. I.R.S. 460 F.3d 79 | Federal court | 1 | 207 | [link](https://www.courtlistener.com/?q=Murphy%20v.%20I.R.S%20460%20F.3d%2079) |
 | United States v. Critzer. 498 F.2d 1160 | Federal court | 1 | 391 | [link](https://www.courtlistener.com/?q=United%20States%20v.%20Critzer%20498%20F.2d%201160) |
@@ -64,23 +66,21 @@ Citations found in this book that are **not yet** in the shared register (`citat
 | United States v. Neff. 954 F.2d 698 at 699 | Federal court | 1 | 399 | [link](https://www.courtlistener.com/?q=United%20States%20v.%20Neff%20954%20F.2d%20698) |
 | United States v. Pilcher. 672 F.2d 875 at 877 | Federal court | 1 | 399 | [link](https://www.courtlistener.com/?q=United%20States%20v.%20Pilcher%20672%20F.2d%20875) |
 | United States v. Ballard. 535 F.2d 400 at 404 | Federal court | 1 | 400 | [link](https://www.courtlistener.com/?q=United%20States%20v.%20Ballard%20535%20F.2d%20400) |
-| Finley v. United States. 490 U.S. 545 (1989) | U.S. Supreme Court | 1 | 438 | [link](https://supreme.justia.com/cases/federal/us/490/545/) |
 | Melo v. U.S. 505 F.2d 1026 at 18 | Federal court | 1 | 460 | [link](https://www.courtlistener.com/?q=Melo%20v.%20U.S%20505%20F.2d%201026) |
 | Millken v. Meyer. 311 U.S. 457 at 61 | U.S. Supreme Court | 1 | 494 | [link](https://supreme.justia.com/cases/federal/us/311/457/) |
 | Amos Treat & Co. v. Securities & Exchange Commission. 306 F.2d 260 (1962) | Federal court | 1 | 523 | [link](https://www.courtlistener.com/?q=Amos%20Treat%20%26%20Co.%20v.%20Securities%20%26%20Exchange%20Commission%20306%20F.2d%20260) |
-| Shoshone Mining Co. v. Rutter. 177 U.S. 505 at 513 (1900) | U.S. Supreme Court | 1 | 639 | [link](https://supreme.justia.com/cases/federal/us/177/505/) |
 | Eidman v. Martinez. 184 U.S. 578 at 583 (1902) | U.S. Supreme Court | 1 | 653 | [link](https://supreme.justia.com/cases/federal/us/184/578/) |
 
-## 2. Title 26 U.S.C. (IRC) sections  (190 new)
+## 2. Title 26 U.S.C. (IRC) sections  (189 new)
 
 | Section | Occ. | Pages | Cornell LII |
 |---|---:|---|---|
-| 26 U.S.C. § 7608 | 129 | 4, 13, 263, 306, 307, 333, 338, 341 … | [link](https://www.law.cornell.edu/uscode/text/26/7608) |
+| 26 U.S.C. § 7608 | 131 | 4, 13, 263, 306, 307, 333, 338, 341 … | [link](https://www.law.cornell.edu/uscode/text/26/7608) |
 | 26 U.S.C. § 7609 | 43 | 570, 594, 595, 596, 599, 600, 603, 609 … | [link](https://www.law.cornell.edu/uscode/text/26/7609) |
 | 26 U.S.C. § 7603 | 28 | 570, 571, 572, 587, 588, 594, 599, 603 … | [link](https://www.law.cornell.edu/uscode/text/26/7603) |
 | 26 U.S.C. § 6502 | 28 | 323, 325, 333, 337, 347, 507, 508, 509 … | [link](https://www.law.cornell.edu/uscode/text/26/6502) |
 | 26 U.S.C. § 7604 | 22 | 566, 568, 570, 583, 584, 586, 595, 605 … | [link](https://www.law.cornell.edu/uscode/text/26/7604) |
-| 26 U.S.C. § 22 | 20 | 159, 160, 161, 162, 163, 164, 167, 168 … | [link](https://www.law.cornell.edu/uscode/text/26/22) |
+| 26 U.S.C. § 22 | 21 | 159, 160, 161, 162, 163, 164, 167, 168 … | [link](https://www.law.cornell.edu/uscode/text/26/22) |
 | 26 U.S.C. § 6201 | 19 | 138, 300, 320, 367, 370, 376, 381, 382 … | [link](https://www.law.cornell.edu/uscode/text/26/6201) |
 | 26 U.S.C. § 1332 | 18 | 437, 438, 458, 459, 479, 485, 491, 639 … | [link](https://www.law.cornell.edu/uscode/text/26/1332) |
 | 26 U.S.C. § 6335 | 17 | 302, 322, 323, 333, 507, 508, 515, 719 … | [link](https://www.law.cornell.edu/uscode/text/26/6335) |
@@ -199,7 +199,6 @@ Citations found in this book that are **not yet** in the shared register (`citat
 | 26 U.S.C. § 4985 | 1 | 146 | [link](https://www.law.cornell.edu/uscode/text/26/4985) |
 | 26 U.S.C. § 6213 | 1 | 148 | [link](https://www.law.cornell.edu/uscode/text/26/6213) |
 | 26 U.S.C. § 6512 | 1 | 148 | [link](https://www.law.cornell.edu/uscode/text/26/6512) |
-| 26 U.S.C. § 15 | 1 | 155 | [link](https://www.law.cornell.edu/uscode/text/26/15) |
 | 26 U.S.C. § 40 | 1 | 161 | [link](https://www.law.cornell.edu/uscode/text/26/40) |
 | 26 U.S.C. § 501 | 1 | 162 | [link](https://www.law.cornell.edu/uscode/text/26/501) |
 | 26 U.S.C. § 877 | 1 | 187 | [link](https://www.law.cornell.edu/uscode/text/26/877) |
@@ -297,7 +296,7 @@ _Fallback links are HathiTrust searches; add canonical URLs to the shared TD map
 
 | Reference | Occ. | Source |
 |---|---:|---|
-| Fourteenth Amendment | 7 | [link](https://constitution.congress.gov/constitution/amendment-14/) |
+| Fourteenth Amendment | 8 | [link](https://constitution.congress.gov/constitution/amendment-14/) |
 
 ## 6. IRS forms  (33 new)
 
@@ -354,25 +353,25 @@ _Fallback links are HathiTrust searches; add canonical URLs to the shared TD map
 |---|---:|---|---|
 | Corporate Tax Act of 1909 | 7 | 76, 84, 209, 210 | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
 | Corporation Excise Tax Act of 1909 | 5 | 208, 209, 214 | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
+| Simmons Tariff Act | 4 | 55, 135, 763 | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
 | Underwood-Simmons Tariff Act | 3 | 56, 125, 364 | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
 | Revenue Act of 1916 | 3 | 66, 175, 206 | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
-| Simmons Tariff Act | 3 | 135, 763 | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
 | Underwood Simmons Tariff Act | 2 | 61, 103 | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
 | Tariff Act of 1913 | 2 | 74, 676 | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
 | Revenue Act of 1938 | 2 | 111 | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
 | Paperwork Reduction Act of 1980 | 2 | 149, 152 | [link](https://www.congress.gov/bill/96th-congress/senate-bill/1411) |
-| Contributions Act | 2 | 540, 552 | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
+| Corporation Excise Tax Act | 2 | 214, 216 | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
 | Revenue Act of 1926 | 2 | 544, 545 | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
 | Income Tax Act of 1894 | 1 | 52 | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
 | Tariff Act | 1 | 55 | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
 | Certain Excise Tax Act | 1 | 96 | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
 | For Certain Excise Tax Act | 1 | 97 | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
+| Pot Paperwork Reduction Act | 1 | 156 | [link](https://www.congress.gov/bill/96th-congress/senate-bill/1411) |
 | Income Tax Act of 1916 | 1 | 214 | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
-| Tax Act | 1 | 214 | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
-| Corporation Excise Tax Act | 1 | 216 | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
 | Revenue Act of 1934 | 1 | 255 | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
 | Paperwork Reduction Act of 1995 | 1 | 340 | [link](https://www.congress.gov/bill/96th-congress/senate-bill/1411) |
 | Revenue Act of 1978 | 1 | 378 | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
+| Contributions Act | 1 | 540 | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
 
 ## 9. Executive Orders  (0 new)
 

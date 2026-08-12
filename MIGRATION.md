@@ -1,9 +1,28 @@
 # Migration plan — multi-book layout with a shared citation library
 
-_Planned 2026-08-11. **Plan only — no files moved yet.** Decisions locked with the owner:_
-1. **Full rename** of book #1 into `books/<slug>/` (accepts breaking the live `/book/` URL — mitigated by a redirect stub, step 6).
-2. **One merged register** across all books (per-entry book provenance).
-3. Reorg executed in a **later** pass; this document is the checklist.
+_Planned 2026-08-11._
+
+## Status — RELOCATE + RETARGET pass DONE (2026-08-11)
+Executed the structural reorg and path retargeting only:
+- `book/` → `books/income-tax-shattering-the-myths/`; `American_Tax_Bible_book/book/` →
+  `books/american-tax-bible/` (with `new_citations.md` pulled into the book dir);
+  cross-book artifacts → `comparisons/`; `PDF_TO_MD_PROMPT.md` → `docs/`.
+- All builder paths retargeted; all three pipelines (book #1 register+edition, book #2
+  citation-diff+edition) rebuild clean from their new homes.
+- Old `/book/` and `/book/link_register.html` kept as meta-refresh **redirect stubs**.
+- **Not created this pass** (deliberate, low-risk): `site/` (root landing files stay at
+  root so their live URLs don't break) and `shared/` (edition-builder unification deferred).
+
+**Still DEFERRED (follow-up):**
+- §2 unify book #1 & #2 `build_html.py` into one `shared/build_edition.py` (config-driven).
+- §3 make `citations/build_register.py` multi-book / merged with `by_book` provenance
+  (book #2 still uses its own `build_new_citations.py` diff in the meantime).
+- Git-LFS-vs-commit decision for the PDFs (repo now carries ~35 MB of book PDFs).
+
+_Original decisions (locked with the owner):_
+1. **Full rename** of book #1 into `books/<slug>/` (accepts breaking the live `/book/` URL — mitigated by a redirect stub, step 6). ✅ done
+2. **One merged register** across all books (per-entry book provenance). ⏳ deferred
+3. Reorg executed in a **later** pass; this document is the checklist. ✅ relocate pass done
 
 ---
 

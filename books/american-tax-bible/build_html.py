@@ -17,7 +17,7 @@ Differences from book #1's build_html.py (by design):
 Citation URLs are resolved exactly as book #1 does: look them up in the shared
 register (../../citations/link_register.json) and fall back to the same
 deterministic construction the register itself uses, so nothing goes unlinked.
-Book-#2-only citations (see ../new_citations.md) resolve via those fallbacks.
+Book-#2-only citations (see new_citations.md) resolve via those fallbacks.
 """
 import re, html, json, unicodedata
 from urllib.parse import quote
@@ -396,7 +396,7 @@ htmlout = f"""<!doctype html>
 <aside id="sidebar">
 <h1>The American<br>Tax Bible</h1>
 <div class="byline">Thomas Freed — interactive edition</div>
-<div class="byline"><a href="../new_citations.md" style="color:var(--link);text-decoration:none">New citations (this book) →</a></div>
+<div class="byline"><a href="new_citations.md" style="color:var(--link);text-decoration:none">New citations (this book) →</a></div>
 {sidebar}
 <div class="legend"><b>Link colours:</b> <span style="color:#0b5c8a">cases</span>,
 <span style="color:#5a3d8a">statutes / regs</span>, <span style="color:#1d6b45">Constitution</span>,

@@ -1,19 +1,19 @@
 #!/usr/bin/env python3
 """build_html_preview.py — quick HTML preview of the first N pages of
 *The American Tax Bible*, styled identically to book #1's interactive edition
-(`../../book/Book - …Shattering the Myths.html`).
+(`../income-tax-shattering-the-myths/Book - …Shattering the Myths.html`).
 
 Reuses book #1's <style> block verbatim (shared look/feel), renders the MD
 (emphasis + page anchors + book headings) into the same sidebar+main shell.
 This is a STYLE preview — full citation enrichment / TOC generation is the later
-`build_html.py` step. Run from American_Tax_Bible_book/book/:
+`build_html.py` step. Run from books/american-tax-bible/:
 
     .venv/bin/python build_html_preview.py [--pages 1-10]
 """
 import argparse, re, html
 
 MD = "American Tax Bible.md"
-BOOK1 = "../../book/Book - Dave Champion - Income Tax - Shattering the Myths.html"
+BOOK1 = "../income-tax-shattering-the-myths/Book - Dave Champion - Income Tax - Shattering the Myths.html"
 PDF = "American Tax Bible.pdf"
 OUT = "preview_p1-10.html"
 

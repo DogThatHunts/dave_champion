@@ -5,9 +5,9 @@ Extracts legal citations from `American Tax Bible.md` using the SAME regex logic
 as the repo-root `citations/build_register.py` (book #1's register builder), then
 diffs against `citations/link_register.json` and writes a LOCAL list of only the
 NEW citations (present in this book, absent from the shared register) to
-`../new_citations.md`, ready to fold into a merged multi-book register later.
+`new_citations.md`, ready to fold into a merged multi-book register later.
 
-Run from American_Tax_Bible_book/book/:  .venv/bin/python build_new_citations.py
+Run from books/american-tax-bible/:  .venv/bin/python build_new_citations.py
 """
 import re, json, os
 from collections import defaultdict, OrderedDict
@@ -15,7 +15,7 @@ from urllib.parse import quote
 
 MD = "American Tax Bible.md"
 REGISTER = "../../citations/link_register.json"
-OUT = "../new_citations.md"
+OUT = "new_citations.md"
 
 text = open(MD, encoding="utf-8").read()
 

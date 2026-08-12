@@ -2,12 +2,15 @@
 
 _Last updated: 2026-08-11_
 
-> **Planned reorg:** multi-book layout with a shared citation library — see
-> [`MIGRATION.md`](MIGRATION.md). Decisions locked: full rename of book #1 into
-> `books/<slug>/` (redirect the old `/book/` URL), one merged multi-book register.
-> **Not executed yet — plan only.**
+> **Reorg DONE (2026-08-11):** multi-book layout with a shared citation library — see
+> [`MIGRATION.md`](MIGRATION.md). Executed the *relocate + retarget* pass: `book/` →
+> `books/income-tax-shattering-the-myths/`, `American_Tax_Bible_book/book/` →
+> `books/american-tax-bible/`, cross-book docs → `comparisons/`, prompt → `docs/`; old
+> `/book/` URL kept as a redirect stub. **Deferred to a follow-up:** the merged
+> multi-book register (§3) and unifying the two `build_html.py` into one shared builder
+> (§2) — each book still has its own builder; the register is still book-#1-only.
 >
-> **Pipeline playbook:** [`PDF_TO_MD_PROMPT.md`](PDF_TO_MD_PROMPT.md) — the reusable,
+> **Pipeline playbook:** [`PDF_TO_MD_PROMPT.md`](docs/PDF_TO_MD_PROMPT.md) — the reusable,
 > book-agnostic PDF→MD conversion spec + agent prompt (recon → extract → OCR → citation
 > abstraction/parking → validate → HTML handoff). Specs a **parked `new_citations.json`**
 > allowlist for the HTML build — **spec only, not yet implemented** (build_new_citations.py
@@ -15,19 +18,22 @@ _Last updated: 2026-08-11_
 
 ## Goal
 Publish the project's HTML pages as a live site via GitHub Pages. **New major workstream:**
-an interactive HTML edition of the book *Income Tax: Shattering The Myths* (in `book/`).
+an interactive HTML edition of the book *Income Tax: Shattering The Myths*
+(in `books/income-tax-shattering-the-myths/`).
 
 ---
 
-## Book edition (`book/`) — interactive HTML
+## Book edition (`books/income-tax-shattering-the-myths/`) — interactive HTML
 
-**Status: ✅ LIVE & published**
-- Edition: https://dogthathunts.github.io/dave_champion/book/
-- Link register (HTML): https://dogthathunts.github.io/dave_champion/book/link_register.html
+**Status: ✅ LIVE & published**  _(URL changed in the 2026-08-11 reorg; old `/book/` redirects)_
+- Edition: https://dogthathunts.github.io/dave_champion/books/income-tax-shattering-the-myths/
+- Link register (HTML): https://dogthathunts.github.io/dave_champion/citations/link_register.html
+- Old URLs `…/book/` and `…/book/link_register.html` are meta-refresh redirect stubs.
 - Source PDF **is now published** (`book/Book - …Shattering the Myths.pdf`, ~16 MB) so the
   edition's per-page back-links resolve.
 
-Pipeline (deterministic, re-runnable generators, all in `book/`). **Build order matters:**
+Pipeline (deterministic, re-runnable generators). The register builders live in the shared
+`citations/`; `clean.py`/`proofread.py`/`build_html.py` live in the book dir. **Build order matters:**
 `clean.py` → `proofread.py chunk` → `proofread.py apply` → `build_register.py` →
 `build_register_html.py` → `build_html.py`.
 1. `clean.py` — raw OCR → cleaned MD (`Book - …Shattering the Myths.md`). Strips
@@ -92,7 +98,10 @@ Pipeline (deterministic, re-runnable generators, all in `book/`). **Build order 
 
 ---
 
-## Book #2 — *The American Tax Bible* (`American_Tax_Bible_book/book/`)
+## Book #2 — *The American Tax Bible* (`books/american-tax-bible/`)
+
+_Note: moved from `American_Tax_Bible_book/book/` in the 2026-08-11 reorg; `new_citations.md`
+now lives inside the book dir. Historical paths below refer to the pre-reorg location._
 
 **Status: 🟢 MD edition built (2026-08-11); citation diff + HTML still to do**
 
