@@ -25,12 +25,19 @@ an interactive HTML edition of the book *Income Tax: Shattering The Myths*
 
 ## Book edition (`books/income-tax-shattering-the-myths/`) — interactive HTML
 
-**Status: ✅ LIVE & published**  _(URL changed in the 2026-08-11 reorg; old `/book/` redirects)_
+**Status: ✅ LIVE & published**  _(URL changed in the 2026-08-11 reorg; verified live 2026-08-12)_
 - Edition: https://dogthathunts.github.io/dave_champion/books/income-tax-shattering-the-myths/
 - Link register (HTML): https://dogthathunts.github.io/dave_champion/citations/link_register.html
-- Old URLs `…/book/` and `…/book/link_register.html` are meta-refresh redirect stubs.
-- Source PDF **is now published** (`book/Book - …Shattering the Myths.pdf`, ~16 MB) so the
-  edition's per-page back-links resolve.
+- The old `…/book/` URL is **retired** — redirect stubs were added then removed as
+  redundant, so `/book/` now 404s (confirmed). No inbound links relied on it.
+- Source PDF **is now published** (`books/income-tax-shattering-the-myths/Book - …Shattering the Myths.pdf`,
+  ~16 MB) so the edition's per-page back-links resolve.
+
+> **GitHub Pages runs with Jekyll DISABLED** — a `.nojekyll` file at the repo root makes
+> Pages copy files verbatim (no Liquid/Markdown/theme). Required: Book #2's OCR'd MD
+> contains literal `{{` from scanned IRS forms, which Jekyll's Liquid parser choked on and
+> **failed the whole deploy** (site silently stuck on the old commit). Keep `.nojekyll`;
+> don't rely on any Jekyll feature. Our real "build" is the local Python generators.
 
 Pipeline (deterministic, re-runnable generators). The register builders live in the shared
 `citations/`; `clean.py`/`proofread.py`/`build_html.py` live in the book dir. **Build order matters:**
@@ -267,19 +274,22 @@ Any *other* `.css` file added later stays out of the repo.
 - [ ] Replace the placeholder `index.html` with real home-page content.
 - [ ] (Optional) Vendor the Google Fonts locally to remove the CDN dependency.
 
-## ⚠ Repo file-size concern (flagged 2026-08-11)
-Binary assets are being committed straight into git history and will bloat every
-clone/pull permanently (git keeps every version forever):
-- `citations/treasury_decisions/` — local TD source PDFs, **~4.5 MB** total
-  (`td_2815` alone is ~2.4 MB). Committed in the citation-reorg commit.
-- `book/Book - …Shattering the Myths.pdf` — **~16 MB** source PDF, already tracked
-  (kept so the edition's page back-links resolve). `book/.gitignore` ignores all
-  other `*.pdf`.
-- Top-level `American Tax Bible.pdf` (~18 MB) and `Tax_acts_compared.xlsx` are
-  currently **untracked** — decide before adding them.
+## Repo file size / Git LFS — RESOLVED (2026-08-12)
+Binary assets (PDFs) are committed straight into git history:
+- `citations/treasury_decisions/` — local TD source PDFs, **~4.5 MB** total (`td_2815`
+  alone ~2.4 MB).
+- `books/income-tax-shattering-the-myths/Book - …Shattering the Myths.pdf` — **~16 MB**
+  (kept so the edition's `PDF p.N` back-links resolve).
+- `books/american-tax-bible/American Tax Bible.pdf` — **~18 MB** (Book #2 source).
+- Total: ~37 MB of PDF bytes; whole `.git` ~45 MB. Each PDF is stored **once**
+  (verified: 1 blob apiece). Renames/`git mv` are free — only *replacing a PDF's
+  content* adds a new permanent copy to history.
 
-Decision needed: keep committing binaries as-is (simple, but history grows), or
-move large/binary assets to **Git LFS** or an external asset store and reference
-them. Cheapest to switch **before** these get pushed. Inline book TD links are a
-planned follow-up that would require the `citations/` PDFs to ship alongside the
-distributable HTML — factor that into the LFS-vs-inline decision.
+**Decision: keep committing the PDFs as-is. Git LFS was rejected** — GitHub Pages does
+NOT resolve LFS objects (it serves the ~130-byte pointer stub, not the file), which
+would break every served PDF: the Book #1 page back-links and the local Treasury-Decision
+PDFs. LFS also only reclaims history via a disruptive `git lfs migrate` rewrite and adds
+a client dependency + separate bandwidth quota. If repo size ever becomes a real problem,
+host the PDFs **outside git** (GitHub **Release** asset or a bucket/CDN) and link to
+absolute URLs — do **not** use LFS for anything Pages must serve. (Full rationale in
+`MIGRATION.md`.)

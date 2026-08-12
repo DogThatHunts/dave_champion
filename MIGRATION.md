@@ -17,7 +17,19 @@ Executed the structural reorg and path retargeting only:
 - §2 unify book #1 & #2 `build_html.py` into one `shared/build_edition.py` (config-driven).
 - §3 make `citations/build_register.py` multi-book / merged with `by_book` provenance
   (book #2 still uses its own `build_new_citations.py` diff in the meantime).
-- Git-LFS-vs-commit decision for the PDFs (repo now carries ~35 MB of book PDFs).
+
+**RESOLVED — repo file size / Git LFS (2026-08-12):** **LFS rejected.** GitHub Pages
+does not resolve LFS objects — it serves the ~130-byte pointer stub, not the file — so
+moving the PDFs to LFS would break every *served* PDF: Book #1's `PDF p.N` page
+back-links and the local Treasury-Decision PDFs under `citations/treasury_decisions/`.
+LFS also only reclaims history via a disruptive `git lfs migrate` history rewrite
+(force-push, all later SHAs change), and adds a client dependency (`git lfs install`)
+plus a separate metered bandwidth quota. **Decision: keep committing the PDFs as-is.**
+Each PDF is stored once (verified: 1 blob apiece, ~37 MB total; whole `.git` ~45 MB);
+`git mv`/renames are free — only *replacing a PDF's content* bloats history permanently.
+If repo size ever becomes a real problem, host the PDFs **outside git** (a GitHub
+**Release** asset or a bucket/CDN) and point the links at absolute URLs — do **not** use
+LFS for anything Pages must serve.
 
 _Original decisions (locked with the owner):_
 1. **Full rename** of book #1 into `books/<slug>/` (accepts breaking the live `/book/` URL — mitigated by a redirect stub, step 6). ✅ done
@@ -176,8 +188,8 @@ shared/build_edition.py books/<slug> # once per book
   `__pycache__/`, etc.) should move to a **per-book** `.gitignore` template under
   `books/<slug>/` (or a root rule scoped to `books/**`).
 - Ignore `books/*/src/.venv/`.
-- **File-size debt still open** (see WAYPOINT "Repo file-size concern"): the reorg is the
-  natural moment to decide Git-LFS-vs-commit for the PDFs before more accumulate.
+- **File-size / Git LFS: RESOLVED** — keep committing the PDFs; LFS rejected because
+  Pages won't serve LFS-tracked files (see the "RESOLVED" note near the top of this doc).
 
 ---
 
