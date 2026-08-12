@@ -17,6 +17,10 @@ Executed the structural reorg and path retargeting only:
 - §2 unify book #1 & #2 `build_html.py` into one `shared/build_edition.py` (config-driven).
 - §3 make `citations/build_register.py` multi-book / merged with `by_book` provenance
   (book #2 still uses its own `build_new_citations.py` diff in the meantime).
+- **Case-linker compliance** with `citations/CITATION_LINKING.md`: make `build_html.py`
+  wrap the full `case_name + cite` span (from `link_register.json`'s `full_citation`),
+  not just the bare reporter cite. Do it once in the shared/edition builder. The policy
+  is written; the linkers are not yet compliant (case name currently sits outside `<a>`).
 
 **RESOLVED — repo file size / Git LFS (2026-08-12):** **LFS rejected.** GitHub Pages
 does not resolve LFS objects — it serves the ~130-byte pointer stub, not the file — so
