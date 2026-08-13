@@ -507,7 +507,7 @@ htmlout = f"""<!doctype html>
 <aside id="sidebar">
 <h1>Income Tax:<br>Shattering The Myths</h1>
 <div class="byline">Dave Champion — interactive edition</div>
-<div class="byline"><a href="../../citations/link_register.html" style="color:var(--link);text-decoration:none">Link register →</a></div>
+<div class="byline"><a href="../../citations/link_register.html" target="_blank" rel="noopener" style="color:var(--link);text-decoration:none">Link register →</a></div>
 {sidebar}
 <div class="legend"><b>Link colours:</b> <span style="color:#0b5c8a">cases</span>,
 <span style="color:#5a3d8a">statutes / regs</span>, <span style="color:#1d6b45">Constitution</span>,

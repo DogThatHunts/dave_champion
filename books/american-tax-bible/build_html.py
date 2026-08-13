@@ -396,7 +396,7 @@ htmlout = f"""<!doctype html>
 <aside id="sidebar">
 <h1>The American<br>Tax Bible</h1>
 <div class="byline">Thomas Freed — interactive edition</div>
-<div class="byline"><a href="new_citations.md" style="color:var(--link);text-decoration:none">New citations (this book) →</a></div>
+<div class="byline"><a href="new_citations.md" target="_blank" rel="noopener" style="color:var(--link);text-decoration:none">New citations (this book) →</a></div>
 {sidebar}
 <div class="legend"><b>Link colours:</b> <span style="color:#0b5c8a">cases</span>,
 <span style="color:#5a3d8a">statutes / regs</span>, <span style="color:#1d6b45">Constitution</span>,
