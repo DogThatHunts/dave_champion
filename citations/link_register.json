@@ -1703,7 +1703,8 @@
         "150"
       ],
       "in_mapping_file": true,
-      "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+1928%22;a=srchls;lmt=ft"
+      "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+1928%22;a=srchls;lmt=ft",
+      "local_path": "treasury_decisions/td_1928/TD 1928.pdf"
     },
     {
       "cite": "T.D. 6500",
@@ -1723,7 +1724,8 @@
         "154"
       ],
       "in_mapping_file": true,
-      "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2401%22;a=srchls;lmt=ft"
+      "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2401%22;a=srchls;lmt=ft",
+      "local_path": "treasury_decisions/td_2401/TD 2401, TD 2402.pdf"
     },
     {
       "cite": "T.D. 2815",
@@ -1743,7 +1745,8 @@
         "156"
       ],
       "in_mapping_file": true,
-      "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2988%22;a=srchls;lmt=ft"
+      "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2988%22;a=srchls;lmt=ft",
+      "local_path": "treasury_decisions/td_2988/TD 2988.pdf"
     },
     {
       "cite": "T.D. 2382",
@@ -1753,6 +1756,7 @@
       ],
       "in_mapping_file": false,
       "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2382%22;a=srchls;lmt=ft",
+      "local_path": "treasury_decisions/td_2382/TD 2382.pdf",
       "note": "NOT YET in TREASURY_DECISIONS file — add it there; fallback is a HathiTrust search."
     }
   ],
