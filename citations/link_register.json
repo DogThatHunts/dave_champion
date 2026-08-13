@@ -1680,7 +1680,8 @@
       ],
       "in_mapping_file": true,
       "url": "https://www.irs.gov/pub/irs-regs/td8734.txt",
-      "local_path": "treasury_decisions/td_8734/T.D. 8734-Cumulative Bulletin 1997-44.pdf"
+      "local_path": "treasury_decisions/td_8734/T.D. 8734-Cumulative Bulletin 1997-44.pdf",
+      "transcript_path": "treasury_decisions/td_8734/td_8734.html"
     },
     {
       "cite": "T.D. 2313",
@@ -1693,7 +1694,8 @@
       ],
       "in_mapping_file": true,
       "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2313%22;a=srchls;lmt=ft",
-      "local_path": "treasury_decisions/td_2313/TD 2313.pdf"
+      "local_path": "treasury_decisions/td_2313/TD 2313.pdf",
+      "transcript_path": "treasury_decisions/td_2313/td_2313.html"
     },
     {
       "cite": "T.D. 1928",
@@ -1704,7 +1706,8 @@
       ],
       "in_mapping_file": true,
       "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+1928%22;a=srchls;lmt=ft",
-      "local_path": "treasury_decisions/td_1928/TD 1928.pdf"
+      "local_path": "treasury_decisions/td_1928/TD 1928.pdf",
+      "transcript_path": "treasury_decisions/td_1928/td_1928.html"
     },
     {
       "cite": "T.D. 6500",
@@ -1715,7 +1718,8 @@
       ],
       "in_mapping_file": true,
       "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+6500%22;a=srchls;lmt=ft",
-      "local_path": "treasury_decisions/td_6500/TD 6500.pdf"
+      "local_path": "treasury_decisions/td_6500/TD 6500.pdf",
+      "transcript_path": "treasury_decisions/td_6500/td_6500.html"
     },
     {
       "cite": "T.D. 2401",
@@ -1725,7 +1729,8 @@
       ],
       "in_mapping_file": true,
       "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2401%22;a=srchls;lmt=ft",
-      "local_path": "treasury_decisions/td_2401/TD 2401, TD 2402.pdf"
+      "local_path": "treasury_decisions/td_2401/TD 2401, TD 2402.pdf",
+      "transcript_path": "treasury_decisions/td_2401/td_2401.html"
     },
     {
       "cite": "T.D. 2815",
@@ -1736,7 +1741,8 @@
       "in_mapping_file": true,
       "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2815%22;a=srchls;lmt=ft",
       "local_path": "treasury_decisions/td_2815/TD 2815 - Form 1040 for nonresident aliens and their agents.pdf",
-      "note": "Local copy may actually be T.D. 2816 (possible filing/scan mislabel) — verify before relying on it."
+      "transcript_path": "treasury_decisions/td_2815/td_2815.html",
+      "note": "The 2-page scan also carries the next decision, T.D. 2816 (the earlier 'may be 2816' mislabel caveat is resolved — the scan's header reads T.D. 2815)."
     },
     {
       "cite": "T.D. 2988",
@@ -1746,7 +1752,8 @@
       ],
       "in_mapping_file": true,
       "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2988%22;a=srchls;lmt=ft",
-      "local_path": "treasury_decisions/td_2988/TD 2988.pdf"
+      "local_path": "treasury_decisions/td_2988/TD 2988.pdf",
+      "transcript_path": "treasury_decisions/td_2988/td_2988.html"
     },
     {
       "cite": "T.D. 2382",
@@ -1756,7 +1763,8 @@
       ],
       "in_mapping_file": true,
       "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2382%22;a=srchls;lmt=ft",
-      "local_path": "treasury_decisions/td_2382/TD 2382.pdf"
+      "local_path": "treasury_decisions/td_2382/TD 2382.pdf",
+      "transcript_path": "treasury_decisions/td_2382/td_2382.html"
     }
   ],
   "constitution": [

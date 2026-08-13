@@ -322,7 +322,8 @@ import os
 TD_LOCAL_DIR = "treasury_decisions"
 # Known caveats about the local scans (surfaced in the register, not silently trusted).
 TD_LOCAL_NOTES = {
-    "2815": "Local copy may actually be T.D. 2816 (possible filing/scan mislabel) — verify before relying on it.",
+    "2815": "The 2-page scan also carries the next decision, T.D. 2816 (the earlier "
+            "'may be 2816' mislabel caveat is resolved — the scan's header reads T.D. 2815).",
 }
 def td_local_path(num):
     """Return the relative path to a locally-stored TD PDF, or None."""
@@ -331,6 +332,10 @@ def td_local_path(num):
         return None
     pdfs = sorted(f for f in os.listdir(d) if f.lower().endswith(".pdf"))
     return os.path.join(d, pdfs[0]) if pdfs else None
+def td_transcript_path(num):
+    """Return the relative path to the rendered HTML transcript, or None."""
+    p = os.path.join(TD_LOCAL_DIR, f"td_{num}", f"td_{num}.html")
+    return p if os.path.isfile(p) else None
 out["treasury_decisions"] = []
 # general reference: Treasury Decisions are published by the IRS in the Internal Revenue Bulletin
 _td_general = len(re.findall(r"Treasury Decisions", text))
@@ -349,6 +354,9 @@ for k,v in sorted(td.items(), key=lambda kv:-kv[1]["count"]):
     if local:
         # prefer the local source document; keep the external URL as a secondary link
         entry["local_path"] = local
+    tr = td_transcript_path(num)
+    if tr:
+        entry["transcript_path"] = tr
     notes = []
     if url is None:
         notes.append("NOT YET in TREASURY_DECISIONS file — add it there; fallback is a HathiTrust search.")
@@ -428,6 +436,8 @@ for c in out["treasury_decisions"]:
         src = f"[local copy]({quote(c['local_path'])}) · [external]({c['url']})"
     else:
         src = f"[link]({c['url']})"
+    if c.get("transcript_path"):
+        src += f" · [transcript]({quote(c['transcript_path'])})"
     if c.get("note"):
         src += f"<br>⚠ {c['note']}"
     L.append(f"| {c['cite']} | {c['occurrences']} | {pgs} | {status} | {src} |")

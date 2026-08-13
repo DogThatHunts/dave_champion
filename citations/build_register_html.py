@@ -54,18 +54,23 @@ for key, title, cls, prim, cols in SECTIONS:
     for it in items:
         url = it.get("url","")
         local = it.get("local_path","")
+        md = it.get("transcript_path","")
         label = esc(it.get(prim,""))
+        # A rendered HTML transcript link, appended to the source line when present.
+        md_link = f' · <a href="{quote(md)}">transcript</a>' if md else ""
         # Prefer the local source document when we have one; keep the external
         # URL as a secondary link. Notes (e.g. possible mislabels) render inline.
         if local:
             href = quote(local)
             link = (f'<a class="cite {cls}" href="{href}">{label}</a>'
                     f'<span class="src"> · local copy · '
-                    f'<a href="{esc(url)}" target="_blank" rel="noopener">external</a></span>')
+                    f'<a href="{esc(url)}" target="_blank" rel="noopener">external</a>'
+                    f'{md_link}</span>')
         elif url:
-            link = f'<a class="cite {cls}" href="{esc(url)}" target="_blank" rel="noopener">{label}</a>'
+            link = (f'<a class="cite {cls}" href="{esc(url)}" target="_blank" rel="noopener">{label}</a>'
+                    + (f'<span class="src">{md_link}</span>' if md else ""))
         else:
-            link = label
+            link = label + (f'<span class="src">{md_link}</span>' if md else "")
         if it.get("note"):
             link += f'<span class="note">⚠ {esc(it["note"])}</span>'
         tds = "".join(f"<td>{cell(it.get(f), kind)}</td>" for f,_,kind in cols)
