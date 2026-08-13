@@ -322,8 +322,6 @@ import os
 TD_LOCAL_DIR = "treasury_decisions"
 # Known caveats about the local scans (surfaced in the register, not silently trusted).
 TD_LOCAL_NOTES = {
-    "2815": "The 2-page scan also carries the next decision, T.D. 2816 (the earlier "
-            "'may be 2816' mislabel caveat is resolved — the scan's header reads T.D. 2815).",
 }
 def td_local_path(num):
     """Return the relative path to a locally-stored TD PDF, or None."""

@@ -1757,8 +1757,7 @@
       "in_mapping_file": true,
       "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2815%22;a=srchls;lmt=ft",
       "local_path": "treasury_decisions/td_2815/TD 2815 - Form 1040 for nonresident aliens and their agents.pdf",
-      "transcript_path": "treasury_decisions/td_2815/td_2815.html",
-      "note": "The 2-page scan also carries the next decision, T.D. 2816 (the earlier 'may be 2816' mislabel caveat is resolved — the scan's header reads T.D. 2815)."
+      "transcript_path": "treasury_decisions/td_2815/td_2815.html"
     },
     {
       "cite": "T.D. 2988",
