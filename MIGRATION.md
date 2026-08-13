@@ -9,7 +9,9 @@ Executed the structural reorg and path retargeting only:
   cross-book artifacts → `comparisons/`; `PDF_TO_MD_PROMPT.md` → `docs/`.
 - All builder paths retargeted; all three pipelines (book #1 register+edition, book #2
   citation-diff+edition) rebuild clean from their new homes.
-- Old `/book/` and `/book/link_register.html` kept as meta-refresh **redirect stubs**.
+- Old `/book/` and `/book/link_register.html` were briefly kept as meta-refresh
+  redirect stubs, then **removed as redundant** (2026-08-12) — both now 404. The live
+  paths are `books/income-tax-shattering-the-myths/` and `citations/link_register.html`.
 - **Not created this pass** (deliberate, low-risk): `site/` (root landing files stay at
   root so their live URLs don't break) and `shared/` (edition-builder unification deferred).
 

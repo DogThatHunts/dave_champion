@@ -201,7 +201,7 @@ _External URLs are sourced from the shared mapping `transcription-agent/TREASURY
 | T.D. 2401 | 2 | 154 | in mapping | [local copy](treasury_decisions/td_2401/TD%202401%2C%20TD%202402.pdf) · [external](https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2401%22;a=srchls;lmt=ft) |
 | T.D. 2815 | 2 | 155 | in mapping | [local copy](treasury_decisions/td_2815/TD%202815%20-%20Form%201040%20for%20nonresident%20aliens%20and%20their%20agents.pdf) · [external](https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2815%22;a=srchls;lmt=ft)<br>⚠ Local copy may actually be T.D. 2816 (possible filing/scan mislabel) — verify before relying on it. |
 | T.D. 2988 | 2 | 156 | in mapping | [local copy](treasury_decisions/td_2988/TD%202988.pdf) · [external](https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2988%22;a=srchls;lmt=ft) |
-| T.D. 2382 | 2 | 155 | **add to mapping** | [local copy](treasury_decisions/td_2382/TD%202382.pdf) · [external](https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2382%22;a=srchls;lmt=ft)<br>⚠ NOT YET in TREASURY_DECISIONS file — add it there; fallback is a HathiTrust search. |
+| T.D. 2382 | 2 | 155 | in mapping | [local copy](treasury_decisions/td_2382/TD%202382.pdf) · [external](https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2382%22;a=srchls;lmt=ft) |
 
 ## 5. Constitution & founding documents
 

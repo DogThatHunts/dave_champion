@@ -1754,10 +1754,9 @@
       "pages": [
         "155"
       ],
-      "in_mapping_file": false,
+      "in_mapping_file": true,
       "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2382%22;a=srchls;lmt=ft",
-      "local_path": "treasury_decisions/td_2382/TD 2382.pdf",
-      "note": "NOT YET in TREASURY_DECISIONS file — add it there; fallback is a HathiTrust search."
+      "local_path": "treasury_decisions/td_2382/TD 2382.pdf"
     }
   ],
   "constitution": [
