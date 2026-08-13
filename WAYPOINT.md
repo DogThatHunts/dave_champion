@@ -112,6 +112,12 @@ Pipeline (deterministic, re-runnable generators). The register builders live in 
 - [ ] Add T.D. 2382 to `../transcription-agent/TREASURY_DECISIONS.md`; recover more OCR tail if desired.
 
 ### Treasury Decisions — deferred (owner, 2026-08-13)
+- [ ] **Re-present the TD relationship lines on the register** (owner, 2026-08-13): the inline
+      "Supersedes / Superseded by / Amended by" lines were **removed from the rendered register**
+      (HTML + md) for now — the render loops are commented out in `build_register.py` and
+      `build_register_html.py`, but the **data is still in `link_register.json`**
+      (`entry["relations"]`) and the unused `VERB_LABEL` import is left in place. Decide the
+      proper presentation next session (tie in with the highlighting item below) and re-enable.
 - [ ] **Clean up the Treasury Decisions section of the link register** (`citations/`):
       (a) **verify/repair links** — external (HathiTrust) + local PDF + transcript links all
       resolve; fix any dead/wrong ones. (b) **formatting/layout** — tidy the TD table

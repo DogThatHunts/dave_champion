@@ -73,10 +73,8 @@ for key, title, cls, prim, cols in SECTIONS:
                     + (f'<span class="src">{md_link}</span>' if md else ""))
         else:
             link = label + (f'<span class="src">{md_link}</span>' if md else "")
-        for r in it.get("relations", []):
-            tgt = (f'<a href="{quote(r["transcript"])}" target="_blank" rel="noopener">T.D. {esc(r["num"])}</a>'
-                   if r.get("transcript") else f'T.D. {esc(r["num"])}')
-            link += f'<span class="rel">{esc(VERB_LABEL[r["verb"]])} {tgt}</span>'
+        # Relationship lines are intentionally not rendered here for now (data kept in
+        # link_register.json); proper presentation deferred to next session — see WAYPOINT.
         if it.get("note"):
             link += f'<span class="note">⚠ {esc(it["note"])}</span>'
         tds = "".join(f"<td>{cell(it.get(f), kind)}</td>" for f,_,kind in cols)

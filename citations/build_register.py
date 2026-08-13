@@ -444,10 +444,9 @@ for c in out["treasury_decisions"]:
         src = f"[link]({c['url']})"
     if c.get("transcript_path"):
         src += f" · [transcript]({quote(c['transcript_path'])})"
-    for r in c.get("relations", []):
-        tgt = (f"[T.D. {r['num']}]({quote(r['transcript'])})"
-               if r.get("transcript") else f"T.D. {r['num']}")
-        src += f"<br>{VERB_LABEL[r['verb']]} {tgt}"
+    # NOTE: relationship lines (supersedes/superseded by/amended by) are intentionally
+    # NOT rendered on the register for now — the data is kept in link_register.json
+    # (entry["relations"]); proper presentation is deferred to next session (see WAYPOINT).
     if c.get("note"):
         src += f"<br>⚠ {c['note']}"
     L.append(f"| {c['cite']} | {c['occurrences']} | {pgs} | {status} | {src} |")
