@@ -101,6 +101,10 @@ Pipeline (deterministic, re-runnable generators). The register builders live in 
    treatment across TOC + body.
 
 ### Book edition — next steps (optional)
+- [ ] **Verify the edition byline links on the live site** (deferred 2026-08-13): after the
+      commit `a0c7095` Pages deploy finishes, confirm both editions' byline links open in a new
+      tab — Book #1 `Link register →` and Book #2 `New citations →` (should carry
+      `target="_blank" rel="noopener"`).
 - [ ] **Make the case linker policy-compliant** (`citations/CITATION_LINKING.md`): anchor the
       full `case_name + cite` span (from `link_register.json` `full_citation`), not just the bare
       reporter cite — e.g. link *"Tandy Leather Company v. United States, 347 F.2d 693"*. Do it
