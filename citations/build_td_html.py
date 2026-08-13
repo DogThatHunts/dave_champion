@@ -26,7 +26,8 @@ def inline(text):
     """Escape, then linkify [text](url) and **bold**."""
     text = html.escape(text)
     text = LINK_RE.sub(
-        lambda m: f'<a href="{m.group(2)}">{m.group(1)}</a>', text)
+        lambda m: f'<a href="{m.group(2)}" target="_blank" rel="noopener">'
+                  f'{m.group(1)}</a>', text)
     text = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", text)
     return text
 
@@ -93,7 +94,7 @@ HTML = """<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 <style>{css}</style></head><body><main>
-<a class="home" href="../../link_register.html">← Citation link register</a>
+<a class="home" href="../../link_register.html" target="_blank" rel="noopener">← Citation link register</a>
 {body}
 </main></body></html>"""
 
