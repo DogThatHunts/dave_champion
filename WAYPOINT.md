@@ -112,6 +112,22 @@ Pipeline (deterministic, re-runnable generators). The register builders live in 
 - [ ] Replace the placeholder root `index.html` with real home-page content.
 - [ ] Add T.D. 2382 to `../transcription-agent/TREASURY_DECISIONS.md`; recover more OCR tail if desired.
 
+### Treasury Decisions — deferred (owner, 2026-08-13)
+- [ ] **Clean up the Treasury Decisions section of the link register** (`citations/`):
+      (a) **verify/repair links** — external (HathiTrust) + local PDF + transcript links all
+      resolve; fix any dead/wrong ones. (b) **formatting/layout** — tidy the TD table
+      columns/notes/status for readability. (c) **ordering** — sort the TD table in **ascending
+      numerical order by T.D. number**, even though this overrides the register's default sort
+      (currently by occurrence count, desc, in `build_register.py`).
+- [ ] **Highlight supersession relationships on the TD transcript DETAIL pages** (detail pages
+      only — not the register rows; amends/amended-by are NOT highlighted, supersede only):
+      - a **"Supersedes: …"** line → **bright green** highlight (this TD replaces an older one).
+      - a **"Superseded by: …"** line → **pink** highlight (draws attention that this TD is
+        obsolete). Example: on **T.D. 2382**, the header line *"Superseded by: T.D. 2401 —
+        Revision of T.D. 2382 of October 19, 1916"* should get the pink highlight.
+      Implement in `build_td_html.py` (style the `.meta` relationship lines) + a class emitted
+      from the `> **Supersedes/Superseded by:**` header rows written by `build_td_markdown.py`.
+
 ---
 
 ## Book #2 — *The American Tax Bible* (`books/american-tax-bible/`)
