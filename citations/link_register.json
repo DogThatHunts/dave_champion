@@ -1695,7 +1695,15 @@
       "in_mapping_file": true,
       "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2313%22;a=srchls;lmt=ft",
       "local_path": "treasury_decisions/td_2313/TD 2313.pdf",
-      "transcript_path": "treasury_decisions/td_2313/td_2313.html"
+      "transcript_path": "treasury_decisions/td_2313/td_2313.html",
+      "relations": [
+        {
+          "verb": "amended by",
+          "num": "2402",
+          "basis": "Amending T.D. 2313 of March 21, 1916",
+          "transcript": "treasury_decisions/td_2402/td_2402.html"
+        }
+      ]
     },
     {
       "cite": "T.D. 1928",
@@ -1730,7 +1738,15 @@
       "in_mapping_file": true,
       "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2401%22;a=srchls;lmt=ft",
       "local_path": "treasury_decisions/td_2401/TD 2401, TD 2402.pdf",
-      "transcript_path": "treasury_decisions/td_2401/td_2401.html"
+      "transcript_path": "treasury_decisions/td_2401/td_2401.html",
+      "relations": [
+        {
+          "verb": "supersedes",
+          "num": "2382",
+          "basis": "Revision of T.D. 2382 of October 19, 1916",
+          "transcript": "treasury_decisions/td_2382/td_2382.html"
+        }
+      ]
     },
     {
       "cite": "T.D. 2815",
@@ -1764,7 +1780,15 @@
       "in_mapping_file": true,
       "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2382%22;a=srchls;lmt=ft",
       "local_path": "treasury_decisions/td_2382/TD 2382.pdf",
-      "transcript_path": "treasury_decisions/td_2382/td_2382.html"
+      "transcript_path": "treasury_decisions/td_2382/td_2382.html",
+      "relations": [
+        {
+          "verb": "superseded by",
+          "num": "2401",
+          "basis": "Revision of T.D. 2382 of October 19, 1916",
+          "transcript": "treasury_decisions/td_2401/td_2401.html"
+        }
+      ]
     }
   ],
   "constitution": [

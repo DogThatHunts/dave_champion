@@ -336,6 +336,8 @@ def td_transcript_path(num):
     """Return the relative path to the rendered HTML transcript, or None."""
     p = os.path.join(TD_LOCAL_DIR, f"td_{num}", f"td_{num}.html")
     return p if os.path.isfile(p) else None
+from td_relations import load_relations, VERB_LABEL
+TD_RELATIONS = load_relations()
 out["treasury_decisions"] = []
 # general reference: Treasury Decisions are published by the IRS in the Internal Revenue Bulletin
 _td_general = len(re.findall(r"Treasury Decisions", text))
@@ -357,6 +359,12 @@ for k,v in sorted(td.items(), key=lambda kv:-kv[1]["count"]):
     tr = td_transcript_path(num)
     if tr:
         entry["transcript_path"] = tr
+    rels = TD_RELATIONS.get(num)
+    if rels:
+        entry["relations"] = [
+            {"verb": r["verb"], "num": r["to"], "basis": r.get("basis", ""),
+             "transcript": td_transcript_path(r["to"])}
+            for r in rels]
     notes = []
     if url is None:
         notes.append("NOT YET in TREASURY_DECISIONS file — add it there; fallback is a HathiTrust search.")
@@ -438,6 +446,10 @@ for c in out["treasury_decisions"]:
         src = f"[link]({c['url']})"
     if c.get("transcript_path"):
         src += f" · [transcript]({quote(c['transcript_path'])})"
+    for r in c.get("relations", []):
+        tgt = (f"[T.D. {r['num']}]({quote(r['transcript'])})"
+               if r.get("transcript") else f"T.D. {r['num']}")
+        src += f"<br>{VERB_LABEL[r['verb']]} {tgt}"
     if c.get("note"):
         src += f"<br>⚠ {c['note']}"
     L.append(f"| {c['cite']} | {c['occurrences']} | {pgs} | {status} | {src} |")

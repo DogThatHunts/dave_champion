@@ -1,0 +1,7 @@
+{
+  "_comment": "Directed inter-Treasury-Decision relationships, curated from the decision texts. Reverse direction is derived in code (supersedes<->superseded by, amends<->amended by). Consumed by build_register.py and build_td_markdown.py.",
+  "relations": [
+    {"from": "2401", "verb": "supersedes", "to": "2382", "basis": "Revision of T.D. 2382 of October 19, 1916"},
+    {"from": "2402", "verb": "amends", "to": "2313", "basis": "Amending T.D. 2313 of March 21, 1916"}
+  ]
+}

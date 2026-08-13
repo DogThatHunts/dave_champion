@@ -3,6 +3,7 @@
 Regenerate whenever the register changes (kept in sync with the JSON source of truth)."""
 import json, html
 from urllib.parse import quote
+from td_relations import VERB_LABEL
 
 REG = json.load(open("link_register.json", encoding="utf-8"))
 
@@ -72,6 +73,10 @@ for key, title, cls, prim, cols in SECTIONS:
                     + (f'<span class="src">{md_link}</span>' if md else ""))
         else:
             link = label + (f'<span class="src">{md_link}</span>' if md else "")
+        for r in it.get("relations", []):
+            tgt = (f'<a href="{quote(r["transcript"])}" target="_blank" rel="noopener">T.D. {esc(r["num"])}</a>'
+                   if r.get("transcript") else f'T.D. {esc(r["num"])}')
+            link += f'<span class="rel">{esc(VERB_LABEL[r["verb"]])} {tgt}</span>'
         if it.get("note"):
             link += f'<span class="note">⚠ {esc(it["note"])}</span>'
         tds = "".join(f"<td>{cell(it.get(f), kind)}</td>" for f,_,kind in cols)
@@ -107,6 +112,8 @@ td:nth-child(n+2){font-family:'Inter',sans-serif;font-size:.82rem;color:#5b5348;
 .src{font-family:'Inter',sans-serif;font-size:.7rem;color:var(--muted)}
 .src a{color:var(--muted)}
 .note{display:block;font-family:'Inter',sans-serif;font-size:.72rem;color:#a05a00;margin-top:.15rem;white-space:normal}
+.rel{display:block;font-family:'Inter',sans-serif;font-size:.72rem;color:#5b5348;margin-top:.15rem;white-space:normal}
+.rel a{color:var(--link)}
 @media(max-width:860px){.wrap{grid-template-columns:1fr}#sidebar{position:static;height:auto}td:nth-child(n+2){white-space:normal}}
 """
 

@@ -23,6 +23,10 @@ import sys
 import tempfile
 from urllib.parse import quote
 
+from td_relations import load_relations, VERB_LABEL
+
+RELATIONS = load_relations()
+
 TD_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "treasury_decisions")
 
 # method: "text" (pdftotext) | "ocr" (tesseract) | "irs-txt"
@@ -124,8 +128,14 @@ def clean(text, reflow=False):
     See docs/OCR_TEXT_RECONSTITUTION.md.
     """
     text = text.replace("\r", "")
-    # de-hyphenate words broken across a line end
-    text = re.sub(r"(\w)-\n(\w)", r"\1\2", text)
+    if reflow:
+        # OCR text: de-hyphenate across a line end, tolerating spaces around the
+        # hyphen/break (e.g. "dis- \nclose", "non-\n resident") so reflow doesn't
+        # leave a visible mid-word space.
+        text = re.sub(r"(\w)-[ \t]*\n[ \t]*(\w)", r"\1\2", text)
+    else:
+        # non-reflowed (born-digital / .txt): keep line breaks; conservative join.
+        text = re.sub(r"(\w)-\n(\w)", r"\1\2", text)
     lines = []
     for ln in text.split("\n"):
         ln = re.sub(r"[ \t]+", " ", ln).strip()
@@ -182,6 +192,13 @@ def build(spec):
     sources = [f"[local scan (PDF)]({quote(pdf_rel)})", f"[{ext_label}]({ext_url})"]
 
     header = [f"# Treasury Decision {spec['num']}", ""]
+    # Inter-TD relationships (supersedes / superseded by / amends / amended by),
+    # each linking to the other decision's transcript page.
+    for rel in RELATIONS.get(spec["num"], []):
+        link = f"[T.D. {rel['to']}](../td_{rel['to']}/td_{rel['to']}.html)"
+        basis = f" — {rel['basis']}" if rel.get("basis") else ""
+        header.append(f"> **{VERB_LABEL[rel['verb']]}:** {link}{basis}")
+        header.append(">")
     header.append("> **Source(s):** " + " · ".join(sources))
     header.append(">")
     src = spec.get("_source_used", "local PDF")
