@@ -28,20 +28,24 @@ TD_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "treasury_deci
 # method: "text" (pdftotext) | "ocr" (tesseract) | "irs-txt"
 # slice:  True  -> slice out just this decision from a multi-decision scan
 #         False -> the whole PDF is this one decision
+# "ocr": True marks OCR-derived text (tesseract, or a HathiTrust embedded-OCR text
+# layer) — its within-paragraph soft line breaks get reflowed (see
+# docs/OCR_TEXT_RECONSTITUTION.md). Born-digital text and the authoritative IRS
+# .txt keep their intentional line breaks (no "ocr").
 TDS = [
-    {"num": "1928", "folder": "td_1928", "method": "text", "slice": True},
+    {"num": "1928", "folder": "td_1928", "method": "text", "slice": True, "ocr": True},
     {"num": "2313", "folder": "td_2313", "method": "text", "slice": True},
-    {"num": "2382", "folder": "td_2382", "method": "ocr",  "slice": True},
-    {"num": "2401", "folder": "td_2401", "method": "text", "slice": True},
+    {"num": "2382", "folder": "td_2382", "method": "ocr",  "slice": True, "ocr": True},
+    {"num": "2401", "folder": "td_2401", "method": "text", "slice": True, "ocr": True},
     # 2402 shares the combined "TD 2401, TD 2402.pdf"; the dup folder was removed,
-    # so read from td_2401's PDF and write td_2402/content.md (no duplicate PDF).
+    # so read from td_2401's PDF and write td_2402/td_2402.md (no duplicate PDF).
     {"num": "2402", "folder": "td_2402", "src_folder": "td_2401",
-     "method": "text", "slice": True},
-    {"num": "2815", "folder": "td_2815", "method": "ocr",  "slice": True,
+     "method": "text", "slice": True, "ocr": True},
+    {"num": "2815", "folder": "td_2815", "method": "ocr",  "slice": True, "ocr": True,
      "note": "The 2-page scan also carries the next decision, T.D. 2816; this file "
              "is sliced to the T.D. 2815 section. (The earlier 'may actually be 2816' "
              "caveat is resolved — the scan's own header reads (T.D. 2815.).)"},
-    {"num": "2988", "folder": "td_2988", "method": "text", "slice": True},
+    {"num": "2988", "folder": "td_2988", "method": "text", "slice": True, "ocr": True},
     {"num": "6500", "folder": "td_6500", "method": "text", "slice": False},
     {"num": "8734", "folder": "td_8734", "method": "irs-txt", "slice": False,
      "ext_txt": "https://www.irs.gov/pub/irs-regs/td8734.txt"},
@@ -112,8 +116,13 @@ def extract_pages(spec, pdf):
     raise ValueError(spec["method"])
 
 
-def clean(text):
-    """Light, deterministic OCR/layout cleanup — faithful, no rewriting."""
+def clean(text, reflow=False):
+    """Light, deterministic OCR/layout cleanup — faithful, no rewriting.
+
+    reflow=True (OCR'd text): join within-paragraph soft line breaks into spaces so
+    each paragraph is continuous flowing text; blank-line paragraph breaks are kept.
+    See docs/OCR_TEXT_RECONSTITUTION.md.
+    """
     text = text.replace("\r", "")
     # de-hyphenate words broken across a line end
     text = re.sub(r"(\w)-\n(\w)", r"\1\2", text)
@@ -128,6 +137,10 @@ def clean(text):
         lines.append(ln)
     out = "\n".join(lines)
     out = re.sub(r"\n{3,}", "\n\n", out).strip()
+    if reflow:
+        # collapse single (soft) newlines to a space; keep blank-line paragraph breaks
+        out = re.sub(r"(?<!\n)\n(?!\n)", " ", out)
+        out = re.sub(r"[ \t]{2,}", " ", out)
     return out
 
 
@@ -152,7 +165,7 @@ def build(spec):
         return
     os.makedirs(os.path.join(TD_DIR, spec["folder"]), exist_ok=True)
     pages = extract_pages(spec, pdf)
-    cleaned = [clean(p) for p in pages]
+    cleaned = [clean(p, reflow=spec.get("ocr", False)) for p in pages]
 
     # Assemble body with page anchors; slice afterwards so anchors survive.
     body = "\n\n".join(
