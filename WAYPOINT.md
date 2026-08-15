@@ -334,3 +334,40 @@ a client dependency + separate bandwidth quota. If repo size ever becomes a real
 host the PDFs **outside git** (GitHub **Release** asset or a bucket/CDN) and link to
 absolute URLs — do **not** use LFS for anything Pages must serve. (Full rationale in
 `MIGRATION.md`.)
+
+## Citation register — extracted to a shared private repo (2026-08-16)
+
+`citations/link_register.json` was merged with `transcription-agent/publisher/citations.py`'s
+curated maps into a new **private** standalone repo, `citation-register` — the single
+source of truth going forward for this book, Book #2 (american-tax-bible, once its
+`new_citations.md` is folded in — not done yet), and a new companion project
+(`KL_on_RiceRadio`) that will cite the same body of law from interview-transcript
+summaries.
+
+**Update 2026-08-16:** `citation-register` is now live —
+https://github.com/DogThatHunts/citation-register (private). This repo's `citations/`
+still has NOT been switched to consume it (no submodule wiring yet — `dave_champion`'s
+`link_register.json` here is untouched and still what `build_register_html.py`
+actually reads for the published page). **Explicitly on hold** — owner decision
+2026-08-16 was to hold off wiring up both `dave_champion` and `KL_on_RiceRadio` as
+submodule consumers for now. This repo's local `citations/` files remain the live
+source for the published site until that wiring happens.
+
+Two things resolved during the merge, one deferred:
+- Fixed a broken `Form 1099 MISC` URL (literal space) and three OCR-garbled USC section
+  citations (`340l`, `770I`, `77O` → folded into `3401` / `7701`) — see
+  `citation-register/TBD_later.md` "Resolved log".
+- Found `transcription-agent/publisher/citations.py`'s curated case map mislabels
+  *Coppedge v. United States*, 369 U.S. 438 (1962) as "Coppedge v. Kansas" — unrelated to
+  this book's actual citation, *Coppage v. Kansas*, 236 U.S. 1 (1915). Added a
+  disambiguation comment in the book's `.md` source next to the Ch. 4 endnote (**HTML not
+  rebuilt this cycle** — the comment doesn't render, so the live page is unaffected until
+  the next build). **Update 2026-08-16:** the citations.py mislabel itself is now fixed
+  and pushed (`transcription-agent` commit `a4123ff`) — its full pytest suite wasn't
+  runnable in the fixing environment (missing `requests`), only verified in isolation;
+  see that repo's `WAYPOINT.md` for the caveat. Full detail:
+  `citation-register/TBD_later.md`.
+- **Deferred, no action taken:** Brushaber and Butchers' Union Co. resolve to the same
+  case/cite in both sources but via different hosts (Justia vs. Cornell LII) — a style
+  choice for a future register-wide pass, not a correctness issue. Tracked in
+  `citation-register/TBD_later.md`.
