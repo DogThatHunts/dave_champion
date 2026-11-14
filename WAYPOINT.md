@@ -62,6 +62,12 @@ _Last updated: 2026-11-13_
 > nothing until both books' `build_html.py` were also widened). Book #1
 > rebuilt (3 links confirmed); the 3 video rows republished and confirmed
 > live via the GitHub API.
+>
+> **Verified, not a bug:** a second Grace Commission mention on two of the
+> three rows looked unlinked on spot-check — confirmed it's the existing
+> "first mention only per summary" policy on the video-summary side
+> (`transcription-agent/publisher/CITATION_LINKING.md`), already applying
+> uniformly to every citation type there. No change made; left as-is.
 
 > **Reorg DONE (2026-08-11):** multi-book layout with a shared citation library — see
 > [`MIGRATION.md`](MIGRATION.md). Executed the *relocate + retarget* pass: `book/` →
