@@ -37,6 +37,15 @@ Executed the structural reorg and path retargeting only:
   `treasury_decisions.json` to `{}` on every run — caught before any commit, fixed,
   and guarded against recurring silently. 3 TDs (2090, 2109, 4707) still have no
   local source; see `CITATION_LINKING.md` for manual-lookup leads.
+- **FLAGGED 2026-11-14, not built — unify this register with the
+  `transcription-agent/publisher/citations.py` video-summary linker.** They are
+  two fully separate systems: this register never feeds that linker, and it
+  never reads this register. Every citation gap found while building the
+  Dave Champion 45-video digest (Grace Commission, a Brushaber ASR variant,
+  *Shattering the Myths*) had to be added by hand to both. Possibly a major
+  improvement if unified — see `transcription-agent/NEXT_ITERATION.md` §26
+  for the open design questions (case-name matching, caching, one- vs.
+  two-directional sync).
 
 **RESOLVED — repo file size / Git LFS (2026-08-12):** **LFS rejected.** GitHub Pages
 does not resolve LFS objects — it serves the ~130-byte pointer stub, not the file — so

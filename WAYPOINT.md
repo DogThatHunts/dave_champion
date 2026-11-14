@@ -28,7 +28,16 @@ _Last updated: 2026-11-14_
 > real, site-wide CSS bug where tile date/word-count lines never actually
 > bottom-aligned (`.post-card-body` wasn't a flex container, so the
 > existing `margin-top: auto` had nothing to push against). Full detail in
-> `transcription-agent/WAYPOINT.md` §0a17.
+> `transcription-agent/WAYPOINT.md` §0a17. User also corrected the confidence
+> badge colors same day — High=red/Medium=amber/Low=green (desaturated),
+> not the initial green/orange/pink.
+>
+> **Flagged, not built:** this register and `transcription-agent/publisher/
+> citations.py`'s video-summary linker are two fully separate systems —
+> neither feeds the other, which is why every citation gap found this week
+> had to be added by hand to both. Possibly a major improvement if unified.
+> See `transcription-agent/NEXT_ITERATION.md` §26 and `MIGRATION.md`'s
+> deferred list.
 
 > **2026-11-13 — Video synthesis moved in + citation-register fixes.** Moved the
 > three Dave Champion video-synthesis files from `transcription-agent/` repo root
