@@ -52,6 +52,22 @@ _Last updated: 2026-11-14_
 > Confirmed no conflict with the "book-derived citations belong in the master
 > register too, in case encountered elsewhere" principle — that's exactly
 > what the plan already does. Proceeding to execute.
+>
+> **Executed (commit `5b1d5ec`):** added the durable "manual additions" block to
+> `build_register.py` — *Moore v. United States* (602 U.S. 572) and Forms
+> 1099-NEC/INT/DIV (user-supplied URLs: `i1099mec`, `i1099int`, `i1099div`,
+> all verified 200) now in `link_register.json`, tagged
+> `"source": "video_synthesis_2026-11-13"`, surviving every future rebuild.
+> Both books + the book-2 diff rebuilt as a regression check — byte-identical
+> output, no regressions. `new_citations_from_videos.md` converted from an
+> active parking lot to a resolved historical record.
+>
+> **Session resting point (2026-11-14):** repo clean, nothing uncommitted.
+> Carried forward, open: the linkify()/register unification itself (`NEXT_
+> ITERATION.md` §26, not built), the *Shattering the Myths* Dave-Champion-only
+> scoping/re-confirmation mechanism (not designed — that entry stays out of
+> the register until it is), and TDs 2090/2109/4707 still lacking a local
+> source.
 
 > **2026-11-14 — Full 45-video digest + DIGEST tile.** User asked for the real
 > 45-video synthesis (not a stopgap), published as a public digest page with a
