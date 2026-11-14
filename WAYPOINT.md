@@ -20,6 +20,15 @@ _Last updated: 2026-11-14_
 > `transcription-agent/TREASURY_DECISIONS.md`. Published and confirmed live
 > via the GitHub API: the digest page, the DIGEST tile, and a date-format fix
 > on all 45 video tiles (single line, "MMM YYYY - word count", date first).
+>
+> **Same-day polish:** user supplied the DIGEST tile's final graphic (kept
+> as-is); `DAVE_CHAMPION_FULL_DIGEST.md` dropped "AI" from "not the AI
+> summaries" -> "not the summaries"; added color-coded confidence badges
+> (High green / Medium orange / Low pink) on the publish side; fixed a
+> real, site-wide CSS bug where tile date/word-count lines never actually
+> bottom-aligned (`.post-card-body` wasn't a flex container, so the
+> existing `margin-top: auto` had nothing to push against). Full detail in
+> `transcription-agent/WAYPOINT.md` §0a17.
 
 > **2026-11-13 — Video synthesis moved in + citation-register fixes.** Moved the
 > three Dave Champion video-synthesis files from `transcription-agent/` repo root

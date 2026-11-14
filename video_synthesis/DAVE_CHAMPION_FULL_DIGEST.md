@@ -1,6 +1,6 @@
 # Dave Champion on the Federal Income Tax — A Synthesis of All 45 Video Transcripts
 
-*A cross-reading of all 45 tax videos in the [income-tax index](https://dogthathunts.github.io/transcript-summaries/dave-champion-income-tax.html) — the original 33 (rows 1217–1255) plus 12 added 2026-11-13 (rows 5596–5612) — built to surface where Champion's arguments **reinforce** each other and where they **conflict**. Every finding is tagged with the video(s) it draws from and a confidence label. Analysis is grounded in the transcripts themselves, not the AI summaries.*
+*A cross-reading of all 45 tax videos in the [income-tax index](https://dogthathunts.github.io/transcript-summaries/dave-champion-income-tax.html) — the original 33 (rows 1217–1255) plus 12 added 2026-11-13 (rows 5596–5612) — built to surface where Champion's arguments **reinforce** each other and where they **conflict**. Every finding is tagged with the video(s) it draws from and a confidence label. Analysis is grounded in the transcripts themselves, not the summaries.*
 
 **Confidence:** **High** = same statute/claim stated two opposing ways, quotable both sides · **Medium** = real tension, partly reconcilable as emphasis/context · **Low** = minor or likely wording/ASR artifact. Where a claim conflicts with an *external* authority he cites (not with himself), it is labelled **[claim vs. source]**.
 
