@@ -45,7 +45,12 @@ Executed the structural reorg and path retargeting only:
   *Shattering the Myths*) had to be added by hand to both. Possibly a major
   improvement if unified — see `transcription-agent/NEXT_ITERATION.md` §26
   for the open design questions (case-name matching, caching, one- vs.
-  two-directional sync).
+  two-directional sync). **§26 itself (automatic unification) is still
+  open/not built** — but the specific entries that prompted it are now
+  resolved: `build_register.py` has a new "manual additions" block (entries
+  not derivable from scanning book text — *Moore v. United States*, Forms
+  1099-NEC/INT/DIV) so they survive every rebuild, and `new_citations_from_
+  videos.md` is now a resolved historical record, not an active to-do.
 
 **RESOLVED — repo file size / Git LFS (2026-08-12):** **LFS rejected.** GitHub Pages
 does not resolve LFS objects — it serves the ~130-byte pointer stub, not the file — so

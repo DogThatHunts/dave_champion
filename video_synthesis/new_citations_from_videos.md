@@ -1,35 +1,41 @@
-# New citations — Dave Champion video synthesis
+# New citations — Dave Champion video synthesis (RESOLVED 2026-11-14)
 
-Citations found in the video-transcript synthesis (`DAVE_CHAMPION_TAX_SYNTHESIS.md`
-/ `_KIMI.md`) that are **not yet** in the shared register
-(`citations/link_register.json`, built by `citations/build_register.py` from
-book #1's text and `books/american-tax-bible/build_new_citations.py`'s diff of
-book #2 — this file is the same pattern, for the video corpus instead of a
-book). Not merged into the live register directly: `build_register.py`
-regenerates `link_register.json` from scratch on every run, so a hand-edit
-would be silently dropped on the next rebuild. Park here; fold into the
-merged multi-book register when that work lands (`MIGRATION.md` §3).
+Historical record. This file originally parked citations found in the video-transcript
+synthesis that weren't yet in the shared register, because hand-editing
+`link_register.json` directly doesn't survive `build_register.py`'s next
+rebuild. **As of 2026-11-14, all of them are resolved** — two by that same
+day's IRS-form regex fix (which made book #1's own W-9/W-4 mentions
+auto-detectable via normal text scanning, so they no longer needed manual
+help), and the rest via a durable "manual additions" block added directly to
+`build_register.py` (entries tagged `"source": "video_synthesis_2026-11-13"`
+in `link_register.json`, so they regenerate on every future rebuild instead
+of needing to be re-parked).
 
-Each entry's URL is already used in the synthesis Markdown files directly
-(hand-written links, which don't depend on the JSON register — that register
-only drives the automated *book*-edition HTML linker). This file exists so
-the entries aren't lost / re-researched later.
-
-| Citation | URL | Verification (2026-11-13) |
+| Citation | URL | How it's resolved now |
 |---|---|---|
-| *Moore v. United States*, 602 U.S. 572 (2024) | https://www.law.cornell.edu/supremecourt/text/22-800 | Same URL already live and marked "verified to resolve" in the sibling `transcription-agent/publisher/citations.py` `_CASE_LINKS` map. Citation (602 U.S. 572, decided 2024-06-20, docket 22-800) cross-confirmed via Wikipedia/Ballotpedia/SCOTUSblog. Justia's URL for this case (`supreme.justia.com/cases/federal/us/2023/22-800/`, matching the register's usual style) could not be fetch-verified — Justia returns a Cloudflare bot challenge (HTTP 403) to automated requests — so Cornell LII was used instead as the independently-verified source. |
-| Form W-9 | https://www.irs.gov/forms-pubs/about-form-w-9 | `curl` HEAD → HTTP 200. Already in `publisher/citations.py` `_FORM_URLS`. |
-| Form W-4 | https://www.irs.gov/forms-pubs/about-form-w-4 | `curl` HEAD → HTTP 200. Already in `publisher/citations.py` `_FORM_URLS`. |
+| *Moore v. United States*, 602 U.S. 572 (2024) | https://www.law.cornell.edu/supremecourt/text/22-800 | `build_register.py`'s manual-additions block (`scotus_and_courts`) — never appears in book #1's text, so it will never be auto-detected; this is the permanent home for it. |
+| Form W-9 | https://www.irs.gov/forms-pubs/about-form-w-9 | **Auto-detected.** Book #1 says "Form W-9" 33 times — once the 2026-11-13 regex fix landed, normal text scanning found it; no manual entry needed. |
+| Form W-4 | https://www.irs.gov/forms-pubs/about-form-w-4 | **Auto-detected**, same fix — book #1 says "Form W-4" 40 times. |
+
+Three more were added to the same manual-additions block 2026-11-14 (also
+never found in either book's text — video/publisher-side-only citations):
+Form 1099-NEC (`irs.gov/instructions/i1099mec` — the real IRS slug for the
+*combined* 1099-MISC/1099-NEC instructions, not a typo), Form 1099-INT
+(`irs.gov/instructions/i1099int`), Form 1099-DIV (`irs.gov/instructions/i1099div`)
+— all user-supplied, all verified resolving.
 
 Already-covered citations used by the synthesis (no new entry needed — linked
 straight from the existing register / sibling map):
 - Brushaber v. Union Pacific Railroad, 240 U.S. 1 — `scotus_and_courts`
 - Steward Machine Co. v. Davis, 301 U.S. 548 — `scotus_and_courts` (synthesis text spells it "Stewart Machine" — an ASR artifact per the doc's own fidelity caveat; left as-is in the prose, linked to the correctly-named case)
 - 26 U.S.C. § 3401, § 3402 — `usc_title26_irc` (Cornell LII, subsection letters stripped per the publisher's citation-linking convention)
-- Form 1040, Form 1099 — `irs_forms`
+- Form 1040, Form 1099, Form 1099-R, Form 1099-MISC — `irs_forms` (all now auto-detected)
 
-**Not linked — Treasury Decisions.** The synthesis text only gives counts
-("7 → 9 → 11 TDs") from the videos, never specific `T.D. NNNN` numbers, so
-there is nothing to link without either (a) guessing a number, which the
-no-fabrication rule forbids, or (b) re-reading the 33 transcripts to pull the
-actual TD numbers out — a separate, larger task. Flagged, not done.
+**Still not linked — Treasury Decisions in this specific synthesis file.** The
+original 33-row synthesis text only gives counts ("7 → 9 → 11 TDs") from the
+videos, never specific `T.D. NNNN` numbers. This was separately resolved for
+the *45-video* digest (`DAVE_CHAMPION_FULL_DIGEST.md`) — row 5612 named the
+full 10-TD list, added to `transcription-agent/TREASURY_DECISIONS.md` and
+from there into `citations/treasury_decisions.json` (now 16 entries). The
+original 33-row file itself was not retroactively updated with TD numbers;
+not asked for.

@@ -578,6 +578,17 @@
       "pages": [
         "414"
       ]
+    },
+    {
+      "cite": "602 U.S. 572",
+      "case_name": "Moore v. United States",
+      "full_citation": "Moore v. United States, 602 U.S. 572 (2024)",
+      "year": "2024",
+      "court": "U.S. Supreme Court",
+      "url": "https://www.law.cornell.edu/supremecourt/text/22-800",
+      "occurrences": 0,
+      "pages": [],
+      "source": "video_synthesis_2026-11-13"
     }
   ],
   "usc_title26_irc": [
@@ -2058,6 +2069,27 @@
       "pages": [
         "243"
       ]
+    },
+    {
+      "form": "Form 1099-NEC",
+      "url": "https://www.irs.gov/instructions/i1099mec",
+      "occurrences": 0,
+      "pages": [],
+      "source": "video_synthesis_2026-11-13"
+    },
+    {
+      "form": "Form 1099-INT",
+      "url": "https://www.irs.gov/instructions/i1099int",
+      "occurrences": 0,
+      "pages": [],
+      "source": "video_synthesis_2026-11-13"
+    },
+    {
+      "form": "Form 1099-DIV",
+      "url": "https://www.irs.gov/instructions/i1099div",
+      "occurrences": 0,
+      "pages": [],
+      "source": "video_synthesis_2026-11-13"
     }
   ],
   "constitutional_clauses": [

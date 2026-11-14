@@ -451,6 +451,38 @@ out["secondary_authorities"] = [
     for k,v in sorted(secondary.items(), key=lambda kv:-kv[1]["count"])]
 out["irs_treasury_documents"] = irs_docs
 
+# ---------- manual additions (NOT derived from scanning this book's text) ----------
+# These citations are known-relevant to the broader Dave Champion corpus (the
+# video-transcript synthesis) but never appear in book #1's own text, so the
+# scanning loops above can never find them no matter how the regexes are
+# tuned. Added 2026-11-14 per the user: citations found anywhere in the
+# corpus belong in this one master register, in case they're ever encountered
+# elsewhere, not just scattered across each consumer's own curated map. Each
+# entry carries a "source" field recording where it actually came from.
+# Unlike the scanning loops, these do NOT get overwritten/lost on a re-run —
+# they're appended here every time, so they're durable by construction.
+MANUAL_SCOTUS = [
+    {"cite": "602 U.S. 572", "case_name": "Moore v. United States",
+     "full_citation": "Moore v. United States, 602 U.S. 572 (2024)",
+     "year": "2024", "court": "U.S. Supreme Court",
+     "url": "https://www.law.cornell.edu/supremecourt/text/22-800",
+     "occurrences": 0, "pages": [],
+     "source": "video_synthesis_2026-11-13"},
+]
+MANUAL_FORMS = [
+    # User-supplied URLs (2026-11-14), verified resolving (HTTP 200).
+    {"form": "Form 1099-NEC", "url": "https://www.irs.gov/instructions/i1099mec",
+     "occurrences": 0, "pages": [], "source": "video_synthesis_2026-11-13"},
+    {"form": "Form 1099-INT", "url": "https://www.irs.gov/instructions/i1099int",
+     "occurrences": 0, "pages": [], "source": "video_synthesis_2026-11-13"},
+    {"form": "Form 1099-DIV", "url": "https://www.irs.gov/instructions/i1099div",
+     "occurrences": 0, "pages": [], "source": "video_synthesis_2026-11-13"},
+]
+_existing_scotus_cites = {e["cite"] for e in out["scotus_and_courts"]}
+out["scotus_and_courts"] += [e for e in MANUAL_SCOTUS if e["cite"] not in _existing_scotus_cites]
+_existing_forms = {e["form"] for e in out["irs_forms"]}
+out["irs_forms"] += [e for e in MANUAL_FORMS if e["form"] not in _existing_forms]
+
 json.dump(out, open("link_register.json","w",encoding="utf-8"), indent=2, ensure_ascii=False)
 
 # ---------- emit Markdown ----------

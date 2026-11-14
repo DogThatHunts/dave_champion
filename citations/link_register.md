@@ -57,6 +57,7 @@ _Full citation (name · reporter cite · year). U.S. Reports link to Justia; oth
 | Dred Scott v. Sandford. 60 U.S. 393 (1856) | U.S. Supreme Court | 1 | 413 | [link](https://supreme.justia.com/cases/federal/us/60/393/) |
 | Economy Plumbing & Heating Co. v. United States. 470 F.2d 585 | Federal court | 1 | 413 | [link](https://www.courtlistener.com/?q=Economy%20Plumbing%20%26%20Heating%20Co.%20v.%20United%20States%20470%20F.2d%20585) |
 | State of Georgia v. Brailsford. 3 U.S. 1 (1794) | U.S. Supreme Court | 1 | 414 | [link](https://supreme.justia.com/cases/federal/us/3/1/) |
+| Moore v. United States, 602 U.S. 572 (2024) | U.S. Supreme Court | 0 |  | [link](https://www.law.cornell.edu/supremecourt/text/22-800) |
 
 ## 2. Title 26 U.S.C. (Internal Revenue Code) sections
 
@@ -243,6 +244,9 @@ _Links point to current IRS “About Form” pages; the book often discusses his
 | Form 1040NR | 1 | 157 | [link](https://www.irs.gov/forms-pubs/about-form-1040-nr) |
 | Form SS-5 | 1 | 223 | [link](https://www.ssa.gov/forms/ss-5.pdf) |
 | Form 1099-MISC | 1 | 243 | [link](https://www.irs.gov/forms-pubs/about-form-1099-misc) |
+| Form 1099-NEC | 0 |  | [link](https://www.irs.gov/instructions/i1099mec) |
+| Form 1099-INT | 0 |  | [link](https://www.irs.gov/instructions/i1099int) |
+| Form 1099-DIV | 0 |  | [link](https://www.irs.gov/instructions/i1099div) |
 
 ## 7. Constitutional provisions (Article / Section / Clause)
 
