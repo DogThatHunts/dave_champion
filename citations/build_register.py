@@ -478,10 +478,61 @@ MANUAL_FORMS = [
     {"form": "Form 1099-DIV", "url": "https://www.irs.gov/instructions/i1099div",
      "occurrences": 0, "pages": [], "source": "video_synthesis_2026-11-13"},
 ]
+# T.D. 2090/2109/4707 are cited on-camera (rows 1247, 1217, 1253) but never appear
+# in book #1's text, so the scanning loop above can never produce them — same
+# reason MANUAL_SCOTUS/MANUAL_FORMS exist. "summary" is a new field (2026-11-14,
+# researched via web search + a public-domain 1915 treatise's verbatim text, since
+# HathiTrust/Google Books both block automated search-within-book access to the
+# relevant volumes) — plain prose explaining what the decision actually says,
+# which "url" alone can't carry and which TREASURY_DECISIONS.md's table format
+# doesn't have room for either (its Notes section carries the full version).
+# Nothing downstream reads "summary" yet (build_html.py's td_map only ever reads
+# ("td", ...)["url"]), so adding it is additive — no existing consumer breaks.
+MANUAL_TD = [
+    {"cite": "T.D. 2090", "occurrences": 0, "pages": [], "in_mapping_file": True,
+     "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2090%22;a=srchls;lmt=ft",
+     "summary": (
+         "Dec. 14, 1914 — \"Synopsis of rulings on questions relating to the income "
+         "tax imposed by Section 2 of the Act of October 3, 1913.\" A large "
+         "alphabetical (A-Z) digest of dozens of unrelated administrative rulings "
+         "(deductions, withholding, annuities, fiduciaries, bad debts, etc.) for IRS "
+         "officers. It does not define who the income tax applies to as a class of "
+         "filer. Verbatim text (pp. 1456-1486) found in the public-domain 1915 "
+         "treatise \"Foster's Income Tax\" (non-government mirror, link not durable)."),
+     "source": "video_synthesis_2026-11-14"},
+    {"cite": "T.D. 2109", "occurrences": 0, "pages": [], "in_mapping_file": True,
+     "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2109%22;a=srchls;lmt=ft",
+     "summary": (
+         "Dec. 28, 1914 — \"Amendment of Article 8 of Regulations 33, providing for "
+         "the collection of tax on income of non-resident aliens.\" A narrow "
+         "procedural amendment setting withholding mechanics specifically for "
+         "non-resident aliens' U.S.-source income, alongside (not instead of) the "
+         "citizen/resident-alien rules the same regulations already covered. Genuinely "
+         "about non-resident aliens, but regulates one filer category among several — "
+         "doesn't confine the tax to that category. Verbatim text (pp. 1487-1488) in "
+         "the same Foster treatise."),
+     "source": "video_synthesis_2026-11-14"},
+    {"cite": "T.D. 4707", "occurrences": 0, "pages": [], "in_mapping_file": True,
+     "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+4707%22;a=srchls;lmt=ft",
+     "summary": (
+         "NOT VERIFIED against primary text (HathiTrust/Google Books block automated "
+         "search-within-book access to the relevant 1936 volume; treasury.gov/irs.gov "
+         "have nothing pre-1990s). Circumstantial dating only: T.D. 4704 (Nov. 5, 1936) "
+         "is documented as the decision authorizing assignment of Social Security "
+         "account/employer numbers, and Regulations 91 (employees'/employers' tax under "
+         "Title VIII of the Social Security Act - the SS-5 regime) were approved Nov. 9, "
+         "1936. T.D. 4707, numbered just 3 after 4704, likely belongs to that same "
+         "early-November-1936 batch of Social Security implementing decisions - "
+         "consistent with row 1253 citing it re: the SS-5 application. Treat as "
+         "inferred, not confirmed."),
+     "source": "video_synthesis_2026-11-14"},
+]
 _existing_scotus_cites = {e["cite"] for e in out["scotus_and_courts"]}
 out["scotus_and_courts"] += [e for e in MANUAL_SCOTUS if e["cite"] not in _existing_scotus_cites]
 _existing_forms = {e["form"] for e in out["irs_forms"]}
 out["irs_forms"] += [e for e in MANUAL_FORMS if e["form"] not in _existing_forms]
+_existing_tds = {e["cite"] for e in out["treasury_decisions"]}
+out["treasury_decisions"] += [e for e in MANUAL_TD if e["cite"] not in _existing_tds]
 
 json.dump(out, open("link_register.json","w",encoding="utf-8"), indent=2, ensure_ascii=False)
 

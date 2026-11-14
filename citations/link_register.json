@@ -1807,6 +1807,33 @@
         }
       ],
       "note": "NOT YET in TREASURY_DECISIONS file — add it there; fallback is a HathiTrust search."
+    },
+    {
+      "cite": "T.D. 2090",
+      "occurrences": 0,
+      "pages": [],
+      "in_mapping_file": true,
+      "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2090%22;a=srchls;lmt=ft",
+      "summary": "Dec. 14, 1914 — \"Synopsis of rulings on questions relating to the income tax imposed by Section 2 of the Act of October 3, 1913.\" A large alphabetical (A-Z) digest of dozens of unrelated administrative rulings (deductions, withholding, annuities, fiduciaries, bad debts, etc.) for IRS officers. It does not define who the income tax applies to as a class of filer. Verbatim text (pp. 1456-1486) found in the public-domain 1915 treatise \"Foster's Income Tax\" (non-government mirror, link not durable).",
+      "source": "video_synthesis_2026-11-14"
+    },
+    {
+      "cite": "T.D. 2109",
+      "occurrences": 0,
+      "pages": [],
+      "in_mapping_file": true,
+      "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2109%22;a=srchls;lmt=ft",
+      "summary": "Dec. 28, 1914 — \"Amendment of Article 8 of Regulations 33, providing for the collection of tax on income of non-resident aliens.\" A narrow procedural amendment setting withholding mechanics specifically for non-resident aliens' U.S.-source income, alongside (not instead of) the citizen/resident-alien rules the same regulations already covered. Genuinely about non-resident aliens, but regulates one filer category among several — doesn't confine the tax to that category. Verbatim text (pp. 1487-1488) in the same Foster treatise.",
+      "source": "video_synthesis_2026-11-14"
+    },
+    {
+      "cite": "T.D. 4707",
+      "occurrences": 0,
+      "pages": [],
+      "in_mapping_file": true,
+      "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+4707%22;a=srchls;lmt=ft",
+      "summary": "NOT VERIFIED against primary text (HathiTrust/Google Books block automated search-within-book access to the relevant 1936 volume; treasury.gov/irs.gov have nothing pre-1990s). Circumstantial dating only: T.D. 4704 (Nov. 5, 1936) is documented as the decision authorizing assignment of Social Security account/employer numbers, and Regulations 91 (employees'/employers' tax under Title VIII of the Social Security Act - the SS-5 regime) were approved Nov. 9, 1936. T.D. 4707, numbered just 3 after 4704, likely belongs to that same early-November-1936 batch of Social Security implementing decisions - consistent with row 1253 citing it re: the SS-5 application. Treat as inferred, not confirmed.",
+      "source": "video_synthesis_2026-11-14"
     }
   ],
   "constitution": [

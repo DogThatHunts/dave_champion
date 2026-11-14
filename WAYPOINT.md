@@ -2,6 +2,45 @@
 
 _Last updated: 2026-11-14_
 
+> **2026-11-14 — closed the "TDs 2090/2109/4707 still lacking a local source"
+> carryforward (research, not a local PDF).** HathiTrust and Google Books both
+> block automated search-within-book access to the relevant pre-1990s *Treasury
+> Decisions Under Internal Revenue Laws* volumes, and treasury.gov/irs.gov have
+> nothing that old, so no local PDF was found — but a public-domain 1915
+> treatise (*Foster's Income Tax*, non-government mirror at `img1.wsimg.com`,
+> not treated as durable enough to use as the canonical link) turned up
+> verbatim text for two of the three:
+> - **T.D. 2090** (Dec. 14, 1914) — a large A-Z synopsis of unrelated
+>   1913-income-tax administrative rulings; operational guidance, not a
+>   scope-defining regulation.
+> - **T.D. 2109** (Dec. 28, 1914) — amends Regulations 33 Art. 8, setting
+>   withholding mechanics specifically for non-resident aliens' U.S.-source
+>   income, alongside (not instead of) the citizen/resident-alien rules
+>   already in force — one filer category among several, not an exclusive
+>   scope. **Independently corroborated** by this corpus's own local T.D. 2402
+>   text (`citations/treasury_decisions/td_2402/`), which separately cites
+>   "T.D. 2109 of December 28, 1914" by the same date.
+> - **T.D. 4707** — no primary text found; dated only by inference (T.D. 4704,
+>   Nov. 5 1936, is documented as the decision assigning Social Security
+>   account/employer numbers, and Regulations 91 — the Title VIII SS-5 regime
+>   — were approved Nov. 9, 1936; 4707 is 3 numbers after 4704, so likely the
+>   same batch). **Not verified**, flagged as inferred.
+>
+> All three are video-only citations (rows 1247, 1217, 1253 — none appear in
+> either book's text), so `build_register.py`'s scanning loop can never find
+> them on its own. Added a new **`MANUAL_TD`** block (mirrors the existing
+> `MANUAL_SCOTUS`/`MANUAL_FORMS` pattern — durable across reruns, merged by
+> `cite` rather than overwritten) with a new **`summary`** field per entry —
+> prose explaining what the decision actually says, which bare `url` alone
+> can't carry. Additive only: nothing existing reads `summary` yet, so nothing
+> broke. `citations/treasury_decisions.json` (the runtime sidecar the book's
+> JS fetches, `a.href = m[a.dataset.td]`) was deliberately left as a flat
+> `{num: url}` map — its one consumer only ever wants a URL, so there was no
+> reason to widen it. Regenerated `link_register.json`/`.md` (Treasury
+> Decisions 9 → 12) as a regression check — merge confirmed clean. Full
+> narrative also written to `transcription-agent/TREASURY_DECISIONS.md` and
+> that repo's `WAYPOINT.md` §0a18.
+
 > **2026-11-14 — decision: fold citation improvements into the register (not yet
 > executed, planning only).** User asked to move this week's citation fixes into
 > the central citations register (`citations/link_register.json`) rather than
