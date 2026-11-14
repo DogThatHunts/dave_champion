@@ -298,7 +298,7 @@ _Fallback links are HathiTrust searches; add canonical URLs to the shared TD map
 |---|---:|---|
 | Fourteenth Amendment | 8 | [link](https://constitution.congress.gov/constitution/amendment-14/) |
 
-## 6. IRS forms  (33 new)
+## 6. IRS forms  (36 new)
 
 | Form | Occ. | Pages | IRS |
 |---|---:|---|---|
@@ -310,6 +310,9 @@ _Fallback links are HathiTrust searches; add canonical URLs to the shared TD map
 | Form 668-A | 3 | 299, 323, 326 | [link](https://www.irs.gov/forms-pubs/about-form-668-a) |
 | Form 940 | 3 | 377, 378, 379 | [link](https://www.irs.gov/forms-pubs/about-form-940) |
 | Form 943 | 3 | 377, 378, 379 | [link](https://www.irs.gov/forms-pubs/about-form-943) |
+| Form 11-B | 3 | 378 | [link](https://www.irs.gov/forms-pubs/about-form-11-b) |
+| Form CT-1 | 3 | 378, 379 | [link](https://www.irs.gov/forms-pubs/about-form-ct-1) |
+| Form 11-C | 2 | 96, 97 | [link](https://www.irs.gov/forms-pubs/about-form-11-c) |
 | Form 637 | 2 | 96, 97 | [link](https://www.irs.gov/forms-pubs/about-form-637) |
 | Form 730 | 2 | 96, 97 | [link](https://www.irs.gov/forms-pubs/about-form-730) |
 | Form 843 | 2 | 96, 97 | [link](https://www.irs.gov/forms-pubs/about-form-843) |
@@ -319,7 +322,7 @@ _Fallback links are HathiTrust searches; add canonical URLs to the shared TD map
 | Form 4136 | 2 | 96, 97 | [link](https://www.irs.gov/forms-pubs/about-form-4136) |
 | Form 942 | 2 | 377, 378 | [link](https://www.irs.gov/forms-pubs/about-form-942) |
 | Form 1065 | 2 | 378, 379 | [link](https://www.irs.gov/forms-pubs/about-form-1065) |
-| Form 1099-MIS | 2 | 551, 730 | [link](https://www.irs.gov/forms-pubs/about-form-1099-mis) |
+| Form 11 | 2 | 379 | [link](https://www.irs.gov/forms-pubs/about-form-11) |
 | Form 5384 | 1 | 97 | [link](https://www.irs.gov/forms-pubs/about-form-5384) |
 | Form 5385 | 1 | 97 | [link](https://www.irs.gov/forms-pubs/about-form-5385) |
 | Form 6197 | 1 | 97 | [link](https://www.irs.gov/forms-pubs/about-form-6197) |
@@ -328,7 +331,7 @@ _Fallback links are HathiTrust searches; add canonical URLs to the shared TD map
 | Form 8109 | 1 | 97 | [link](https://www.irs.gov/forms-pubs/about-form-8109) |
 | Form 8849 | 1 | 97 | [link](https://www.irs.gov/forms-pubs/about-form-8849) |
 | Form 9117 | 1 | 97 | [link](https://www.irs.gov/forms-pubs/about-form-9117) |
-| Form 2555 F | 1 | 154 | [link](https://www.irs.gov/forms-pubs/about-form-2555 f) |
+| Form 2555-F | 1 | 154 | [link](https://www.irs.gov/forms-pubs/about-form-2555-f) |
 | Form 2555-EZ | 1 | 156 | [link](https://www.irs.gov/forms-pubs/about-form-2555-ez) |
 | Form 668-W | 1 | 310 | [link](https://www.irs.gov/forms-pubs/about-form-668-w) |
 | Form 668 | 1 | 319 | [link](https://www.irs.gov/forms-pubs/about-form-668) |

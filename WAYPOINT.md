@@ -1,6 +1,67 @@
 # Waypoint — dave_champion
 
-_Last updated: 2026-08-12_
+_Last updated: 2026-11-13_
+
+> **2026-11-13 — Video synthesis moved in + citation-register fixes.** Moved the
+> three Dave Champion video-synthesis files from `transcription-agent/` repo root
+> into `video_synthesis/` here (`DAVE_CHAMPION_TAX_SYNTHESIS.md`, `_KIMI.md`,
+> `DAVE_CHAMPION_SYNTHESIS_PROMPT.md`) — see that dir's own files for the
+> 33→45-row expansion plan (rows 5596–5613 from a new `youtube_follow` batch,
+> 6 excluded as non-tax health content, flagged in the Queue sheet) and
+> `new_citations_from_videos.md` for citations added while backfilling links
+> into the existing 33-row synthesis.
+>
+> **Found + fixed while doing that backfill (full writeup: `citations/
+> CITATION_LINKING.md`'s "Low-confidence mappings" section):**
+> - W-9/W-4/W-2 were **never linkable anywhere** — `build_register.py`,
+>   `build_new_citations.py`, and both books' `build_html.py` all shared one
+>   digit-only form regex that structurally couldn't match a letter-prefixed
+>   form. Book #1 says "W-9" 54×/"W-4" 58×/"W-2" 32× and zero were linked.
+>   Fixed in all 4 files; both editions rebuilt (confirmed live: 28 W-9 links
+>   in book #1, 16 W-4/W-2 in book #2).
+> - 6 of 18 `irs_forms` register entries were dead links (mechanically
+>   guessed, never checked) — 4 are real but discontinued forms from the
+>   1910s–40s (left unlinked, not guessed at); 1099-MISC and 1040-NR needed
+>   corrected slugs; added SS-5 (an SSA form).
+> - **`transcription-agent/TREASURY_DECISIONS.md`** (the real source of truth
+>   for the TD sidecar, `citations/treasury_decisions.json`) updated so 9 of
+>   12 TDs point at their local verified transcript page instead of a generic
+>   HathiTrust search. While fixing this, caught a second bug: `build_html.py`'s
+>   path to that file was off by one directory level, so every run was
+>   **silently wiping `treasury_decisions.json` to `{}`** — caught before any
+>   commit, restored from git, path fixed, and a guard added so a future wrong
+>   path fails loud instead of erasing the sidecar.
+> - TD 2090, 2109, 4707 still have no local source — searched treasury.gov/
+>   irs.gov/archive.org, came up empty; HathiTrust search remains the link.
+>
+> **2026-11-14 follow-up — cleanup + republish.** Removed two orphaned, untracked
+> HTML files from this repo's root (`Dave Champion — Income Tax.html`,
+> `dave_champion_tax_synthesis.html`) — unreferenced duplicate renders of the
+> synthesis, now properly living in `video_synthesis/`; `index.html` never linked
+> to either, confirmed no other file referenced them before deleting. Separately,
+> the user's own spot-check of the **published video summaries** (a different
+> pipeline — `transcription-agent/publisher/citations.py`, not this repo's book
+> builders) turned up its own bugs: bare "Form 1099" missing from its curated map,
+> plural forms ("W-9s"/"1040s") never linking, and no Acts-of-Congress category at
+> all (so "the Federal Reserve Act" never linked). All fixed there — see that
+> repo's `WAYPOINT.md` §0a16 and `publisher/CITATION_LINKING.md`. The 11
+> already-published tax-row summaries (5596, 5597, 5598, 5600, 5602, 5603, 5605,
+> 5606, 5608, 5610, 5612) were flagged for republish (Queue `gh_publish_state` →
+> `publish`) so they pick up the fix on the publisher's next 30-min cycle. All
+> 11 were manually force-published the same session (confirmed live via the
+> GitHub API, not the Pages CDN, which lags ~20-30s) — plus 5602's own
+> Brushaber-ASR-variant link fix, confirmed separately.
+>
+> **Same-day follow-up — the Grace Commission.** Found while spot-checking
+> rows 5596/5605/5606: "the Grace Commission" cited 3× in book #1 and in 3
+> of the new video summaries, never linked anywhere. Added to
+> `secondary_authorities` (archive.org's full report, verified resolving —
+> see `citations/CITATION_LINKING.md`'s new section for the fix detail,
+> including a second bug: `build_html.py`'s secondary-authority linker is
+> hardcoded, not register-driven, so the register addition alone did
+> nothing until both books' `build_html.py` were also widened). Book #1
+> rebuilt (3 links confirmed); the 3 video rows republished and confirmed
+> live via the GitHub API.
 
 > **Reorg DONE (2026-08-11):** multi-book layout with a shared citation library — see
 > [`MIGRATION.md`](MIGRATION.md). Executed the *relocate + retarget* pass: `book/` →
@@ -339,19 +400,33 @@ absolute URLs — do **not** use LFS for anything Pages must serve. (Full ration
 
 `citations/link_register.json` was merged with `transcription-agent/publisher/citations.py`'s
 curated maps into a new **private** standalone repo, `citation-register` — the single
-source of truth going forward for this book, Book #2 (american-tax-bible, once its
-`new_citations.md` is folded in — not done yet), and a new companion project
-(`KL_on_RiceRadio`) that will cite the same body of law from interview-transcript
-summaries.
+source of truth going forward for this book, Book #2 (american-tax-bible), and two
+new companion projects that cite the same body of law from interview-transcript
+summaries: `KL_on_Crrow` (Crrow777 Radio) and `KL_on_RiceRadio`
+(RiceTVX/Stranger Than Fiction) — same speaker "KL," different shows.
 
 **Update 2026-08-16:** `citation-register` is now live —
 https://github.com/DogThatHunts/citation-register (private). This repo's `citations/`
 still has NOT been switched to consume it (no submodule wiring yet — `dave_champion`'s
 `link_register.json` here is untouched and still what `build_register_html.py`
 actually reads for the published page). **Explicitly on hold** — owner decision
-2026-08-16 was to hold off wiring up both `dave_champion` and `KL_on_RiceRadio` as
-submodule consumers for now. This repo's local `citations/` files remain the live
-source for the published site until that wiring happens.
+2026-08-16 was to hold off wiring up `dave_champion` and the KL projects
+(`KL_on_Crrow`, `KL_on_RiceRadio`) as submodule consumers for now. This repo's
+local `citations/` files remain the live source for the published site until
+that wiring happens.
+
+**Update 2026-08-15:** Book #2's `new_citations.md` (328 citations, not just the
+~63 cases originally scoped) has now been verified against primary sources and
+merged into `citation-register/register.json` — see that repo's `CHANGELOG.md`
+"dave_champion Book #2 (american-tax-bible) merge (Phase 1, completed)". Still has
+**no effect on this repo's published page** (same reason as above — `citations/`
+here isn't wired to the shared register yet). The submodule wiring itself, plus the
+matching wiring for `transcription-agent/publisher`, remains explicitly parked as
+its own follow-up (Phases 2–3) — not started. When it does happen, note that the
+merge surfaced and fixed 5 cross-book duplicate `acts_of_congress` entries (this
+book's Book #1 citations had registered several of the same acts as Book #2 under
+different informal names) and flagged one further unresolved cross-book dedup
+opportunity in `citation-register/TBD_later.md` item 8.
 
 Two things resolved during the merge, one deferred:
 - Fixed a broken `Form 1099 MISC` URL (literal space) and three OCR-garbled USC section

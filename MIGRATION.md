@@ -23,6 +23,20 @@ Executed the structural reorg and path retargeting only:
   wrap the full `case_name + cite` span (from `link_register.json`'s `full_citation`),
   not just the bare reporter cite. Do it once in the shared/edition builder. The policy
   is written; the linkers are not yet compliant (case name currently sits outside `<a>`).
+- **FIXED 2026-11-13 — IRS-form linking was broken for letter-prefixed forms, and
+  ~22% of existing form links 404'd** (found during the video-synthesis citation
+  backfill; full writeup + fix detail in `citations/CITATION_LINKING.md`'s
+  "Low-confidence mappings" section). W-9/W-4/W-2 regex widened and wired into all
+  four builder copies (`build_register.py`, `build_new_citations.py`, both books'
+  `build_html.py`); dead-link guessing replaced with a live-resolution check that
+  drops unresolved forms instead of emitting a 404. Both book editions rebuilt;
+  confirmed live (28 W-9 links in book #1, 16 W-4/W-2 in book #2).
+- **FIXED 2026-11-13 — Treasury Decisions served a worse link than what's already
+  on disk for 9 of 12 TDs**, and a second bug (`build_html.py`'s path to the source
+  `TREASURY_DECISIONS.md` was off by one directory level) was silently wiping
+  `treasury_decisions.json` to `{}` on every run — caught before any commit, fixed,
+  and guarded against recurring silently. 3 TDs (2090, 2109, 4707) still have no
+  local source; see `CITATION_LINKING.md` for manual-lookup leads.
 
 **RESOLVED — repo file size / Git LFS (2026-08-12):** **LFS rejected.** GitHub Pages
 does not resolve LFS objects — it serves the ~130-byte pointer stub, not the file — so

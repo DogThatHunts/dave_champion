@@ -115,8 +115,8 @@ for label, url in FOUNDING.items():
 
 # ---- 6. IRS forms ----
 forms = defaultdict(lambda: {"count":0,"pages":set()})
-for m in re.finditer(r"Form\s+(\d{3,4}[- ]?[A-Z]{0,3})", text):
-    k = "Form " + m.group(1).strip().replace("  "," ")
+for m in re.finditer(r"Form\s+([A-Z]{0,2}-?\d{1,4}(?:[- ]?[A-Z]{1,4})?)", text):
+    k = "Form " + re.sub(r"\s+", "-", m.group(1).strip())
     forms[k]["count"] += 1; forms[k]["pages"].add(page_at(m.start()))
 
 # ---- 7. Constitutional Article/Section/Clause ----
@@ -177,7 +177,8 @@ for m in re.finditer(r"(?:Executive\s+Order|E\.?\s?O\.?)\s*(?:No\.?\s*)?(\d{4,5}
 
 # ---- 10. Secondary authorities ----
 SECONDARY = {"Black's Law Dictionary":"https://thelawdictionary.org/",
-             "Bouvier's Law Dictionary":"https://www.constitution.org/1-Law/bouvier/bouvier.html"}
+             "Bouvier's Law Dictionary":"https://www.constitution.org/1-Law/bouvier/bouvier.html",
+             "Grace Commission":"https://archive.org/details/GraceCommissionReport"}
 secondary = {}
 for name, url in SECONDARY.items():
     n = len(re.findall(name.replace("'", "[’']"), text))

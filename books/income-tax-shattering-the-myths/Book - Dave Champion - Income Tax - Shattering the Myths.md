@@ -7581,6 +7581,13 @@ will forgive me for not being able to include each by name, but know that their 
 
 3. Coppage v. Kansas. 236 U.S. 1 (1915) 
 
+<!-- CITATION NOTE (2026-08-16): This is Coppage v. Kansas, 236 U.S. 1 (1915). Do not
+confuse with the unrelated Coppedge v. United States, 369 U.S. 438 (1962), which is
+currently mislabeled "Coppedge v. Kansas" in transcription-agent/publisher/citations.py's
+curated case-link map. See citation-register/TBD_later.md item #3. No visible change to
+the rendered page; not rebuilt this cycle. -->
+
+
 4. American Heritage Dictionary, Fourth Edition 
 
 5. United States Constitution, Article IV, Section 4 

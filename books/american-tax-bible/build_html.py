@@ -60,7 +60,7 @@ USC     = re.compile(r"\b26\s+U\.?S\.?C\.?\s*§?\s*(\d{1,5}[A-Za-z]?)\b")
 CFR     = re.compile(r"\b(\d{1,2})\s+C\.?F\.?R\.?\s*(?:Part\s*)?§?\s*(\d+(?:\.\d+)?(?:-\d+)?)?")
 AMEND   = re.compile(r"\b(16th|Sixteenth|14th|Fourteenth|13th|Thirteenth)\s+Amendment\b")
 TD      = re.compile(r"\bT\.?D\.?\s*(\d{3,5})\b")
-FORM    = re.compile(r"\bForm\s+(\d{3,4}(?:[- ]?[A-Z]{1,3})?)\b")
+FORM    = re.compile(r"\bForm\s+([A-Z]{0,2}-?\d{1,4}(?:[- ]?[A-Z]{1,4})?)\b")
 AMAP = {"16th":"amendment-16","sixteenth":"amendment-16","14th":"amendment-14",
         "fourteenth":"amendment-14","13th":"amendment-13","thirteenth":"amendment-13"}
 ROMAN2INT = {"I":1,"II":2,"III":3,"IV":4,"V":5,"VI":6,"VII":7}
@@ -72,10 +72,11 @@ ACT = re.compile(r"\b((?:[A-Z][A-Za-z'\-]+\s+){0,4}"
     r"(?:\s+of\s+\d{4}|\s+\[\d{4}\])?")
 EO = re.compile(r"(?:Executive\s+Order|E\.?\s?O\.?)\s*(?:No\.?\s*)?(\d{4,5})")
 REG11 = re.compile(r"\b1\.1-1(?:\([a-z]\))?")
-SECONDARY = re.compile(r"(Black|Bouvier)['’]s Law Dictionary")
+SECONDARY = re.compile(r"(Black|Bouvier)['’]s Law Dictionary|(Grace)\s+Commission")
 LOC_STATUTES = "https://www.loc.gov/collections/united-states-statutes-at-large/"
 SECONDARY_URL = {"black":"https://thelawdictionary.org/",
-                 "bouvier":"https://www.constitution.org/1-Law/bouvier/bouvier.html"}
+                 "bouvier":"https://www.constitution.org/1-Law/bouvier/bouvier.html",
+                 "grace":"https://archive.org/details/GraceCommissionReport"}
 EO_URL_OVERRIDES = {"10289":"https://www.trumanlibrary.gov/library/executive-orders/10289/executive-order-10289"}
 
 # ---------- load the shared register as the source of truth for curated URLs ----------
@@ -145,7 +146,8 @@ def _form_b(m):
     return A(look("form", "Form " + m.group(1),
         "https://www.irs.gov/forms-pubs/about-form-" + m.group(1).strip().lower().replace(" ", "-")), "form", m.group(0))
 def _sec_b(m):
-    return A(SECONDARY_URL[m.group(1).lower()], "secondary", m.group(0))
+    key = (m.group(1) or m.group(2)).lower()
+    return A(SECONDARY_URL[key], "secondary", m.group(0))
 
 # priority order (first = most specific / wins overlaps)
 RULES = [("const_clause", CLAUSE, _clause_b), ("case", CASE_US, _caseus_b), ("case", CASE_F, _casef_b),

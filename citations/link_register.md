@@ -194,14 +194,14 @@ _External URLs are sourced from the shared mapping `transcription-agent/TREASURY
 | T.D. | Occ. | Pages | Status | Source |
 |---|---:|---|---|---|
 | Treasury Decisions (general) | 15 |  | in mapping | [link](https://www.irs.gov/internal-revenue-bulletins) |
-| T.D. 8734 | 23 | 127, 128, 129, 130, 131, 132 | in mapping | [local copy](treasury_decisions/td_8734/T.D.%208734-Cumulative%20Bulletin%201997-44.pdf) · [external](https://www.irs.gov/pub/irs-regs/td8734.txt) · [transcript](treasury_decisions/td_8734/td_8734.html) |
-| T.D. 2313 | 5 | 151, 152, 153, 154 | in mapping | [local copy](treasury_decisions/td_2313/TD%202313.pdf) · [external](https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2313%22;a=srchls;lmt=ft) · [transcript](treasury_decisions/td_2313/td_2313.html) |
-| T.D. 1928 | 4 | 149, 150 | in mapping | [local copy](treasury_decisions/td_1928/TD%201928.pdf) · [external](https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+1928%22;a=srchls;lmt=ft) · [transcript](treasury_decisions/td_1928/td_1928.html) |
-| T.D. 6500 | 4 | 157, 158 | in mapping | [local copy](treasury_decisions/td_6500/TD%206500.pdf) · [external](https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+6500%22;a=srchls;lmt=ft) · [transcript](treasury_decisions/td_6500/td_6500.html) |
-| T.D. 2401 | 2 | 154 | in mapping | [local copy](treasury_decisions/td_2401/TD%202401%2C%20TD%202402.pdf) · [external](https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2401%22;a=srchls;lmt=ft) · [transcript](treasury_decisions/td_2401/td_2401.html) |
-| T.D. 2815 | 2 | 155 | in mapping | [local copy](treasury_decisions/td_2815/TD%202815%20-%20Form%201040%20for%20nonresident%20aliens%20and%20their%20agents.pdf) · [external](https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2815%22;a=srchls;lmt=ft) · [transcript](treasury_decisions/td_2815/td_2815.html) |
-| T.D. 2988 | 2 | 156 | in mapping | [local copy](treasury_decisions/td_2988/TD%202988.pdf) · [external](https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2988%22;a=srchls;lmt=ft) · [transcript](treasury_decisions/td_2988/td_2988.html) |
-| T.D. 2382 | 2 | 155 | in mapping | [local copy](treasury_decisions/td_2382/TD%202382.pdf) · [external](https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2382%22;a=srchls;lmt=ft) · [transcript](treasury_decisions/td_2382/td_2382.html) |
+| T.D. 8734 | 23 | 127, 128, 129, 130, 131, 132 | **add to mapping** | [local copy](treasury_decisions/td_8734/T.D.%208734-Cumulative%20Bulletin%201997-44.pdf) · [external](https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+8734%22;a=srchls;lmt=ft) · [transcript](treasury_decisions/td_8734/td_8734.html)<br>⚠ NOT YET in TREASURY_DECISIONS file — add it there; fallback is a HathiTrust search. |
+| T.D. 2313 | 5 | 151, 152, 153, 154 | **add to mapping** | [local copy](treasury_decisions/td_2313/TD%202313.pdf) · [external](https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2313%22;a=srchls;lmt=ft) · [transcript](treasury_decisions/td_2313/td_2313.html)<br>⚠ NOT YET in TREASURY_DECISIONS file — add it there; fallback is a HathiTrust search. |
+| T.D. 1928 | 4 | 149, 150 | **add to mapping** | [local copy](treasury_decisions/td_1928/TD%201928.pdf) · [external](https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+1928%22;a=srchls;lmt=ft) · [transcript](treasury_decisions/td_1928/td_1928.html)<br>⚠ NOT YET in TREASURY_DECISIONS file — add it there; fallback is a HathiTrust search. |
+| T.D. 6500 | 4 | 157, 158 | **add to mapping** | [local copy](treasury_decisions/td_6500/TD%206500.pdf) · [external](https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+6500%22;a=srchls;lmt=ft) · [transcript](treasury_decisions/td_6500/td_6500.html)<br>⚠ NOT YET in TREASURY_DECISIONS file — add it there; fallback is a HathiTrust search. |
+| T.D. 2401 | 2 | 154 | **add to mapping** | [local copy](treasury_decisions/td_2401/TD%202401%2C%20TD%202402.pdf) · [external](https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2401%22;a=srchls;lmt=ft) · [transcript](treasury_decisions/td_2401/td_2401.html)<br>⚠ NOT YET in TREASURY_DECISIONS file — add it there; fallback is a HathiTrust search. |
+| T.D. 2815 | 2 | 155 | **add to mapping** | [local copy](treasury_decisions/td_2815/TD%202815%20-%20Form%201040%20for%20nonresident%20aliens%20and%20their%20agents.pdf) · [external](https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2815%22;a=srchls;lmt=ft) · [transcript](treasury_decisions/td_2815/td_2815.html)<br>⚠ NOT YET in TREASURY_DECISIONS file — add it there; fallback is a HathiTrust search. |
+| T.D. 2988 | 2 | 156 | **add to mapping** | [local copy](treasury_decisions/td_2988/TD%202988.pdf) · [external](https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2988%22;a=srchls;lmt=ft) · [transcript](treasury_decisions/td_2988/td_2988.html)<br>⚠ NOT YET in TREASURY_DECISIONS file — add it there; fallback is a HathiTrust search. |
+| T.D. 2382 | 2 | 155 | **add to mapping** | [local copy](treasury_decisions/td_2382/TD%202382.pdf) · [external](https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2382%22;a=srchls;lmt=ft) · [transcript](treasury_decisions/td_2382/td_2382.html)<br>⚠ NOT YET in TREASURY_DECISIONS file — add it there; fallback is a HathiTrust search. |
 
 ## 5. Constitution & founding documents
 
@@ -225,7 +225,10 @@ _Links point to current IRS “About Form” pages; the book often discusses his
 
 | Form | Occ. | Pages | IRS |
 |---|---:|---|---|
+| Form W-4 | 40 | 161, 168, 170, 204, 205, 215 | [link](https://www.irs.gov/forms-pubs/about-form-w-4) |
 | Form 1040 | 39 | 140, 148, 149, 150, 151, 152 | [link](https://www.irs.gov/forms-pubs/about-form-1040) |
+| Form W-9 | 33 | 124, 130, 132, 133, 134, 232 | [link](https://www.irs.gov/forms-pubs/about-form-w-9) |
+| Form W-2 | 19 | 120, 184, 187, 216, 218, 219 | [link](https://www.irs.gov/forms-pubs/about-form-w-2) |
 | Form 1099 | 12 | 120, 124, 128, 129, 130, 132 | [link](https://www.irs.gov/forms-pubs/about-form-1099) |
 | Form 4852 | 8 | 296, 297, 413, 419 | [link](https://www.irs.gov/forms-pubs/about-form-4852) |
 | Form 8233 | 7 | 221, 222, 223 | [link](https://www.irs.gov/forms-pubs/about-form-8233) |
@@ -233,16 +236,13 @@ _Links point to current IRS “About Form” pages; the book often discusses his
 | Form 1042 | 3 | 149, 153, 157 | [link](https://www.irs.gov/forms-pubs/about-form-1042) |
 | Form 1040A | 3 | 155, 158 | [link](https://www.irs.gov/forms-pubs/about-form-1040a) |
 | Form 1099-R | 3 | 296 | [link](https://www.irs.gov/forms-pubs/about-form-1099-r) |
-| Form 1043 | 2 | 150 | [link](https://www.irs.gov/forms-pubs/about-form-1043) |
-| Form 1044 | 2 | 150 | [link](https://www.irs.gov/forms-pubs/about-form-1044) |
-| Form 1040W | 2 | 158 | [link](https://www.irs.gov/forms-pubs/about-form-1040w) |
 | Form 1120 | 2 | 159 | [link](https://www.irs.gov/forms-pubs/about-form-1120) |
 | Form 941 | 2 | 220 | [link](https://www.irs.gov/forms-pubs/about-form-941) |
 | Form 1098 | 1 | 120 | [link](https://www.irs.gov/forms-pubs/about-form-1098) |
 | Form 1041 | 1 | 149 | [link](https://www.irs.gov/forms-pubs/about-form-1041) |
-| Form 1031 | 1 | 155 | [link](https://www.irs.gov/forms-pubs/about-form-1031) |
-| Form 1040NR | 1 | 157 | [link](https://www.irs.gov/forms-pubs/about-form-1040nr) |
-| Form 1099 MIS | 1 | 243 | [link](https://www.irs.gov/forms-pubs/about-form-1099 mis) |
+| Form 1040NR | 1 | 157 | [link](https://www.irs.gov/forms-pubs/about-form-1040-nr) |
+| Form SS-5 | 1 | 223 | [link](https://www.ssa.gov/forms/ss-5.pdf) |
+| Form 1099-MISC | 1 | 243 | [link](https://www.irs.gov/forms-pubs/about-form-1099-misc) |
 
 ## 7. Constitutional provisions (Article / Section / Clause)
 
@@ -296,6 +296,7 @@ _Reference works cited in the text (non-government sources)._
 |---|---:|---|
 | Bouvier's Law Dictionary | 5 | [link](https://www.constitution.org/1-Law/bouvier/bouvier.html) |
 | Black's Law Dictionary | 3 | [link](https://thelawdictionary.org/) |
+| Grace Commission | 3 | [link](https://archive.org/details/GraceCommissionReport) |
 
 ## 11. IRS & Treasury guidance documents
 

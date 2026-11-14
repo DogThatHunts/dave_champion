@@ -3,6 +3,7 @@
 constitutional refs, IRS forms) from the cleaned MD, mapped to authoritative URLs.
 Emits link_register.md (human) and link_register.json (for HTML enrichment)."""
 import re, json, sys
+import urllib.request, urllib.error
 from collections import defaultdict, OrderedDict
 from urllib.parse import quote
 
@@ -157,9 +158,18 @@ for label, url in FOUNDING.items():
         const[label]["url"] = url
 
 # ---------- 6. IRS forms ----------
+# NOTE (2026-11-13): widened from digit-only (`\d{3,4}[- ]?[A-Z]{0,3}`) to also
+# catch letter-prefixed forms ("W-9", "W-4", "W-2", "I-9", "W-8BEN") — the old
+# pattern required the token to START with a digit, so it silently never
+# matched any W-/I- form no matter how often the book named it. Found while
+# backfilling citations into the video synthesis: book #1 says "Form W-9" 54x,
+# "Form W-4" 58x, "Form W-2" 32x, and NONE were ever linked. Still requires
+# the literal word "Form" before the token (same ambiguity guard as before —
+# a bare "W-9s" with no "Form" prefix is still not captured).
 forms = defaultdict(lambda: {"count":0,"pages":set()})
-for m in re.finditer(r"Form\s+(\d{3,4}[- ]?[A-Z]{0,3})", text):
-    k = "Form " + m.group(1).strip().replace("  "," ")
+FORM_RX = re.compile(r"Form\s+([A-Z]{0,2}-?\d{1,4}(?:[- ]?[A-Z]{1,4})?)")
+for m in FORM_RX.finditer(text):
+    k = "Form " + re.sub(r"\s+", "-", m.group(1).strip())
     forms[k]["count"] += 1
     forms[k]["pages"].add(page_at(m.start()))
 
@@ -229,6 +239,12 @@ for m in re.finditer(r"(?:Executive\s+Order|E\.?\s?O\.?)\s*(?:No\.?\s*)?(\d{4,5}
 SECONDARY = {
     "Black's Law Dictionary": "https://thelawdictionary.org/",
     "Bouvier's Law Dictionary": "https://www.constitution.org/1-Law/bouvier/bouvier.html",
+    # Not strictly "non-government" (it's a presidential commission report),
+    # but no other category fits either -- added 2026-11-13, cited 3x in
+    # book #1. archive.org has the full report (PDF + OCR text, verified
+    # resolving); the Reagan Library's page is a finding-aid description
+    # only, not the document.
+    "Grace Commission": "https://archive.org/details/GraceCommissionReport",
 }
 secondary = {}
 for name, url in SECONDARY.items():
@@ -263,9 +279,51 @@ def cfr_url(e):
         return f"https://www.law.cornell.edu/cfr/text/{e['title']}/{e['part']}"
     return f"https://www.law.cornell.edu/cfr/text/{e['title']}"
 def const_url(label): return f"https://constitution.congress.gov/constitution/{CMAP[label]}/"
+# Curated overrides for forms whose live URL doesn't follow the plain
+# about-form-<lowercased-number> pattern, or that aren't IRS forms at all.
+# URLs copied from the sibling transcription-agent publisher's _FORM_URLS map
+# (already verified there) rather than re-guessed.
+FORM_URL_OVERRIDES = {
+    "Form W-9": "https://www.irs.gov/forms-pubs/about-form-w-9",
+    "Form W-4": "https://www.irs.gov/forms-pubs/about-form-w-4",
+    "Form W-2": "https://www.irs.gov/forms-pubs/about-form-w-2",
+    "Form W-8BEN": "https://www.irs.gov/forms-pubs/about-form-w-8-ben",
+    "Form I-9": "https://www.uscis.gov/i-9",  # USCIS form, not IRS
+    "Form 1040NR": "https://www.irs.gov/forms-pubs/about-form-1040-nr",  # real slug is hyphenated; book text has no hyphen
+    # SSA form, not IRS. URL corroborated by multiple independent search
+    # results (ssa.gov, teachmepersonalfinance.com, immi-usa.com all agree)
+    # but could not be curl-verified — ssa.gov 403s all automated requests,
+    # same bot-protection pattern seen on Justia/HathiTrust this session.
+    "Form SS-5": "https://www.ssa.gov/forms/ss-5.pdf",
+}
+
+_FORM_URL_CACHE: dict = {}
+
+def _url_resolves(url: str) -> bool:
+    if url in _FORM_URL_CACHE:
+        return _FORM_URL_CACHE[url]
+    ok = False
+    try:
+        req = urllib.request.Request(url, method="HEAD",
+                                      headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=10) as r:
+            ok = r.status == 200
+    except Exception:
+        ok = False
+    _FORM_URL_CACHE[url] = ok
+    return ok
+
+unresolved_forms = []  # (form, guessed_url) pairs that failed verification — reported, not linked
+
 def form_url(k):
-    slug=k.replace('Form ','').strip().lower()
-    return f"https://www.irs.gov/forms-pubs/about-form-{slug}"
+    if k in FORM_URL_OVERRIDES:
+        return FORM_URL_OVERRIDES[k]
+    slug = k.replace("Form ", "").strip().lower()
+    url = f"https://www.irs.gov/forms-pubs/about-form-{slug}"
+    if _url_resolves(url):
+        return url
+    unresolved_forms.append((k, url))
+    return None
 
 # ---------- emit JSON ----------
 def _pkey(x):
@@ -375,8 +433,9 @@ out["constitution"] = [
     {"ref":k, "url":v.get("url") or const_url(k), "occurrences":v["count"]}
     for k,v in sorted(const.items(), key=lambda kv:-kv[1]["count"])]
 out["irs_forms"] = [
-    {"form":k, "url":form_url(k), "occurrences":v["count"], "pages":pset(v["pages"])}
-    for k,v in sorted(forms.items(), key=lambda kv:-kv[1]["count"])]
+    {"form":k, "url":url, "occurrences":v["count"], "pages":pset(v["pages"])}
+    for k,v in sorted(forms.items(), key=lambda kv:-kv[1]["count"])
+    if (url := form_url(k)) is not None]  # unresolved (404) guesses are dropped, not linked — see unresolved_forms
 out["constitutional_clauses"] = [
     {"citation":k, "url":v["url"], "occurrences":v["count"], "pages":pset(v["pages"])}
     for k,v in sorted(clauses.items())]
@@ -517,4 +576,8 @@ print("CFR cites          :", len(out["cfr"]))
 print("Treasury Decisions :", len(out["treasury_decisions"]))
 print("Constitution refs  :", len(out["constitution"]))
 print("IRS forms          :", len(out["irs_forms"]))
+if unresolved_forms:
+    print(f"IRS forms UNRESOLVED (guessed URL 404'd, left unlinked): {len(unresolved_forms)}")
+    for k, u in unresolved_forms:
+        print(f"  - {k}  (tried: {u})")
 print("wrote link_register.md + link_register.json")

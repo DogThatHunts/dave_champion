@@ -15,12 +15,19 @@ from urllib.parse import quote
 MD  = "Book - Dave Champion - Income Tax - Shattering the Myths.md"
 OUT = "Book - Dave Champion - Income Tax - Shattering the Myths.html"
 PDF = "Book - Dave Champion - Income Tax - Shattering the Myths.pdf"
-TD_FILE = "../../../transcription-agent/TREASURY_DECISIONS.md"
+TD_FILE = "../../../../transcription-agent/TREASURY_DECISIONS.md"
 PDF_HREF = quote(PDF)
 PAGE_OFFSET_ARABIC = 23   # physical PDF page = printed arabic + 23  (measured)
 PAGE_OFFSET_ROMAN  = 11   # physical PDF page = printed roman  + 11  (measured, ii->13)
 
 # ---------- Treasury Decisions sidecar (num -> canonical URL) ----------
+# Guarded 2026-11-13: TD_FILE's relative path was off by one directory level
+# (missing a "../"), so TD_FILE was never found, td_map stayed {}, and this
+# unconditionally overwrote the real 12-entry treasury_decisions.json with an
+# empty one on every run. Path is fixed, but keep the guard — refuse to write
+# an empty/shrunk map over a bigger existing one, since a silently-wrong path
+# on another machine should fail loud, not silently erase curated data.
+TD_SIDECAR = "../../citations/treasury_decisions.json"
 td_map = {}
 try:
     for line in open(TD_FILE, encoding="utf-8"):
@@ -30,7 +37,17 @@ try:
             td_map[mnum.group(1)] = urls[-1]
 except FileNotFoundError:
     pass
-json.dump(td_map, open("../../citations/treasury_decisions.json", "w", encoding="utf-8"), indent=2)
+try:
+    existing_td_map = json.load(open(TD_SIDECAR, encoding="utf-8"))
+except (FileNotFoundError, json.JSONDecodeError):
+    existing_td_map = {}
+if len(td_map) < len(existing_td_map):
+    print(f"WARNING: TD_FILE ({TD_FILE}) produced only {len(td_map)} entries vs "
+          f"{len(existing_td_map)} already in {TD_SIDECAR} — NOT overwriting; "
+          "check TD_FILE exists and the path is correct.", file=__import__("sys").stderr)
+    td_map = existing_td_map
+else:
+    json.dump(td_map, open(TD_SIDECAR, "w", encoding="utf-8"), indent=2)
 
 # ---------- helpers ----------
 def roman_to_int(s):
@@ -71,7 +88,7 @@ USC     = re.compile(r"\b26\s+U\.?S\.?C\.?\s*§?\s*(\d{1,5}[A-Za-z]?)\b")
 CFR     = re.compile(r"\b(\d{1,2})\s+C\.?F\.?R\.?\s*(?:Part\s*)?§?\s*(\d+(?:\.\d+)?(?:-\d+)?)?")
 AMEND   = re.compile(r"\b(16th|Sixteenth|14th|Fourteenth|13th|Thirteenth)\s+Amendment\b")
 TD      = re.compile(r"\bT\.?D\.?\s*(\d{3,5})\b")
-FORM    = re.compile(r"\bForm\s+(\d{3,4}(?:[- ]?[A-Z]{1,3})?)\b")
+FORM    = re.compile(r"\bForm\s+([A-Z]{0,2}-?\d{1,4}(?:[- ]?[A-Z]{1,4})?)\b")
 AMAP={"16th":"amendment-16","sixteenth":"amendment-16","14th":"amendment-14",
       "fourteenth":"amendment-14","13th":"amendment-13","thirteenth":"amendment-13"}
 
@@ -115,10 +132,11 @@ ACT=re.compile(r"\b((?:[A-Z][A-Za-z'\-]+\s+){0,4}"
     r"(?:\s+of\s+\d{4}|\s+\[\d{4}\])?")
 EO=re.compile(r"(?:Executive\s+Order|E\.?\s?O\.?)\s*(?:No\.?\s*)?(\d{4,5})")
 REG11=re.compile(r"\b1\.1-1(?:\([a-z]\))?")   # bare CFR reg cite written without a "CFR" prefix
-SECONDARY=re.compile(r"(Black|Bouvier)['’]s Law Dictionary")
+SECONDARY=re.compile(r"(Black|Bouvier)['’]s Law Dictionary|(Grace)\s+Commission")
 LOC_STATUTES="https://www.loc.gov/collections/united-states-statutes-at-large/"
 SECONDARY_URL={"black":"https://thelawdictionary.org/",
-               "bouvier":"https://www.constitution.org/1-Law/bouvier/bouvier.html"}
+               "bouvier":"https://www.constitution.org/1-Law/bouvier/bouvier.html",
+               "grace":"https://archive.org/details/GraceCommissionReport"}
 act_url={}   # normalised act name -> url (from the register, single source of truth)
 for e in (REG.get("acts_of_congress",[]) if REG else []):
     act_url[rk(e["act"])]=e["url"]
@@ -165,7 +183,8 @@ def _form_b(m):
     return A(look("form","Form "+m.group(1),
         "https://www.irs.gov/forms-pubs/about-form-"+m.group(1).strip().lower().replace(" ","-")),"form",m.group(0))
 def _sec_b(m):
-    return A(SECONDARY_URL[m.group(1).lower()],"secondary",m.group(0))
+    key = (m.group(1) or m.group(2)).lower()
+    return A(SECONDARY_URL[key],"secondary",m.group(0))
 
 # priority order (first = most specific / wins overlaps)
 RULES=[("const_clause",CLAUSE,_clause_b),("case",CASE_US,_caseus_b),("case",CASE_F,_casef_b),

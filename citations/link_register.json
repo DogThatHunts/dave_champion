@@ -1678,10 +1678,11 @@
         "134",
         "136"
       ],
-      "in_mapping_file": true,
-      "url": "https://www.irs.gov/pub/irs-regs/td8734.txt",
+      "in_mapping_file": false,
+      "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+8734%22;a=srchls;lmt=ft",
       "local_path": "treasury_decisions/td_8734/T.D. 8734-Cumulative Bulletin 1997-44.pdf",
-      "transcript_path": "treasury_decisions/td_8734/td_8734.html"
+      "transcript_path": "treasury_decisions/td_8734/td_8734.html",
+      "note": "NOT YET in TREASURY_DECISIONS file — add it there; fallback is a HathiTrust search."
     },
     {
       "cite": "T.D. 2313",
@@ -1692,7 +1693,7 @@
         "153",
         "154"
       ],
-      "in_mapping_file": true,
+      "in_mapping_file": false,
       "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2313%22;a=srchls;lmt=ft",
       "local_path": "treasury_decisions/td_2313/TD 2313.pdf",
       "transcript_path": "treasury_decisions/td_2313/td_2313.html",
@@ -1703,7 +1704,8 @@
           "basis": "Amending T.D. 2313 of March 21, 1916",
           "transcript": "treasury_decisions/td_2402/td_2402.html"
         }
-      ]
+      ],
+      "note": "NOT YET in TREASURY_DECISIONS file — add it there; fallback is a HathiTrust search."
     },
     {
       "cite": "T.D. 1928",
@@ -1712,10 +1714,11 @@
         "149",
         "150"
       ],
-      "in_mapping_file": true,
+      "in_mapping_file": false,
       "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+1928%22;a=srchls;lmt=ft",
       "local_path": "treasury_decisions/td_1928/TD 1928.pdf",
-      "transcript_path": "treasury_decisions/td_1928/td_1928.html"
+      "transcript_path": "treasury_decisions/td_1928/td_1928.html",
+      "note": "NOT YET in TREASURY_DECISIONS file — add it there; fallback is a HathiTrust search."
     },
     {
       "cite": "T.D. 6500",
@@ -1724,10 +1727,11 @@
         "157",
         "158"
       ],
-      "in_mapping_file": true,
+      "in_mapping_file": false,
       "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+6500%22;a=srchls;lmt=ft",
       "local_path": "treasury_decisions/td_6500/TD 6500.pdf",
-      "transcript_path": "treasury_decisions/td_6500/td_6500.html"
+      "transcript_path": "treasury_decisions/td_6500/td_6500.html",
+      "note": "NOT YET in TREASURY_DECISIONS file — add it there; fallback is a HathiTrust search."
     },
     {
       "cite": "T.D. 2401",
@@ -1735,7 +1739,7 @@
       "pages": [
         "154"
       ],
-      "in_mapping_file": true,
+      "in_mapping_file": false,
       "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2401%22;a=srchls;lmt=ft",
       "local_path": "treasury_decisions/td_2401/TD 2401, TD 2402.pdf",
       "transcript_path": "treasury_decisions/td_2401/td_2401.html",
@@ -1746,7 +1750,8 @@
           "basis": "Revision of T.D. 2382 of October 19, 1916",
           "transcript": "treasury_decisions/td_2382/td_2382.html"
         }
-      ]
+      ],
+      "note": "NOT YET in TREASURY_DECISIONS file — add it there; fallback is a HathiTrust search."
     },
     {
       "cite": "T.D. 2815",
@@ -1754,10 +1759,11 @@
       "pages": [
         "155"
       ],
-      "in_mapping_file": true,
+      "in_mapping_file": false,
       "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2815%22;a=srchls;lmt=ft",
       "local_path": "treasury_decisions/td_2815/TD 2815 - Form 1040 for nonresident aliens and their agents.pdf",
-      "transcript_path": "treasury_decisions/td_2815/td_2815.html"
+      "transcript_path": "treasury_decisions/td_2815/td_2815.html",
+      "note": "NOT YET in TREASURY_DECISIONS file — add it there; fallback is a HathiTrust search."
     },
     {
       "cite": "T.D. 2988",
@@ -1765,10 +1771,11 @@
       "pages": [
         "156"
       ],
-      "in_mapping_file": true,
+      "in_mapping_file": false,
       "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2988%22;a=srchls;lmt=ft",
       "local_path": "treasury_decisions/td_2988/TD 2988.pdf",
-      "transcript_path": "treasury_decisions/td_2988/td_2988.html"
+      "transcript_path": "treasury_decisions/td_2988/td_2988.html",
+      "note": "NOT YET in TREASURY_DECISIONS file — add it there; fallback is a HathiTrust search."
     },
     {
       "cite": "T.D. 2382",
@@ -1776,7 +1783,7 @@
       "pages": [
         "155"
       ],
-      "in_mapping_file": true,
+      "in_mapping_file": false,
       "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2382%22;a=srchls;lmt=ft",
       "local_path": "treasury_decisions/td_2382/TD 2382.pdf",
       "transcript_path": "treasury_decisions/td_2382/td_2382.html",
@@ -1787,7 +1794,8 @@
           "basis": "Revision of T.D. 2382 of October 19, 1916",
           "transcript": "treasury_decisions/td_2401/td_2401.html"
         }
-      ]
+      ],
+      "note": "NOT YET in TREASURY_DECISIONS file — add it there; fallback is a HathiTrust search."
     }
   ],
   "constitution": [
@@ -1839,6 +1847,27 @@
   ],
   "irs_forms": [
     {
+      "form": "Form W-4",
+      "url": "https://www.irs.gov/forms-pubs/about-form-w-4",
+      "occurrences": 40,
+      "pages": [
+        "161",
+        "168",
+        "170",
+        "204",
+        "205",
+        "215",
+        "216",
+        "217",
+        "218",
+        "219",
+        "223",
+        "224",
+        "363",
+        "375"
+      ]
+    },
+    {
       "form": "Form 1040",
       "url": "https://www.irs.gov/forms-pubs/about-form-1040",
       "occurrences": 39,
@@ -1862,6 +1891,44 @@
         "362",
         "ii",
         "iv"
+      ]
+    },
+    {
+      "form": "Form W-9",
+      "url": "https://www.irs.gov/forms-pubs/about-form-w-9",
+      "occurrences": 33,
+      "pages": [
+        "124",
+        "130",
+        "132",
+        "133",
+        "134",
+        "232",
+        "233",
+        "242",
+        "243",
+        "247",
+        "252",
+        "258",
+        "263",
+        "347",
+        "363",
+        "366",
+        "412"
+      ]
+    },
+    {
+      "form": "Form W-2",
+      "url": "https://www.irs.gov/forms-pubs/about-form-w-2",
+      "occurrences": 19,
+      "pages": [
+        "120",
+        "184",
+        "187",
+        "216",
+        "218",
+        "219",
+        "296"
       ]
     },
     {
@@ -1937,30 +2004,6 @@
       ]
     },
     {
-      "form": "Form 1043",
-      "url": "https://www.irs.gov/forms-pubs/about-form-1043",
-      "occurrences": 2,
-      "pages": [
-        "150"
-      ]
-    },
-    {
-      "form": "Form 1044",
-      "url": "https://www.irs.gov/forms-pubs/about-form-1044",
-      "occurrences": 2,
-      "pages": [
-        "150"
-      ]
-    },
-    {
-      "form": "Form 1040W",
-      "url": "https://www.irs.gov/forms-pubs/about-form-1040w",
-      "occurrences": 2,
-      "pages": [
-        "158"
-      ]
-    },
-    {
       "form": "Form 1120",
       "url": "https://www.irs.gov/forms-pubs/about-form-1120",
       "occurrences": 2,
@@ -1993,24 +2036,24 @@
       ]
     },
     {
-      "form": "Form 1031",
-      "url": "https://www.irs.gov/forms-pubs/about-form-1031",
-      "occurrences": 1,
-      "pages": [
-        "155"
-      ]
-    },
-    {
       "form": "Form 1040NR",
-      "url": "https://www.irs.gov/forms-pubs/about-form-1040nr",
+      "url": "https://www.irs.gov/forms-pubs/about-form-1040-nr",
       "occurrences": 1,
       "pages": [
         "157"
       ]
     },
     {
-      "form": "Form 1099 MIS",
-      "url": "https://www.irs.gov/forms-pubs/about-form-1099 mis",
+      "form": "Form SS-5",
+      "url": "https://www.ssa.gov/forms/ss-5.pdf",
+      "occurrences": 1,
+      "pages": [
+        "223"
+      ]
+    },
+    {
+      "form": "Form 1099-MISC",
+      "url": "https://www.irs.gov/forms-pubs/about-form-1099-misc",
       "occurrences": 1,
       "pages": [
         "243"
@@ -2272,6 +2315,11 @@
     {
       "work": "Black's Law Dictionary",
       "url": "https://thelawdictionary.org/",
+      "occurrences": 3
+    },
+    {
+      "work": "Grace Commission",
+      "url": "https://archive.org/details/GraceCommissionReport",
       "occurrences": 3
     }
   ],
