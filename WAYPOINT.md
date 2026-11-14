@@ -1,6 +1,25 @@
 # Waypoint — dave_champion
 
-_Last updated: 2026-11-13_
+_Last updated: 2026-11-14_
+
+> **2026-11-14 — Full 45-video digest + DIGEST tile.** User asked for the real
+> 45-video synthesis (not a stopgap), published as a public digest page with a
+> DIGEST tile (first position) on the income-tax index, plus a citation link
+> for *Income Tax: Shattering the Myths* back to Dave Champion's own store
+> (`drreality.news/store/`) and an explicit, scoped exception letting every
+> citation on that one page link on every occurrence (not just first — the
+> site-wide linker is untouched). See `video_synthesis/
+> DIGEST_TILE_REQUEST_2026-11-14.md` for the full request record and
+> `video_synthesis/DAVE_CHAMPION_FULL_DIGEST.md` for the synthesis itself.
+> Pulled all 12 new rows' transcripts and ran claim extraction via 4 parallel
+> subagents — **row 5612 resolved a gap this project had carried since the
+> original synthesis**: the only video in all 45 that names the full
+> 10-Treasury-Decision list behind the recurring "Form 1040 is for
+> non-resident aliens" claim (1928, 1953, 2013, 2190, 2313, 2401, 2402, 2815,
+> 2988, 6500); every other video only gives a count. 4 new TDs added to
+> `transcription-agent/TREASURY_DECISIONS.md`. Published and confirmed live
+> via the GitHub API: the digest page, the DIGEST tile, and a date-format fix
+> on all 45 video tiles (single line, "MMM YYYY - word count", date first).
 
 > **2026-11-13 — Video synthesis moved in + citation-register fixes.** Moved the
 > three Dave Champion video-synthesis files from `transcription-agent/` repo root
