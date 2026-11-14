@@ -35,6 +35,23 @@ _Last updated: 2026-11-14_
 >
 > Plan for folding in the parked entries (item 1) follows in chat; not yet
 > executed.
+>
+> **Plan refined, then approved:** checking the register directly first showed
+> most of the original "parked" list is already resolved — yesterday's regex
+> fix auto-detected `Form W-9`/`W-4`/`1099`/`1099-R`/`1099-MISC` via normal
+> book-text scanning, durably. Only two things genuinely need manual
+> injection (never appear in either book's text, so scanning will never find
+> them): *Moore v. United States* (602 U.S. 572) and three 1099 variants.
+> **User supplied the exact URLs for those three** — instructions pages, not
+> the simpler "about-form" pages used on the publisher side:
+> `Form 1099-NEC` → `irs.gov/instructions/i1099mec` (confirmed: this is the
+> real IRS slug for the *combined* "Instructions for Forms 1099-MISC and
+> 1099-NEC" — not a typo, as first assumed; verified it covers 1099-NEC in
+> detail), `Form 1099-INT` → `irs.gov/instructions/i1099int`, `Form 1099-DIV`
+> → `irs.gov/instructions/i1099div` — all three confirmed resolving (200).
+> Confirmed no conflict with the "book-derived citations belong in the master
+> register too, in case encountered elsewhere" principle — that's exactly
+> what the plan already does. Proceeding to execute.
 
 > **2026-11-14 — Full 45-video digest + DIGEST tile.** User asked for the real
 > 45-video synthesis (not a stopgap), published as a public digest page with a
