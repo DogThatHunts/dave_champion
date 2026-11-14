@@ -2,6 +2,40 @@
 
 _Last updated: 2026-11-14_
 
+> **2026-11-14 — decision: fold citation improvements into the register (not yet
+> executed, planning only).** User asked to move this week's citation fixes into
+> the central citations register (`citations/link_register.json`) rather than
+> leaving them scattered across `publisher/citations.py`'s own curated maps.
+> Two objections raised and accepted as the right approach:
+> 1. **Hand-editing `link_register.json` directly won't survive the next
+>    `build_register.py` run** (it regenerates from book-text scanning every
+>    time — same problem that put Moore v. United States and Forms W-9/W-4 into
+>    `video_synthesis/new_citations_from_videos.md` as a parked diff instead of
+>    the live register in the first place). Durable fix: add a small
+>    "known additions, not derived from book-text scanning" block directly into
+>    `build_register.py` (mirrored in `build_new_citations.py`) so these survive
+>    every future rebuild.
+> 2. **Most of this week's additions already live in the register** and need no
+>    porting: Brushaber's ASR variants (a publisher-side regex widen only, no
+>    new case), the four Acts (Federal Reserve/Social Security/Patriot/Paperwork
+>    Reduction — copied *from* the register originally), and the Grace
+>    Commission (already added to `SECONDARY` yesterday).
+>
+> **Decisions on open scope questions:**
+> - **Yes** — fold in yesterday's parked `new_citations_from_videos.md` entries
+>   (Moore v. United States, Form W-9, Form W-4) at the same time; same
+>   durability problem, same fix.
+> - **"Shattering the Myths" → `drreality.news/store/`**: include it, but
+>   tagged as a **Dave-Champion-only** entry, with a way to *not* blindly reuse
+>   it on a future Champion video batch without reconsidering it first (e.g. the
+>   link could go stale, or the user may want a different promo link by then).
+>   **Open design question, not yet resolved**: the register has no per-entry
+>   "re-confirm before reuse" or batch-scoping mechanism today — needs one
+>   before this entry is added, not after.
+>
+> Plan for folding in the parked entries (item 1) follows in chat; not yet
+> executed.
+
 > **2026-11-14 — Full 45-video digest + DIGEST tile.** User asked for the real
 > 45-video synthesis (not a stopgap), published as a public digest page with a
 > DIGEST tile (first position) on the income-tax index, plus a citation link
