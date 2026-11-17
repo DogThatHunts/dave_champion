@@ -71,6 +71,61 @@ TDS = [
                  "https://www.federalregister.gov/documents/2000/05/22/00-11937/"
                  "revisions-to-regulations-relating-to-withholding-of-tax-on-"
                  "certain-us-source-income-paid-to-foreign")},
+    # The following 7 were added 2026-11-16: all found the same session via
+    # HathiTrust's Bibliographic API (unblocked, unlike catalog.hathitrust.org's
+    # Cloudflare-gated pages) + a real Claude-in-Chrome browser session. Each
+    # local PDF is a page range pulled from a bound multi-decision bulletin
+    # volume, so (except 4704/4707, a different, modern bulletin format the
+    # "(T. D. NNNN.)" header regex doesn't match) slice=True drops the tail-end
+    # of the preceding decision that scan pagination left at the top of page 1.
+    {"num": "1953", "folder": "td_1953", "method": "text", "slice": True,
+     "ext_ref": ("HathiTrust (Vol. 16, seq 46)",
+                 "https://babel.hathitrust.org/cgi/pt?id=uc1.a0001809318&seq=46")},
+    {"num": "2013", "folder": "td_2013", "method": "text", "slice": True,
+     "ext_ref": ("HathiTrust (Vol. 16, seq 130)",
+                 "https://babel.hathitrust.org/cgi/pt?id=uc1.a0001809318&seq=130")},
+    {"num": "2090", "folder": "td_2090", "method": "text", "slice": False,
+     "note": "24-page A-Z digest (full synopsis of 1913-income-tax rulings), "
+             "not a single short decision like the others here. slice=False "
+             "deliberately: the digest's own body is full of internal "
+             "\"(T. D. NNNN.)\" cross-reference citations to unrelated rulings, "
+             "which slice_to_target's header regex can't tell apart from a new "
+             "decision's header -- slice=True truncated the whole digest down "
+             "to its first ~2 entries the first time this ran (2026-11-16), "
+             "stopping at the first internal cross-ref it hit. Keeps the ~1 "
+             "paragraph of T.D. 2089's tail at the very top (same tolerance as "
+             "td_2815's scan-mate note) rather than risk cutting real content. "
+             "Pages 1-17 carry Google's original OCR text; pages 18-24 were "
+             "tesseract-OCR'd 2026-11-16 (no text layer on the source scan) "
+             "and merged back in.",
+     "ext_ref": ("HathiTrust (Vol. 16, seq 271)",
+                 "https://babel.hathitrust.org/cgi/pt?id=uc1.a0001809318&seq=271")},
+    {"num": "2109", "folder": "td_2109", "method": "text", "slice": True,
+     "ext_ref": ("HathiTrust (Vol. 16, seq 317)",
+                 "https://babel.hathitrust.org/cgi/pt?id=uc1.a0001809318&seq=317")},
+    {"num": "2190", "folder": "td_2190", "method": "text", "slice": True,
+     "ext_ref": ("HathiTrust (Vol. 17, seq 490)",
+                 "https://babel.hathitrust.org/cgi/pt?id=uc1.a0001809318&seq=490")},
+    # T.D. 4704/4707: modern-format 1936 Internal Revenue Bulletin, headed
+    # "XV-NN-NNNN / T. D. NNNN" rather than "(T. D. NNNN.)" -- the slicer's
+    # header regex doesn't match this format, so slice=False; each still
+    # carries ~1 leftover paragraph from the preceding bulletin item at the
+    # very top (clearly set off by a rule and the old item's own citation, not
+    # confusable with the decision itself -- same "faithful, not rewritten"
+    # tolerance as td_2815's noted scan-mate content).
+    {"num": "4704", "folder": "td_4704", "method": "text", "slice": False,
+     "note": "Identification of taxpayers under Title VIII of the Social "
+             "Security Act -- the real source of row 1253's SS-5 quote, "
+             "hand-corrected 2026-11-16 from a misattribution to T.D. 4707.",
+     "ext_ref": ("HathiTrust (Internal Revenue Bulletin 1936, seq 1640)",
+                 "https://babel.hathitrust.org/cgi/pt?id=uiug.30112102075568&seq=1640")},
+    {"num": "4707", "folder": "td_4707", "method": "text", "slice": False,
+     "note": "Liquor Tax Administration Act -- warehouse ventilation. Real "
+             "and verified, but not actually cited anywhere in the Dave "
+             "Champion corpus; row 1253's citation moved to T.D. 4704 "
+             "(2026-11-16) once the SS-5 quote was traced to its real source.",
+     "ext_ref": ("HathiTrust (Internal Revenue Bulletin 1936, seq 1717)",
+                 "https://babel.hathitrust.org/cgi/pt?id=uiug.30112102075568&seq=1717")},
 ]
 
 # Header that opens a decision on the old bulletins, e.g. "(T. D. 2401.)".

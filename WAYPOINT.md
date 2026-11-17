@@ -141,6 +141,150 @@ _Last updated: 2026-11-16_
 > expected, this TD only mattered for the video corpus and the register).
 > **Every item in the two preceding entries' TODO lists is now closed.**
 > **Not yet committed.**
+
+> **2026-11-16 follow-up #4 — closed the remaining 6-TD gap (1953, 2013, 2090,
+> 2109, 2190, and the 4707→4704 correction) via a real Claude-in-Chrome
+> browser session, bypassing HathiTrust's automated-request block entirely.**
+> User asked to add 1953/2013/2190 as `MANUAL_TD` entries (HathiTrust tier,
+> same as 2090/2109/4707 before this), then to actually go get the PDFs.
+>
+> **Found the exact source via HathiTrust's Bibliographic API** (unblocked,
+> unlike `catalog.hathitrust.org`'s Cloudflare-gated pages): T.D. 1953, 2013,
+> 2090, 2109 are all in one bound item, `uc1.a0001809318` ("v.16-19
+> yr.1914-17," UC, public domain). Drove a real browser to
+> `babel.hathitrust.org` — the Cloudflare challenge passes automatically for
+> a real session — used "Search in This Text" to find each TD's exact page
+> (1953→seq 46, 2013→seq 130-131, 2109→seq 317-318, 2090→seq 271-294 — a
+> 24-page A-Z digest), then downloaded each as a single-page PDF via the
+> UI's "current page scan" download (whole-book download needs institutional
+> login; per-page doesn't). T.D. 2190 is in the *next* volume, Vol. 17 —
+> found via the same item/API, seq 490. ~30 pages downloaded total; a few
+> individual pages (288-289, then 290-292 again) failed server-side PDF
+> generation transiently and needed 1-3 retries, with Image/JPEG as a
+> reliable fallback format when PDF kept failing. Merged each TD's pages
+> into one local PDF via PyMuPDF (the american-tax-bible book's own `.venv`,
+> which already had it) into new `td_1953/`, `td_2013/`, `td_2090/`,
+> `td_2109/`, `td_2190/` folders.
+>
+> **Built T.D. 2090's missing text layer, per user's follow-up ask.** Pages
+> 288-294 of the 24-page digest came from HathiTrust with no text layer at
+> all (pure image scans — the earlier 271-287 pages inherited Google's own
+> OCR). Extracted those 7 as 300dpi gray images (`pdftoppm`, same convention
+> `build_td_markdown.py`'s `"ocr": True` path already uses for
+> `td_2382`/`td_2815`) and ran `tesseract ... pdf` per page to get a
+> searchable single-page PDF, then merged all 24 pages back into one file.
+> Spot-checked: clean, accurate OCR. All 24 pages now extract real text.
+>
+> **Added all 5 as register entries** (`build_register.py`, `source:
+> video_synthesis_2026-11-16`) with `local_path`/`transcript_path` and
+> per-decision summaries (dates, subjects, verbatim opening text where
+> short). Rebuilt the register (TD count 14→17) and both books as a
+> regression check — byte-identical, no regressions (none of these are
+> cited by number in either book's own text).
+>
+> **Then the user asked to go find exactly where T.D. 4707 is cited, to
+> resolve it properly instead of just trusting the register's inferred
+> guess.** Pulled row 1253's real transcript from Drive
+> (`1PIlqqu3jQZUoOpONV-zlKO19LQ2AHWvk`): timestamp 1333.0s-1338.7s, Champion
+> says *"In pursuance of that, in Treasury Decision 4707, the Commissioner of
+> Internal Revenue said this... Every individual who is an employee on
+> November 24, 1936, shall file an application for an account on Form
+> SS-5."* That exact sentence does **not** appear in the real T.D. 4707 (the
+> liquor-warehouse decision, confirmed by grep). Opened the video in Chrome
+> at 1323s (1333-10s) for the user to review in place.
+>
+> **Traced the quote to its real source: T.D. 4704, not T.D. 4707.** Same
+> HathiTrust volume (`uiug.30112102075568`, *Internal revenue bulletin
+> 1936*), full-text search for "account number November 24" landed on seq
+> 1643 (p.21) — Article 5 of a decision headed, on seq 1640 (p.18),
+> **"XV-45-8383, T.D. 4704 — Identification of taxpayers under Title VIII of
+> the Social Security Act — Assignment of identification numbers to
+> employers and account numbers to employees."** This is the literal source
+> of the quote. **Champion misspoke the TD number on camera** — the
+> register's 2026-11-14 inference (4707 "likely belongs to that same
+> November 1936 batch" as 4704, based only on proximity of the numbers) was
+> directionally right about 4704 mattering but wrong that 4707 was part of
+> it; 4707 is genuinely unrelated.
+>
+> **Hand-corrected per the user's explicit instruction, with the research
+> kept visible, not silently overwritten:** downloaded T.D. 4704's full text
+> (seq 1640-1643, 4 pages, merged the same way) into a new `td_4704/`
+> folder; added a `MANUAL_TD` register entry for it (row 1253's citation now
+> lives here); updated T.D. 4707's register summary to record the
+> correction and that it's real-but-uncited. Updated
+> `transcription-agent/TREASURY_DECISIONS.md`: replaced the old T.D. 4707
+> table row (which carried row 1253) with two rows — T.D. 4704 (cited in
+> 1253) and T.D. 4707 (no citing rows, flagged as verified-but-uncited) —
+> and added correction notes to both the live Notes section and the old
+> 2026-11-14 "Content findings" paragraph (marked **superseded**, not
+> deleted, so the record of how the wrong inference was reasoned stays
+> legible). Also refreshed that file's stale intro paragraph, which still
+> said three TDs had no local source as of 2026-11-13 — now true for zero.
+> Rebuilt the register and the sidecar (`treasury_decisions.json`, now 17
+> entries, confirmed `"4704"` and `"4707"` both resolve to their correct
+> distinct HathiTrust pages) and both books as a regression check —
+> byte-identical, no regressions.
+>
+> **Did not touch:** the dated 2026-11-13/11-14 historical log entries in
+> this file and in `MIGRATION.md`/`CITATION_LINKING.md` that still say "3
+> TDs have no local source" — those are accurate records of what was true on
+> that date, not live-state claims, consistent with this project's
+> convention of appending corrections rather than editing history.
+>
+> **Open, deliberately not started:** per-TD Markdown/HTML extraction
+> (`build_td_markdown.py`/`build_td_html.py`) for all six TDs touched this
+> session (1953, 2013, 2090, 2109, 2190, 4704) plus a re-run for 4707 — the
+> user is holding this gate open explicitly and will ungate it separately.
+> **Not yet committed.**
+
+> **2026-11-16 follow-up #5 — ungated: ran the per-TD extraction for all 7**
+> (1953, 2013, 2090, 2109, 2190, 4704, 4707). Added config entries to
+> `build_td_markdown.py`: plain `"method": "text"` for all seven (every one
+> now has a real text layer, Google's own OCR or this session's tesseract
+> pass); `slice=True` for the five old-bulletin-format ones (1953, 2013,
+> 2090, 2109, 2190, each a page range cut from a bound multi-decision
+> volume, so the header regex needs to drop the preceding decision's tail);
+> `slice=False` for 4704/4707 (a different, modern bulletin header format
+> the slicer's regex doesn't match — each keeps ~1 tolerated leftover
+> paragraph at the top, same as `td_2815`'s existing scan-mate note).
+>
+> **Two real bugs found and fixed while verifying the output, not just
+> run-and-trust:**
+> 1. **T.D. 2090 (the 24-page digest) came out truncated to ~2 entries on
+>    the first run.** Its own body is full of internal `"(T. D. NNNN.)"`
+>    cross-reference citations to unrelated rulings (e.g. "...shall not be
+>    included in computing net income. (T. D. 1946.)"), which
+>    `slice_to_target`'s header regex can't distinguish from a new
+>    decision's header — it stopped at the very first one. Fixed by setting
+>    `slice=False` for 2090 specifically (documented inline in the config,
+>    since this is a real footgun for any future multi-page digest).
+> 2. **T.D. 1953's single page had a Google-OCR reading-order bug** — the
+>    embedded text layer was word-salad (confirmed: same scramble with and
+>    without `pdftotext -layout`, so not a pdftotext-mode issue, something
+>    about this specific page's OCR'd word-box positions). Re-OCR'd the
+>    page image with tesseract (`pdftoppm` 300dpi + `tesseract ... pdf`,
+>    same recipe as T.D. 2090's missing pages) and replaced the PDF's page —
+>    clean, correctly-ordered text, confirmed by re-reading the output.
+>
+> **Also updated the `url` field for all 7 register entries** — they were
+> literal hardcoded HathiTrust links from the discovery session; switched
+> to the same `td_map.get(num, fallback)` pattern the rest of the register
+> already uses (reads from `transcription-agent/TREASURY_DECISIONS.md`),
+> and found + fixed a duplicate-key bug this introduced (each entry already
+> had its own leading `"in_mapping_file": True` from the original write;
+> the new `td_map`-driven one is the one that should win, so the stale
+> leading one was removed from all 7). Updated
+> `TREASURY_DECISIONS.md`'s rows for these 7 to point at the new local
+> transcript pages (`dogthathunts.github.io/.../td_<n>.html`) instead of
+> the raw HathiTrust links — not live until this session's work is pushed,
+> same as every other GitHub Pages link changed today.
+>
+> Rebuilt the register and both books as a final regression check —
+> byte-identical, no regressions (none of these 7 are cited by number in
+> either book's own text; this work was entirely for the video corpus and
+> the shared register). **Every TD in the corpus (16 of 16) now has a
+> verified local primary source, a local transcript page, and a register
+> entry pointing at it. Not yet committed.**
 > Rebuilt both books as a regression check: Book #1 gained the corrected
 > `T.D. 8734` hrefs (52 changed lines, all `href` upgrades — same text,
 > same citation, now pointing at the real local transcript instead of

@@ -3926,8 +3926,10 @@
       "occurrences": 0,
       "pages": [],
       "in_mapping_file": true,
-      "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2090%22;a=srchls;lmt=ft",
-      "summary": "Dec. 14, 1914 — \"Synopsis of rulings on questions relating to the income tax imposed by Section 2 of the Act of October 3, 1913.\" A large alphabetical (A-Z) digest of dozens of unrelated administrative rulings (deductions, withholding, annuities, fiduciaries, bad debts, etc.) for IRS officers. It does not define who the income tax applies to as a class of filer. Verbatim text (pp. 1456-1486) found in the public-domain 1915 treatise \"Foster's Income Tax\" (non-government mirror, link not durable).",
+      "url": "https://dogthathunts.github.io/dave_champion/citations/treasury_decisions/td_2090/td_2090.html",
+      "local_path": "treasury_decisions/td_2090/TD 2090.pdf",
+      "transcript_path": "treasury_decisions/td_2090/td_2090.html",
+      "summary": "Dec. 14, 1914 — \"Synopsis of rulings on questions relating to the income tax imposed by Section 2 of the Act of October 3, 1913.\" A large alphabetical (A-Z) digest of dozens of unrelated administrative rulings (deductions, withholding, annuities, fiduciaries, bad debts, etc.) for IRS officers. It does not define who the income tax applies to as a class of filer. Verbatim text (pp. 1456-1486) found in the public-domain 1915 treatise \"Foster's Income Tax\" (non-government mirror, link not durable). Primary source found 2026-11-16: HathiTrust uc1.a0001809318 seq 271-294 (24 pages, the full digest), downloaded via browser and merged into the local PDF above. Pages 271-287 carry Google's original OCR text layer; pages 288-294 (which had none -- image-only Google scans) were run through tesseract (300dpi gray via pdftoppm, matching the pattern already used for td_2382/td_2815) and merged back in with a real text layer, same day. All 24 pages are now searchable/extractable.",
       "source": "video_synthesis_2026-11-14"
     },
     {
@@ -3935,8 +3937,10 @@
       "occurrences": 0,
       "pages": [],
       "in_mapping_file": true,
-      "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2109%22;a=srchls;lmt=ft",
-      "summary": "Dec. 28, 1914 — \"Amendment of Article 8 of Regulations 33, providing for the collection of tax on income of non-resident aliens.\" A narrow procedural amendment setting withholding mechanics specifically for non-resident aliens' U.S.-source income, alongside (not instead of) the citizen/resident-alien rules the same regulations already covered. Genuinely about non-resident aliens, but regulates one filer category among several — doesn't confine the tax to that category. Verbatim text (pp. 1487-1488) in the same Foster treatise.",
+      "url": "https://dogthathunts.github.io/dave_champion/citations/treasury_decisions/td_2109/td_2109.html",
+      "local_path": "treasury_decisions/td_2109/TD 2109.pdf",
+      "transcript_path": "treasury_decisions/td_2109/td_2109.html",
+      "summary": "Dec. 28, 1914 — \"Amendment of Article 8 of Regulations 33, providing for the collection of tax on income of non-resident aliens.\" A narrow procedural amendment setting withholding mechanics specifically for non-resident aliens' U.S.-source income, alongside (not instead of) the citizen/resident-alien rules the same regulations already covered. Genuinely about non-resident aliens, but regulates one filer category among several — doesn't confine the tax to that category. Verbatim text (pp. 1487-1488) in the same Foster treatise. Primary source found 2026-11-16: HathiTrust uc1.a0001809318 seq 317-318 (2 pages, full decision text, text layer present), downloaded and merged into the local PDF above.",
       "source": "video_synthesis_2026-11-14"
     },
     {
@@ -3944,9 +3948,55 @@
       "occurrences": 0,
       "pages": [],
       "in_mapping_file": true,
-      "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+4707%22;a=srchls;lmt=ft",
-      "summary": "NOT VERIFIED against primary text (HathiTrust/Google Books block automated search-within-book access to the relevant 1936 volume; treasury.gov/irs.gov have nothing pre-1990s). Circumstantial dating only: T.D. 4704 (Nov. 5, 1936) is documented as the decision authorizing assignment of Social Security account/employer numbers, and Regulations 91 (employees'/employers' tax under Title VIII of the Social Security Act - the SS-5 regime) were approved Nov. 9, 1936. T.D. 4707, numbered just 3 after 4704, likely belongs to that same early-November-1936 batch of Social Security implementing decisions - consistent with row 1253 citing it re: the SS-5 application. Treat as inferred, not confirmed.",
-      "source": "video_synthesis_2026-11-14"
+      "url": "https://dogthathunts.github.io/dave_champion/citations/treasury_decisions/td_4707/td_4707.html",
+      "local_path": "treasury_decisions/td_4707/TD 4707.pdf",
+      "transcript_path": "treasury_decisions/td_4707/td_4707.html",
+      "summary": "Nov. 16, 1936 -- \"Liquor Tax Administration Act. Openings for ventilation or heating in internal revenue bonded warehouses.\" Amends paragraph 3 of T.D. 4651, setting warehouse construction/ventilation specs for bonded liquor warehouses. Chas. T. Russell, Acting Commissioner; Stephen B. Gibbons, Acting Secretary of the Treasury. PRIMARY SOURCE FOUND AND VERIFIED 2026-11-16: HathiTrust 'Internal revenue bulletin 1936' (uiug.30112102075568), seq 1717 -- this REFUTES the previous inferred guess kept in this file's history: that T.D. 4707 was part of a November 1936 batch of Social Security/SS-5 implementing decisions, based only on its number being close to T.D. 4704 (the actual SS account-number decision). It is NOT -- it's an unrelated liquor-tax warehouse regulation. **Row 1253 cites T.D. 4707 re: the SS-5 application -- that citation is a misattribution in the source video, not a sourcing gap on our end: Champion says \"4707\" on camera but reads text that is actually T.D. 4704's. HAND-CORRECTED 2026-11-16, based on this research: row 1253's citation is now tracked against T.D. 4704 (see that entry), not this one. T.D. 4707 itself is correctly sourced above and real, just not actually cited anywhere in the Dave Champion corpus.",
+      "source": "video_synthesis_2026-11-16"
+    },
+    {
+      "cite": "T.D. 4704",
+      "occurrences": 0,
+      "pages": [],
+      "local_path": "treasury_decisions/td_4704/TD 4704.pdf",
+      "transcript_path": "treasury_decisions/td_4704/td_4704.html",
+      "in_mapping_file": true,
+      "url": "https://dogthathunts.github.io/dave_champion/citations/treasury_decisions/td_4704/td_4704.html",
+      "summary": "Nov. 5, 1936 (XV-45-8383) -- \"Identification of taxpayers under Title VIII of the Social Security Act -- Assignment of identification numbers to employers and account numbers to employees.\" Article 5 (p. 21): \"Every individual who is an employee on November 24, 1936, shall file an application for an account number on Form SS-5\" -- the exact line row 1253 quotes on-camera, attributed there to \"Treasury Decision 4707.\" HAND-CORRECTED 2026-11-16: verified by content (HathiTrust 'Internal revenue bulletin 1936', uiug.30112102075568, seq 1640-1643) that this text is T.D. 4704, not T.D. 4707 (an unrelated liquor-tax warehouse decision, see that entry) -- Champion misspoke the number on camera. Row 1253's citation moved here from T.D. 4707.",
+      "source": "video_synthesis_2026-11-16"
+    },
+    {
+      "cite": "T.D. 1953",
+      "occurrences": 0,
+      "pages": [],
+      "in_mapping_file": true,
+      "url": "https://dogthathunts.github.io/dave_champion/citations/treasury_decisions/td_1953/td_1953.html",
+      "local_path": "treasury_decisions/td_1953/TD 1953.pdf",
+      "transcript_path": "treasury_decisions/td_1953/td_1953.html",
+      "summary": "March 2, 1914 -- \"Extension of time for filing returns under income-tax law by citizens of the United States living abroad.\" Falls in Treasury Decisions Under Internal Revenue Laws, Vol. 16 (Jan.-Dec. 1914, covers T.D. 1927-2112) -- same volume as T.D. 2090/2109. Cited on-camera (row 5612, per transcription-agent/TREASURY_DECISIONS.md), recited as part of a 10-TD list, not individually discussed. Primary source found 2026-11-16: HathiTrust uc1.a0001809318 seq 46 (1 page, complete, text layer present), downloaded and saved to the local PDF above.",
+      "source": "video_synthesis_2026-11-16"
+    },
+    {
+      "cite": "T.D. 2013",
+      "occurrences": 0,
+      "pages": [],
+      "in_mapping_file": true,
+      "url": "https://dogthathunts.github.io/dave_champion/citations/treasury_decisions/td_2013/td_2013.html",
+      "local_path": "treasury_decisions/td_2013/TD 2013.pdf",
+      "transcript_path": "treasury_decisions/td_2013/td_2013.html",
+      "summary": "Aug. 12, 1914 -- \"Nonresident aliens -- Amendment of article 8 of Regulations 33, providing for the collection of tax on income of nonresident aliens derived from trades or professions in the United States.\" Same Vol. 16 as T.D. 1953/2090/2109. Cited on-camera (row 5612), recited as part of a 10-TD list. Primary source found 2026-11-16: HathiTrust uc1.a0001809318 seq 130-131 (2 pages, complete, text layer present), downloaded and merged into the local PDF above.",
+      "source": "video_synthesis_2026-11-16"
+    },
+    {
+      "cite": "T.D. 2190",
+      "occurrences": 0,
+      "pages": [],
+      "in_mapping_file": true,
+      "url": "https://dogthathunts.github.io/dave_champion/citations/treasury_decisions/td_2190/td_2190.html",
+      "local_path": "treasury_decisions/td_2190/TD 2190.pdf",
+      "transcript_path": "treasury_decisions/td_2190/td_2190.html",
+      "summary": "April 21, 1915 -- \"Income tax -- Temporary certificate, Form 1005.\" Falls in Treasury Decisions Under Internal Revenue Laws, Vol. 17 (Jan.-Dec. 1915, covers T.D. 2113-2276) -- a different volume from T.D. 2090/2109/1953/2013 (Vol. 16), same bound item though (uc1.a0001809318 covers v.16-19). Cited on-camera (row 5612), recited as part of a 10-TD list. Primary source found 2026-11-16: HathiTrust seq 490 (1 page, complete, text layer present), downloaded and saved to the local PDF above.",
+      "source": "video_synthesis_2026-11-16"
     },
     {
       "cite": "T.D. 2402",
