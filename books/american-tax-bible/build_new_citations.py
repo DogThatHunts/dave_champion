@@ -16,6 +16,7 @@ from urllib.parse import quote
 MD = "American Tax Bible.md"
 REGISTER = "../../citations/link_register.json"
 OUT = "new_citations.md"
+OUT_JSON = "new_citations.json"
 
 text = open(MD, encoding="utf-8").read()
 
@@ -317,6 +318,7 @@ if new["irs_docs"]:
         L.append(f"| {c['document']} | {c['occurrences']} | [link]({c['url']}) |")
 
 open(OUT, "w", encoding="utf-8").write("\n".join(L) + "\n")
+json.dump(new, open(OUT_JSON, "w", encoding="utf-8"), indent=2, ensure_ascii=False)
 
 total = sum(len(v) for v in new.values())
 print(f"NEW citations (not in shared register): {total}")

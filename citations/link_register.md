@@ -58,6 +58,69 @@ _Full citation (name · reporter cite · year). U.S. Reports link to Justia; oth
 | Economy Plumbing & Heating Co. v. United States. 470 F.2d 585 | Federal court | 1 | 413 | [link](https://www.courtlistener.com/?q=Economy%20Plumbing%20%26%20Heating%20Co.%20v.%20United%20States%20470%20F.2d%20585) |
 | State of Georgia v. Brailsford. 3 U.S. 1 (1794) | U.S. Supreme Court | 1 | 414 | [link](https://supreme.justia.com/cases/federal/us/3/1/) |
 | Moore v. United States, 602 U.S. 572 (2024) | U.S. Supreme Court | 0 |  | [link](https://www.law.cornell.edu/supremecourt/text/22-800) |
+| Christianson v. Colt Industries Operating Co. 486 U.S. 800 | U.S. Supreme Court | 0 |  | [link](https://supreme.justia.com/cases/federal/us/486/800/) |
+| Firestone Tire & Rubber Co. v. Risjord. 449 U.S. 368 | U.S. Supreme Court | 0 |  | [link](https://supreme.justia.com/cases/federal/us/449/368/) |
+| United States v. Collins. 920 F.2d 619 at 629 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=United%20States%20v.%20Collins%20920%20F.2d%20619) |
+| Shoshone Mining Co. v. Rutter. 177 U.S. 505 at 513 (1900) | U.S. Supreme Court | 0 |  | [link](https://supreme.justia.com/cases/federal/us/177/505/) |
+| Finley v. United States. 490 U.S. 545 (1989) | U.S. Supreme Court | 0 |  | [link](https://supreme.justia.com/cases/federal/us/490/545/) |
+| Lovell v. United States. 755 F.2d 517 at 518 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=Lovell%20v.%20United%20States%20755%20F.2d%20517) |
+| Broughton v. United States. 632 F.2d 706 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=Broughton%20v.%20United%20States%20632%20F.2d%20706) |
+| Connecticut National Bank v. Germain. 503 U.S. 249 | U.S. Supreme Court | 0 |  | [link](https://supreme.justia.com/cases/federal/us/503/249/) |
+| Murphy v. I.R.S. 460 F.3d 79 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=Murphy%20v.%20I.R.S%20460%20F.3d%2079) |
+| United States v. Critzer. 498 F.2d 1160 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=United%20States%20v.%20Critzer%20498%20F.2d%201160) |
+| United States v. Mallas. 762 F.2d 361 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=United%20States%20v.%20Mallas%20762%20F.2d%20361) |
+| States v. Garber. 607 F.2d 92 at 97-98 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=States%20v.%20Garber%20607%20F.2d%2092) |
+| United States v. Dahlstrom. 713 F.2d 1423 at 1429 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=United%20States%20v.%20Dahlstrom%20713%20F.2d%201423) |
+| United States v. Heller. 830 F.2d 150 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=United%20States%20v.%20Heller%20830%20F.2d%20150) |
+| United States v. Harris. 942 F.2d 1125 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=United%20States%20v.%20Harris%20942%20F.2d%201125) |
+| United States v. Insco. 496 F.2d 204 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=United%20States%20v.%20Insco%20496%20F.2d%20204) |
+| United States v. Anzalone. 766 F.2d 676 at 681-82 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=United%20States%20v.%20Anzalone%20766%20F.2d%20676) |
+| United States v. Denemark. 779 F.2d 1559 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=United%20States%20v.%20Denemark%20779%20F.2d%201559) |
+| United States v. Varbel. 780 F.2d 758 at 762 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=United%20States%20v.%20Varbel%20780%20F.2d%20758) |
+| United States v. Dela Espriella. 781 F.2d 1432 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=United%20States%20v.%20Dela%20Espriella%20781%20F.2d%201432) |
+| United States v. Larson. 796 F.2d 244 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=United%20States%20v.%20Larson%20796%20F.2d%20244) |
+| Tyee Realty Co. v. Anderson. 240 U.S. 115 at 36 | U.S. Supreme Court | 0 |  | [link](https://supreme.justia.com/cases/federal/us/240/115/) |
+| United States v. Turano. 802 F.2d 10 at 12 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=United%20States%20v.%20Turano%20802%20F.2d%2010) |
+| Jandorf's Estate v. Commissioner. 171 F.2d 464 at 465 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=Jandorf%27s%20Estate%20v.%20Commissioner%20171%20F.2d%20464) |
+| Ficalora v. Commissioner. 751 F.2d 85 at 87 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=Ficalora%20v.%20Commissioner%20751%20F.2d%2085) |
+| United States v. Sitka. 845 F.2d 43 at 46 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=United%20States%20v.%20Sitka%20845%20F.2d%2043) |
+| Keasbey & Mattison Co. v. Rothensies. 133 F.2d 894 at 897 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=Keasbey%20%26%20Mattison%20Co.%20v.%20Rothensies%20133%20F.2d%20894) |
+| Penn Mutual Indemnity Co. v. Commissioner. 277 F.2d 16 at 19 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=Penn%20Mutual%20Indemnity%20Co.%20v.%20Commissioner%20277%20F.2d%2016) |
+| White Packing Co. v. Robertson. 89 F.2d 775 at 779 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=White%20Packing%20Co.%20v.%20Robertson%2089%20F.2d%20775) |
+| United States v. Gaumer. 972 F.2d 723 at 725 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=United%20States%20v.%20Gaumer%20972%20F.2d%20723) |
+| Parker v. Commissioner. 724 F.2d 469 at 471 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=Parker%20v.%20Commissioner%20724%20F.2d%20469) |
+| Coleman v. Commissioner. 791 F.2d 68 at 70 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=Coleman%20v.%20Commissioner%20791%20F.2d%2068) |
+| United States v. Francisco. 614 F.2d 617 at 619 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=United%20States%20v.%20Francisco%20614%20F.2d%20617) |
+| United States v. Lawson. 670 F.2d 923 at 927 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=United%20States%20v.%20Lawson%20670%20F.2d%20923) |
+| Aquilino v. United States. 363 U.S. 509 at 512-13 | U.S. Supreme Court | 0 |  | [link](https://supreme.justia.com/cases/federal/us/363/509/) |
+| United States v. Baldwin. 575 F.2d 1097 at 1098 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=United%20States%20v.%20Baldwin%20575%20F.2d%201097) |
+| Samet v. Farmers' & Merchants' Nat. Bank. 247 F. 669 at 671 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=Samet%20v.%20Farmers%27%20%26%20Merchants%27%20Nat.%20Bank%20247%20F.%20669) |
+| St. Louis Union Trust Co. v. United States. 617 F.2d 1293 at 1301 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=St.%20Louis%20Union%20Trust%20Co.%20v.%20United%20States%20617%20F.2d%201293) |
+| Sims v. United States. 252 F.2d 434 at 437 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=Sims%20v.%20United%20States%20252%20F.2d%20434) |
+| Kolb v. Berlin. 356 F.2d 269 at 271 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=Kolb%20v.%20Berlin%20356%20F.2d%20269) |
+| United States v. Briggs. 514 F.2d 794 at 798 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=United%20States%20v.%20Briggs%20514%20F.2d%20794) |
+| James v. United States. 970 F.2d 750 at 755 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=James%20v.%20United%20States%20970%20F.2d%20750) |
+| Inc. v. West Virginia Workers' Comp. Fund. 886 F.2d 714 at 719 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=Inc.%20v.%20West%20Virginia%20Workers%27%20Comp.%20Fund%20886%20F.2d%20714) |
+| Jack Cole Co. v. MacFarland. 337 S.W.2d 453 at 455-56 | State / other court | 0 |  | [link](https://www.courtlistener.com/?q=Jack%20Cole%20Co.%20v.%20MacFarland%20337%20S.W.2d%20453) |
+| United States v. Albertini. 830 F.2d 985 at 989 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=United%20States%20v.%20Albertini%20830%20F.2d%20985) |
+| Commissioner v. Lane-Wells Co. 321 U.S. 219 at 222 | U.S. Supreme Court | 0 |  | [link](https://supreme.justia.com/cases/federal/us/321/219/) |
+| Updike v. United States. 8 F.2d 913 at 915 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=Updike%20v.%20United%20States%208%20F.2d%20913) |
+| True v. United States. 354 F.2d 323 at 324 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=True%20v.%20United%20States%20354%20F.2d%20323) |
+| United States v. Carlson. 260 F. Supp. 423 at 425 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=United%20States%20v.%20Carlson%20260%20F.%20Supp.%20423) |
+| Counts v. Commissioner. 774 F.2d 426 at 427 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=Counts%20v.%20Commissioner%20774%20F.2d%20426) |
+| Beard v. Commissioner. 793 F.2d 139 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=Beard%20v.%20Commissioner%20793%20F.2d%20139) |
+| United States v. Moore. 627 F.2d 830 at 834 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=United%20States%20v.%20Moore%20627%20F.2d%20830) |
+| United States v. Dawes. 951 F.2d 1189 at 1192 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=United%20States%20v.%20Dawes%20951%20F.2d%201189) |
+| United States v. Hicks. 947 F.2d 1356 at 1360 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=United%20States%20v.%20Hicks%20947%20F.2d%201356) |
+| Steinbrecher v. Commissioner. 712 F.2d 195 at 198 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=Steinbrecher%20v.%20Commissioner%20712%20F.2d%20195) |
+| United States v. Bowers. 920 F.2d 220 at 222 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=United%20States%20v.%20Bowers%20920%20F.2d%20220) |
+| United States v. Neff. 954 F.2d 698 at 699 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=United%20States%20v.%20Neff%20954%20F.2d%20698) |
+| United States v. Pilcher. 672 F.2d 875 at 877 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=United%20States%20v.%20Pilcher%20672%20F.2d%20875) |
+| United States v. Ballard. 535 F.2d 400 at 404 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=United%20States%20v.%20Ballard%20535%20F.2d%20400) |
+| Melo v. U.S. 505 F.2d 1026 at 18 | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=Melo%20v.%20U.S%20505%20F.2d%201026) |
+| Millken v. Meyer. 311 U.S. 457 at 61 | U.S. Supreme Court | 0 |  | [link](https://supreme.justia.com/cases/federal/us/311/457/) |
+| Amos Treat & Co. v. Securities & Exchange Commission. 306 F.2d 260 (1962) | Federal court | 0 |  | [link](https://www.courtlistener.com/?q=Amos%20Treat%20%26%20Co.%20v.%20Securities%20%26%20Exchange%20Commission%20306%20F.2d%20260) |
+| Eidman v. Martinez. 184 U.S. 578 at 583 (1902) | U.S. Supreme Court | 0 |  | [link](https://supreme.justia.com/cases/federal/us/184/578/) |
 
 ## 2. Title 26 U.S.C. (Internal Revenue Code) sections
 
@@ -148,6 +211,195 @@ _Note: bare “section NNNN” references in the text are IRC (Title 26) section
 | 26 U.S.C. § 671 | 1 | 361 | [link](https://www.law.cornell.edu/uscode/text/26/671) |
 | 26 U.S.C. § 20 | 1 | 413 | [link](https://www.law.cornell.edu/uscode/text/26/20) |
 | 26 U.S.C. § 455 | 1 | 414 | [link](https://www.law.cornell.edu/uscode/text/26/455) |
+| 26 U.S.C. § 7608 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/7608) |
+| 26 U.S.C. § 7609 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/7609) |
+| 26 U.S.C. § 7603 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/7603) |
+| 26 U.S.C. § 6502 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/6502) |
+| 26 U.S.C. § 7604 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/7604) |
+| 26 U.S.C. § 22 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/22) |
+| 26 U.S.C. § 6201 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/6201) |
+| 26 U.S.C. § 1332 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/1332) |
+| 26 U.S.C. § 6335 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/6335) |
+| 26 U.S.C. § 6065 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/6065) |
+| 26 U.S.C. § 1442 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/1442) |
+| 26 U.S.C. § 1443 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/1443) |
+| 26 U.S.C. § 1463 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/1463) |
+| 26 U.S.C. § 6212 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/6212) |
+| 26 U.S.C. § 6203 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/6203) |
+| 26 U.S.C. § 6332 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/6332) |
+| 26 U.S.C. § 7433 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/7433) |
+| 26 U.S.C. § 7809 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/7809) |
+| 26 U.S.C. § 7214 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/7214) |
+| 26 U.S.C. § 86 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/86) |
+| 26 U.S.C. § 7321 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/7321) |
+| 26 U.S.C. § 7612 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/7612) |
+| 26 U.S.C. § 6330 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/6330) |
+| 26 U.S.C. § 7213 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/7213) |
+| 26 U.S.C. § 25 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/25) |
+| 26 U.S.C. § 17 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/17) |
+| 26 U.S.C. § 6320 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/6320) |
+| 26 U.S.C. § 1273 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/1273) |
+| 26 U.S.C. § 1331 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/1331) |
+| 26 U.S.C. § 7402 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/7402) |
+| 26 U.S.C. § 6420 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/6420) |
+| 26 U.S.C. § 884 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/884) |
+| 26 U.S.C. § 6053 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/6053) |
+| 26 U.S.C. § 881 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/881) |
+| 26 U.S.C. § 511 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/511) |
+| 26 U.S.C. § 4948 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/4948) |
+| 26 U.S.C. § 5291 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/5291) |
+| 26 U.S.C. § 62 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/62) |
+| 26 U.S.C. § 115 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/115) |
+| 26 U.S.C. § 3101 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/3101) |
+| 26 U.S.C. § 6159 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/6159) |
+| 26 U.S.C. § 6325 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/6325) |
+| 26 U.S.C. § 6061 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/6061) |
+| 26 U.S.C. § 3202 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/3202) |
+| 26 U.S.C. § 4411 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/4411) |
+| 26 U.S.C. § 931 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/931) |
+| 26 U.S.C. § 7213A | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/7213A) |
+| 26 U.S.C. § 7802 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/7802) |
+| 26 U.S.C. § 101 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/101) |
+| 26 U.S.C. § 3290 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/3290) |
+| 26 U.S.C. § 7302 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/7302) |
+| 26 U.S.C. § 7303 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/7303) |
+| 26 U.S.C. § 7403 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/7403) |
+| 26 U.S.C. § 7432 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/7432) |
+| 26 U.S.C. § 71 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/71) |
+| 26 U.S.C. § 7613 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/7613) |
+| 26 U.S.C. § 4423 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/4423) |
+| 26 U.S.C. § 6501 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/6501) |
+| 26 U.S.C. § 4221 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/4221) |
+| 26 U.S.C. § 2032A | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/2032A) |
+| 26 U.S.C. § 3102 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/3102) |
+| 26 U.S.C. § 3505 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/3505) |
+| 26 U.S.C. § 4002 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/4002) |
+| 26 U.S.C. § 4051 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/4051) |
+| 26 U.S.C. § 4071 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/4071) |
+| 26 U.S.C. § 4219 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/4219) |
+| 26 U.S.C. § 4401 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/4401) |
+| 26 U.S.C. § 4483 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/4483) |
+| 26 U.S.C. § 4611 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/4611) |
+| 26 U.S.C. § 4662 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/4662) |
+| 26 U.S.C. § 4972 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/4972) |
+| 26 U.S.C. § 4980B | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/4980B) |
+| 26 U.S.C. § 4980D | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/4980D) |
+| 26 U.S.C. § 4980F | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/4980F) |
+| 26 U.S.C. § 5005 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/5005) |
+| 26 U.S.C. § 5043 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/5043) |
+| 26 U.S.C. § 5232 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/5232) |
+| 26 U.S.C. § 5364 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/5364) |
+| 26 U.S.C. § 5418 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/5418) |
+| 26 U.S.C. § 5703 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/5703) |
+| 26 U.S.C. § 5751 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/5751) |
+| 26 U.S.C. § 305 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/305) |
+| 26 U.S.C. § 10 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/10) |
+| 26 U.S.C. § 512 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/512) |
+| 26 U.S.C. § 1235 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/1235) |
+| 26 U.S.C. § 645 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/645) |
+| 26 U.S.C. § 1231 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/1231) |
+| 26 U.S.C. § 6303 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/6303) |
+| 26 U.S.C. § 7301 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/7301) |
+| 26 U.S.C. § 7208 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/7208) |
+| 26 U.S.C. § 7271 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/7271) |
+| 26 U.S.C. § 7207 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/7207) |
+| 26 U.S.C. § 6621 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/6621) |
+| 26 U.S.C. § 7401 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/7401) |
+| 26 U.S.C. § 6321 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/6321) |
+| 26 U.S.C. § 1001 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/1001) |
+| 26 U.S.C. § 6532 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/6532) |
+| 26 U.S.C. § 3201 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/3201) |
+| 26 U.S.C. § 74 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/74) |
+| 26 U.S.C. § 6104 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/6104) |
+| 26 U.S.C. § 433 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/433) |
+| 26 U.S.C. § 7605 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/7605) |
+| 26 U.S.C. § 7606 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/7606) |
+| 26 U.S.C. § 7607 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/7607) |
+| 26 U.S.C. § 7610 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/7610) |
+| 26 U.S.C. § 7611 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/7611) |
+| 26 U.S.C. § 1340 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/1340) |
+| 26 U.S.C. § 1345 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/1345) |
+| 26 U.S.C. § 4612 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/4612) |
+| 26 U.S.C. § 704 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/704) |
+| 26 U.S.C. § 3224 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/3224) |
+| 26 U.S.C. § 250 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/250) |
+| 26 U.S.C. § 270 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/270) |
+| 26 U.S.C. § 251 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/251) |
+| 26 U.S.C. § 891 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/891) |
+| 26 U.S.C. § 55 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/55) |
+| 26 U.S.C. § 6654 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/6654) |
+| 26 U.S.C. § 4911 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/4911) |
+| 26 U.S.C. § 4940 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/4940) |
+| 26 U.S.C. § 4971 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/4971) |
+| 26 U.S.C. § 4981 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/4981) |
+| 26 U.S.C. § 4985 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/4985) |
+| 26 U.S.C. § 6213 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/6213) |
+| 26 U.S.C. § 6512 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/6512) |
+| 26 U.S.C. § 40 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/40) |
+| 26 U.S.C. § 501 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/501) |
+| 26 U.S.C. § 877 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/877) |
+| 26 U.S.C. § 7491 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/7491) |
+| 26 U.S.C. § 7430 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/7430) |
+| 26 U.S.C. § 14418 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/14418) |
+| 26 U.S.C. § 7206 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/7206) |
+| 26 U.S.C. § 1204 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/1204) |
+| 26 U.S.C. § 6301 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/6301) |
+| 26 U.S.C. § 408 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/408) |
+| 26 U.S.C. § 6166 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/6166) |
+| 26 U.S.C. § 6531 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/6531) |
+| 26 U.S.C. § 3211 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/3211) |
+| 26 U.S.C. § 3221 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/3221) |
+| 26 U.S.C. § 3301 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/3301) |
+| 26 U.S.C. § 3404 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/3404) |
+| 26 U.S.C. § 3451 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/3451) |
+| 26 U.S.C. § 72 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/72) |
+| 26 U.S.C. § 73 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/73) |
+| 26 U.S.C. § 75 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/75) |
+| 26 U.S.C. § 76 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/76) |
+| 26 U.S.C. § 77 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/77) |
+| 26 U.S.C. § 78 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/78) |
+| 26 U.S.C. § 80 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/80) |
+| 26 U.S.C. § 81 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/81) |
+| 26 U.S.C. § 82 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/82) |
+| 26 U.S.C. § 83 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/83) |
+| 26 U.S.C. § 84 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/84) |
+| 26 U.S.C. § 85 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/85) |
+| 26 U.S.C. § 87 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/87) |
+| 26 U.S.C. § 88 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/88) |
+| 26 U.S.C. § 89 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/89) |
+| 26 U.S.C. § 90 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/90) |
+| 26 U.S.C. § 54 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/54) |
+| 26 U.S.C. § 1655 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/1655) |
+| 26 U.S.C. § 200 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/200) |
+| 26 U.S.C. § 4502 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/4502) |
+| 26 U.S.C. § 3371 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/3371) |
+| 26 U.S.C. § 7342 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/7342) |
+| 26 U.S.C. § 602 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/602) |
+| 26 U.S.C. § 603 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/603) |
+| 26 U.S.C. § 102 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/102) |
+| 26 U.S.C. § 1102 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/1102) |
+| 26 U.S.C. § 1110 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/1110) |
+| 26 U.S.C. § 3410 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/3410) |
+| 26 U.S.C. § 3413 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/3413) |
+| 26 U.S.C. § 1335 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/1335) |
+| 26 U.S.C. § 341 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/341) |
+| 26 U.S.C. § 7803 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/7803) |
+| 26 U.S.C. § 301 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/301) |
+| 26 U.S.C. § 302 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/302) |
+| 26 U.S.C. § 303 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/303) |
+| 26 U.S.C. § 304 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/304) |
+| 26 U.S.C. § 306 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/306) |
+| 26 U.S.C. § 307 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/307) |
+| 26 U.S.C. § 308 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/308) |
+| 26 U.S.C. § 309 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/309) |
+| 26 U.S.C. § 310 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/310) |
+| 26 U.S.C. § 3321 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/3321) |
+| 26 U.S.C. § 3322 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/3322) |
+| 26 U.S.C. § 3323 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/3323) |
+| 26 U.S.C. § 7426 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/7426) |
+| 26 U.S.C. § 7422 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/7422) |
+| 26 U.S.C. § 1304 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/1304) |
+| 26 U.S.C. § 7521 | 0 |  | [link](https://www.law.cornell.edu/uscode/text/26/7521) |
 
 ## 3. Code of Federal Regulations (CFR)
 
@@ -187,6 +439,21 @@ _Note: bare “section NNNN” references in the text are IRC (Title 26) section
 | 26 CFR §301.6724-1 | 1 | 414 | [link](https://www.law.cornell.edu/cfr/text/26/301.6724-1) |
 | 26 CFR §301.6724 | 1 | 415 | [link](https://www.law.cornell.edu/cfr/text/26/301.6724) |
 | 26 CFR §1.861 | 1 | 415 | [link](https://www.law.cornell.edu/cfr/text/26/1.861) |
+| 26 CFR §601.106 | 0 |  | [link](https://www.law.cornell.edu/cfr/text/26/601.106) |
+| 27 CFR §170 | 0 |  | [link](https://www.law.cornell.edu/cfr/text/27/170) |
+| 26 CFR §602 | 0 |  | [link](https://www.law.cornell.edu/cfr/text/26/602) |
+| 01 CFR | 0 |  | [link](https://www.law.cornell.edu/cfr/text/01) |
+| 5 CFR | 0 |  | [link](https://www.law.cornell.edu/cfr/text/5) |
+| 28 CFR | 0 |  | [link](https://www.law.cornell.edu/cfr/text/28) |
+| 1 CFR §3.1 | 0 |  | [link](https://www.law.cornell.edu/cfr/text/1/3.1) |
+| 1 CFR §51 | 0 |  | [link](https://www.law.cornell.edu/cfr/text/1/51) |
+| 2 CFR | 0 |  | [link](https://www.law.cornell.edu/cfr/text/2) |
+| 26 CFR §31.6001 | 0 |  | [link](https://www.law.cornell.edu/cfr/text/26/31.6001) |
+| 26 CFR §1.312-6 | 0 |  | [link](https://www.law.cornell.edu/cfr/text/26/1.312-6) |
+| 26 CFR §31.3402 | 0 |  | [link](https://www.law.cornell.edu/cfr/text/26/31.3402) |
+| 26 CFR §31 | 0 |  | [link](https://www.law.cornell.edu/cfr/text/26/31) |
+| 26 CFR §301.6331-2 | 0 |  | [link](https://www.law.cornell.edu/cfr/text/26/301.6331-2) |
+| 26 CFR §301.7602 | 0 |  | [link](https://www.law.cornell.edu/cfr/text/26/301.7602) |
 
 ## 4. Treasury Decisions (T.D.)
 
@@ -195,17 +462,19 @@ _External URLs are sourced from the shared mapping `transcription-agent/TREASURY
 | T.D. | Occ. | Pages | Status | Source |
 |---|---:|---|---|---|
 | Treasury Decisions (general) | 15 |  | in mapping | [link](https://www.irs.gov/internal-revenue-bulletins) |
-| T.D. 8734 | 23 | 127, 128, 129, 130, 131, 132 | **add to mapping** | [local copy](treasury_decisions/td_8734/T.D.%208734-Cumulative%20Bulletin%201997-44.pdf) · [external](https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+8734%22;a=srchls;lmt=ft) · [transcript](treasury_decisions/td_8734/td_8734.html)<br>⚠ NOT YET in TREASURY_DECISIONS file — add it there; fallback is a HathiTrust search. |
-| T.D. 2313 | 5 | 151, 152, 153, 154 | **add to mapping** | [local copy](treasury_decisions/td_2313/TD%202313.pdf) · [external](https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2313%22;a=srchls;lmt=ft) · [transcript](treasury_decisions/td_2313/td_2313.html)<br>⚠ NOT YET in TREASURY_DECISIONS file — add it there; fallback is a HathiTrust search. |
-| T.D. 1928 | 4 | 149, 150 | **add to mapping** | [local copy](treasury_decisions/td_1928/TD%201928.pdf) · [external](https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+1928%22;a=srchls;lmt=ft) · [transcript](treasury_decisions/td_1928/td_1928.html)<br>⚠ NOT YET in TREASURY_DECISIONS file — add it there; fallback is a HathiTrust search. |
-| T.D. 6500 | 4 | 157, 158 | **add to mapping** | [local copy](treasury_decisions/td_6500/TD%206500.pdf) · [external](https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+6500%22;a=srchls;lmt=ft) · [transcript](treasury_decisions/td_6500/td_6500.html)<br>⚠ NOT YET in TREASURY_DECISIONS file — add it there; fallback is a HathiTrust search. |
-| T.D. 2401 | 2 | 154 | **add to mapping** | [local copy](treasury_decisions/td_2401/TD%202401%2C%20TD%202402.pdf) · [external](https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2401%22;a=srchls;lmt=ft) · [transcript](treasury_decisions/td_2401/td_2401.html)<br>⚠ NOT YET in TREASURY_DECISIONS file — add it there; fallback is a HathiTrust search. |
-| T.D. 2815 | 2 | 155 | **add to mapping** | [local copy](treasury_decisions/td_2815/TD%202815%20-%20Form%201040%20for%20nonresident%20aliens%20and%20their%20agents.pdf) · [external](https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2815%22;a=srchls;lmt=ft) · [transcript](treasury_decisions/td_2815/td_2815.html)<br>⚠ NOT YET in TREASURY_DECISIONS file — add it there; fallback is a HathiTrust search. |
-| T.D. 2988 | 2 | 156 | **add to mapping** | [local copy](treasury_decisions/td_2988/TD%202988.pdf) · [external](https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2988%22;a=srchls;lmt=ft) · [transcript](treasury_decisions/td_2988/td_2988.html)<br>⚠ NOT YET in TREASURY_DECISIONS file — add it there; fallback is a HathiTrust search. |
-| T.D. 2382 | 2 | 155 | **add to mapping** | [local copy](treasury_decisions/td_2382/TD%202382.pdf) · [external](https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2382%22;a=srchls;lmt=ft) · [transcript](treasury_decisions/td_2382/td_2382.html)<br>⚠ NOT YET in TREASURY_DECISIONS file — add it there; fallback is a HathiTrust search. |
+| T.D. 8734 | 23 | 127, 128, 129, 130, 131, 132 | in mapping | [local copy](treasury_decisions/td_8734/T.D.%208734-Cumulative%20Bulletin%201997-44.pdf) · [external](https://dogthathunts.github.io/dave_champion/citations/treasury_decisions/td_8734/td_8734.html) · [transcript](treasury_decisions/td_8734/td_8734.html) |
+| T.D. 2313 | 5 | 151, 152, 153, 154 | in mapping | [local copy](treasury_decisions/td_2313/TD%202313.pdf) · [external](https://dogthathunts.github.io/dave_champion/citations/treasury_decisions/td_2313/td_2313.html) · [transcript](treasury_decisions/td_2313/td_2313.html) |
+| T.D. 1928 | 4 | 149, 150 | in mapping | [local copy](treasury_decisions/td_1928/TD%201928.pdf) · [external](https://dogthathunts.github.io/dave_champion/citations/treasury_decisions/td_1928/td_1928.html) · [transcript](treasury_decisions/td_1928/td_1928.html) |
+| T.D. 6500 | 4 | 157, 158 | in mapping | [local copy](treasury_decisions/td_6500/TD%206500.pdf) · [external](https://dogthathunts.github.io/dave_champion/citations/treasury_decisions/td_6500/td_6500.html) · [transcript](treasury_decisions/td_6500/td_6500.html) |
+| T.D. 2401 | 2 | 154 | in mapping | [local copy](treasury_decisions/td_2401/TD%202401%2C%20TD%202402.pdf) · [external](https://dogthathunts.github.io/dave_champion/citations/treasury_decisions/td_2401/td_2401.html) · [transcript](treasury_decisions/td_2401/td_2401.html) |
+| T.D. 2815 | 2 | 155 | in mapping | [local copy](treasury_decisions/td_2815/TD%202815%20-%20Form%201040%20for%20nonresident%20aliens%20and%20their%20agents.pdf) · [external](https://dogthathunts.github.io/dave_champion/citations/treasury_decisions/td_2815/td_2815.html) · [transcript](treasury_decisions/td_2815/td_2815.html) |
+| T.D. 2988 | 2 | 156 | in mapping | [local copy](treasury_decisions/td_2988/TD%202988.pdf) · [external](https://dogthathunts.github.io/dave_champion/citations/treasury_decisions/td_2988/td_2988.html) · [transcript](treasury_decisions/td_2988/td_2988.html) |
+| T.D. 2382 | 2 | 155 | in mapping | [local copy](treasury_decisions/td_2382/TD%202382.pdf) · [external](https://dogthathunts.github.io/dave_champion/citations/treasury_decisions/td_2382/td_2382.html) · [transcript](treasury_decisions/td_2382/td_2382.html) |
 | T.D. 2090 | 0 |  | in mapping | [link](https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2090%22;a=srchls;lmt=ft) |
 | T.D. 2109 | 0 |  | in mapping | [link](https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2109%22;a=srchls;lmt=ft) |
 | T.D. 4707 | 0 |  | in mapping | [link](https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+4707%22;a=srchls;lmt=ft) |
+| T.D. 2402 | 0 |  | in mapping | [local copy](treasury_decisions/td_2401/TD%202401%2C%20TD%202402.pdf) · [external](https://dogthathunts.github.io/dave_champion/citations/treasury_decisions/td_2402/td_2402.html) · [transcript](treasury_decisions/td_2402/td_2402.html) |
+| T.D. 8881 | 0 |  | in mapping | [local copy](treasury_decisions/td_8881/T.D.%208881.pdf) · [external](https://dogthathunts.github.io/dave_champion/citations/treasury_decisions/td_8881/td_8881.html) · [transcript](treasury_decisions/td_8881/td_8881.html) |
 
 ## 5. Constitution & founding documents
 
@@ -222,6 +491,7 @@ _Constitution refs link to the Constitution Annotated; founding documents (e.g. 
 | Article IV | 3 | [link](https://constitution.congress.gov/constitution/article-4/) |
 | 13th Amendment | 2 | [link](https://constitution.congress.gov/constitution/amendment-13/) |
 | Preamble | 1 | [link](https://constitution.congress.gov/constitution/preamble/) |
+| Fourteenth Amendment | 0 | [link](https://constitution.congress.gov/constitution/amendment-14/) |
 
 ## 6. IRS forms
 
@@ -250,6 +520,42 @@ _Links point to current IRS “About Form” pages; the book often discusses his
 | Form 1099-NEC | 0 |  | [link](https://www.irs.gov/instructions/i1099mec) |
 | Form 1099-INT | 0 |  | [link](https://www.irs.gov/instructions/i1099int) |
 | Form 1099-DIV | 0 |  | [link](https://www.irs.gov/instructions/i1099div) |
+| Form 2433 | 0 |  | [link](https://www.irs.gov/forms-pubs/about-form-2433) |
+| Form 2290 | 0 |  | [link](https://www.irs.gov/forms-pubs/about-form-2290) |
+| Form 720 | 0 |  | [link](https://www.irs.gov/forms-pubs/about-form-720) |
+| Form 1215 | 0 |  | [link](https://www.irs.gov/forms-pubs/about-form-1215) |
+| Form 2039 | 0 |  | [link](https://www.irs.gov/forms-pubs/about-form-2039) |
+| Form 668-A | 0 |  | [link](https://www.irs.gov/forms-pubs/about-form-668-a) |
+| Form 940 | 0 |  | [link](https://www.irs.gov/forms-pubs/about-form-940) |
+| Form 943 | 0 |  | [link](https://www.irs.gov/forms-pubs/about-form-943) |
+| Form 11-B | 0 |  | [link](https://www.irs.gov/forms-pubs/about-form-11-b) |
+| Form CT-1 | 0 |  | [link](https://www.irs.gov/forms-pubs/about-form-ct-1) |
+| Form 11-C | 0 |  | [link](https://www.irs.gov/forms-pubs/about-form-11-c) |
+| Form 637 | 0 |  | [link](https://www.irs.gov/forms-pubs/about-form-637) |
+| Form 730 | 0 |  | [link](https://www.irs.gov/forms-pubs/about-form-730) |
+| Form 843 | 0 |  | [link](https://www.irs.gov/forms-pubs/about-form-843) |
+| Form 872-B | 0 |  | [link](https://www.irs.gov/forms-pubs/about-form-872-b) |
+| Form 1363 | 0 |  | [link](https://www.irs.gov/forms-pubs/about-form-1363) |
+| Form 2758 | 0 |  | [link](https://www.irs.gov/forms-pubs/about-form-2758) |
+| Form 4136 | 0 |  | [link](https://www.irs.gov/forms-pubs/about-form-4136) |
+| Form 942 | 0 |  | [link](https://www.irs.gov/forms-pubs/about-form-942) |
+| Form 1065 | 0 |  | [link](https://www.irs.gov/forms-pubs/about-form-1065) |
+| Form 11 | 0 |  | [link](https://www.irs.gov/forms-pubs/about-form-11) |
+| Form 5384 | 0 |  | [link](https://www.irs.gov/forms-pubs/about-form-5384) |
+| Form 5385 | 0 |  | [link](https://www.irs.gov/forms-pubs/about-form-5385) |
+| Form 6197 | 0 |  | [link](https://www.irs.gov/forms-pubs/about-form-6197) |
+| Form 6478 | 0 |  | [link](https://www.irs.gov/forms-pubs/about-form-6478) |
+| Form 6627 | 0 |  | [link](https://www.irs.gov/forms-pubs/about-form-6627) |
+| Form 8109 | 0 |  | [link](https://www.irs.gov/forms-pubs/about-form-8109) |
+| Form 8849 | 0 |  | [link](https://www.irs.gov/forms-pubs/about-form-8849) |
+| Form 9117 | 0 |  | [link](https://www.irs.gov/forms-pubs/about-form-9117) |
+| Form 2555-F | 0 |  | [link](https://www.irs.gov/forms-pubs/about-form-2555-f) |
+| Form 2555-EZ | 0 |  | [link](https://www.irs.gov/forms-pubs/about-form-2555-ez) |
+| Form 668-W | 0 |  | [link](https://www.irs.gov/forms-pubs/about-form-668-w) |
+| Form 668 | 0 |  | [link](https://www.irs.gov/forms-pubs/about-form-668) |
+| Form 8857 | 0 |  | [link](https://www.irs.gov/forms-pubs/about-form-8857) |
+| Form 106 | 0 |  | [link](https://www.irs.gov/forms-pubs/about-form-106) |
+| Form 4443 | 0 |  | [link](https://www.irs.gov/forms-pubs/about-form-4443) |
 
 ## 7. Constitutional provisions (Article / Section / Clause)
 
@@ -263,6 +569,12 @@ _Deep-linked to the Constitution Annotated (congress.gov) at the section level._
 | Article I, Section 9, Clause 4 | 3 | 15, 407 | [link](https://constitution.congress.gov/browse/article-1/section-9/) |
 | Article IV, Section 3, Clause 2 | 2 | 203, 411 | [link](https://constitution.congress.gov/browse/article-4/section-3/) |
 | Article IV, Section 4 | 2 | 46, 408 | [link](https://constitution.congress.gov/browse/article-4/section-4/) |
+| Article I, Section 10 | 0 |  | [link](https://constitution.congress.gov/browse/article-1/section-10/) |
+| Article I, Section 10, Clause 1 | 0 |  | [link](https://constitution.congress.gov/browse/article-1/section-10/) |
+| Article I, Section 8 | 0 |  | [link](https://constitution.congress.gov/browse/article-1/section-8/) |
+| Article I, Section 8, Clause 18 | 0 |  | [link](https://constitution.congress.gov/browse/article-1/section-8/) |
+| Article I, Section 9 | 0 |  | [link](https://constitution.congress.gov/browse/article-1/section-9/) |
+| Article I, Section 9, Clause 5 | 0 |  | [link](https://constitution.congress.gov/browse/article-1/section-9/) |
 
 ## 8. Named Acts of Congress
 
@@ -286,6 +598,27 @@ _Official government sources where a clean one exists (SSA, Federal Reserve, con
 | Wilson-Gorman Tariff Act of 1894 | 1 | 20 | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
 | Revenue Act | 1 | 48 | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
 | Corporate Excise Tax Act | 1 | 49 | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
+| Corporate Tax Act of 1909 | 0 |  | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
+| Corporation Excise Tax Act of 1909 | 0 |  | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
+| Simmons Tariff Act | 0 |  | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
+| Underwood-Simmons Tariff Act | 0 |  | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
+| Revenue Act of 1916 | 0 |  | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
+| Underwood Simmons Tariff Act | 0 |  | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
+| Tariff Act of 1913 | 0 |  | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
+| Revenue Act of 1938 | 0 |  | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
+| Paperwork Reduction Act of 1980 | 0 |  | [link](https://www.congress.gov/bill/96th-congress/senate-bill/1411) |
+| Corporation Excise Tax Act | 0 |  | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
+| Revenue Act of 1926 | 0 |  | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
+| Income Tax Act of 1894 | 0 |  | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
+| Tariff Act | 0 |  | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
+| Certain Excise Tax Act | 0 |  | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
+| For Certain Excise Tax Act | 0 |  | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
+| Pot Paperwork Reduction Act | 0 |  | [link](https://www.congress.gov/bill/96th-congress/senate-bill/1411) |
+| Income Tax Act of 1916 | 0 |  | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
+| Revenue Act of 1934 | 0 |  | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
+| Paperwork Reduction Act of 1995 | 0 |  | [link](https://www.congress.gov/bill/96th-congress/senate-bill/1411) |
+| Revenue Act of 1978 | 0 |  | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
+| Contributions Act | 0 |  | [link](https://www.loc.gov/collections/united-states-statutes-at-large/) _(Statutes at Large)_ |
 
 ## 9. Executive Orders
 

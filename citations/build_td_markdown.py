@@ -53,7 +53,24 @@ TDS = [
     {"num": "6500", "folder": "td_6500", "method": "text", "slice": False},
     {"num": "8734", "folder": "td_8734", "method": "irs-txt", "slice": False,
      "ext_txt": "https://www.irs.gov/pub/irs-regs/td8734.txt"},
-    {"num": "8881", "folder": "td_8881", "method": "text", "slice": False},
+    # PDF removed 2026-11-16: the file that had been sitting in td_8881/ was a
+    # mismatched 2001 Federal Register aviation-safety rule (aircraft oxygen
+    # systems / fire detectors), not an IRS Treasury Decision -- confirmed by
+    # reading its actual text. Re-sourced the same day: the IRS DOES host it
+    # directly at irs.gov/pub/irs-regs/td8881.pdf (HTTP 200) -- the earlier
+    # "404 confirmed at the IRS path" note (since 2026-08-06) was only ever
+    # checking the .txt extension, which does 404; the .pdf doesn't. Content
+    # verified: "[TD 8881] ... Withholding of Tax on Certain U.S. Source
+    # Income Paid to Foreign Persons", references its companion T.D. 8734 (62
+    # FR 53387), effective Jan 1, 2001 -- matches what the 7 citing video rows
+    # actually need. Official Federal Register landing page (65 FR 32152):
+    # federalregister.gov/documents/2000/05/22/00-11937/revisions-to-regulations-
+    # relating-to-withholding-of-tax-on-certain-us-source-income-paid-to-foreign
+    {"num": "8881", "folder": "td_8881", "method": "text", "slice": False,
+     "ext_ref": ("Federal Register (65 FR 32152)",
+                 "https://www.federalregister.gov/documents/2000/05/22/00-11937/"
+                 "revisions-to-regulations-relating-to-withholding-of-tax-on-"
+                 "certain-us-source-income-paid-to-foreign")},
 ]
 
 # Header that opens a decision on the old bulletins, e.g. "(T. D. 2401.)".
@@ -74,6 +91,8 @@ def ext_ref(spec):
     """(label, url) for the external secondary reference."""
     if spec.get("ext_txt"):
         return "IRS (authoritative full text)", spec["ext_txt"]
+    if spec.get("ext_ref"):
+        return spec["ext_ref"]
     return "HathiTrust full-text search", hathitrust(spec["num"])
 
 

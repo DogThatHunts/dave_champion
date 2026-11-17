@@ -1,6 +1,205 @@
 # Waypoint — dave_champion
 
-_Last updated: 2026-11-14_
+_Last updated: 2026-11-16_
+
+> **2026-11-16 — fixed a live TD-link bug in `citations/build_register.py`;
+> added T.D. 2402 to the register; dropped T.D. 8881's local copy as
+> mismatched.** User asked how to fold the local TD copies
+> (`citations/treasury_decisions/td_<num>/`) into the register.
+>
+> **Found a real bug, not just cosmetic:** `build_register.py`'s own `TD_FILE`
+> path (`"../../transcription-agent/TREASURY_DECISIONS.md"`) was one `../`
+> short — resolved to `~/Projects/law_sovereignty/transcription-agent/...`,
+> which doesn't exist (the repo is `~/Projects/transcription-agent`, a sibling
+> of `law_sovereignty`, not inside it). Silently caught, `td_map` stayed `{}`,
+> every TD's `url`/`in_mapping_file` in `link_register.json` quietly fell back
+> to a generic HathiTrust search. **This DID reach the live book**, not just
+> the register's own page: Book #1's `_td_b` linker checks the register
+> (`reg_url`) *before* its own (correctly-pathed) sidecar fallback, so every
+> baked-in `T.D. 8734` href in the published HTML was the HathiTrust fallback
+> — confirmed via diff, ~15 occurrences. **Not user-visible in practice**,
+> though: the page's own inline script re-fetches `treasury_decisions.json`
+> (built from book #1's independently-correct path) and overwrites every
+> `a.cite.td[data-td]` href at load time regardless — "update without
+> rebuild," per the existing code comment — so browsers always got the right
+> link. Fixed the path (added one `../`); confirmed via rebuild: all 9
+> scanned TDs' `in_mapping_file` flipped `False → True`, `url` now the real
+> `dogthathunts.github.io/.../td_<n>.html` page, baked-in hrefs now match what
+> the runtime JS was already setting.
+>
+> **T.D. 2402**: has a local transcript (same 1916 multi-decision bulletin PDF
+> as T.D. 2401, cited on-camera at row 5612 per `transcription-agent/
+> TREASURY_DECISIONS.md`) but was never its own register entry — only
+> reachable via the `relations` field on 2401/2313, and never literally cited
+> in either book's text (same reason `MANUAL_TD` exists for 2090/2109/4707).
+> Added as a new durable `MANUAL_TD` entry, `source:
+> td_local_copy_backfill_2026-11-16`, carrying `local_path`/`transcript_path`/
+> `relations` the same way the main scanning loop does. Register TD count
+> 12→13.
+>
+> **T.D. 8881**: local folder has a PDF (`T.D. 8881 corrected.pdf`) but its
+> actual text is a 2001 Federal Register aviation-safety rule (aircraft
+> oxygen systems / fire detectors) — unrelated to any IRS Treasury Decision.
+> **User's call: drop it for now**, don't fold a mismatched source in. Needs
+> the correct T.D. 8881 document before it can get a register entry; left
+> untouched on disk, not deleted.
+
+> **2026-11-16 follow-up — removed the mismatched T.D. 8881 PDF; this one is a
+> real, actively-cited gap, not a dead end.** Deleted `T.D. 8881
+> corrected.pdf` plus its two derived transcripts (`td_8881.html`,
+> `td_8881.md` — both just carried the same wrong aviation-rule text) from
+> `citations/treasury_decisions/td_8881/`, now an empty placeholder folder.
+> Added a `note` field to that TD's entry in `citations/build_td_markdown.py`
+> so a future run of that script prints why there's no source instead of
+> silently having nothing to build (it already handles a missing PDF
+> gracefully — prints `! td_8881: no PDF found`, doesn't crash the batch).
+>
+> **TODO — find the correct T.D. 8881 source.** This is not an obscure
+> citation: `transcription-agent/TREASURY_DECISIONS.md` row 52 lists it as
+> cited in **7 video rows** (1234, 1239, 1243, 1247, 1249, 1254, 5600) — same
+> tier as T.D. 8734, which this project already has a correct, verified
+> source for. That doc's own notes say T.D. 8881 is a modern (1998) decision,
+> and that the IRS does **not** host it directly (404 confirmed at the
+> expected `irs.gov` path) — same situation that made T.D. 8734's
+> authoritative `.txt` fetch ( `irs.gov/pub/irs-regs/td8734.txt`) the better
+> source there; worth checking whether an equivalent `td8881.txt` exists
+> before falling back to a HathiTrust/Cumulative-Bulletin search. **Until
+> then:** `citations/treasury_decisions.json` (the live runtime sidecar) and
+> `transcription-agent/TREASURY_DECISIONS.md` row 52 both still point at
+> `.../td_8881/td_8881.html`, which now 404s on the next publish — that's a
+> cross-repo loose end this note doesn't close; flagged here, not yet fixed
+> in either the sidecar or the transcription-agent doc.
+
+> **2026-11-16 follow-up #2 — closed the cross-repo loose end (pending a real
+> source).** Fixed `transcription-agent/TREASURY_DECISIONS.md` row 52: T.D.
+> 8881 now points at a HathiTrust search (same pattern as 2090/2109/4707)
+> instead of the deleted local transcript page, and the Notes section no
+> longer claims 8881 has a local verified PDF. Rebuilt Book #1's
+> `build_html.py` to regenerate `citations/treasury_decisions.json` from that
+> corrected source (confirmed: sidecar's `"8881"` entry now the HathiTrust
+> URL, not the dead `td_8881.html` link). No hand-editing of the sidecar
+> itself — it's fully derived, so the source-of-truth doc was the right place
+> to fix it. **Next: search for the real T.D. 8881 document** before this can
+> get a proper local source + register entry again.
+>
+> **Reference docs to update once a real source is found, and test cases to
+> verify against (recorded 2026-11-16, before the search started):**
+> - `transcription-agent/TREASURY_DECISIONS.md` row 52 + its Notes section
+>   (currently HathiTrust fallback — swap for the real link).
+> - `citations/treasury_decisions.json` — regenerate via Book #1's
+>   `build_html.py` after the doc above is fixed; don't hand-edit.
+> - `citations/build_td_markdown.py`'s `td_8881` config entry — remove the
+>   "NO LOCAL SOURCE" note, point at the new PDF once one exists.
+> - `citations/CITATION_LINKING.md` line 135 — still lists 8881 among TDs
+>   with a verified local PDF; stale since the removal.
+> - No `MANUAL_TD` register entry exists yet for 8881 (never added, since it
+>   isn't cited in either book's text) — add one once sourced, same pattern
+>   as 2090/2109/4707/2402.
+> - **Test cases:** the real document should support what rows 1234, 1239,
+>   1243, 1247, 1249, 1254, 5600 (and possibly 1232/1252, per the original
+>   2026-08-06 sourcing note, which flagged those two as "missed in the
+>   first pass") cite it for — Champion's withholding-on-foreign-persons /
+>   non-resident-alien argument, same ground as T.D. 8734. If the found
+>   document doesn't actually support that reading, treat it as a mismatch
+>   the same way the aviation-rule PDF was.
+
+> **2026-11-16 follow-up #3 — found the real T.D. 8881, closed every open
+> item above.** Web search traced it to **65 FR 32152 (May 22, 2000)**,
+> "Revisions to Regulations Relating to Withholding of Tax on Certain U.S.
+> Source Income Paid to Foreign Persons..." — amends its companion T.D. 8734
+> (sections 1441-1443, 6041 et al.), effective Jan. 1, 2001. Confirmed by
+> content, not just citation: **the IRS hosts it directly at
+> `irs.gov/pub/irs-regs/td8881.pdf` (HTTP 200)** — the "404 confirmed at the
+> IRS path" claim repeated since 2026-08-06 was only ever checking the
+> `.txt` extension, which does 404; the `.pdf` doesn't. Official landing
+> page: `federalregister.gov/documents/2000/05/22/00-11937/
+> revisions-to-regulations-relating-to-withholding-of-tax-on-certain-us-
+> source-income-paid-to-foreign`.
+>
+> **Caught a near-repeat of the exact same mistake before committing to it:**
+> the web search's first candidate for the April 2001 correction notice
+> (`govinfo.gov/.../FR-2001-04-06/pdf/01-8136.pdf`) was the SAME aviation
+> fire-detector document as the one just removed — same 141,517-byte file,
+> different route to the wrong answer. Downloaded and read its actual text
+> before trusting a filename/date match; it was wrong. Verify by content,
+> every time, for this specific TD.
+>
+> **Executed:** downloaded `td8881.pdf` into `citations/treasury_decisions/
+> td_8881/`; ran `build_td_markdown.py` + `build_td_html.py` (added a generic
+> `ext_ref` override so the transcript's secondary source line reads
+> "Federal Register (65 FR 32152)" instead of HathiTrust); added a new
+> `MANUAL_TD` register entry (`source: td_8881_resourced_2026-11-16`,
+> carrying `local_path`/`transcript_path` same as the others); fixed
+> `transcription-agent/TREASURY_DECISIONS.md` row 52 + Notes (no more "404
+> confirmed," no more HathiTrust); regenerated `citations/
+> treasury_decisions.json` via Book #1's `build_html.py` (confirmed: `"8881"`
+> now resolves to the real local transcript). `citations/CITATION_LINKING.md`
+> line 135 needed no edit — it already (if prematurely) listed 8881 among
+> local-verified TDs, so it's accurate again now that there's a real one
+> behind it. Rebuilt both books as a regression check: byte-identical to the
+> prior TD-fix state (neither book cites 8881 by number in its own text —
+> expected, this TD only mattered for the video corpus and the register).
+> **Every item in the two preceding entries' TODO lists is now closed.**
+> **Not yet committed.**
+> Rebuilt both books as a regression check: Book #1 gained the corrected
+> `T.D. 8734` hrefs (52 changed lines, all `href` upgrades — same text,
+> same citation, now pointing at the real local transcript instead of
+> HathiTrust); Book #2 unaffected by the TD changes specifically (neither
+> T.D. 2402 nor 8881 appear in its text). **Not yet committed** — same
+> hold-for-go-ahead pattern as the 2026-11-15 session.
+
+> **2026-11-15 — reprocessed both books against the updated register; cleared
+> American Tax Bible's entire 331-citation parked backlog.** User asked to
+> reprocess links + the citation sidecar for both books using the register as
+> updated 2026-11-14 (TD 2090/2109/4707, Moore v. United States, 1099-NEC/INT/DIV).
+>
+> **Regression check first:** re-ran `citations/build_register.py`, Book #2's
+> `build_new_citations.py`, and both books' `build_html.py` — all came back
+> **byte-identical** to the committed state. That week's additions are
+> video-only citations that never appear in either book's text, so nothing new
+> was generated by re-running the pipeline as-is. Confirmed `treasury_decisions.json`
+> (the one true runtime sidecar — both books fetch it client-side via
+> `fetch('../../citations/treasury_decisions.json')` to resolve `a.cite.td[data-td]`
+> links "without rebuild") didn't shrink; no regression.
+>
+> **Found the standing backlog:** `books/american-tax-bible/new_citations.md` had
+> 331 citations parked against the shared register since 2026-08 (63 cases, 189
+> USC, 15 CFR, 36 forms, 21 Acts, 6 clauses, 1 const) — unrelated to this week's
+> register changes, just never folded in. **User's call: skip per-entry URL
+> verification, fold the full batch now.** Added `new_citations.json` next to
+> `new_citations.md` in `build_new_citations.py` (small permanent addition —
+> structured data needed to fold programmatically; nothing else reads it) and a
+> new durable `MANUAL_BOOK2_IMPORT_*` block in `build_register.py` (mirrors the
+> existing `MANUAL_SCOTUS`/`FORMS`/`TD` pattern, `source:
+> american_tax_bible_backfill_2026-11-15`, survives every future rebuild).
+> Register counts: cases 46→109, USC 83→272, CFR 34→49, const 9→10, forms
+> 21→57, +6 clauses, +21 acts. Book #2's diff now reports **0 new** — backlog
+> cleared. Re-ran both books' `build_html.py` as a regression check.
+>
+> **Net effect on the live books:** Book #1 unchanged (0 bytes — these were
+> Book-2-only citations). Book #2: 114 changed HTML lines — every lower-court
+> case link upgraded from a bare-cite CourtListener search
+> (`?q=920%20F.2d%20619`) to a case-name+cite search
+> (`?q=United%20States%20v.%20Collins%20920%20F.2d%20619`, confirmed via diff on
+> *United States v. Collins*), plus one Act link (*Pot Paperwork Reduction Act*)
+> now resolves to its real congress.gov page instead of the generic LOC
+> fallback. Everything else renders identically to its prior deterministic
+> fallback (most categories — cases on `U.S.` reports, USC, CFR, clauses — were
+> already getting the same URL from `build_html.py`'s own fallback construction
+> even while unregistered; folding mainly makes them available register-wide,
+> e.g. for the video synthesis, not a book-#2 rendering change).
+>
+> **Not verified, flagged for a future human pass, not auto-fixed:** 36 new IRS
+> form entries carry guessed `about-form-X` URLs with no 404 check (unlike the
+> register's own scanning loop, which drops unresolved guesses) — some may be
+> dead, same as the 4 already-known-dead forms. A handful of regex/OCR
+> artifacts slipped through as literal register entries: `"01 CFR"`, `"26
+> U.S.C. § 14418"`, `"Pot Paperwork Reduction Act"`, `"For Certain Excise Tax
+> Act"` (the last two look like mid-sentence OCR fragments, not real Act
+> names).
+>
+> **Not yet committed** — holding for the user's go-ahead (per their stated
+> preference this session to review a diff summary before anything lands).
 
 > **2026-11-14 — closed the "TDs 2090/2109/4707 still lacking a local source"
 > carryforward (research, not a local PDF).** HathiTrust and Google Books both
