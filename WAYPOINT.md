@@ -2,6 +2,34 @@
 
 _Last updated: 2026-11-16_
 
+> **2026-11-16 — session resting point.** Today's entire arc (TD path-fix,
+> American Tax Bible citation backfill, T.D. 8881/2402 re-sourcing, the
+> 6-TD HathiTrust hunt, and the 4707→4704 correction, all five follow-ups
+> below) is now committed: `dave_champion` commits `7a495df` → `33ec30b`
+> (ending with "Source primary text for the last 6 Treasury Decisions;
+> correct T.D. 4707 to 4704"), plus matching corrections in
+> `transcription-agent` (`5e84d32`, `c3ab178`). Repo clean, nothing
+> uncommitted, nothing pushed.
+>
+> **State:** every Treasury Decision in the corpus (16 of 16) has a
+> verified local primary source, a rendered transcript page, and a correct
+> register entry. The American Tax Bible citation backlog (331 entries) is
+> fully folded in. T.D. 8881 and T.D. 4707/4704 misattributions are both
+> corrected and documented, not just patched silently.
+>
+> **Carried forward, open:**
+> - The dated 2026-11-13/11-14 historical log entries in this file,
+>   `MIGRATION.md`, and `CITATION_LINKING.md` still say "3 TDs have no
+>   local source" — left as-is deliberately (accurate point-in-time
+>   records, not live-state claims); a future reader should trust the
+>   table in `transcription-agent/TREASURY_DECISIONS.md` over these.
+> - T.D. 8881 and T.D. 4704/4707's local sources are not yet live on
+>   GitHub Pages — the `dogthathunts.github.io` links written into the
+>   register and `TREASURY_DECISIONS.md` this session resolve only once
+>   these commits are pushed.
+> - Nothing pushed to any remote yet (this entire session was local commits
+>   only, per instruction).
+
 > **2026-11-16 — fixed a live TD-link bug in `citations/build_register.py`;
 > added T.D. 2402 to the register; dropped T.D. 8881's local copy as
 > mismatched.** User asked how to fold the local TD copies
@@ -284,7 +312,7 @@ _Last updated: 2026-11-16_
 > either book's own text; this work was entirely for the video corpus and
 > the shared register). **Every TD in the corpus (16 of 16) now has a
 > verified local primary source, a local transcript page, and a register
-> entry pointing at it. Not yet committed.**
+> entry pointing at it.**
 > Rebuilt both books as a regression check: Book #1 gained the corrected
 > `T.D. 8734` hrefs (52 changed lines, all `href` upgrades — same text,
 > same citation, now pointing at the real local transcript instead of
