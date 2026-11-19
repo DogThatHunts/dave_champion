@@ -457,28 +457,28 @@ _Note: bare “section NNNN” references in the text are IRC (Title 26) section
 
 ## 4. Treasury Decisions (T.D.)
 
-_External URLs are sourced from the shared mapping `transcription-agent/TREASURY_DECISIONS.md` (single source of truth, updated over time). Where a **local copy** is stored under `citations/treasury_decisions/td_<num>/`, it is the primary source and the external link is kept as a secondary. Rows marked **add to mapping** are cited in this book but not yet in that file._
+_Treasury Decisions are hosted in [treasury-decisions](https://dogthathunts.github.io/treasury-decisions/) (its `tds.json` is the single source of truth): a transcript page and the scan for each. Rows marked **add to mapping** are cited in this book but not yet hosted there._
 
 | T.D. | Occ. | Pages | Status | Source |
 |---|---:|---|---|---|
 | Treasury Decisions (general) | 15 |  | in mapping | [link](https://www.irs.gov/internal-revenue-bulletins) |
-| T.D. 8734 | 23 | 127, 128, 129, 130, 131, 132 | in mapping | [local copy](treasury_decisions/td_8734/T.D.%208734-Cumulative%20Bulletin%201997-44.pdf) · [external](https://dogthathunts.github.io/treasury-decisions/td/8734/) · [transcript](treasury_decisions/td_8734/td_8734.html) |
-| T.D. 2313 | 5 | 151, 152, 153, 154 | in mapping | [local copy](treasury_decisions/td_2313/TD%202313.pdf) · [external](https://dogthathunts.github.io/treasury-decisions/td/2313/) · [transcript](treasury_decisions/td_2313/td_2313.html) |
-| T.D. 1928 | 4 | 149, 150 | in mapping | [local copy](treasury_decisions/td_1928/TD%201928.pdf) · [external](https://dogthathunts.github.io/treasury-decisions/td/1928/) · [transcript](treasury_decisions/td_1928/td_1928.html) |
-| T.D. 6500 | 4 | 157, 158 | in mapping | [local copy](treasury_decisions/td_6500/TD%206500.pdf) · [external](https://dogthathunts.github.io/treasury-decisions/td/6500/) · [transcript](treasury_decisions/td_6500/td_6500.html) |
-| T.D. 2401 | 2 | 154 | in mapping | [local copy](treasury_decisions/td_2401/TD%202401%2C%20TD%202402.pdf) · [external](https://dogthathunts.github.io/treasury-decisions/td/2401/) · [transcript](treasury_decisions/td_2401/td_2401.html) |
-| T.D. 2815 | 2 | 155 | in mapping | [local copy](treasury_decisions/td_2815/TD%202815%20-%20Form%201040%20for%20nonresident%20aliens%20and%20their%20agents.pdf) · [external](https://dogthathunts.github.io/treasury-decisions/td/2815/) · [transcript](treasury_decisions/td_2815/td_2815.html) |
-| T.D. 2988 | 2 | 156 | in mapping | [local copy](treasury_decisions/td_2988/TD%202988.pdf) · [external](https://dogthathunts.github.io/treasury-decisions/td/2988/) · [transcript](treasury_decisions/td_2988/td_2988.html) |
-| T.D. 2382 | 2 | 155 | in mapping | [local copy](treasury_decisions/td_2382/TD%202382.pdf) · [external](https://dogthathunts.github.io/treasury-decisions/td/2382/) · [transcript](treasury_decisions/td_2382/td_2382.html) |
-| T.D. 2090 | 0 |  | in mapping | [local copy](treasury_decisions/td_2090/TD%202090.pdf) · [external](https://dogthathunts.github.io/treasury-decisions/td/2090/) · [transcript](treasury_decisions/td_2090/td_2090.html) |
-| T.D. 2109 | 0 |  | in mapping | [local copy](treasury_decisions/td_2109/TD%202109.pdf) · [external](https://dogthathunts.github.io/treasury-decisions/td/2109/) · [transcript](treasury_decisions/td_2109/td_2109.html) |
-| T.D. 4707 | 0 |  | in mapping | [local copy](treasury_decisions/td_4707/TD%204707.pdf) · [external](https://dogthathunts.github.io/treasury-decisions/td/4707/) · [transcript](treasury_decisions/td_4707/td_4707.html) |
-| T.D. 4704 | 0 |  | in mapping | [local copy](treasury_decisions/td_4704/TD%204704.pdf) · [external](https://dogthathunts.github.io/treasury-decisions/td/4704/) · [transcript](treasury_decisions/td_4704/td_4704.html) |
-| T.D. 1953 | 0 |  | in mapping | [local copy](treasury_decisions/td_1953/TD%201953.pdf) · [external](https://dogthathunts.github.io/treasury-decisions/td/1953/) · [transcript](treasury_decisions/td_1953/td_1953.html) |
-| T.D. 2013 | 0 |  | in mapping | [local copy](treasury_decisions/td_2013/TD%202013.pdf) · [external](https://dogthathunts.github.io/treasury-decisions/td/2013/) · [transcript](treasury_decisions/td_2013/td_2013.html) |
-| T.D. 2190 | 0 |  | in mapping | [local copy](treasury_decisions/td_2190/TD%202190.pdf) · [external](https://dogthathunts.github.io/treasury-decisions/td/2190/) · [transcript](treasury_decisions/td_2190/td_2190.html) |
-| T.D. 2402 | 0 |  | in mapping | [local copy](treasury_decisions/td_2401/TD%202401%2C%20TD%202402.pdf) · [external](https://dogthathunts.github.io/treasury-decisions/td/2402/) · [transcript](treasury_decisions/td_2402/td_2402.html) |
-| T.D. 8881 | 0 |  | in mapping | [local copy](treasury_decisions/td_8881/T.D.%208881.pdf) · [external](https://dogthathunts.github.io/treasury-decisions/td/8881/) · [transcript](treasury_decisions/td_8881/td_8881.html) |
+| T.D. 8734 | 23 | 127, 128, 129, 130, 131, 132 | in mapping | [transcript](https://dogthathunts.github.io/treasury-decisions/td/8734/) · [scan](https://dogthathunts.github.io/treasury-decisions/td/8734/TD-8734.pdf) |
+| T.D. 2313 | 5 | 151, 152, 153, 154 | in mapping | [transcript](https://dogthathunts.github.io/treasury-decisions/td/2313/) · [scan](https://dogthathunts.github.io/treasury-decisions/td/2313/TD-2313.pdf) |
+| T.D. 1928 | 4 | 149, 150 | in mapping | [transcript](https://dogthathunts.github.io/treasury-decisions/td/1928/) · [scan](https://dogthathunts.github.io/treasury-decisions/td/1928/TD-1928.pdf) |
+| T.D. 6500 | 4 | 157, 158 | in mapping | [transcript](https://dogthathunts.github.io/treasury-decisions/td/6500/) · [scan](https://dogthathunts.github.io/treasury-decisions/td/6500/TD-6500.pdf) |
+| T.D. 2401 | 2 | 154 | in mapping | [transcript](https://dogthathunts.github.io/treasury-decisions/td/2401/) · [scan](https://dogthathunts.github.io/treasury-decisions/td/2401/TD-2401.pdf) |
+| T.D. 2815 | 2 | 155 | in mapping | [transcript](https://dogthathunts.github.io/treasury-decisions/td/2815/) · [scan](https://dogthathunts.github.io/treasury-decisions/td/2815/TD-2815.pdf) |
+| T.D. 2988 | 2 | 156 | in mapping | [transcript](https://dogthathunts.github.io/treasury-decisions/td/2988/) · [scan](https://dogthathunts.github.io/treasury-decisions/td/2988/TD-2988.pdf) |
+| T.D. 2382 | 2 | 155 | in mapping | [transcript](https://dogthathunts.github.io/treasury-decisions/td/2382/) · [scan](https://dogthathunts.github.io/treasury-decisions/td/2382/TD-2382.pdf) |
+| T.D. 2090 | 0 |  | in mapping | [transcript](https://dogthathunts.github.io/treasury-decisions/td/2090/) · [scan](https://dogthathunts.github.io/treasury-decisions/td/2090/TD-2090.pdf) |
+| T.D. 2109 | 0 |  | in mapping | [transcript](https://dogthathunts.github.io/treasury-decisions/td/2109/) · [scan](https://dogthathunts.github.io/treasury-decisions/td/2109/TD-2109.pdf) |
+| T.D. 4707 | 0 |  | in mapping | [transcript](https://dogthathunts.github.io/treasury-decisions/td/4707/) · [scan](https://dogthathunts.github.io/treasury-decisions/td/4707/TD-4707.pdf) |
+| T.D. 4704 | 0 |  | in mapping | [transcript](https://dogthathunts.github.io/treasury-decisions/td/4704/) · [scan](https://dogthathunts.github.io/treasury-decisions/td/4704/TD-4704.pdf) |
+| T.D. 1953 | 0 |  | in mapping | [transcript](https://dogthathunts.github.io/treasury-decisions/td/1953/) · [scan](https://dogthathunts.github.io/treasury-decisions/td/1953/TD-1953.pdf) |
+| T.D. 2013 | 0 |  | in mapping | [transcript](https://dogthathunts.github.io/treasury-decisions/td/2013/) · [scan](https://dogthathunts.github.io/treasury-decisions/td/2013/TD-2013.pdf) |
+| T.D. 2190 | 0 |  | in mapping | [transcript](https://dogthathunts.github.io/treasury-decisions/td/2190/) · [scan](https://dogthathunts.github.io/treasury-decisions/td/2190/TD-2190.pdf) |
+| T.D. 2402 | 0 |  | in mapping | [transcript](https://dogthathunts.github.io/treasury-decisions/td/2402/) · [scan](https://dogthathunts.github.io/treasury-decisions/td/2401/TD-2401.pdf) |
+| T.D. 8881 | 0 |  | in mapping | [transcript](https://dogthathunts.github.io/treasury-decisions/td/8881/) · [scan](https://dogthathunts.github.io/treasury-decisions/td/8881/TD-8881.pdf) |
 
 ## 5. Constitution & founding documents
 

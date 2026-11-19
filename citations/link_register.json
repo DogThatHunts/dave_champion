@@ -3812,8 +3812,8 @@
       ],
       "in_mapping_file": true,
       "url": "https://dogthathunts.github.io/treasury-decisions/td/8734/",
-      "local_path": "treasury_decisions/td_8734/T.D. 8734-Cumulative Bulletin 1997-44.pdf",
-      "transcript_path": "treasury_decisions/td_8734/td_8734.html"
+      "local_path": "https://dogthathunts.github.io/treasury-decisions/td/8734/TD-8734.pdf",
+      "transcript_path": "https://dogthathunts.github.io/treasury-decisions/td/8734/"
     },
     {
       "cite": "T.D. 2313",
@@ -3826,14 +3826,14 @@
       ],
       "in_mapping_file": true,
       "url": "https://dogthathunts.github.io/treasury-decisions/td/2313/",
-      "local_path": "treasury_decisions/td_2313/TD 2313.pdf",
-      "transcript_path": "treasury_decisions/td_2313/td_2313.html",
+      "local_path": "https://dogthathunts.github.io/treasury-decisions/td/2313/TD-2313.pdf",
+      "transcript_path": "https://dogthathunts.github.io/treasury-decisions/td/2313/",
       "relations": [
         {
           "verb": "amended by",
           "num": "2402",
           "basis": "Amending T.D. 2313 of March 21, 1916",
-          "transcript": "treasury_decisions/td_2402/td_2402.html"
+          "transcript": "https://dogthathunts.github.io/treasury-decisions/td/2402/"
         }
       ]
     },
@@ -3846,8 +3846,8 @@
       ],
       "in_mapping_file": true,
       "url": "https://dogthathunts.github.io/treasury-decisions/td/1928/",
-      "local_path": "treasury_decisions/td_1928/TD 1928.pdf",
-      "transcript_path": "treasury_decisions/td_1928/td_1928.html"
+      "local_path": "https://dogthathunts.github.io/treasury-decisions/td/1928/TD-1928.pdf",
+      "transcript_path": "https://dogthathunts.github.io/treasury-decisions/td/1928/"
     },
     {
       "cite": "T.D. 6500",
@@ -3858,8 +3858,8 @@
       ],
       "in_mapping_file": true,
       "url": "https://dogthathunts.github.io/treasury-decisions/td/6500/",
-      "local_path": "treasury_decisions/td_6500/TD 6500.pdf",
-      "transcript_path": "treasury_decisions/td_6500/td_6500.html"
+      "local_path": "https://dogthathunts.github.io/treasury-decisions/td/6500/TD-6500.pdf",
+      "transcript_path": "https://dogthathunts.github.io/treasury-decisions/td/6500/"
     },
     {
       "cite": "T.D. 2401",
@@ -3869,14 +3869,14 @@
       ],
       "in_mapping_file": true,
       "url": "https://dogthathunts.github.io/treasury-decisions/td/2401/",
-      "local_path": "treasury_decisions/td_2401/TD 2401, TD 2402.pdf",
-      "transcript_path": "treasury_decisions/td_2401/td_2401.html",
+      "local_path": "https://dogthathunts.github.io/treasury-decisions/td/2401/TD-2401.pdf",
+      "transcript_path": "https://dogthathunts.github.io/treasury-decisions/td/2401/",
       "relations": [
         {
           "verb": "supersedes",
           "num": "2382",
           "basis": "Revision of T.D. 2382 of October 19, 1916",
-          "transcript": "treasury_decisions/td_2382/td_2382.html"
+          "transcript": "https://dogthathunts.github.io/treasury-decisions/td/2382/"
         }
       ]
     },
@@ -3888,8 +3888,8 @@
       ],
       "in_mapping_file": true,
       "url": "https://dogthathunts.github.io/treasury-decisions/td/2815/",
-      "local_path": "treasury_decisions/td_2815/TD 2815 - Form 1040 for nonresident aliens and their agents.pdf",
-      "transcript_path": "treasury_decisions/td_2815/td_2815.html"
+      "local_path": "https://dogthathunts.github.io/treasury-decisions/td/2815/TD-2815.pdf",
+      "transcript_path": "https://dogthathunts.github.io/treasury-decisions/td/2815/"
     },
     {
       "cite": "T.D. 2988",
@@ -3899,8 +3899,8 @@
       ],
       "in_mapping_file": true,
       "url": "https://dogthathunts.github.io/treasury-decisions/td/2988/",
-      "local_path": "treasury_decisions/td_2988/TD 2988.pdf",
-      "transcript_path": "treasury_decisions/td_2988/td_2988.html"
+      "local_path": "https://dogthathunts.github.io/treasury-decisions/td/2988/TD-2988.pdf",
+      "transcript_path": "https://dogthathunts.github.io/treasury-decisions/td/2988/"
     },
     {
       "cite": "T.D. 2382",
@@ -3910,14 +3910,14 @@
       ],
       "in_mapping_file": true,
       "url": "https://dogthathunts.github.io/treasury-decisions/td/2382/",
-      "local_path": "treasury_decisions/td_2382/TD 2382.pdf",
-      "transcript_path": "treasury_decisions/td_2382/td_2382.html",
+      "local_path": "https://dogthathunts.github.io/treasury-decisions/td/2382/TD-2382.pdf",
+      "transcript_path": "https://dogthathunts.github.io/treasury-decisions/td/2382/",
       "relations": [
         {
           "verb": "superseded by",
           "num": "2401",
           "basis": "Revision of T.D. 2382 of October 19, 1916",
-          "transcript": "treasury_decisions/td_2401/td_2401.html"
+          "transcript": "https://dogthathunts.github.io/treasury-decisions/td/2401/"
         }
       ]
     },
@@ -3927,8 +3927,8 @@
       "pages": [],
       "in_mapping_file": true,
       "url": "https://dogthathunts.github.io/treasury-decisions/td/2090/",
-      "local_path": "treasury_decisions/td_2090/TD 2090.pdf",
-      "transcript_path": "treasury_decisions/td_2090/td_2090.html",
+      "local_path": "https://dogthathunts.github.io/treasury-decisions/td/2090/TD-2090.pdf",
+      "transcript_path": "https://dogthathunts.github.io/treasury-decisions/td/2090/",
       "summary": "Dec. 14, 1914 — \"Synopsis of rulings on questions relating to the income tax imposed by Section 2 of the Act of October 3, 1913.\" A large alphabetical (A-Z) digest of dozens of unrelated administrative rulings (deductions, withholding, annuities, fiduciaries, bad debts, etc.) for IRS officers. It does not define who the income tax applies to as a class of filer. Verbatim text (pp. 1456-1486) found in the public-domain 1915 treatise \"Foster's Income Tax\" (non-government mirror, link not durable). Primary source found 2026-11-16: HathiTrust uc1.a0001809318 seq 271-294 (24 pages, the full digest), downloaded via browser and merged into the local PDF above. Pages 271-287 carry Google's original OCR text layer; pages 288-294 (which had none -- image-only Google scans) were run through tesseract (300dpi gray via pdftoppm, matching the pattern already used for td_2382/td_2815) and merged back in with a real text layer, same day. All 24 pages are now searchable/extractable.",
       "source": "video_synthesis_2026-11-14"
     },
@@ -3938,8 +3938,8 @@
       "pages": [],
       "in_mapping_file": true,
       "url": "https://dogthathunts.github.io/treasury-decisions/td/2109/",
-      "local_path": "treasury_decisions/td_2109/TD 2109.pdf",
-      "transcript_path": "treasury_decisions/td_2109/td_2109.html",
+      "local_path": "https://dogthathunts.github.io/treasury-decisions/td/2109/TD-2109.pdf",
+      "transcript_path": "https://dogthathunts.github.io/treasury-decisions/td/2109/",
       "summary": "Dec. 28, 1914 — \"Amendment of Article 8 of Regulations 33, providing for the collection of tax on income of non-resident aliens.\" A narrow procedural amendment setting withholding mechanics specifically for non-resident aliens' U.S.-source income, alongside (not instead of) the citizen/resident-alien rules the same regulations already covered. Genuinely about non-resident aliens, but regulates one filer category among several — doesn't confine the tax to that category. Verbatim text (pp. 1487-1488) in the same Foster treatise. Primary source found 2026-11-16: HathiTrust uc1.a0001809318 seq 317-318 (2 pages, full decision text, text layer present), downloaded and merged into the local PDF above.",
       "source": "video_synthesis_2026-11-14"
     },
@@ -3949,8 +3949,8 @@
       "pages": [],
       "in_mapping_file": true,
       "url": "https://dogthathunts.github.io/treasury-decisions/td/4707/",
-      "local_path": "treasury_decisions/td_4707/TD 4707.pdf",
-      "transcript_path": "treasury_decisions/td_4707/td_4707.html",
+      "local_path": "https://dogthathunts.github.io/treasury-decisions/td/4707/TD-4707.pdf",
+      "transcript_path": "https://dogthathunts.github.io/treasury-decisions/td/4707/",
       "summary": "Nov. 16, 1936 -- \"Liquor Tax Administration Act. Openings for ventilation or heating in internal revenue bonded warehouses.\" Amends paragraph 3 of T.D. 4651, setting warehouse construction/ventilation specs for bonded liquor warehouses. Chas. T. Russell, Acting Commissioner; Stephen B. Gibbons, Acting Secretary of the Treasury. PRIMARY SOURCE FOUND AND VERIFIED 2026-11-16: HathiTrust 'Internal revenue bulletin 1936' (uiug.30112102075568), seq 1717 -- this REFUTES the previous inferred guess kept in this file's history: that T.D. 4707 was part of a November 1936 batch of Social Security/SS-5 implementing decisions, based only on its number being close to T.D. 4704 (the actual SS account-number decision). It is NOT -- it's an unrelated liquor-tax warehouse regulation. **Row 1253 cites T.D. 4707 re: the SS-5 application -- that citation is a misattribution in the source video, not a sourcing gap on our end: Champion says \"4707\" on camera but reads text that is actually T.D. 4704's. HAND-CORRECTED 2026-11-16, based on this research: row 1253's citation is now tracked against T.D. 4704 (see that entry), not this one. T.D. 4707 itself is correctly sourced above and real, just not actually cited anywhere in the Dave Champion corpus.",
       "source": "video_synthesis_2026-11-16"
     },
@@ -3958,8 +3958,8 @@
       "cite": "T.D. 4704",
       "occurrences": 0,
       "pages": [],
-      "local_path": "treasury_decisions/td_4704/TD 4704.pdf",
-      "transcript_path": "treasury_decisions/td_4704/td_4704.html",
+      "local_path": "https://dogthathunts.github.io/treasury-decisions/td/4704/TD-4704.pdf",
+      "transcript_path": "https://dogthathunts.github.io/treasury-decisions/td/4704/",
       "in_mapping_file": true,
       "url": "https://dogthathunts.github.io/treasury-decisions/td/4704/",
       "summary": "Nov. 5, 1936 (XV-45-8383) -- \"Identification of taxpayers under Title VIII of the Social Security Act -- Assignment of identification numbers to employers and account numbers to employees.\" Article 5 (p. 21): \"Every individual who is an employee on November 24, 1936, shall file an application for an account number on Form SS-5\" -- the exact line row 1253 quotes on-camera, attributed there to \"Treasury Decision 4707.\" HAND-CORRECTED 2026-11-16: verified by content (HathiTrust 'Internal revenue bulletin 1936', uiug.30112102075568, seq 1640-1643) that this text is T.D. 4704, not T.D. 4707 (an unrelated liquor-tax warehouse decision, see that entry) -- Champion misspoke the number on camera. Row 1253's citation moved here from T.D. 4707.",
@@ -3971,8 +3971,8 @@
       "pages": [],
       "in_mapping_file": true,
       "url": "https://dogthathunts.github.io/treasury-decisions/td/1953/",
-      "local_path": "treasury_decisions/td_1953/TD 1953.pdf",
-      "transcript_path": "treasury_decisions/td_1953/td_1953.html",
+      "local_path": "https://dogthathunts.github.io/treasury-decisions/td/1953/TD-1953.pdf",
+      "transcript_path": "https://dogthathunts.github.io/treasury-decisions/td/1953/",
       "summary": "March 2, 1914 -- \"Extension of time for filing returns under income-tax law by citizens of the United States living abroad.\" Falls in Treasury Decisions Under Internal Revenue Laws, Vol. 16 (Jan.-Dec. 1914, covers T.D. 1927-2112) -- same volume as T.D. 2090/2109. Cited on-camera (row 5612, per transcription-agent/TREASURY_DECISIONS.md), recited as part of a 10-TD list, not individually discussed. Primary source found 2026-11-16: HathiTrust uc1.a0001809318 seq 46 (1 page, complete, text layer present), downloaded and saved to the local PDF above.",
       "source": "video_synthesis_2026-11-16"
     },
@@ -3982,8 +3982,8 @@
       "pages": [],
       "in_mapping_file": true,
       "url": "https://dogthathunts.github.io/treasury-decisions/td/2013/",
-      "local_path": "treasury_decisions/td_2013/TD 2013.pdf",
-      "transcript_path": "treasury_decisions/td_2013/td_2013.html",
+      "local_path": "https://dogthathunts.github.io/treasury-decisions/td/2013/TD-2013.pdf",
+      "transcript_path": "https://dogthathunts.github.io/treasury-decisions/td/2013/",
       "summary": "Aug. 12, 1914 -- \"Nonresident aliens -- Amendment of article 8 of Regulations 33, providing for the collection of tax on income of nonresident aliens derived from trades or professions in the United States.\" Same Vol. 16 as T.D. 1953/2090/2109. Cited on-camera (row 5612), recited as part of a 10-TD list. Primary source found 2026-11-16: HathiTrust uc1.a0001809318 seq 130-131 (2 pages, complete, text layer present), downloaded and merged into the local PDF above.",
       "source": "video_synthesis_2026-11-16"
     },
@@ -3993,8 +3993,8 @@
       "pages": [],
       "in_mapping_file": true,
       "url": "https://dogthathunts.github.io/treasury-decisions/td/2190/",
-      "local_path": "treasury_decisions/td_2190/TD 2190.pdf",
-      "transcript_path": "treasury_decisions/td_2190/td_2190.html",
+      "local_path": "https://dogthathunts.github.io/treasury-decisions/td/2190/TD-2190.pdf",
+      "transcript_path": "https://dogthathunts.github.io/treasury-decisions/td/2190/",
       "summary": "April 21, 1915 -- \"Income tax -- Temporary certificate, Form 1005.\" Falls in Treasury Decisions Under Internal Revenue Laws, Vol. 17 (Jan.-Dec. 1915, covers T.D. 2113-2276) -- a different volume from T.D. 2090/2109/1953/2013 (Vol. 16), same bound item though (uc1.a0001809318 covers v.16-19). Cited on-camera (row 5612), recited as part of a 10-TD list. Primary source found 2026-11-16: HathiTrust seq 490 (1 page, complete, text layer present), downloaded and saved to the local PDF above.",
       "source": "video_synthesis_2026-11-16"
     },
@@ -4004,14 +4004,14 @@
       "pages": [],
       "in_mapping_file": true,
       "url": "https://dogthathunts.github.io/treasury-decisions/td/2402/",
-      "local_path": "treasury_decisions/td_2401/TD 2401, TD 2402.pdf",
-      "transcript_path": "treasury_decisions/td_2402/td_2402.html",
+      "local_path": "https://dogthathunts.github.io/treasury-decisions/td/2401/TD-2401.pdf",
+      "transcript_path": "https://dogthathunts.github.io/treasury-decisions/td/2402/",
       "relations": [
         {
           "verb": "amends",
           "num": "2313",
           "basis": "Amending T.D. 2313 of March 21, 1916",
-          "transcript": "treasury_decisions/td_2313/td_2313.html"
+          "transcript": "https://dogthathunts.github.io/treasury-decisions/td/2313/"
         }
       ],
       "summary": "Nov. 29, 1916 — \"Amending T.D. 2313 of March 21, 1916, as to payment of income tax for nonresident aliens, so as to relieve their agents or representatives in the United States from the duty of paying tax for said nonresident aliens in certain cases.\" Has a local transcript (extracted from the same multi-decision bulletin PDF as T.D. 2401,  citations/treasury_decisions/td_2402/) but, unlike those two, is never literally cited by number in either book's text -- only reachable via T.D. 2401/2313's relations field -- same reason MANUAL_TD exists for 2090/2109/4707. Cited on-camera (row 5612, per transcription-agent/TREASURY_DECISIONS.md).",
@@ -4023,8 +4023,8 @@
       "pages": [],
       "in_mapping_file": true,
       "url": "https://dogthathunts.github.io/treasury-decisions/td/8881/",
-      "local_path": "treasury_decisions/td_8881/T.D. 8881.pdf",
-      "transcript_path": "treasury_decisions/td_8881/td_8881.html",
+      "local_path": "https://dogthathunts.github.io/treasury-decisions/td/8881/TD-8881.pdf",
+      "transcript_path": "https://dogthathunts.github.io/treasury-decisions/td/8881/",
       "summary": "May 22, 2000 (65 FR 32152) — \"Revisions to Regulations Relating to Withholding of Tax on Certain U.S. Source Income Paid to Foreign Persons and Revisions of Information Reporting Regulations.\" Amends its companion T.D. 8734 (sections 1441-1443, 6041 et al.), effective Jan. 1, 2001 -- same withholding-on-foreign-persons ground Champion leans on for both. Cited in 7 video rows per transcription-agent/TREASURY_DECISIONS.md (1234, 1239, 1243, 1247, 1249, 1254, 5600), never in either book's text -- same reason MANUAL_TD exists for 2090/2109/4707/2402. Re-sourced 2026-11-16: the local PDF previously here was a mismatched 2001 FAA aviation rule (removed); the IRS hosts the real document directly at irs.gov/pub/irs-regs/td8881.pdf (HTTP 200 -- the prior \"404 confirmed\" note only ever checked the .txt extension, which does 404). A web search's first candidate for the April 2001 correction notice (govinfo.gov .../01-8136.pdf) turned out to be the SAME wrong aviation document by a different route -- verified by content before trusting it, not by filename/size match alone.",
       "source": "td_8881_resourced_2026-11-16"
     }

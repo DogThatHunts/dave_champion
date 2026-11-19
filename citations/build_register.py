@@ -360,49 +360,33 @@ for sub in ["(a)","(b)"]:
 out["cfr"] = [e for e in cfr_general if e["occurrences"]] + [
     {"cite":k, "url":cfr_url(v), "occurrences":v["count"], "pages":pset(v["pages"])}
     for k,v in sorted(cfr.items(), key=lambda kv:-kv[1]["count"])]
-# Treasury Decision URLs come from the shared source of truth (single mapping,
-# maintained in the transcription-agent repo, updated over time).
-# Fixed 2026-11-16: this path was one "../" short (resolved to
-# ~/Projects/law_sovereignty/transcription-agent/..., which doesn't exist --
-# the repo lives at ~/Projects/transcription-agent, a sibling of
-# law_sovereignty, not inside it). Silently caught by the except below, so
-# td_map stayed {} and every TD's "url"/"in_mapping_file" field quietly fell
-# back to the generic HathiTrust search. Did NOT affect the live published
-# books -- each book's own build_html.py has the correct path and
-# independently rebuilds the real runtime sidecar (treasury_decisions.json);
-# this only weakened the secondary "external" link on link_register.html.
-TD_FILE = "../../../transcription-agent/TREASURY_DECISIONS.md"
-td_map = {}
-try:
-    for line in open(TD_FILE, encoding="utf-8"):
-        mnum = re.search(r"\*\*T\.D\.\s*(\d+)\*\*", line)
-        urls = re.findall(r"https?://[^\s|)]+", line)  # canonical = last URL column
-        if mnum and urls:
-            td_map[mnum.group(1)] = urls[-1]
-except FileNotFoundError:
-    pass
-
-# Local source documents: prefer a locally-stored copy when we have one.
-# Scanned from citations/treasury_decisions/td_<num>/*.pdf (relative to this script).
-# We record BOTH the local path and the external URL (dual-link) for now.
+# Treasury Decisions come from tds.json in the DogThatHunts/treasury-decisions repo
+# (local checkout ~/Projects/treasury-decisions, a sibling of law_sovereignty), the
+# single source of truth since 2026-11-19. It replaced TREASURY_DECISIONS.md (URLs),
+# the local citations/treasury_decisions/td_<N>/ scans and td_relations.json here.
+# A missing tds.json STOPS the build: the old code swallowed a bad path and silently
+# fell back to HathiTrust for every TD (2026-11-16), which must not happen again.
 import os
-TD_LOCAL_DIR = "treasury_decisions"
-# Known caveats about the local scans (surfaced in the register, not silently trusted).
+_TDS_JSON = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                          "..", "..", "..", "treasury-decisions", "tds.json"))
+try:
+    _TDS = json.load(open(_TDS_JSON, encoding="utf-8"))["tds"]
+except (OSError, ValueError, KeyError) as e:
+    raise SystemExit(f"build_register: cannot read {_TDS_JSON} ({e}); "
+                     "clone DogThatHunts/treasury-decisions next to law_sovereignty")
+td_map = {n: t["page"] for n, t in _TDS.items()}
+# Known caveats about the scans (surfaced in the register, not silently trusted).
 TD_LOCAL_NOTES = {
 }
 def td_local_path(num):
-    """Return the relative path to a locally-stored TD PDF, or None."""
-    d = os.path.join(TD_LOCAL_DIR, f"td_{num}")
-    if not os.path.isdir(d):
-        return None
-    pdfs = sorted(f for f in os.listdir(d) if f.lower().endswith(".pdf"))
-    return os.path.join(d, pdfs[0]) if pdfs else None
+    """URL of the TD's scan (PDF) in treasury-decisions, or None."""
+    t = _TDS.get(num)
+    return t["pdf"] if t else None
 def td_transcript_path(num):
-    """Return the relative path to the rendered HTML transcript, or None."""
-    p = os.path.join(TD_LOCAL_DIR, f"td_{num}", f"td_{num}.html")
-    return p if os.path.isfile(p) else None
-from td_relations import load_relations, VERB_LABEL
-TD_RELATIONS = load_relations()
+    """URL of the TD's transcript page in treasury-decisions, or None."""
+    t = _TDS.get(num)
+    return t["page"] if t else None
+TD_RELATIONS = {n: t.get("relations", []) for n, t in _TDS.items() if t.get("relations")}
 out["treasury_decisions"] = []
 # general reference: Treasury Decisions are published by the IRS in the Internal Revenue Bulletin
 _td_general = len(re.findall(r"Treasury Decisions", text))
@@ -432,7 +416,7 @@ for k,v in sorted(td.items(), key=lambda kv:-kv[1]["count"]):
             for r in rels]
     notes = []
     if url is None:
-        notes.append("NOT YET in TREASURY_DECISIONS file — add it there; fallback is a HathiTrust search.")
+        notes.append("NOT YET in treasury-decisions (tds.json); add it there. Fallback is a HathiTrust search.")
     if num in TD_LOCAL_NOTES:
         notes.append(TD_LOCAL_NOTES[num])
     if notes:
@@ -502,7 +486,7 @@ MANUAL_TD = [
      "in_mapping_file": "2090" in td_map,
      "url": td_map.get("2090",
          "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2090%22;a=srchls;lmt=ft"),
-     "local_path": "treasury_decisions/td_2090/TD 2090.pdf",
+     "local_path": td_local_path("2090"),
      "transcript_path": td_transcript_path("2090"),
      "summary": (
          "Dec. 14, 1914 — \"Synopsis of rulings on questions relating to the income "
@@ -524,7 +508,7 @@ MANUAL_TD = [
      "in_mapping_file": "2109" in td_map,
      "url": td_map.get("2109",
          "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2109%22;a=srchls;lmt=ft"),
-     "local_path": "treasury_decisions/td_2109/TD 2109.pdf",
+     "local_path": td_local_path("2109"),
      "transcript_path": td_transcript_path("2109"),
      "summary": (
          "Dec. 28, 1914 — \"Amendment of Article 8 of Regulations 33, providing for "
@@ -542,7 +526,7 @@ MANUAL_TD = [
      "in_mapping_file": "4707" in td_map,
      "url": td_map.get("4707",
          "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+4707%22;a=srchls;lmt=ft"),
-     "local_path": "treasury_decisions/td_4707/TD 4707.pdf",
+     "local_path": td_local_path("4707"),
      "transcript_path": td_transcript_path("4707"),
      "summary": (
          "Nov. 16, 1936 -- \"Liquor Tax Administration Act. Openings for "
@@ -566,7 +550,7 @@ MANUAL_TD = [
          "just not actually cited anywhere in the Dave Champion corpus."),
      "source": "video_synthesis_2026-11-16"},
     {"cite": "T.D. 4704", "occurrences": 0, "pages": [],
-     "local_path": "treasury_decisions/td_4704/TD 4704.pdf",
+     "local_path": td_local_path("4704"),
      "transcript_path": td_transcript_path("4704"),
      "in_mapping_file": "4704" in td_map,
      "url": td_map.get("4704",
@@ -590,7 +574,7 @@ MANUAL_TD = [
      "in_mapping_file": "1953" in td_map,
      "url": td_map.get("1953",
          "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+1953%22;a=srchls;lmt=ft"),
-     "local_path": "treasury_decisions/td_1953/TD 1953.pdf",
+     "local_path": td_local_path("1953"),
      "transcript_path": td_transcript_path("1953"),
      "summary": (
          "March 2, 1914 -- \"Extension of time for filing returns under "
@@ -607,7 +591,7 @@ MANUAL_TD = [
      "in_mapping_file": "2013" in td_map,
      "url": td_map.get("2013",
          "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2013%22;a=srchls;lmt=ft"),
-     "local_path": "treasury_decisions/td_2013/TD 2013.pdf",
+     "local_path": td_local_path("2013"),
      "transcript_path": td_transcript_path("2013"),
      "summary": (
          "Aug. 12, 1914 -- \"Nonresident aliens -- Amendment of article 8 of "
@@ -623,7 +607,7 @@ MANUAL_TD = [
      "in_mapping_file": "2190" in td_map,
      "url": td_map.get("2190",
          "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2190%22;a=srchls;lmt=ft"),
-     "local_path": "treasury_decisions/td_2190/TD 2190.pdf",
+     "local_path": td_local_path("2190"),
      "transcript_path": td_transcript_path("2190"),
      "summary": (
          "April 21, 1915 -- \"Income tax -- Temporary certificate, Form 1005.\" "
@@ -639,7 +623,7 @@ MANUAL_TD = [
      "in_mapping_file": "2402" in td_map,
      "url": td_map.get("2402",
          "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2402%22;a=srchls;lmt=ft"),
-     "local_path": "treasury_decisions/td_2401/TD 2401, TD 2402.pdf",
+     "local_path": td_local_path("2401"),
      "transcript_path": td_transcript_path("2402"),
      "relations": [
          {"verb": r["verb"], "num": r["to"], "basis": r.get("basis", ""),
@@ -1562,21 +1546,20 @@ for c in out["cfr"]:
     L.append(f"| {c['cite']} | {c['occurrences']} | {pgs} | [link]({c['url']}) |")
 
 L.append("\n## 4. Treasury Decisions (T.D.)\n")
-L.append("_External URLs are sourced from the shared mapping `transcription-agent/TREASURY_DECISIONS.md` "
-         "(single source of truth, updated over time). Where a **local copy** is stored under "
-         "`citations/treasury_decisions/td_<num>/`, it is the primary source and the external link is kept "
-         "as a secondary. Rows marked **add to mapping** are cited in this book but not yet in that file._\n")
+L.append("_Treasury Decisions are hosted in [treasury-decisions](https://dogthathunts.github.io/treasury-decisions/) "
+         "(its `tds.json` is the single source of truth): a transcript page and the scan for each. Rows marked "
+         "**add to mapping** are cited in this book but not yet hosted there._\n")
 L.append("| T.D. | Occ. | Pages | Status | Source |")
 L.append("|---|---:|---|---|---|")
 for c in out["treasury_decisions"]:
     pgs=", ".join(c["pages"][:6])
     status = "in mapping" if c["in_mapping_file"] else "**add to mapping**"
     if c.get("local_path"):
-        src = f"[local copy]({quote(c['local_path'])}) · [external]({c['url']})"
+        src = f"[transcript]({c['url']}) · [scan]({c['local_path']})"
     else:
         src = f"[link]({c['url']})"
-    if c.get("transcript_path"):
-        src += f" · [transcript]({quote(c['transcript_path'])})"
+    if c.get("transcript_path") and c["transcript_path"] != c["url"]:
+        src += f" · [transcript]({c['transcript_path']})"
     # NOTE: relationship lines (supersedes/superseded by/amended by) are intentionally
     # NOT rendered on the register for now — the data is kept in link_register.json
     # (entry["relations"]); proper presentation is deferred to next session (see WAYPOINT).
